@@ -11,22 +11,42 @@
   </head>
 
   <body>
+    <!-- Header -->
     <header>
       <a href="./index.html" class="logo-block">
         <img src="./img/img-logo/logo.svg" alt="Binabox logo" />
         BINABOX
       </a>
-
+      <!-- Navigation Menu -->
       <nav class="nav-menu">
         <ul class="nav-menu-items">
-          <li class="nav-menu-item"><a href="index.html">HOME</a></li>
-          <li class="nav-menu-item"><a href="#about-block">ABOUT</a></li>
+          <li class="nav-menu-item">
+            <a href="index.html">HOME</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="./about.html">ABOUT</a>
+          </li>
           <li class="nav-menu-item"><a href="#roadmap-block">ROADMAP</a></li>
           <li class="nav-menu-item">
-            <a href="./catalog.html" target="_blank">COLLECTION</a>
+            <a href="./catalog.html">COLLECTION</a>
           </li>
-          <li class="nav-menu-item"><a href="#faq-block">FAQS</a></li>
-          <li class="nav-menu-item"><a href="#">PAGES</a></li>
+          <li class="nav-menu-item">
+            <a href="./faqs.html">FAQS</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="#" class="dropdown">PAGES</a>
+            <ul class="dropdown-content">
+              <li>
+                <a href="./catalog.html">NFT Catalog</a>
+              </li>
+              <li>
+                <a href="./blog.html">Blog</a>
+              </li>
+              <li>
+                <a href="./contact-us.html">Contact Us</a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
 
@@ -35,7 +55,7 @@
           <img src="./img/btn-icons/switch.png" alt="" />
         </button>
 
-        <a href="https://discord.com/" class="header-link">
+        <a href="https://discord.com/" class="header-link" target="_blank">
           <img src="./img/socialntw-icons/discord-btn.png" alt="" />
           DISCORD
         </a>
@@ -83,7 +103,7 @@
       <!-- NFT section -->
       <section class="nft-cards">
         <h2 style="display: none">EXPLORE COLECTIONS</h2>
-        <!-- change div to article ? -->
+
         <article class="nft-card">
           <a href="./catalog-item.html">
             <img
@@ -146,7 +166,7 @@
       </section>
 
       <!-- About section -->
-      <section class="about" id="about-block">
+      <section class="about">
         <h2>ABOUT US</h2>
         <p>
           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
@@ -195,7 +215,7 @@
           </li>
         </ol>
 
-        <a href="#">READ MORE</a>
+        <a href="./about.html">READ MORE</a>
       </section>
 
       <!-- Workflow section  -->
@@ -260,8 +280,9 @@
             <a href="#">READ MORE</a>
           </div>
         </div>
-        <!-- add navigation arrows function -->
+        <span>&lt;</span>
         <hr />
+        <span>&gt;</span>
         <div class="roadmap-nav">
           <ol>
             <li class="roadmap-nav-item active">
@@ -285,7 +306,7 @@
       </section>
 
       <!-- Team section -->
-      <section class="team" id="team-block">
+      <section class="team">
         <h2>OUR TEAM</h2>
         <article class="team-card">
           <img src="./img/img-team/team-photo1.png" alt="Team member photo" />
@@ -721,7 +742,7 @@
       </section>
 
       <!-- FAQs section -->
-      <section class="faq-box" id="faq-block">
+      <section class="faq-box">
         <h2>FAQS</h2>
 
         <details>
@@ -844,10 +865,12 @@
       <nav class="nav-pages">
         <ul class="nav-pages-items">
           <li class="nav-pages-item"><a href="index.html">Home</a></li>
-          <li class="nav-pages-item"><a href="#about-block">About</a></li>
+          <li class="nav-pages-item"><a href="./about.html">About</a></li>
           <li class="nav-pages-item"><a href="#roadmap-block">Roadmap</a></li>
-          <li class="nav-pages-item"><a href="#team-block">Our Team</a></li>
-          <li class="nav-pages-item"><a href="#faq-block">FAQS</a></li>
+          <li class="nav-pages-item">
+            <a href="./about.html#team-block">Our Team</a>
+          </li>
+          <li class="nav-pages-item"><a href="./faqs.html">FAQS</a></li>
         </ul>
       </nav>
     </footer>

@@ -3,25 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="You can find a range of NFT marketplaces where you can buy existing NFTs or list your own NFTs for sale."
+    />
     <title>Blog - Binabox</title>
   </head>
   <body>
+    <!-- Header -->
     <header>
       <a href="./index.html" class="logo-block">
         <img src="./img/img-logo/logo.svg" alt="Binabox logo" />
         BINABOX
       </a>
-
+      <!-- Navigation Menu -->
       <nav class="nav-menu">
         <ul class="nav-menu-items">
-          <li class="nav-menu-item"><a href="index.html">HOME</a></li>
-          <li class="nav-menu-item"><a href="#about-block">ABOUT</a></li>
-          <li class="nav-menu-item"><a href="#roadmap-block">ROADMAP</a></li>
           <li class="nav-menu-item">
-            <a href="./catalog.html" target="_blank">COLLECTION</a>
+            <a href="index.html">HOME</a>
           </li>
-          <li class="nav-menu-item"><a href="#faq-block">FAQS</a></li>
-          <li class="nav-menu-item"><a href="#">PAGES</a></li>
+
+          <li class="nav-menu-item">
+            <a href="./about.html">ABOUT</a>
+          </li>
+
+          <li class="nav-menu-item">
+            <a href="./index.html#roadmap-block">ROADMAP</a>
+          </li>
+
+          <li class="nav-menu-item">
+            <a href="./catalog.html">COLLECTION</a>
+          </li>
+
+          <li class="nav-menu-item">
+            <a href="./faqs.html">FAQS</a>
+          </li>
+
+          <li class="nav-menu-item">
+            <a href="#" class="dropdown">PAGES</a>
+            <ul class="dropdown-content">
+              <li>
+                <a href="./catalog.html">NFT Catalog</a>
+              </li>
+              <li>
+                <a href="./blog.html">Blog</a>
+              </li>
+              <li>
+                <a href="./contact-us.html">Contact Us</a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
 
@@ -30,7 +61,7 @@
           <img src="./img/btn-icons/switch.png" alt="" />
         </button>
 
-        <a href="https://discord.com/" class="header-link">
+        <a href="https://discord.com/" class="header-link" target="_blank">
           <img src="./img/socialntw-icons/discord-btn.png" alt="" />
           DISCORD
         </a>
@@ -41,9 +72,11 @@
         </button>
       </nav>
     </header>
+
+    <!-- Main -->
     <main>
-      <!-- sub nav section -->
-      <section class="subnav-block">
+      <!-- Breadcrumbs -->
+      <section class="breadcrumbs">
         <h1>OUR BLOG</h1>
         <ul>
           <li><a href="./index.html">HOME</a></li>
@@ -53,6 +86,7 @@
         </ul>
       </section>
 
+      <!-- NFT Article Blog section -->
       <section id="nft-blog">
         <h2 style="display: none">NFT Collection</h2>
         <!-- NFT article 1 -->
@@ -254,6 +288,7 @@
         </article>
       </section>
 
+      <!-- Pagination -->
       <div class="pagination">
         <a href="#">&lt;</a>
         <a href="#" style="display: none">1</a>
@@ -265,6 +300,8 @@
         <a href="#">&gt;</a>
       </div>
     </main>
+
+    <!-- Footer -->
     <footer>
       <section class="footer-nftcatalog">
         <div class="footer-logobox">
@@ -284,16 +321,16 @@
               <a href="./index.html">Home</a>
             </li>
             <li>
-              <a href="./index.html#about-block"> About </a>
+              <a href="./about.html"> About </a>
             </li>
             <li class="nav-pages-item">
               <a href="./index.html#roadmap-block"> Roadmap </a>
             </li>
             <li class="nav-pages-item">
-              <a href="./index.html#team-block"> Our Team </a>
+              <a href="./about.html#team-block"> Our Team </a>
             </li>
             <li class="nav-pages-item">
-              <a href="./index.html#faq-block"> FAQS </a>
+              <a href="./faqs.html"> FAQS </a>
             </li>
           </ul>
         </div>

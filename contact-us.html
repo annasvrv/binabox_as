@@ -3,25 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Get in touch with Binabox team" />
     <title>Contact Us - Binabox</title>
   </head>
   <body>
+    <!-- Header -->
     <header>
       <a href="./index.html" class="logo-block">
         <img src="./img/img-logo/logo.svg" alt="Binabox logo" />
         BINABOX
       </a>
-
+      <!-- Navigation Menu -->
       <nav class="nav-menu">
         <ul class="nav-menu-items">
-          <li class="nav-menu-item"><a href="index.html">HOME</a></li>
-          <li class="nav-menu-item"><a href="#about-block">ABOUT</a></li>
-          <li class="nav-menu-item"><a href="#roadmap-block">ROADMAP</a></li>
           <li class="nav-menu-item">
-            <a href="./catalog.html" target="_blank">COLLECTION</a>
+            <a href="index.html">HOME</a>
           </li>
-          <li class="nav-menu-item"><a href="#faq-block">FAQS</a></li>
-          <li class="nav-menu-item"><a href="#">PAGES</a></li>
+
+          <li class="nav-menu-item">
+            <a href="./about.html">ABOUT</a>
+          </li>
+
+          <li class="nav-menu-item">
+            <a href="./index.html#roadmap-block">ROADMAP</a>
+          </li>
+
+          <li class="nav-menu-item">
+            <a href="./catalog.html">COLLECTION</a>
+          </li>
+
+          <li class="nav-menu-item">
+            <a href="./faqs.html">FAQS</a>
+          </li>
+
+          <li class="nav-menu-item">
+            <a href="#" class="dropdown">PAGES</a>
+            <ul class="dropdown-content">
+              <li>
+                <a href="./catalog.html">NFT Catalog</a>
+              </li>
+              <li>
+                <a href="./blog.html">Blog</a>
+              </li>
+              <li>
+                <a href="./contact-us.html">Contact Us</a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
 
@@ -30,7 +58,7 @@
           <img src="./img/btn-icons/switch.png" alt="" />
         </button>
 
-        <a href="https://discord.com/" class="header-link">
+        <a href="https://discord.com/" class="header-link" target="_blank">
           <img src="./img/socialntw-icons/discord-btn.png" alt="" />
           DISCORD
         </a>
@@ -42,39 +70,41 @@
       </nav>
     </header>
 
+    <!-- Main -->
     <main>
-      <!-- sub nav section -->
-      <section class="subnav-block">
+      <!-- Breadcrumbs -->
+      <section class="breadcrumbs">
         <h1>CONTACT US</h1>
         <ul>
           <li><a href="./index.html">HOME</a></li>
           <li>
-            <a href="#nft-collection">CONTACT US</a>
+            <a href="#contact-info">CONTACT US</a>
           </li>
         </ul>
       </section>
+
       <!-- Contact info cards  -->
-      <ul class="contact-info">
+      <ul class="contact-info" id="contact-info">
         <li>
-          <!-- add image icon -->
-          <!-- <img src="" alt="" /> -->
+          <img src="./img/btn-icons/contact-location.png" alt="" />
           <h2>Location</h2>
-          <p>2163 Phillips Gap Rd West Jefferson</p>
+          <a href="https://maps.app.goo.gl/qJvwvcxLTHW6qtAg6" target="_blank"
+            >2163 Phillips Gap Rd West Jefferson</a
+          >
         </li>
         <li>
-          <!-- add image icon -->
-          <!-- <img src="" alt="" /> -->
+          <img src="./img/btn-icons/contact-email.png" alt="" />
           <h2>Email</h2>
-          <p>Info.avitex@gmail.com</p>
+          <a href="mailto:Info.avitex@gmail.com">Info.avitex@gmail.com</a>
         </li>
         <li>
-          <!-- add image icon -->
-          <!-- <img src="" alt="" /> -->
+          <img src="./img/btn-icons/contact-phone.png" alt="" />
           <h2>Phone</h2>
-          <p>+1 666 8888</p>
+          <a href="tel:+16668888">+1 666 8888</a>
         </li>
       </ul>
 
+      <!-- Get in touch section -->
       <section class="get-intouch-block">
         <h2>Get in touch</h2>
         <p>Browse through the most freuently asked questions</p>
@@ -108,6 +138,8 @@
         <button>WHITELIST NOW</button>
       </section>
     </main>
+
+    <!-- Footer -->
     <footer>
       <section class="footer-nftcatalog">
         <div class="footer-logobox">
@@ -127,16 +159,16 @@
               <a href="./index.html">Home</a>
             </li>
             <li>
-              <a href="./index.html#about-block"> About </a>
+              <a href="./about.html"> About </a>
             </li>
             <li class="nav-pages-item">
               <a href="./index.html#roadmap-block"> Roadmap </a>
             </li>
             <li class="nav-pages-item">
-              <a href="./index.html#team-block"> Our Team </a>
+              <a href="./about.html#team-block"> Our Team </a>
             </li>
             <li class="nav-pages-item">
-              <a href="./index.html#faq-block"> FAQS </a>
+              <a href="./faqs.html"> FAQS </a>
             </li>
           </ul>
         </div>

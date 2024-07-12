@@ -10,29 +10,48 @@
     <title>NFT Card</title>
   </head>
   <body>
+    <!-- Header -->
     <header>
-      <a href="./index.html" class="BINABOX logo">
+      <a href="./index.html" class="logo-block">
         <img src="./img/img-logo/logo.svg" alt="Binabox logo" />
         BINABOX
       </a>
-
+      <!-- Navigation Menu -->
       <nav class="nav-menu">
         <ul class="nav-menu-items">
           <li class="nav-menu-item">
             <a href="index.html">HOME</a>
           </li>
+
           <li class="nav-menu-item">
-            <a href="./index.html#about-block">ABOUT</a>
+            <a href="./about.html">ABOUT</a>
           </li>
+
           <li class="nav-menu-item">
             <a href="./index.html#roadmap-block">ROADMAP</a>
           </li>
-          <li class="nav-menu-item"><a href="./catalog.html">COLLECTION</a></li>
+
           <li class="nav-menu-item">
-            <a href="./index.html#faq-block">FAQS</a>
+            <a href="./catalog.html">COLLECTION</a>
           </li>
+
           <li class="nav-menu-item">
-            <a href="#">PAGES</a>
+            <a href="./faqs.html">FAQS</a>
+          </li>
+
+          <li class="nav-menu-item">
+            <a href="#" class="dropdown">PAGES</a>
+            <ul class="dropdown-content">
+              <li>
+                <a href="./catalog.html">NFT Catalog</a>
+              </li>
+              <li>
+                <a href="./blog.html">Blog</a>
+              </li>
+              <li>
+                <a href="./contact-us.html">Contact Us</a>
+              </li>
+            </ul>
           </li>
         </ul>
       </nav>
@@ -42,7 +61,7 @@
           <img src="./img/btn-icons/switch.png" alt="" />
         </button>
 
-        <a href="https://discord.com/" class="header-link">
+        <a href="https://discord.com/" class="header-link" target="_blank">
           <img src="./img/socialntw-icons/discord-btn.png" alt="" />
           DISCORD
         </a>
@@ -55,8 +74,8 @@
     </header>
 
     <main>
-      <!-- Sub header -->
-      <section class="subnav-block">
+      <!-- Breadcrumbs -->
+      <section class="breadcrumbs">
         <h1>ITEM DETAIL</h1>
         <ul>
           <li>
@@ -65,6 +84,7 @@
           <li><a href="#nftcard-details">ITEM DETAIL</a></li>
         </ul>
       </section>
+
       <!-- NFT Card -->
       <section class="nftcard-box">
         <figure class="nftcard-img">
@@ -196,10 +216,11 @@
         </article>
 
         <!-- add icons for arrow btns < > -->
-        <button>left arrow</button>
-        <button>right arrow</button>
+        <button>&lt;</button>
+        <button>&gt;</button>
       </section>
 
+      <!-- Call Action section -->
       <section class="call-action">
         <h2>JOIN OUR COMMUNITY</h2>
         <p>
@@ -216,6 +237,7 @@
       </section>
     </main>
 
+    <!-- Footer -->
     <footer>
       <section class="footer-nftcatalog">
         <div class="footer-logobox">
@@ -235,16 +257,16 @@
               <a href="./index.html">Home</a>
             </li>
             <li>
-              <a href="./index.html#about-block"> About </a>
+              <a href="./about.html"> About </a>
             </li>
             <li class="nav-pages-item">
               <a href="./index.html#roadmap-block"> Roadmap </a>
             </li>
             <li class="nav-pages-item">
-              <a href="./index.html#team-block"> Our Team </a>
+              <a href="./about.html#team-block"> Our Team </a>
             </li>
             <li class="nav-pages-item">
-              <a href="./index.html#faq-block"> FAQS </a>
+              <a href="./faqs.html"> FAQS </a>
             </li>
           </ul>
         </div>
@@ -308,7 +330,7 @@
             <!-- Tiktok add icon -->
             <li class="network-item">
               <a href="#">
-                <!-- TikTok -->
+                <!-- Tiktok -->
                 <img
                   src="./img/socialntw-icons/img-footer/footer-tiktok.png"
                   alt="TikTok page"
