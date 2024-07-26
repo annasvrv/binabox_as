@@ -7,12 +7,24 @@
       name="description"
       content="BINABOX is the best platform to check the rarity of NFT collection"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="http://necolas.github.io/normalize.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>BINABOX</title>
   </head>
 
   <body>
     <!-- Header -->
-    <header>
+    <header class="container">
       <a href="./index.html" class="logo-block">
         <img src="./img/img-logo/logo.svg" alt="Binabox logo" />
         BINABOX
@@ -34,7 +46,10 @@
             <a href="./faqs.html">FAQS</a>
           </li>
           <li class="nav-menu-item">
-            <a href="#" class="dropdown">PAGES</a>
+            <a href="#" class="dropdown">
+              PAGES
+              <img src="./img/btn-icons/arrow-down.png" alt="" />
+            </a>
             <ul class="dropdown-content">
               <li>
                 <a href="./catalog.html">NFT Catalog</a>
@@ -52,16 +67,20 @@
 
       <div class="btn-box">
         <button class="switch-mode">
-          <img src="./img/btn-icons/switch.png" alt="" />
+          <img src="./img/btn-icons/switch.svg" alt="" />
         </button>
 
-        <a href="https://discord.com/" class="header-link" target="_blank">
+        <a
+          href="https://discord.com/"
+          class="header-link btn-link"
+          target="_blank"
+        >
           <img src="./img/socialntw-icons/discord-btn.png" alt="" />
           DISCORD
         </a>
 
-        <button class="header-btn">
-          <img src="./img/btn-icons/wallet.png" alt="" />
+        <button class="header-btn btn-bgcolor">
+          <img src="./img/btn-icons/wallet.svg" alt="" />
           CONNECT
         </button>
       </div>
@@ -69,7 +88,7 @@
 
     <main>
       <!-- Hero section -->
-      <section class="hero-box">
+      <section class="hero-box container">
         <div class="hero-content">
           <h1 class="hero-title">
             WITH <span>BINABOX</span> EXPLORE NFT COLLECTION
@@ -81,15 +100,17 @@
           <dl class="hero-counter">
             <dt class="hero-number">2240+</dt>
             <dd class="hero-description">Total Iteam</dd>
-          </dl>
-          <dl class="hero-counter">
             <dt class="hero-number">1000+</dt>
             <dd class="hero-description">Profiles whitelisted</dd>
           </dl>
+          <!-- <dl class="hero-counter">
+            <dt class="hero-number">1000+</dt>
+            <dd class="hero-description">Profiles whitelisted</dd>
+          </dl> -->
           <!-- Hero Btns -->
           <div class="hero-btn">
-            <button>CONNECT WALLET</button>
-            <button>WHITELIST NOW</button>
+            <button class="btn-bgcolor-hero">CONNECT WALLET</button>
+            <button class="btn-border">WHITELIST NOW</button>
           </div>
         </div>
 
@@ -102,15 +123,13 @@
 
       <!-- NFT section -->
       <section class="nft-cards">
-        <h2 style="display: none">EXPLORE COLECTIONS</h2>
-
         <article class="nft-card">
           <a href="./catalog-item.html">
             <img
               src="./img/img-nftcatalog/nft-picture1.png"
               alt="NFT picture"
             />
-            <h3>SKISIRS#2</h3>
+            <h2>SKISIRS#2</h2>
           </a>
         </article>
 
@@ -120,7 +139,7 @@
               src="./img/img-nftcatalog/nft-picture2.png"
               alt="NFT picture"
             />
-            <h3>SKISIRS#2</h3>
+            <h2>SKISIRS#2</h2>
           </a>
         </article>
 
@@ -130,7 +149,7 @@
               src="./img/img-nftcatalog/nft-picture3.png"
               alt="NFT picture"
             />
-            <h3>SKISIRS#2</h3>
+            <h2>SKISIRS#2</h2>
           </a>
         </article>
 
@@ -140,7 +159,7 @@
               src="./img/img-nftcatalog/nft-picture4.png"
               alt="NFT picture"
             />
-            <h3>SKISIRS#2</h3>
+            <h2>SKISIRS#2</h2>
           </a>
         </article>
 
@@ -150,7 +169,7 @@
               src="./img/img-nftcatalog/nft-picture5.png"
               alt="NFT picture"
             />
-            <h3>SKISIRS#2</h3>
+            <h2>SKISIRS#2</h2>
           </a>
         </article>
 
@@ -160,14 +179,14 @@
               src="./img/img-nftcatalog/nft-picture6.png"
               alt="NFT picture"
             />
-            <h3>SKISIRS#2</h3>
+            <h2>SKISIRS#2</h2>
           </a>
         </article>
       </section>
 
       <!-- About section -->
-      <section class="about">
-        <h2>ABOUT US</h2>
+      <section class="about container">
+        <h2 class="secondary-heading">ABOUT US</h2>
         <p>
           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
           dolore eu fugiat nulla pariatur. Excepteur sint occae cat cupidatat
@@ -215,31 +234,29 @@
           </li>
         </ol>
 
-        <a href="./about.html">READ MORE</a>
+        <a href="./about.html" class="btn-border">READ MORE</a>
       </section>
 
       <!-- Workflow section  -->
-      <section class="workflow">
-        <h2>HOW TO <span>BINABOX</span> WORK</h2>
+      <section class="workflow container">
+        <h2 class="secondary-heading">
+          HOW TO <span class="secondary-heading">BINABOX</span> WORK
+        </h2>
 
         <ol class="workflow-cards">
           <li class="workflow-card">
-            STEP
             <img src="./img/img-workflow/icon1.png" alt="" />
             <p>Connect Your Wallet</p>
           </li>
           <li class="workflow-card">
-            STEP
             <img src="./img/img-workflow/icon2.png" alt="" />
             <p>Sellect Your Quaility</p>
           </li>
           <li class="workflow-card">
-            STEP
             <img src="./img/img-workflow/icon3.png" alt="" />
             <p>Confirm the Transaction</p>
           </li>
           <li class="workflow-card">
-            STEP
             <img src="./img/img-workflow/icon4.png" alt="" />
             <p>Receive Your NFTs</p>
           </li>
@@ -247,8 +264,8 @@
       </section>
 
       <!-- Roadmap section -->
-      <section class="roadmap" id="roadmap-block">
-        <h2>ROAD MAP</h2>
+      <section class="roadmap container" id="roadmap-block">
+        <h2 class="secondary-heading">ROAD MAP</h2>
 
         <div class="roadmap-card">
           <figure class="roadmap-img-box">
@@ -257,8 +274,10 @@
             <img src="./img/img-roadmap/roadmap-img-3.png" alt="circuit" />
             <figcaption style="display: none">circuit</figcaption>
           </figure>
+
           <div class="roadmap-card-description">
             <h3 class="roadmap-card-title">PHASE 1</h3>
+
             <ul class="roadmap-list">
               <li class="roadmap-items">
                 <img src="./img/btn-icons/icon-phase.png" alt="" />
@@ -277,28 +296,34 @@
                 Mobile Version Launch
               </li>
             </ul>
-            <a href="#">READ MORE</a>
+            <a href="#" class="btn-link btn-border">READ MORE</a>
           </div>
         </div>
-        <span>&lt;</span>
-        <hr />
-        <span>&gt;</span>
+
         <div class="roadmap-nav">
-          <ol>
+          <img
+            src="./img/btn-icons/arrow-less.svg"
+            alt=""
+            class="arrow-less-btn"
+          />
+
+          <img
+            src="./img/btn-icons/arrow-greater.svg"
+            alt=""
+            class="arrow-greater-btn"
+          />
+
+          <ol class="roadmap-nav-item-list">
             <li class="roadmap-nav-item active">
-              PHASE
               <img src="./img/btn-icons/elipse-phase-active.png" alt="" />
             </li>
             <li class="roadmap-nav-item">
-              PHASE
               <img src="./img/btn-icons/elipse-phase.png" alt="" />
             </li>
             <li class="roadmap-nav-item">
-              PHASE
               <img src="./img/btn-icons/elipse-phase.png" alt="" />
             </li>
             <li class="roadmap-nav-item">
-              PHASE
               <img src="./img/btn-icons/elipse-phase.png" alt="" />
             </li>
           </ol>
@@ -306,8 +331,8 @@
       </section>
 
       <!-- Team section -->
-      <section class="team">
-        <h2>OUR TEAM</h2>
+      <section class="team container">
+        <h2 class="secondary-heading">OUR TEAM</h2>
         <article class="team-card">
           <img src="./img/img-team/team-photo1.png" alt="Team member photo" />
           <h3 class="team-name">Ralph Edwards</h3>
@@ -591,8 +616,10 @@
       </section>
 
       <!-- Partners section -->
-      <section class="partners">
-        <h2><span>BINABOX</span> PARTNER</h2>
+      <section class="partners container">
+        <h2 class="secondary-heading">
+          <span class="secondary-heading">BINABOX</span> PARTNER
+        </h2>
 
         <ul class="partners-cards">
           <li>
@@ -742,62 +769,69 @@
       </section>
 
       <!-- FAQs section -->
-      <section class="faq-box">
-        <h2>FAQS</h2>
+      <section class="faq-box container">
+        <h2 class="secondary-heading">FAQS</h2>
 
-        <details>
-          <summary class="faqs-name">What are the NFTs?</summary>
-          Urna vitae erat et lacus, consectetur ac nulla vestibulum lobortis.
-          Nulla dapibus urna volutpat venenatis, risus faucibus.
+        <details open class="faqs-card">
+          <summary class="faqs-name open">What are the NFTs?</summary>
+          <p class="faqs-content">
+            Urna vitae erat et lacus, consectetur ac nulla vestibulum lobortis.
+            Nulla dapibus urna volutpat venenatis, risus faucibus.
+          </p>
         </details>
 
-        <details>
+        <details class="faqs-card">
           <summary class="faqs-name">How do I get NFTs?</summary>
-          Urna vitae erat et lacus, consectetur ac nulla vestibulum lobortis.
-          Nulla dapibus urna volutpat venenatis, risus faucibus.
+          <p class="faqs-content">
+            Urna vitae erat et lacus, consectetur ac nulla vestibulum lobortis.
+            Nulla dapibus urna volutpat venenatis, risus faucibus.
+          </p>
         </details>
 
-        <details>
+        <details class="faqs-card">
           <summary class="faqs-name">How can we buy your NFTs?</summary>
-          Urna vitae erat et lacus, consectetur ac nulla vestibulum lobortis.
-          Nulla dapibus urna volutpat venenatis, risus faucibus.
+          <p class="faqs-content">
+            Urna vitae erat et lacus, consectetur ac nulla vestibulum lobortis.
+            Nulla dapibus urna volutpat venenatis, risus faucibus.
+          </p>
         </details>
 
-        <details>
+        <details class="faqs-card">
           <summary class="faqs-name">
             Who are the team behind the project?
           </summary>
-          Urna vitae erat et lacus, consectetur ac nulla vestibulum lobortis.
-          Nulla dapibus urna volutpat venenatis, risus faucibus.
+          <p class="faqs-content">
+            Urna vitae erat et lacus, consectetur ac nulla vestibulum lobortis.
+            Nulla dapibus urna volutpat venenatis, risus faucibus.
+          </p>
         </details>
       </section>
     </main>
 
     <!-- Footer -->
     <footer>
-      <section class="call-action">
-        <h2>JOIN OUR COMMUNITY</h2>
+      <section class="call-action container">
+        <h2 class="secondary-heading">JOIN OUR COMMUNITY</h2>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry.
         </p>
 
-        <a href="#">
-          <img src="./img/socialntw-icons/discord-btn.png" alt="" />
-          DISCORD
-        </a>
+        <div class="footer-btn-box">
+          <a href="#" class="btn-link btn-footer">
+            <img src="./img/socialntw-icons/discord-btn.png" alt="" />
+            DISCORD
+          </a>
+          <button class="btn-bgcolor">WHITELIST NOW</button>
+        </div>
 
-        <button>WHITELIST NOW</button>
-      </section>
-
-      <div class="social-networks">
+        <!-- Social List -->
         <ul class="social-networks-items">
           <!-- Twitter add icon -->
           <li class="network-item">
             <a href="#">
-              <!-- twitter -->
               <img
-                src="./img/socialntw-icons/img-footer/footer-twitter.png"
+                src="./img/socialntw-icons/img-footer/tw-footer.png"
                 alt="Twitter page"
               />
             </a>
@@ -805,7 +839,6 @@
           <!-- Facebook add icon -->
           <li class="network-item">
             <a href="#">
-              <!-- facebook -->
               <img
                 src="./img/socialntw-icons/img-footer/footer-facebook.png"
                 alt="Facebook page"
@@ -853,26 +886,33 @@
             </a>
           </li>
         </ul>
-      </div>
+      </section>
 
-      <nav class="footer-nav">
-        <a href="./index.html" class="logo">
-          <img src="./img/img-logo/logo.svg" alt="Binabox logo" />
-          BINABOX
-        </a>
-        <p>BINABOX 2022 - ALL rights reserved</p>
-      </nav>
-      <nav class="nav-pages">
-        <ul class="nav-pages-items">
-          <li class="nav-pages-item"><a href="index.html">Home</a></li>
-          <li class="nav-pages-item"><a href="./about.html">About</a></li>
-          <li class="nav-pages-item"><a href="#roadmap-block">Roadmap</a></li>
-          <li class="nav-pages-item">
-            <a href="./about.html#team-block">Our Team</a>
-          </li>
-          <li class="nav-pages-item"><a href="./faqs.html">FAQS</a></li>
-        </ul>
-      </nav>
+      <section class="footer-border">
+        <nav class="footer-nav container">
+          <div class="footer-logo-box">
+            <a href="./index.html" class="footer-logo">
+              <img src="./img/img-logo/logo.svg" alt="Binabox logo" />
+              BINABOX
+            </a>
+            <p>BINABOX 2022 - ALL rights reserved</p>
+          </div>
+          <nav class="nav-pages">
+            <ul class="nav-pages-items">
+              <li class="nav-pages-item"><a href="index.html">Home</a></li>
+              <li class="nav-pages-item"><a href="./about.html">About</a></li>
+              <li class="nav-pages-item">
+                <a href="#roadmap-block">Roadmap</a>
+              </li>
+
+              <li class="nav-pages-item">
+                <a href="./about.html#team-block">Our Team</a>
+              </li>
+              <li class="nav-pages-item"><a href="./faqs.html">FAQS</a></li>
+            </ul>
+          </nav>
+        </nav>
+      </section>
     </footer>
   </body>
 </html>
