@@ -2,7 +2,9 @@
   --btn-primary-color: rgba(33, 231, 134, 1);
   --secondary-color: rgba(20, 27, 34, 1);
   --article-bg-color: rgba(255, 255, 255, 0.05);
+  --main-background-color: rgb(13, 13, 17);
   --text-color: rgba(194, 195, 197, 1);
+  --inactive-color: rgba(136, 139, 142, 1);
   --text-font: "Poppins", sans-serif;
 }
 
@@ -197,7 +199,7 @@ header {
 .nft-cards {
   padding-top: 60px;
   padding-bottom: 50px;
-  background-color: rgb(13, 13, 17);
+  background-color: var(--main-background-color);
   text-align: center;
 }
 
@@ -220,7 +222,7 @@ header {
   margin: 0 auto;
 }
 
-.nft-card h2 {
+.nft-card-title {
   padding-top: 10px;
   font-size: 20px;
   line-height: 28px;
@@ -233,7 +235,7 @@ header {
   padding-top: 50px;
   padding-bottom: 50px;
   text-align: center;
-  background-color: rgb(13, 13, 17);
+  background-color: var(--main-background-color);
 }
 
 .about * {
@@ -305,7 +307,7 @@ header {
 .workflow {
   padding-top: 50px;
   padding-bottom: 50px;
-  background-color: rgb(13, 13, 17);
+  background-color: var(--main-background-color);
 }
 
 .workflow * {
@@ -368,7 +370,7 @@ header {
 .roadmap {
   padding-top: 50px;
   padding-bottom: 50px;
-  background-color: rgb(13, 13, 17);
+  background-color: var(--main-background-color);
 }
 
 .roadmap * {
@@ -430,7 +432,7 @@ header {
 
 .roadmap-nav-item::marker {
   content: "PHASE " counter(list-item);
-  color: rgba(136, 139, 142, 1);
+  color: var(--inactive-color);
 }
 
 .roadmap-nav-item.active::marker {
@@ -442,7 +444,7 @@ header {
 .team {
   padding-top: 50px;
   padding-bottom: 50px;
-  background-color: rgb(13, 13, 17);
+  background-color: var(--main-background-color);
 }
 
 .team * {
@@ -498,7 +500,7 @@ header {
 .partners {
   padding-top: 50px;
   padding-bottom: 50px;
-  background-color: rgb(13, 13, 17);
+  background-color: var(--main-background-color);
 }
 
 .partners * {
@@ -518,7 +520,7 @@ header {
 .faq-box {
   padding-top: 50px;
   padding-bottom: 50px;
-  background-color: rgb(13, 13, 17);
+  background-color: var(--main-background-color);
 }
 
 .faq-box * {
@@ -649,4 +651,178 @@ footer * {
   font-size: 14px;
   line-height: 22px;
   text-align: right;
+}
+
+/************************* Catalog Page **************************/
+
+/* Breadcrumbs */
+
+.breadcrumbs {
+  background-color: var(--secondary-color);
+  padding-top: 77px;
+  padding-bottom: 77px;
+  text-align: center;
+}
+
+.breadcrumbs * {
+  background-color: transparent;
+}
+
+.breadcrumbs ul {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.breadcrumbs a {
+  padding: 0 8px;
+}
+
+.breadcrumbs a,
+.breadcrumbs span {
+  font-size: 14px;
+  line-height: 20px;
+  justify-content: center;
+}
+
+.inactive-link a {
+  color: var(--inactive-color);
+  border-right: 2px solid var(--inactive-color);
+}
+
+/* NFT Collection */
+
+.nft-collection {
+  background-color: var(--main-background-color);
+  padding-top: 100px;
+  padding-bottom: 200px;
+}
+
+.nft-collection h2 {
+  text-align: left;
+  margin-bottom: 40px;
+  background-color: transparent;
+}
+
+/* Call Action section - coloful */
+
+.CTA-section {
+  background-color: var(--secondary-color);
+}
+
+.call-action-catalog {
+  background-color: var(--secondary-color);
+  position: relative;
+  top: -100px;
+  margin: 0 255px;
+  padding: 40px 0 48px;
+  border-radius: 8px;
+  background: linear-gradient(
+    to left,
+    rgba(35, 51, 222, 1),
+    rgba(10, 190, 102, 1)
+  );
+}
+
+.catalog-cta-title {
+  background-color: transparent;
+}
+
+.catalog-cta-text {
+  margin-top: 4px;
+  margin-bottom: 22px;
+  text-align: center;
+  font-family: var(--text-font);
+  color: rgba(247, 247, 249, 1);
+  background-color: transparent;
+}
+
+.cta-catbtn-box {
+  text-align: center;
+  background-color: transparent;
+}
+
+.cta-btn-link {
+  padding: 12px 24px;
+  background-color: rgba(88, 101, 242, 1);
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.cta-btn-link img {
+  background-color: transparent;
+  width: 24px;
+}
+
+/* Footer */
+
+.catalog-footer {
+  background-color: var(--secondary-color);
+  padding-top: -40px;
+}
+
+.catalog-footer-logobox {
+  width: 324px;
+  margin-bottom: 156px;
+}
+
+.footer-cat-logo {
+  font-size: 30px;
+  line-height: 42px;
+  margin-bottom: 12px;
+}
+
+.footer-cat-logo img {
+  width: 32px;
+  height: 36px;
+}
+
+.catalog-footer-logobox p {
+  font-size: 16px;
+  line-height: 26px;
+  font-family: var(--text-font);
+}
+
+/* Sitemap section */
+
+.sitemap-title {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+.sitemap-list li {
+  margin-bottom: 16px;
+}
+
+.sitemap-list a {
+  font-family: var(--text-font);
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--text-color);
+}
+
+/* Footer Copyright section in catalog   */
+
+.footer-copyright {
+  border-top: 1px solid rgba(67, 67, 67, 1);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.footer-copyright h2 {
+  font-family: var(--text-font);
+  color: var(--text-color);
+  font-size: 14px;
+  line-height: 22px;
+  text-align: left;
+}
+
+.network-item-cat {
+  background-color: transparent;
+}
+
+.network-item-cat img {
+  width: 20px;
 }
