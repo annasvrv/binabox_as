@@ -7,11 +7,23 @@
       name="description"
       content="SKISIRS - the first hero of the Neoh Universe, collection has over 9,999 unique skins drawn from the different missions and challenges he faced throughout his life."
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="http://necolas.github.io/normalize.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>NFT Card</title>
   </head>
   <body>
     <!-- Header -->
-    <header>
+    <header class="container">
       <a href="./index.html" class="logo-block">
         <img src="./img/img-logo/logo.svg" alt="Binabox logo" />
         BINABOX
@@ -22,25 +34,21 @@
           <li class="nav-menu-item">
             <a href="index.html">HOME</a>
           </li>
-
           <li class="nav-menu-item">
             <a href="./about.html">ABOUT</a>
           </li>
-
-          <li class="nav-menu-item">
-            <a href="./index.html#roadmap-block">ROADMAP</a>
-          </li>
-
+          <li class="nav-menu-item"><a href="#roadmap-block">ROADMAP</a></li>
           <li class="nav-menu-item">
             <a href="./catalog.html">COLLECTION</a>
           </li>
-
           <li class="nav-menu-item">
             <a href="./faqs.html">FAQS</a>
           </li>
-
           <li class="nav-menu-item">
-            <a href="#" class="dropdown">PAGES</a>
+            <a href="#" class="dropdown">
+              PAGES
+              <img src="./img/btn-icons/arrow-down.png" alt="" />
+            </a>
             <ul class="dropdown-content">
               <li>
                 <a href="./catalog.html">NFT Catalog</a>
@@ -58,16 +66,20 @@
 
       <div class="btn-box">
         <button class="switch-mode">
-          <img src="./img/btn-icons/switch.png" alt="" />
+          <img src="./img/btn-icons/switch.svg" alt="" />
         </button>
 
-        <a href="https://discord.com/" class="header-link" target="_blank">
+        <a
+          href="https://discord.com/"
+          class="header-link btn-link"
+          target="_blank"
+        >
           <img src="./img/socialntw-icons/discord-btn.png" alt="" />
           DISCORD
         </a>
 
-        <button class="header-btn">
-          <img src="./img/btn-icons/wallet.png" alt="" />
+        <button class="header-btn btn-bgcolor">
+          <img src="./img/btn-icons/wallet.svg" alt="" />
           CONNECT
         </button>
       </div>
@@ -75,40 +87,49 @@
 
     <main>
       <!-- Breadcrumbs -->
-      <section class="breadcrumbs">
-        <h1>ITEM DETAIL</h1>
+      <section class="breadcrumbs container">
+        <h1 class="secondary-heading">ITEM DETAIL</h1>
         <ul>
-          <li>
+          <li class="inactive-link">
             <a href="./index.html">HOME</a>
           </li>
-          <li><a href="#nftcard-details">ITEM DETAIL</a></li>
+          <li>
+            <a href="#nftcard-details"><span>ITEM DETAIL</span></a>
+          </li>
         </ul>
       </section>
 
       <!-- NFT Card -->
-      <section class="nftcard-box">
+      <section class="nftcard-box container">
         <figure class="nftcard-img">
           <img src="./img/img-nftcatalog/nft-picture2.png" alt="NFT Card" />
           <figcaption style="display: none">SKISIRS#4587</figcaption>
         </figure>
         <div class="time-counter">
-          <h2>PUPLIC END IN</h2>
+          <h2 class="time-counter-title">PUPLIC END IN</h2>
           <dl class="nftcard-box-timer">
-            <dt>16 :</dt>
+            <dt class="secondary-heading">
+              16 <span class="time-counter-span secondary-heading">:</span>
+            </dt>
             <dd>DAYS</dd>
 
-            <dt>20 :</dt>
+            <dt class="secondary-heading">
+              20 <span class="time-counter-span secondary-heading">:</span>
+            </dt>
             <dd>HOURS</dd>
 
-            <dt>11 :</dt>
+            <dt class="secondary-heading">
+              11 <span class="time-counter-span secondary-heading">:</span>
+            </dt>
             <dd>MINUTES</dd>
 
-            <dt>08</dt>
+            <dt class="secondary-heading">08</dt>
             <dd>SECONDS</dd>
           </dl>
         </div>
+
         <div class="nftcard-details" id="nftcard-details">
-          <h2>SKISIRS#4587</h2>
+          <h2 class="secondary-heading nftcard-details-title">SKISIRS#4587</h2>
 
           <p>
             As the first hero of the Neoh Universe, collection has over 9,999
@@ -138,30 +159,40 @@
 
           <dl class="nft-price">
             <dt>PRICE:</dt>
-            <dd>0.15 ETH</dd>
+            <dd><span>0.15 ETH</span></dd>
           </dl>
 
-          <a href="#">
+          <a href="#" class="btn-nftcard-buy">
             <img src="./img/btn-icons/buy-icon.png" alt="shopping bag" />
             BUY ON OPENSEA
           </a>
 
           <div class="nftcard-box-btns">
-            <a href="#">JOIN DISCORD</a>
-            <a href="#">JOIN TWITTER</a>
+            <a href="#">
+              <img src="./img/socialntw-icons/discord-btn.png" alt="" />
+              JOIN DISCORD</a
+            >
+            <a href="#">
+              <img
+                src="./img/socialntw-icons/img-footer/tw-footer.png"
+                alt=""
+              />
+              JOIN TWITTER</a
+            >
           </div>
         </div>
       </section>
 
-      <section class="nft-cards">
-        <h2 style="display: none">EXPLORE COLECTIONS</h2>
+      <section class="nft-cards nft-cards-section">
+        <h2 class="secondary-heading nft-cards-title">EXPLORE COLECTIONS</h2>
+
         <article class="nft-card">
           <a href="./catalog-item.html">
             <img
               src="./img/img-nftcatalog/nft-picture1.png"
               alt="NFT picture"
             />
-            <h3>SKISIRS#2</h3>
+            <h2 class="nft-card-title">SKISIRS#2</h2>
           </a>
         </article>
 
@@ -171,7 +202,7 @@
               src="./img/img-nftcatalog/nft-picture2.png"
               alt="NFT picture"
             />
-            <h3>SKISIRS#2</h3>
+            <h2 class="nft-card-title">SKISIRS#2</h2>
           </a>
         </article>
 
@@ -181,7 +212,7 @@
               src="./img/img-nftcatalog/nft-picture3.png"
               alt="NFT picture"
             />
-            <h3>SKISIRS#2</h3>
+            <h2 class="nft-card-title">SKISIRS#2</h2>
           </a>
         </article>
 
@@ -191,7 +222,7 @@
               src="./img/img-nftcatalog/nft-picture4.png"
               alt="NFT picture"
             />
-            <h3>SKISIRS#2</h3>
+            <h2 class="nft-card-title">SKISIRS#2</h2>
           </a>
         </article>
 
@@ -201,7 +232,7 @@
               src="./img/img-nftcatalog/nft-picture5.png"
               alt="NFT picture"
             />
-            <h3>SKISIRS#2</h3>
+            <h2 class="nft-card-title">SKISIRS#2</h2>
           </a>
         </article>
 
@@ -211,37 +242,49 @@
               src="./img/img-nftcatalog/nft-picture6.png"
               alt="NFT picture"
             />
-            <h3>SKISIRS#2</h3>
+            <h2 class="nft-card-title">SKISIRS#2</h2>
           </a>
         </article>
 
         <!-- add icons for arrow btns < > -->
-        <button>&lt;</button>
-        <button>&gt;</button>
+
+        <button class="nft-cat-btn nft-cat-ltbtn">&lt;</button>
+        <button class="nft-cat-gtbtn nft-cat-btn">&gt;</button>
+        <!-- <button class="nft-cat-ltbtn nft-cat-btn">
+          <img src="./img/btn-icons/arrow-less.svg" alt="" />
+        </button>
+        <button class="nft-cat-gtbtn nft-cat-btn">
+          <img src="./img/btn-icons/arrow-greater.svg" alt="" />
+        </button> -->
       </section>
 
       <!-- Call Action section -->
-      <section class="call-action">
-        <h2>JOIN OUR COMMUNITY</h2>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.
-        </p>
+      <section class="CTA-section">
+        <article class="call-action-catalog">
+          <h2 class="secondary-heading catalog-cta-title">
+            JOIN OUR COMMUNITY
+          </h2>
+          <p class="catalog-cta-text">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
 
-        <a href="#">
-          <img src="./img/socialntw-icons/discord-btn.png" alt="" />
-          DISCORD
-        </a>
-
-        <button>WHITELIST NOW</button>
+          <div class="cta-catbtn-box">
+            <a href="#" class="cta-btn-link">
+              <img src="./img/socialntw-icons/discord-btn.png" alt="" />
+              DISCORD
+            </a>
+            <button class="btn-bgcolor">WHITELIST NOW</button>
+          </div>
+        </article>
       </section>
     </main>
 
     <!-- Footer -->
-    <footer>
+    <footer class="container catalog-footer">
       <section class="footer-nftcatalog">
-        <div class="footer-logobox">
-          <a href="./index.html" class="logo">
+        <div class="catalog-footer-logobox">
+          <a href="./index.html" class="footer-cat-logo">
             <img src="./img/img-logo/logo.svg" alt="Binabox logo" />
             BINABOX
           </a>
@@ -250,8 +293,7 @@
         </div>
 
         <div class="sitemap">
-          <h2 style="display: none">JOIN OUR COMMUNITY</h2>
-          <h3 class="sitemap-title">SUBSCRIBE</h3>
+          <h2 class="sitemap-title">SUBSCRIBE</h2>
           <ul class="sitemap-list">
             <li>
               <a href="./index.html">Home</a>
@@ -272,7 +314,7 @@
         </div>
 
         <div class="sitemap">
-          <h3 class="sitemap-title">COMPANY</h3>
+          <h2 class="sitemap-title">COMPANY</h2>
           <ul class="sitemap-list">
             <li><a href="#">Terms Canditions</a></li>
             <li><a href="#">Privacy Policy</a></li>
@@ -283,22 +325,21 @@
       </section>
 
       <section class="footer-copyright">
-        <h2 style="display: none">copyright</h2>
-        <p>BINABOX 2022 - ALL rights reserved</p>
+        <h2>BINABOX 2022 - ALL rights reserved</h2>
         <div class="social-networks">
           <ul class="social-networks-items">
             <!-- Twitter add icon -->
-            <li class="network-item">
+            <li class="network-item network-item-cat">
               <a href="#">
                 <!-- Twitter -->
                 <img
-                  src="./img/socialntw-icons/img-footer/footer-twitter.png"
+                  src="./img/socialntw-icons/img-footer/tw-footer.png"
                   alt="Twitter page"
                 />
               </a>
             </li>
             <!-- Facebook add icon -->
-            <li class="network-item">
+            <li class="network-item network-item-cat">
               <a href="#">
                 <!-- Facebook -->
                 <img
@@ -308,7 +349,7 @@
               </a>
             </li>
             <!-- Telegram add icon -->
-            <li class="network-item">
+            <li class="network-item network-item-cat">
               <a href="#">
                 <!-- Telegram -->
                 <img
@@ -318,7 +359,7 @@
               </a>
             </li>
             <!-- YouTube add icon -->
-            <li class="network-item">
+            <li class="network-item network-item-cat">
               <a href="#">
                 <!-- YouTube -->
                 <img
@@ -328,7 +369,7 @@
               </a>
             </li>
             <!-- Tiktok add icon -->
-            <li class="network-item">
+            <li class="network-item network-item-cat">
               <a href="#">
                 <!-- Tiktok -->
                 <img
@@ -338,7 +379,7 @@
               </a>
             </li>
             <!-- Discord add icon -->
-            <li class="network-item">
+            <li class="network-item network-item-cat">
               <a href="#">
                 <!-- Discord -->
                 <img
