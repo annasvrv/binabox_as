@@ -826,3 +826,177 @@ footer * {
 .network-item-cat img {
   width: 20px;
 }
+
+/***************** Catalog Item page *****************************/
+
+.nft-cards-title {
+  background-color: transparent;
+  margin-bottom: 40px;
+}
+
+/* NFT card item */
+
+.nftcard-box {
+  padding-top: 100px;
+  background-color: var(--main-background-color);
+}
+
+.nftcard-box * {
+  background-color: transparent;
+}
+
+/* Image block */
+
+.nftcard-img img {
+  width: 690px;
+  height: 690px;
+}
+
+.time-counter {
+  width: 608px;
+  background-color: rgba(255, 255, 255, 0.3);
+  text-align: center;
+  padding: 20px;
+}
+
+.time-counter-title {
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 12px;
+}
+
+.nftcard-box-timer dt {
+  text-align: left;
+}
+
+.time-counter-span {
+  text-align: right;
+  color: var(--text-color);
+  margin-left: 20px;
+}
+
+.nftcard-box-timer dd {
+  font-size: 20px;
+  line-height: 28px;
+  color: rgba(246, 246, 246, 1);
+  text-align: left;
+}
+
+/* NFT Details section */
+
+.nftcard-details {
+  width: 620px;
+}
+
+.nftcard-details-title {
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.nftcard-details p {
+  font-size: 20px;
+  line-height: 30px;
+  font-family: var(--text-font);
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.nft-features {
+  margin-bottom: 30px;
+}
+
+.nft-features dt {
+  font-size: 16px;
+  line-height: 26px;
+  font-family: var(--text-font);
+  color: var(--text-color);
+  width: 196px;
+  padding: 20px 20px 4px 20px;
+  background-color: var(--secondary-color);
+}
+
+.nft-features dd {
+  font-size: 24px;
+  line-height: 30px;
+  padding: 0 20px 20px 20px;
+  background-color: var(--secondary-color);
+  width: 196px;
+  margin-bottom: 20px;
+}
+
+/* NFT price block */
+
+.nft-price dt,
+.nft-price span {
+  font-size: 36px;
+}
+
+.nft-price {
+  margin-bottom: 40px;
+}
+
+.btn-nftcard-buy {
+  display: block;
+  padding: 16px 24px;
+  color: var(--secondary-color);
+  font-size: 16px;
+  line-height: 24px;
+  background-color: var(--btn-primary-color);
+  text-align: center;
+}
+
+.btn-nftcard-buy img {
+  width: 20px;
+  height: 20px;
+}
+
+.nftcard-box-btns {
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 13px;
+  width: 100%;
+}
+
+.nftcard-box-btns a {
+  display: inline-block;
+  border: 2px solid rgba(136, 139, 142, 1);
+  padding: 16px 24px;
+  font-size: 16px;
+  line-height: 24px;
+  width: 40%;
+}
+
+.nftcard-box-btns img {
+  width: 24px;
+}
+
+/* NFT cards collection section */
+
+.nft-cat-btn {
+  width: 48px;
+  height: 48px;
+  padding: 5px;
+  text-align: center;
+  font-size: 40px;
+  font-family: var(--text-font);
+}
+
+.nft-cat-ltbtn {
+  border: 1px solid var(--btn-primary-color);
+}
+
+.nft-cat-gtbtn {
+  background-color: var(--btn-primary-color);
+  color: var(--secondary-color);
+}
+
+.nft-cards-section {
+  padding-bottom: 200px;
+}
+
+/************************* FAQ Page ******************************/
+
+.faq-page {
+  padding-top: 100px;
+  padding-bottom: 180px;
+}
