@@ -988,6 +988,7 @@ footer * {
 .nft-cat-gtbtn {
   background-color: var(--btn-primary-color);
   color: var(--secondary-color);
+  border: none;
 }
 
 .nft-cards-section {
