@@ -953,7 +953,7 @@ footer * {
 .nftcard-box-btns {
   text-align: center;
   margin-top: 24px;
-  margin-bottom: 13px;
+  /* margin-bottom: 13px; */
   width: 100%;
 }
 
