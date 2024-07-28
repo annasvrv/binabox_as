@@ -1001,3 +1001,91 @@ footer * {
   padding-top: 100px;
   padding-bottom: 180px;
 }
+
+/********************** Contact Us Page ****************************/
+
+.contact-info {
+  padding-top: 100px;
+  padding-bottom: 40px;
+  background-color: var(--main-background-color);
+}
+
+.contact-info * {
+  background-color: transparent;
+}
+
+.contact-info li {
+  border: 1px solid rgba(67, 67, 67, 1);
+  margin-bottom: 30px;
+  padding: 40px 30px;
+  width: 33%;
+  text-align: center;
+}
+
+.contact-info img {
+  width: 56px;
+  height: 56px;
+}
+.contact-info h2 {
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-size: 36px;
+  line-height: 44px;
+}
+.contact-info a {
+  font-family: var(--text-font);
+  color: var(--text-color);
+}
+
+/*  Get in touch form section */
+
+.get-intouch-block {
+  padding-bottom: 200px;
+  text-align: center;
+  background-color: var(--main-background-color);
+}
+
+.get-intouch-block * {
+  background-color: transparent;
+}
+
+.get-intouch-block h2 {
+  margin-bottom: 4px;
+}
+
+.get-intouch-block p {
+  margin-bottom: 60px;
+  font-size: 20px;
+  line-height: 30px;
+  font-family: var(--text-font);
+}
+
+.get-intouch-block form {
+  width: 690px;
+  margin: 0 auto;
+}
+
+.get-intouch-block input,
+.get-intouch-block textarea {
+  background-color: rgba(194, 195, 197, 0.15);
+  padding: 14px 24px;
+  font-family: var(--text-font);
+  font-size: 16px;
+  line-height: 26px;
+  border: none;
+  margin-bottom: 20px;
+  /* temporary display and width for better viewing */
+  display: block;
+  width: 100%;
+}
+
+input[type="text"] {
+  background-color: rgba(194, 195, 197, 0.15);
+}
+
+.get-intouch-block button {
+  margin-top: 40px;
+  padding: 12px 36px;
+}
+
+/********************** About Us Page ****************************/
