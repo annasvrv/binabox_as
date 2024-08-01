@@ -2,19 +2,23 @@
   --btn-primary-color: rgba(33, 231, 134, 1);
   --secondary-color: rgba(20, 27, 34, 1);
   --article-bg-color: rgba(255, 255, 255, 0.05);
-  --main-background-color: rgb(13, 13, 17);
+  --main-background-color: rgba(13, 13, 17, 1);
   --text-color: rgba(194, 195, 197, 1);
   --inactive-color: rgba(136, 139, 142, 1);
   --text-font: "Poppins", sans-serif;
+  --btn-header-font: "Bakbak One", sans-serif;
 }
 
-/* Uneversal css */
+/********************** General css **********************************/
 
 * {
   padding: 0;
   margin: 0;
+}
+
+body {
   background-color: rgba(4, 11, 17, 1);
-  font-family: "Bakbak One", sans-serif;
+  font-family: "Bakbak One", sans-serif, "Roboto", Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 18px;
@@ -37,9 +41,9 @@ ul {
   padding: 0 255px;
 }
 
-button,
-.btn-link,
-.btn-border {
+/**************** Buttons styles ****************/
+
+.basic-btn {
   padding: 12px 24px;
   font-size: 16px;
   line-height: 24px;
@@ -47,7 +51,33 @@ button,
   cursor: pointer;
 }
 
-span {
+.media-btn img {
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+}
+
+.btn-light {
+  border: none;
+  background-color: var(--btn-primary-color);
+  color: var(--secondary-color);
+  font-family: var(--btn-header-font);
+}
+
+.btn-border {
+  border: 2px solid var(--btn-primary-color);
+  background-color: inherit;
+  color: rgba(255, 255, 255, 1);
+  font-family: var(--btn-header-font);
+}
+
+.btn-border:active {
+  background-color: rgba(33, 231, 134, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Text styles */
+.highlighted-text {
   color: var(--btn-primary-color);
 }
 
@@ -57,7 +87,7 @@ span {
   text-align: center;
 }
 
-/* Header styles */
+/********************* Header styles *****************************/
 
 header {
   margin: 30px 0;
@@ -74,7 +104,7 @@ header {
   height: 40px;
 }
 
-/* Header navigation styles */
+/************* Header navigation styles *******************/
 
 .nav-menu-items {
   gap: 32px;
@@ -87,8 +117,8 @@ header {
 }
 
 .dropdown img {
-  width: 24px;
-  height: 24px;
+  width: 15px;
+  height: 15px;
 }
 
 .dropdown-content a {
@@ -109,58 +139,60 @@ header {
   border-radius: 41px;
   background-color: var(--secondary-color);
   border: none;
+  transition: all 0.3s ease-in-out;
 }
 
-.switch-mode img {
-  width: 24px;
-  height: 24px;
-  background-color: transparent;
-}
-
-.header-link {
-  background-color: var(--secondary-color);
-}
-
-.header-link img {
-  width: 24px;
-  height: 24px;
-  background-color: transparent;
-}
-
-.btn-bgcolor {
-  border: none;
+.switch-mode:active {
   background-color: var(--btn-primary-color);
-  color: var(--secondary-color);
 }
 
-.header-btn img {
+/* .switch-mode img {
+  width: 24px;
+  height: 24px;
   background-color: transparent;
+} */
+
+.switch-mode svg {
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  fill: var(--btn-primary-color);
 }
 
-/* Hero section */
+.switch-mode svg:active {
+  fill: var(--secondary-color);
+}
+
+header .media-btn {
+  background-color: var(--secondary-color);
+  transition: color 0.3s ease-in-out;
+}
+
+header .media-btn:active {
+  background-color: rgb(35, 46, 57);
+  border: 2px solid var(--secondary-color);
+}
+
+/**************** Hero section **************************/
 
 .hero-box {
   padding-top: 141px;
   /* add img bg  */
+  /* to be done later after css+ lesson */
+  background: url(../img/bg-s/star-big.svg) bottom -50px right -170px/ 496.05px 496.05px
+      no-repeat,
+    linear-gradient(to top, rgba(4, 11, 17, 1), rgba(4, 11, 17, 0)) bottom left
+      no-repeat,
+    /* add radial gradiant */ url(../img/bg-s/hero-green-shade.svg) top right/
+      100% no-repeat;
   background-color: var(--secondary-color);
-}
-
-.hero-box * {
-  background-color: transparent;
-}
-
-.btn-bgcolor-hero {
-  border: none;
-  background-color: var(--btn-primary-color);
-  color: var(--secondary-color);
 }
 
 .hero-content {
   width: 750px;
 }
 
-.hero-title,
-.hero-title span {
+.hero-title {
   font-size: 72px;
   line-height: 80px;
 }
@@ -190,17 +222,17 @@ header {
   gap: 24px;
 }
 
-.btn-border {
-  border: 2px solid var(--btn-primary-color);
-}
-
-/*  nft-cards section */
+/**********************  nft-cards section **************************/
 
 .nft-cards {
   padding-top: 60px;
   padding-bottom: 50px;
   background-color: var(--main-background-color);
   text-align: center;
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
 .nft-card {
@@ -209,11 +241,6 @@ header {
   height: 378px;
   padding: 20px;
   background-color: var(--article-bg-color);
-  margin-bottom: 30px;
-}
-
-.nft-card * {
-  background-color: transparent;
 }
 
 .nft-card img {
@@ -229,7 +256,7 @@ header {
   text-align: left;
 }
 
-/* About section */
+/***************************** About section *******************************/
 
 .about {
   padding-top: 50px;
@@ -238,15 +265,11 @@ header {
   background-color: var(--main-background-color);
 }
 
-.about * {
-  background-color: transparent;
-}
-
 .about h2 {
   margin-bottom: 16px;
 }
 
-.about p {
+.about-description {
   margin: 0 auto;
   font-family: var(--text-font);
   color: var(--text-color);
@@ -256,13 +279,17 @@ header {
 .about-list {
   margin-top: 60px;
   list-style-position: inside;
+  text-align: left;
 }
 
 .about-list li {
   margin: 0 auto;
+  padding: 30px;
   background-color: var(--secondary-color);
   margin-bottom: 30px;
   width: 570px;
+  height: 224px;
+  box-sizing: border-box;
   border-color: transparent;
   transition: all 0.3s ease-in-out;
 }
@@ -285,11 +312,17 @@ header {
       rgba(33, 231, 134, 0) 20%
     )
     1;
+  /* border-image: linear-gradient(
+      to top left,
+      rgba(33, 231, 134, 1) 0%,
+      rgba(33, 231, 134, 0) 20%
+    )
+    1; */
 }
 
 .about-list article {
-  padding: 82px 30px 30px;
-  text-align: start;
+  position: relative;
+  bottom: 48px;
 }
 
 .about-list h3 {
@@ -298,11 +331,13 @@ header {
   margin-bottom: 26px;
 }
 
-.about-list p {
+.about-list-description {
+  font-family: var(--text-font);
+  color: var(--text-color);
   width: 510px;
 }
 
-/* Workflow section */
+/*********************** Workflow section ***************************/
 
 .workflow {
   padding-top: 50px;
@@ -310,12 +345,7 @@ header {
   background-color: var(--main-background-color);
 }
 
-.workflow * {
-  background-color: transparent;
-}
-
-.workflow h2,
-.workflow span {
+.workflow h2 {
   margin-bottom: 40px;
 }
 
@@ -329,7 +359,7 @@ header {
   margin: 0 auto;
   background-color: var(--secondary-color);
   margin-bottom: 30px;
-  padding: 30px;
+  padding: 30px 30px 26px;
   width: 330px;
 }
 
@@ -351,7 +381,6 @@ header {
 .workflow-card p {
   font-size: 24px;
   line-height: 32px;
-  text-wrap: nowrap;
 }
 
 .workflow-card:hover {
@@ -365,16 +394,12 @@ header {
     1;
 }
 
-/* Road Map section */
+/************************ Road Map section **********************************/
 
 .roadmap {
   padding-top: 50px;
   padding-bottom: 50px;
   background-color: var(--main-background-color);
-}
-
-.roadmap * {
-  background-color: transparent;
 }
 
 .roadmap h2 {
@@ -408,16 +433,22 @@ header {
   color: var(--text-color);
 }
 
-.arrow-greater-btn {
-  float: inline-end;
+.roadmap-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
 }
 
 .roadmap-nav-item-list {
   margin: 0 auto;
   border-top: 2px solid rgba(67, 67, 67, 1);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 90%;
+  padding-top: 20px;
+  position: relative;
+  top: 10px;
+  list-style-position: inside;
 }
 
 .roadmap-nav-item {
@@ -428,6 +459,8 @@ header {
 .roadmap-nav-item img {
   margin: 0 auto;
   display: block;
+  position: relative;
+  top: -65px;
 }
 
 .roadmap-nav-item::marker {
@@ -439,16 +472,12 @@ header {
   color: rgba(255, 255, 255, 1);
 }
 
-/* Team section */
+/****************************** Team section **********************************/
 
 .team {
   padding-top: 50px;
   padding-bottom: 50px;
   background-color: var(--main-background-color);
-}
-
-.team * {
-  background-color: transparent;
 }
 
 .team h2 {
@@ -496,15 +525,11 @@ header {
   gap: 16px;
 }
 
-/* Partners section */
+/**************************** Partners section *****************************/
 .partners {
   padding-top: 50px;
   padding-bottom: 50px;
   background-color: var(--main-background-color);
-}
-
-.partners * {
-  background-color: transparent;
 }
 
 .partners h2 {
@@ -515,16 +540,21 @@ header {
   text-align: center;
 }
 
-/* FAQs section */
+.partner-banner {
+  padding: 20px 24px;
+  margin-bottom: 30px;
+}
+
+.banner-bg {
+  background-color: var(--secondary-color);
+}
+
+/************************** FAQs section *********************************/
 
 .faq-box {
   padding-top: 50px;
   padding-bottom: 50px;
   background-color: var(--main-background-color);
-}
-
-.faq-box * {
-  background-color: transparent;
 }
 
 .faq-box h2 {
@@ -567,17 +597,13 @@ header {
   padding-top: 16px;
 }
 
-/* Footer */
+/*********************** Homepage Footer ***********************/
 
 footer {
   padding-top: 50px;
 }
 
-footer * {
-  background-color: transparent;
-}
-
-/*  call-action section */
+/********************** Homepage call-action section ******************/
 
 .call-action {
   margin: 0 auto;
@@ -596,11 +622,11 @@ footer * {
   margin-bottom: 40px;
 }
 
-.btn-footer {
+footer .media-btn {
   background-color: rgba(88, 101, 242, 1);
 }
 
-/* social-networks Footer */
+/****************** social-networks Footer *****************************/
 
 .network-item {
   margin: 0 auto;
@@ -617,7 +643,7 @@ footer * {
   width: 26px;
 }
 
-/* footer-nav section */
+/******************** footer-nav section *******************************/
 
 .footer-border {
   border-top: 1px solid rgba(67, 67, 67, 1);
@@ -643,7 +669,7 @@ footer * {
   text-align: right;
 }
 
-/* Footer Pages */
+/************************ Homepage Footer Pages *************************/
 
 .nav-pages-item a {
   font-family: var(--text-font);
@@ -655,17 +681,13 @@ footer * {
 
 /************************* Catalog Page **************************/
 
-/* Breadcrumbs */
+/******************* Breadcrumbs ***************************/
 
 .breadcrumbs {
   background-color: var(--secondary-color);
   padding-top: 77px;
   padding-bottom: 77px;
   text-align: center;
-}
-
-.breadcrumbs * {
-  background-color: transparent;
 }
 
 .breadcrumbs ul {
@@ -678,8 +700,7 @@ footer * {
   padding: 0 8px;
 }
 
-.breadcrumbs a,
-.breadcrumbs span {
+.breadcrumbs a {
   font-size: 14px;
   line-height: 20px;
   justify-content: center;
@@ -690,7 +711,7 @@ footer * {
   border-right: 2px solid var(--inactive-color);
 }
 
-/* NFT Collection */
+/********** Catalog NFT Collection ***************************/
 
 .nft-collection {
   background-color: var(--main-background-color);
@@ -704,9 +725,9 @@ footer * {
   background-color: transparent;
 }
 
-/* Call Action section - coloful */
+/******************** Call Action section - Coloful ***********************/
 
-.CTA-section {
+.cta-section {
   background-color: var(--secondary-color);
 }
 
@@ -759,7 +780,6 @@ footer * {
 
 .catalog-footer {
   background-color: var(--secondary-color);
-  padding-top: -40px;
 }
 
 .catalog-footer-logobox {
@@ -829,20 +849,11 @@ footer * {
 
 /***************** Catalog Item page *****************************/
 
-.nft-cards-title {
-  background-color: transparent;
-  margin-bottom: 40px;
-}
-
 /* NFT card item */
 
 .nftcard-box {
   padding-top: 100px;
   background-color: var(--main-background-color);
-}
-
-.nftcard-box * {
-  background-color: transparent;
 }
 
 /* Image block */
@@ -926,8 +937,7 @@ footer * {
 
 /* NFT price block */
 
-.nft-price dt,
-.nft-price span {
+.nft-price dt {
   font-size: 36px;
 }
 
@@ -972,6 +982,28 @@ footer * {
 
 /* NFT cards collection section */
 
+.nft-cards-section {
+  padding-top: 100px;
+  padding-bottom: 200px;
+  background-color: var(--main-background-color);
+}
+
+.nft-cards-title {
+  background-color: transparent;
+}
+
+.nft-cards.cat-item-collection {
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+.nft-cat-btn-block {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  background-color: transparent;
+}
+
 .nft-cat-btn {
   width: 48px;
   height: 48px;
@@ -991,10 +1023,6 @@ footer * {
   border: none;
 }
 
-.nft-cards-section {
-  padding-bottom: 200px;
-}
-
 /************************* FAQ Page ******************************/
 
 .faq-page {
@@ -1008,10 +1036,6 @@ footer * {
   padding-top: 100px;
   padding-bottom: 40px;
   background-color: var(--main-background-color);
-}
-
-.contact-info * {
-  background-color: transparent;
 }
 
 .contact-info li {
@@ -1043,10 +1067,6 @@ footer * {
   padding-bottom: 200px;
   text-align: center;
   background-color: var(--main-background-color);
-}
-
-.get-intouch-block * {
-  background-color: transparent;
 }
 
 .get-intouch-block h2 {
