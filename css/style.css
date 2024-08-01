@@ -43,12 +43,15 @@ ul {
 
 /**************** Buttons styles ****************/
 
+button {
+  cursor: pointer;
+}
+
 .basic-btn {
   padding: 12px 24px;
   font-size: 16px;
   line-height: 24px;
   gap: 8px;
-  cursor: pointer;
 }
 
 .media-btn img {
@@ -679,7 +682,7 @@ footer .media-btn {
   text-align: right;
 }
 
-/************************* Catalog Page **************************/
+/************************* CATALOG Page **************************/
 
 /******************* Breadcrumbs ***************************/
 
@@ -698,12 +701,8 @@ footer .media-btn {
 
 .breadcrumbs a {
   padding: 0 8px;
-}
-
-.breadcrumbs a {
   font-size: 14px;
   line-height: 20px;
-  justify-content: center;
 }
 
 .inactive-link a {
@@ -722,7 +721,6 @@ footer .media-btn {
 .nft-collection h2 {
   text-align: left;
   margin-bottom: 40px;
-  background-color: transparent;
 }
 
 /******************** Call Action section - Coloful ***********************/
@@ -745,35 +743,20 @@ footer .media-btn {
   );
 }
 
-.catalog-cta-title {
-  background-color: transparent;
-}
-
 .catalog-cta-text {
   margin-top: 4px;
   margin-bottom: 22px;
   text-align: center;
   font-family: var(--text-font);
   color: rgba(247, 247, 249, 1);
-  background-color: transparent;
 }
 
 .cta-catbtn-box {
   text-align: center;
-  background-color: transparent;
 }
 
-.cta-btn-link {
-  padding: 12px 24px;
+.cta-section .media-btn {
   background-color: rgba(88, 101, 242, 1);
-  text-align: center;
-  font-size: 16px;
-  line-height: 24px;
-}
-
-.cta-btn-link img {
-  background-color: transparent;
-  width: 24px;
 }
 
 /* Footer */
