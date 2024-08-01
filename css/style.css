@@ -759,7 +759,7 @@ footer .media-btn {
   background-color: rgba(88, 101, 242, 1);
 }
 
-/* Footer */
+/********************** Catalog Footer ******************************/
 
 .catalog-footer {
   background-color: var(--secondary-color);
@@ -787,7 +787,7 @@ footer .media-btn {
   font-family: var(--text-font);
 }
 
-/* Sitemap section */
+/********************** Catalog Sitemap section ***************************/
 
 .sitemap-title {
   font-size: 16px;
@@ -806,7 +806,7 @@ footer .media-btn {
   color: var(--text-color);
 }
 
-/* Footer Copyright section in catalog   */
+/*********************** Footer Copyright section in catalog   ******************/
 
 .footer-copyright {
   border-top: 1px solid rgba(67, 67, 67, 1);
@@ -830,16 +830,16 @@ footer .media-btn {
   width: 20px;
 }
 
-/***************** Catalog Item page *****************************/
+/***************** CATALOG ITEM PAGE *****************************/
 
-/* NFT card item */
+/********************** NFT card item ***********************************/
 
 .nftcard-box {
   padding-top: 100px;
   background-color: var(--main-background-color);
 }
 
-/* Image block */
+/******************************** Image block **********************************/
 
 .nftcard-img img {
   width: 690px;
@@ -876,7 +876,7 @@ footer .media-btn {
   text-align: left;
 }
 
-/* NFT Details section */
+/***************************** NFT Details section ***************************/
 
 .nftcard-details {
   width: 620px;
@@ -918,27 +918,26 @@ footer .media-btn {
   margin-bottom: 20px;
 }
 
-/* NFT price block */
+/******************************* NFT price block ******************************/
 
-.nft-price dt {
+.nft-price dt,
+.nft-price dd {
   font-size: 36px;
+  display: inline;
+  margin-right: 14px;
 }
 
 .nft-price {
   margin-bottom: 40px;
 }
 
-.btn-nftcard-buy {
+.btn-buy {
   display: block;
   padding: 16px 24px;
-  color: var(--secondary-color);
-  font-size: 16px;
-  line-height: 24px;
-  background-color: var(--btn-primary-color);
   text-align: center;
 }
 
-.btn-nftcard-buy img {
+.btn-buy img {
   width: 20px;
   height: 20px;
 }
@@ -946,7 +945,6 @@ footer .media-btn {
 .nftcard-box-btns {
   text-align: center;
   margin-top: 24px;
-  /* margin-bottom: 13px; */
   width: 100%;
 }
 
@@ -961,18 +959,15 @@ footer .media-btn {
 
 .nftcard-box-btns img {
   width: 24px;
+  height: 24px;
 }
 
-/* NFT cards collection section */
+/***************** NFT cards collection section *******************************/
 
 .nft-cards-section {
   padding-top: 100px;
   padding-bottom: 200px;
   background-color: var(--main-background-color);
-}
-
-.nft-cards-title {
-  background-color: transparent;
 }
 
 .nft-cards.cat-item-collection {
@@ -984,26 +979,16 @@ footer .media-btn {
   display: flex;
   justify-content: center;
   gap: 24px;
-  background-color: transparent;
 }
 
+/* Check during image task */
 .nft-cat-btn {
   width: 48px;
   height: 48px;
-  padding: 5px;
   text-align: center;
-  font-size: 40px;
+  font-size: 35px;
   font-family: var(--text-font);
-}
-
-.nft-cat-ltbtn {
-  border: 1px solid var(--btn-primary-color);
-}
-
-.nft-cat-gtbtn {
-  background-color: var(--btn-primary-color);
-  color: var(--secondary-color);
-  border: none;
+  box-sizing: content-box;
 }
 
 /************************* FAQ Page ******************************/
