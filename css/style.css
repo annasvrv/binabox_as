@@ -578,7 +578,7 @@ header .media-btn:active {
 }
 
 .faqs-name::after {
-  content: url(../img/btn-icons/Plus.svg);
+  content: url(../img/btn-icons/plus.svg);
   float: right;
 }
 
@@ -587,7 +587,7 @@ header .media-btn:active {
 }
 
 .faqs-card[open] .faqs-name::after {
-  content: url(../img/btn-icons/Minus.svg);
+  content: url(../img/btn-icons/minus.svg);
 }
 
 .faqs-content {
