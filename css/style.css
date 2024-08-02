@@ -268,12 +268,9 @@ header .media-btn:active {
   background-color: var(--main-background-color);
 }
 
-.about h2 {
-  margin-bottom: 16px;
-}
-
 .about-description {
   margin: 0 auto;
+  margin-top: 16px;
   font-family: var(--text-font);
   color: var(--text-color);
   width: 930px;
@@ -1029,7 +1026,7 @@ footer .media-btn {
   color: var(--text-color);
 }
 
-/*  Get in touch form section */
+/*****************  Get in touch form section ***************/
 
 .get-intouch-block {
   padding-bottom: 200px;
@@ -1067,13 +1064,24 @@ footer .media-btn {
   width: 100%;
 }
 
-input[type="text"] {
-  background-color: rgba(194, 195, 197, 0.15);
-}
-
 .get-intouch-block button {
   margin-top: 40px;
   padding: 12px 36px;
 }
 
 /********************** About Us Page ****************************/
+
+.story-section {
+  text-align: center;
+  background-color: var(--main-background-color);
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.story-section p {
+  margin-bottom: 40px;
+}
+
+.about-partners {
+  margin-bottom: 100px;
+}
