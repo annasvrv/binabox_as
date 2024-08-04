@@ -1202,6 +1202,7 @@ footer .media-btn {
 
 .blog-date-item {
   padding-left: 6px;
+  border-left: 1px solid var(--text-color);
 }
 
 .person-icon {
