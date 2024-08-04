@@ -1069,10 +1069,12 @@ footer .media-btn {
   text-align: center;
 }
 
-.contact-info img {
+.contact-info svg {
   width: 56px;
   height: 56px;
+  fill: var(--btn-primary-color);
 }
+
 .contact-info h2 {
   margin-top: 20px;
   margin-bottom: 8px;
