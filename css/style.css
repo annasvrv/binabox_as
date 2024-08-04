@@ -119,9 +119,10 @@ header {
   letter-spacing: 10%;
 }
 
-.dropdown img {
+.arrow-dwn {
   width: 15px;
   height: 15px;
+  margin-left: 5px;
 }
 
 .dropdown-content a {
@@ -138,31 +139,22 @@ header {
   width: 48px;
   height: 48px;
   margin: 0 auto;
+  background-color: transparent;
+  border: none;
+}
+
+.switch-mode .switch-ico {
+  width: 24px;
+  height: 24px;
   padding: 12px;
   border-radius: 41px;
   background-color: var(--secondary-color);
-  border: none;
+  fill: var(--btn-primary-color);
   transition: all 0.3s ease-in-out;
 }
 
-.switch-mode:active {
+.switch-mode .switch-ico:active {
   background-color: var(--btn-primary-color);
-}
-
-/* .switch-mode img {
-  width: 24px;
-  height: 24px;
-  background-color: transparent;
-} */
-
-.switch-mode svg {
-  width: 24px;
-  height: 24px;
-  background-color: transparent;
-  fill: var(--btn-primary-color);
-}
-
-.switch-mode svg:active {
   fill: var(--secondary-color);
 }
 
@@ -176,18 +168,30 @@ header .media-btn:active {
   border: 2px solid var(--secondary-color);
 }
 
+.discord-btn {
+  width: 24px;
+  height: 24px;
+}
+
+.wallet-icon {
+  width: 24px;
+  height: 24px;
+}
+
 /**************** Hero section **************************/
 
 .hero-box {
   padding-top: 141px;
-  /* add img bg  */
-  /* to be done later after css+ lesson */
-  background: url(../img/bg-s/star-big.svg) bottom -50px right -170px/ 496.05px 496.05px
-      no-repeat,
-    linear-gradient(to top, rgba(4, 11, 17, 1), rgba(4, 11, 17, 0)) bottom left
-      no-repeat,
-    /* add radial gradiant */ url(../img/bg-s/hero-green-shade.svg) top right/
-      100% no-repeat;
+  background-image: url(../img/bg-s/star-big.svg),
+    linear-gradient(to top, rgba(4, 11, 17, 1), rgba(4, 11, 17, 0)),
+    radial-gradient(
+      ellipse at center,
+      rgba(48, 113, 101, 0.3) 10%,
+      rgba(20, 27, 34, 0.3) 70%
+    );
+  background-size: 496.05px auto, cover, 950px 278px;
+  background-position: bottom -50px right -170px, bottom, top -100px left -200px;
+  background-repeat: no-repeat;
   background-color: var(--secondary-color);
 }
 
@@ -424,6 +428,7 @@ header .media-btn:active {
 
 .roadmap-list {
   margin-bottom: 30px;
+  list-style-image: url(../img/icons/phase-icon.svg);
 }
 
 .roadmap-items {
@@ -433,10 +438,24 @@ header .media-btn:active {
   color: var(--text-color);
 }
 
+/* Phase line */
+
 .roadmap-nav {
   display: flex;
   justify-content: space-between;
-  align-items: start;
+}
+
+.arrow-less-btn {
+  width: 24px;
+  height: 24px;
+  stroke: #888b8e;
+}
+
+.arrow-greater-btn {
+  width: 24px;
+  height: 24px;
+  stroke: var(--btn-primary-color);
+  transform: rotate(180deg);
 }
 
 .roadmap-nav-item-list {
@@ -456,11 +475,18 @@ header .media-btn:active {
   line-height: 28px;
 }
 
-.roadmap-nav-item img {
+.elipse-default {
+  width: 30px;
+  height: 30px;
   margin: 0 auto;
   display: block;
   position: relative;
   top: -65px;
+  fill: #888b8e;
+}
+
+.elipse-default.active {
+  fill: var(--btn-primary-color);
 }
 
 .roadmap-nav-item::marker {
@@ -525,6 +551,11 @@ header .media-btn:active {
   gap: 16px;
 }
 
+.team-media {
+  width: 20px;
+  height: 20px;
+}
+
 /**************************** Partners section *****************************/
 .partners {
   padding-top: 50px;
@@ -578,7 +609,7 @@ header .media-btn:active {
 }
 
 .faqs-name::after {
-  content: url(../img/btn-icons/plus.svg);
+  content: url(../img/icons/plus.svg);
   float: right;
 }
 
@@ -587,7 +618,7 @@ header .media-btn:active {
 }
 
 .faqs-card[open] .faqs-name::after {
-  content: url(../img/btn-icons/minus.svg);
+  content: url(../img/icons/minus.svg);
 }
 
 .faqs-content {
@@ -634,13 +665,15 @@ footer .media-btn {
   width: 50px;
   height: 50px;
   margin-bottom: 20px;
+  padding: 12px 10px;
+  box-sizing: border-box;
 }
 
-.network-item img {
+.footer-media {
+  width: 26px;
+  height: 26px;
   display: block;
   margin: 0 auto;
-  padding: 14px 10px;
-  width: 26px;
 }
 
 /******************** footer-nav section *******************************/
