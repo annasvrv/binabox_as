@@ -9,7 +9,7 @@
   </symbol>
 
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="arrow-less">
-    <path d="M15 18.5L8 12L15 5.5" stroke="inherit" stroke-width="4" stroke-miterlimit="10" stroke-linecap="square" stroke-linejoin="round"></path>
+    <path d="M15 18.5L8 12L15 5.5" stroke="inherit" stroke-width="inherit" stroke-miterlimit="10" stroke-linecap="square" stroke-linejoin="round"></path>
   </symbol>
 
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="bag-icon">

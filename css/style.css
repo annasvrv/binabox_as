@@ -449,12 +449,14 @@ header .media-btn:active {
   width: 24px;
   height: 24px;
   stroke: #888b8e;
+  stroke-width: 4;
 }
 
 .arrow-greater-btn {
   width: 24px;
   height: 24px;
   stroke: var(--btn-primary-color);
+  stroke-width: 4;
   transform: rotate(180deg);
 }
 
@@ -766,11 +768,14 @@ footer .media-btn {
   margin: 0 255px;
   padding: 40px 0 48px;
   border-radius: 8px;
-  background: linear-gradient(
-    to left,
-    rgba(35, 51, 222, 1),
-    rgba(10, 190, 102, 1)
-  );
+  background-image: url(../img/bg-s/star-big.svg), url(../img/bg-s/star-big.svg),
+    url(../img/bg-s/star-big.svg),
+    linear-gradient(to left, rgba(35, 51, 222, 1), rgba(10, 190, 102, 1));
+  background-repeat: no-repeat;
+  background-size: 321.2px auto, 255.87px auto, 137.02px auto, cover;
+  background-position: top -60px right -60px, bottom -60px left -60px,
+    top left 350px, center;
+  background-blend-mode: screen;
 }
 
 .catalog-cta-text {
@@ -972,7 +977,7 @@ footer .media-btn {
   text-align: center;
 }
 
-.btn-buy img {
+.bag-ico {
   width: 20px;
   height: 20px;
 }
@@ -992,9 +997,13 @@ footer .media-btn {
   width: 40%;
 }
 
-.nftcard-box-btns img {
+.cat-item-media {
   width: 24px;
   height: 24px;
+}
+
+.nftcard-box-btns a:active {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /***************** NFT cards collection section *******************************/
@@ -1017,13 +1026,26 @@ footer .media-btn {
 }
 
 /* Check during image task */
+
 .nft-cat-btn {
   width: 48px;
   height: 48px;
-  text-align: center;
-  font-size: 35px;
-  font-family: var(--text-font);
   box-sizing: content-box;
+}
+
+.nft-cat-btn svg {
+  stroke-width: 2;
+  width: 48px;
+  height: 48px;
+}
+
+.cat-lt-arrow {
+  stroke: rgba(255, 255, 255, 1);
+}
+
+.cat-gt-arrow {
+  stroke: var(--secondary-color);
+  transform: rotate(180deg);
 }
 
 /************************* FAQ Page ******************************/
