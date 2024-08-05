@@ -1,1 +1,1087 @@
-body {}
+:root {
+  --btn-primary-color: rgba(33, 231, 134, 1);
+  --secondary-color: rgba(20, 27, 34, 1);
+  --article-bg-color: rgba(255, 255, 255, 0.05);
+  --main-background-color: rgba(13, 13, 17, 1);
+  --text-color: rgba(194, 195, 197, 1);
+  --inactive-color: rgba(136, 139, 142, 1);
+  --text-font: "Poppins", sans-serif;
+  --btn-header-font: "Bakbak One", sans-serif;
+}
+
+/********************** General css **********************************/
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: rgba(4, 11, 17, 1);
+  font-family: "Bakbak One", sans-serif, "Roboto", Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 28px;
+  color: rgba(255, 255, 255, 1);
+}
+
+a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 1);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  padding: 0 255px;
+}
+
+/**************** Buttons styles ****************/
+
+button {
+  cursor: pointer;
+}
+
+.basic-btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  line-height: 24px;
+  gap: 8px;
+}
+
+.media-btn img {
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+}
+
+.btn-light {
+  border: none;
+  background-color: var(--btn-primary-color);
+  color: var(--secondary-color);
+  font-family: var(--btn-header-font);
+}
+
+.btn-border {
+  border: 2px solid var(--btn-primary-color);
+  background-color: inherit;
+  color: rgba(255, 255, 255, 1);
+  font-family: var(--btn-header-font);
+}
+
+.btn-border:active {
+  background-color: rgba(33, 231, 134, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Text styles */
+.highlighted-text {
+  color: var(--btn-primary-color);
+}
+
+.secondary-heading {
+  font-size: 44px;
+  line-height: 56px;
+  text-align: center;
+}
+
+/********************* Header styles *****************************/
+
+header {
+  margin: 30px 0;
+}
+
+.logo-block {
+  font-size: 32px;
+  line-height: 42px;
+  gap: 16px;
+}
+
+.logo-block img {
+  width: 36px;
+  height: 40px;
+}
+
+/************* Header navigation styles *******************/
+
+.nav-menu-items {
+  gap: 32px;
+}
+
+.nav-menu-item a {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 10%;
+}
+
+.dropdown img {
+  width: 15px;
+  height: 15px;
+}
+
+.dropdown-content a {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 10%;
+}
+
+.btn-box {
+  gap: 20px;
+}
+
+.switch-mode {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto;
+  padding: 12px;
+  border-radius: 41px;
+  background-color: var(--secondary-color);
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.switch-mode:active {
+  background-color: var(--btn-primary-color);
+}
+
+/* .switch-mode img {
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+} */
+
+.switch-mode svg {
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  fill: var(--btn-primary-color);
+}
+
+.switch-mode svg:active {
+  fill: var(--secondary-color);
+}
+
+header .media-btn {
+  background-color: var(--secondary-color);
+  transition: color 0.3s ease-in-out;
+}
+
+header .media-btn:active {
+  background-color: rgb(35, 46, 57);
+  border: 2px solid var(--secondary-color);
+}
+
+/**************** Hero section **************************/
+
+.hero-box {
+  padding-top: 141px;
+  /* add img bg  */
+  /* to be done later after css+ lesson */
+  background: url(../img/bg-s/star-big.svg) bottom -50px right -170px/ 496.05px 496.05px
+      no-repeat,
+    linear-gradient(to top, rgba(4, 11, 17, 1), rgba(4, 11, 17, 0)) bottom left
+      no-repeat,
+    /* add radial gradiant */ url(../img/bg-s/hero-green-shade.svg) top right/
+      100% no-repeat;
+  background-color: var(--secondary-color);
+}
+
+.hero-content {
+  width: 750px;
+}
+
+.hero-title {
+  font-size: 72px;
+  line-height: 80px;
+}
+
+.hero-text {
+  font-family: var(--text-font);
+  font-size: 20px;
+  line-height: 30px;
+  margin: 20px 0 24px;
+}
+
+.hero-number {
+  font-size: 44px;
+  line-height: 56px;
+  text-shadow: 0px 4px 13px rgba(255, 255, 255, 0.4);
+}
+
+.hero-description {
+  font-family: var(--text-font);
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--text-color);
+}
+
+.hero-btn {
+  margin-top: 48px;
+  gap: 24px;
+}
+
+/**********************  nft-cards section **************************/
+
+.nft-cards {
+  padding-top: 60px;
+  padding-bottom: 50px;
+  background-color: var(--main-background-color);
+  text-align: center;
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.nft-card {
+  margin: 0 auto;
+  width: 330px;
+  height: 378px;
+  padding: 20px;
+  background-color: var(--article-bg-color);
+}
+
+.nft-card img {
+  width: 330px;
+  height: 330px;
+  margin: 0 auto;
+}
+
+.nft-card-title {
+  padding-top: 10px;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: left;
+}
+
+/***************************** About section *******************************/
+
+.about {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  background-color: var(--main-background-color);
+}
+
+.about-description {
+  margin: 0 auto;
+  margin-top: 16px;
+  font-family: var(--text-font);
+  color: var(--text-color);
+  width: 930px;
+}
+
+.about-list {
+  margin-top: 60px;
+  list-style-position: inside;
+  text-align: left;
+}
+
+.about-list li {
+  margin: 0 auto;
+  padding: 30px;
+  background-color: var(--secondary-color);
+  margin-bottom: 30px;
+  width: 570px;
+  height: 224px;
+  box-sizing: border-box;
+  border-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.about-list li::marker {
+  content: counter(list-item, decimal-leading-zero);
+  color: var(--secondary-color);
+  font-size: 80px;
+  line-height: 96px;
+  text-shadow: 0px 0px 1px var(--btn-primary-color);
+}
+
+/* I couldn't add another angle border effect */
+.about-list li:hover {
+  border-width: 3px;
+  border-style: solid;
+  border-image: linear-gradient(
+      to bottom right,
+      rgba(33, 231, 134, 1) 0%,
+      rgba(33, 231, 134, 0) 20%
+    )
+    1;
+  /* border-image: linear-gradient(
+      to top left,
+      rgba(33, 231, 134, 1) 0%,
+      rgba(33, 231, 134, 0) 20%
+    )
+    1; */
+}
+
+.about-list article {
+  position: relative;
+  bottom: 48px;
+}
+
+.about-list h3 {
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 26px;
+}
+
+.about-list-description {
+  font-family: var(--text-font);
+  color: var(--text-color);
+  width: 510px;
+}
+
+/*********************** Workflow section ***************************/
+
+.workflow {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: var(--main-background-color);
+}
+
+.workflow h2 {
+  margin-bottom: 40px;
+}
+
+.workflow-cards {
+  /* gap: 30px; */
+  list-style-position: inside;
+  text-align: center;
+}
+
+.workflow-card {
+  margin: 0 auto;
+  background-color: var(--secondary-color);
+  margin-bottom: 30px;
+  padding: 30px 30px 26px;
+  width: 330px;
+}
+
+/* Change position of the marker and image */
+
+.workflow-card::marker {
+  content: "STEP " counter(list-item);
+  font-size: 22px;
+  line-height: 30px;
+  color: var(--btn-primary-color);
+}
+
+.workflow-card img {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.workflow-card p {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.workflow-card:hover {
+  border-width: 3px;
+  border-style: solid;
+  border-image: linear-gradient(
+      to bottom right,
+      rgba(33, 231, 134, 1) 0%,
+      rgba(33, 231, 134, 0) 20%
+    )
+    1;
+}
+
+/************************ Road Map section **********************************/
+
+.roadmap {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: var(--main-background-color);
+}
+
+.roadmap h2 {
+  margin-bottom: 60px;
+}
+
+.roadmap-card {
+  background-color: var(--article-bg-color);
+  padding: 48px 43px;
+  margin-bottom: 25px;
+}
+
+.roadmap-img-box {
+  width: 715px;
+}
+
+.roadmap-card-title {
+  font-size: 36px;
+  line-height: 44px;
+  margin-bottom: 16px;
+}
+
+.roadmap-list {
+  margin-bottom: 30px;
+}
+
+.roadmap-items {
+  margin-bottom: 20px;
+  /* gap: 12px; */
+  font-family: var(--text-font);
+  color: var(--text-color);
+}
+
+.roadmap-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.roadmap-nav-item-list {
+  margin: 0 auto;
+  border-top: 2px solid rgba(67, 67, 67, 1);
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  padding-top: 20px;
+  position: relative;
+  top: 10px;
+  list-style-position: inside;
+}
+
+.roadmap-nav-item {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.roadmap-nav-item img {
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  top: -65px;
+}
+
+.roadmap-nav-item::marker {
+  content: "PHASE " counter(list-item);
+  color: var(--inactive-color);
+}
+
+.roadmap-nav-item.active::marker {
+  color: rgba(255, 255, 255, 1);
+}
+
+/****************************** Team section **********************************/
+
+.team {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: var(--main-background-color);
+}
+
+.team h2 {
+  margin-bottom: 60px;
+}
+
+.team-card {
+  margin: 0 auto;
+  background-color: var(--secondary-color);
+  text-align: center;
+  padding: 40px 20px;
+  width: 330px;
+  height: 339px;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+}
+
+.team-card:hover {
+  border-width: 3px;
+  border-style: solid;
+  border-image: linear-gradient(
+      to bottom right,
+      rgba(33, 231, 134, 1) 0%,
+      rgba(33, 231, 134, 0) 20%
+    )
+    1;
+}
+
+.team-card h3 {
+  font-size: 24px;
+  line-height: 30px;
+  margin-top: 31px;
+  margin-bottom: 4px;
+}
+
+.team-card p {
+  font-family: var(--text-font);
+  color: var(--text-color);
+  margin-bottom: 26px;
+}
+
+.team-card ul {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+/**************************** Partners section *****************************/
+.partners {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: var(--main-background-color);
+}
+
+.partners h2 {
+  margin-bottom: 58px;
+}
+
+.partners-cards {
+  text-align: center;
+}
+
+.partner-banner {
+  padding: 20px 24px;
+  margin-bottom: 30px;
+}
+
+.banner-bg {
+  background-color: var(--secondary-color);
+}
+
+/************************** FAQs section *********************************/
+
+.faq-box {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: var(--main-background-color);
+}
+
+.faq-box h2 {
+  margin-bottom: 60px;
+}
+
+.faq-box details {
+  margin: 0 auto;
+  background-color: var(--secondary-color);
+  padding: 30px 20px;
+  width: 930px;
+  margin-bottom: 24px;
+}
+
+.faqs-name {
+  font-size: 24px;
+  line-height: 30px;
+  padding-bottom: 16px;
+  color: rgba(194, 195, 197, 1);
+  list-style: none;
+}
+
+.faqs-name::after {
+  content: url(../img/btn-icons/plus.svg);
+  float: right;
+}
+
+.faqs-card[open] .faqs-name {
+  color: rgba(255, 255, 255, 1);
+}
+
+.faqs-card[open] .faqs-name::after {
+  content: url(../img/btn-icons/minus.svg);
+}
+
+.faqs-content {
+  font-family: var(--text-font);
+  color: var(--text-color);
+  border-top: 1px solid rgba(67, 67, 67, 1);
+  padding-top: 16px;
+}
+
+/*********************** Homepage Footer ***********************/
+
+footer {
+  padding-top: 50px;
+}
+
+/********************** Homepage call-action section ******************/
+
+.call-action {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.call-action p {
+  font-family: var(--text-font);
+  color: var(--text-color);
+  margin-top: 8px;
+  margin-bottom: 40px;
+}
+
+.footer-btn-box {
+  margin-bottom: 40px;
+}
+
+footer .media-btn {
+  background-color: rgba(88, 101, 242, 1);
+}
+
+/****************** social-networks Footer *****************************/
+
+.network-item {
+  margin: 0 auto;
+  background-color: rgba(194, 195, 197, 0.15);
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.network-item img {
+  display: block;
+  margin: 0 auto;
+  padding: 14px 10px;
+  width: 26px;
+}
+
+/******************** footer-nav section *******************************/
+
+.footer-border {
+  border-top: 1px solid rgba(67, 67, 67, 1);
+  padding: 19px 0;
+}
+
+.footer-logo {
+  font-size: 22px;
+  line-height: 30px;
+  gap: 16px;
+}
+
+.footer-logo img {
+  width: 24px;
+  height: 26px;
+}
+
+.footer-logo-box p {
+  font-family: var(--text-font);
+  color: var(--text-color);
+  font-size: 14px;
+  line-height: 22px;
+  text-align: right;
+}
+
+/************************ Homepage Footer Pages *************************/
+
+.nav-pages-item a {
+  font-family: var(--text-font);
+  color: var(--text-color);
+  font-size: 14px;
+  line-height: 22px;
+  text-align: right;
+}
+
+/************************* CATALOG Page **************************/
+
+/******************* Breadcrumbs ***************************/
+
+.breadcrumbs {
+  background-color: var(--secondary-color);
+  padding-top: 77px;
+  padding-bottom: 77px;
+  text-align: center;
+}
+
+.breadcrumbs ul {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.breadcrumbs a {
+  padding: 0 8px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.inactive-link a {
+  color: var(--inactive-color);
+  border-right: 2px solid var(--inactive-color);
+}
+
+/********** Catalog NFT Collection ***************************/
+
+.nft-collection {
+  background-color: var(--main-background-color);
+  padding-top: 100px;
+  padding-bottom: 200px;
+}
+
+.nft-collection h2 {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+/******************** Call Action section - Coloful ***********************/
+
+.cta-section {
+  background-color: var(--secondary-color);
+}
+
+.call-action-catalog {
+  background-color: var(--secondary-color);
+  position: relative;
+  top: -100px;
+  margin: 0 255px;
+  padding: 40px 0 48px;
+  border-radius: 8px;
+  background: linear-gradient(
+    to left,
+    rgba(35, 51, 222, 1),
+    rgba(10, 190, 102, 1)
+  );
+}
+
+.catalog-cta-text {
+  margin-top: 4px;
+  margin-bottom: 22px;
+  text-align: center;
+  font-family: var(--text-font);
+  color: rgba(247, 247, 249, 1);
+}
+
+.cta-catbtn-box {
+  text-align: center;
+}
+
+.cta-section .media-btn {
+  background-color: rgba(88, 101, 242, 1);
+}
+
+/********************** Catalog Footer ******************************/
+
+.catalog-footer {
+  background-color: var(--secondary-color);
+}
+
+.catalog-footer-logobox {
+  width: 324px;
+  margin-bottom: 156px;
+}
+
+.footer-cat-logo {
+  font-size: 30px;
+  line-height: 42px;
+  margin-bottom: 12px;
+}
+
+.footer-cat-logo img {
+  width: 32px;
+  height: 36px;
+}
+
+.catalog-footer-logobox p {
+  font-size: 16px;
+  line-height: 26px;
+  font-family: var(--text-font);
+}
+
+/********************** Catalog Sitemap section ***************************/
+
+.sitemap-title {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+.sitemap-list li {
+  margin-bottom: 16px;
+}
+
+.sitemap-list a {
+  font-family: var(--text-font);
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--text-color);
+}
+
+/*********************** Footer Copyright section in catalog   ******************/
+
+.footer-copyright {
+  border-top: 1px solid rgba(67, 67, 67, 1);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.footer-copyright h2 {
+  font-family: var(--text-font);
+  color: var(--text-color);
+  font-size: 14px;
+  line-height: 22px;
+  text-align: left;
+}
+
+.network-item-cat {
+  background-color: transparent;
+}
+
+.network-item-cat img {
+  width: 20px;
+}
+
+/***************** CATALOG ITEM PAGE *****************************/
+
+/********************** NFT card item ***********************************/
+
+.nftcard-box {
+  padding-top: 100px;
+  background-color: var(--main-background-color);
+}
+
+/******************************** Image block **********************************/
+
+.nftcard-img img {
+  width: 690px;
+  height: 690px;
+}
+
+.time-counter {
+  width: 608px;
+  background-color: rgba(255, 255, 255, 0.3);
+  text-align: center;
+  padding: 20px;
+}
+
+.time-counter-title {
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 12px;
+}
+
+.nftcard-box-timer dt {
+  text-align: left;
+}
+
+.time-counter-span {
+  text-align: right;
+  color: var(--text-color);
+  margin-left: 20px;
+}
+
+.nftcard-box-timer dd {
+  font-size: 20px;
+  line-height: 28px;
+  color: rgba(246, 246, 246, 1);
+  text-align: left;
+}
+
+/***************************** NFT Details section ***************************/
+
+.nftcard-details {
+  width: 620px;
+}
+
+.nftcard-details-title {
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.nftcard-details p {
+  font-size: 20px;
+  line-height: 30px;
+  font-family: var(--text-font);
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.nft-features {
+  margin-bottom: 30px;
+}
+
+.nft-features dt {
+  font-size: 16px;
+  line-height: 26px;
+  font-family: var(--text-font);
+  color: var(--text-color);
+  width: 196px;
+  padding: 20px 20px 4px 20px;
+  background-color: var(--secondary-color);
+}
+
+.nft-features dd {
+  font-size: 24px;
+  line-height: 30px;
+  padding: 0 20px 20px 20px;
+  background-color: var(--secondary-color);
+  width: 196px;
+  margin-bottom: 20px;
+}
+
+/******************************* NFT price block ******************************/
+
+.nft-price dt,
+.nft-price dd {
+  font-size: 36px;
+  display: inline;
+  margin-right: 14px;
+}
+
+.nft-price {
+  margin-bottom: 40px;
+}
+
+.btn-buy {
+  display: block;
+  padding: 16px 24px;
+  text-align: center;
+}
+
+.btn-buy img {
+  width: 20px;
+  height: 20px;
+}
+
+.nftcard-box-btns {
+  text-align: center;
+  margin-top: 24px;
+  width: 100%;
+}
+
+.nftcard-box-btns a {
+  display: inline-block;
+  border: 2px solid rgba(136, 139, 142, 1);
+  padding: 16px 24px;
+  font-size: 16px;
+  line-height: 24px;
+  width: 40%;
+}
+
+.nftcard-box-btns img {
+  width: 24px;
+  height: 24px;
+}
+
+/***************** NFT cards collection section *******************************/
+
+.nft-cards-section {
+  padding-top: 100px;
+  padding-bottom: 200px;
+  background-color: var(--main-background-color);
+}
+
+.nft-cards.cat-item-collection {
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+.nft-cat-btn-block {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+/* Check during image task */
+.nft-cat-btn {
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  font-size: 35px;
+  font-family: var(--text-font);
+  box-sizing: content-box;
+}
+
+/************************* FAQ Page ******************************/
+
+.q-box {
+  margin-top: 50px;
+  margin-bottom: 150px;
+}
+
+/********************** Contact Us Page ****************************/
+
+.contact-info {
+  padding-top: 100px;
+  padding-bottom: 40px;
+  background-color: var(--main-background-color);
+}
+
+.contact-info li {
+  border: 1px solid rgba(67, 67, 67, 1);
+  margin-bottom: 30px;
+  padding: 40px 30px;
+  width: 33%;
+  text-align: center;
+}
+
+.contact-info img {
+  width: 56px;
+  height: 56px;
+}
+.contact-info h2 {
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-size: 36px;
+  line-height: 44px;
+}
+.contact-info a {
+  font-family: var(--text-font);
+  color: var(--text-color);
+}
+
+/*****************  Get in touch form section ***************/
+
+.get-intouch-block {
+  padding-bottom: 200px;
+  text-align: center;
+  background-color: var(--main-background-color);
+}
+
+.get-intouch-block h2 {
+  margin-bottom: 4px;
+}
+
+.get-intouch-block p {
+  margin-bottom: 60px;
+  font-size: 20px;
+  line-height: 30px;
+  font-family: var(--text-font);
+}
+
+.get-intouch-block form {
+  width: 690px;
+  margin: 0 auto;
+}
+
+.get-intouch-block input,
+.get-intouch-block textarea {
+  background-color: rgba(194, 195, 197, 0.15);
+  padding: 14px 24px;
+  font-family: var(--text-font);
+  font-size: 16px;
+  line-height: 26px;
+  border: none;
+  margin-bottom: 20px;
+  /* temporary display and width for better viewing */
+  display: block;
+  width: 100%;
+}
+
+.get-intouch-block button {
+  margin-top: 40px;
+  padding: 12px 36px;
+}
+
+/********************** About Us Page ****************************/
+
+.story-section {
+  text-align: center;
+  background-color: var(--main-background-color);
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.story-section p {
+  margin-bottom: 40px;
+}
+
+.about-partners {
+  margin-bottom: 100px;
+}
