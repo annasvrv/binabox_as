@@ -5,8 +5,8 @@
   --main-background-color: rgba(13, 13, 17, 1);
   --text-color: rgba(194, 195, 197, 1);
   --inactive-color: rgba(136, 139, 142, 1);
-  --text-font: "Poppins", sans-serif;
-  --btn-header-font: "Bakbak One", sans-serif;
+  --text-font: "Poppins", "Helvetica Neue", Arial, sans-serif;
+  --btn-header-font: "Bakbak One", "Arial Black", Arial, sans-serif;
 }
 
 /********************** General css **********************************/
@@ -18,7 +18,7 @@
 
 body {
   background-color: rgba(4, 11, 17, 1);
-  font-family: "Bakbak One", sans-serif, "Roboto", Arial, sans-serif;
+  font-family: "Bakbak One", "Arial Black", Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 18px;
@@ -1285,6 +1285,7 @@ footer .media-btn {
   margin-top: 30px;
   font-size: 36px;
   line-height: 44px;
+  font-family: var(--btn-header-font);
 }
 
 .blogarticle-data {
@@ -1370,6 +1371,7 @@ footer .media-btn {
   margin-bottom: 12px;
   font-size: 30px;
   line-height: 42px;
+  font-family: var(--btn-header-font);
 }
 
 .article-block-text {
@@ -1397,9 +1399,10 @@ footer .media-btn {
   align-items: center;
 }
 
-.blog-tags-share h2 {
+.blog-tags-share h3 {
   font-size: 16px;
   line-height: 24px;
+  font-family: var(--btn-header-font);
 }
 
 .tags {
