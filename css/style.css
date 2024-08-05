@@ -5,8 +5,8 @@
   --main-background-color: rgba(13, 13, 17, 1);
   --text-color: rgba(194, 195, 197, 1);
   --inactive-color: rgba(136, 139, 142, 1);
-  --text-font: "Poppins", sans-serif;
-  --btn-header-font: "Bakbak One", sans-serif;
+  --text-font: "Poppins", "Helvetica Neue", Arial, sans-serif;
+  --btn-header-font: "Bakbak One", "Arial Black", Arial, sans-serif;
 }
 
 /********************** General css **********************************/
@@ -18,7 +18,7 @@
 
 body {
   background-color: rgba(4, 11, 17, 1);
-  font-family: "Bakbak One", sans-serif, "Roboto", Arial, sans-serif;
+  font-family: "Bakbak One", "Arial Black", Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 18px;
@@ -119,9 +119,10 @@ header {
   letter-spacing: 10%;
 }
 
-.dropdown img {
+.arrow-dwn {
   width: 15px;
   height: 15px;
+  margin-left: 5px;
 }
 
 .dropdown-content a {
@@ -138,31 +139,22 @@ header {
   width: 48px;
   height: 48px;
   margin: 0 auto;
+  background-color: transparent;
+  border: none;
+}
+
+.switch-mode .switch-ico {
+  width: 24px;
+  height: 24px;
   padding: 12px;
   border-radius: 41px;
   background-color: var(--secondary-color);
-  border: none;
+  fill: var(--btn-primary-color);
   transition: all 0.3s ease-in-out;
 }
 
-.switch-mode:active {
+.switch-mode .switch-ico:active {
   background-color: var(--btn-primary-color);
-}
-
-/* .switch-mode img {
-  width: 24px;
-  height: 24px;
-  background-color: transparent;
-} */
-
-.switch-mode svg {
-  width: 24px;
-  height: 24px;
-  background-color: transparent;
-  fill: var(--btn-primary-color);
-}
-
-.switch-mode svg:active {
   fill: var(--secondary-color);
 }
 
@@ -176,18 +168,30 @@ header .media-btn:active {
   border: 2px solid var(--secondary-color);
 }
 
+.discord-btn {
+  width: 24px;
+  height: 24px;
+}
+
+.wallet-icon {
+  width: 24px;
+  height: 24px;
+}
+
 /**************** Hero section **************************/
 
 .hero-box {
   padding-top: 141px;
-  /* add img bg  */
-  /* to be done later after css+ lesson */
-  background: url(../img/bg-s/star-big.svg) bottom -50px right -170px/ 496.05px 496.05px
-      no-repeat,
-    linear-gradient(to top, rgba(4, 11, 17, 1), rgba(4, 11, 17, 0)) bottom left
-      no-repeat,
-    /* add radial gradiant */ url(../img/bg-s/hero-green-shade.svg) top right/
-      100% no-repeat;
+  background-image: url(../img/bg-s/star-big.svg),
+    linear-gradient(to top, rgba(4, 11, 17, 1), rgba(4, 11, 17, 0)),
+    radial-gradient(
+      ellipse at center,
+      rgba(48, 113, 101, 0.3) 10%,
+      rgba(20, 27, 34, 0.3) 70%
+    );
+  background-size: 496.05px auto, cover, 950px 278px;
+  background-position: bottom -50px right -170px, bottom, top -100px left -200px;
+  background-repeat: no-repeat;
   background-color: var(--secondary-color);
 }
 
@@ -424,6 +428,7 @@ header .media-btn:active {
 
 .roadmap-list {
   margin-bottom: 30px;
+  list-style-image: url(../img/icons/phase-icon.svg);
 }
 
 .roadmap-items {
@@ -433,10 +438,26 @@ header .media-btn:active {
   color: var(--text-color);
 }
 
+/* Phase line */
+
 .roadmap-nav {
   display: flex;
   justify-content: space-between;
-  align-items: start;
+}
+
+.arrow-less-btn {
+  width: 24px;
+  height: 24px;
+  stroke: #888b8e;
+  stroke-width: 4;
+}
+
+.arrow-greater-btn {
+  width: 24px;
+  height: 24px;
+  stroke: var(--btn-primary-color);
+  stroke-width: 4;
+  transform: rotate(180deg);
 }
 
 .roadmap-nav-item-list {
@@ -456,11 +477,18 @@ header .media-btn:active {
   line-height: 28px;
 }
 
-.roadmap-nav-item img {
+.elipse-default {
+  width: 30px;
+  height: 30px;
   margin: 0 auto;
   display: block;
   position: relative;
   top: -65px;
+  fill: #888b8e;
+}
+
+.elipse-default.active {
+  fill: var(--btn-primary-color);
 }
 
 .roadmap-nav-item::marker {
@@ -525,6 +553,11 @@ header .media-btn:active {
   gap: 16px;
 }
 
+.team-media {
+  width: 20px;
+  height: 20px;
+}
+
 /**************************** Partners section *****************************/
 .partners {
   padding-top: 50px;
@@ -578,7 +611,7 @@ header .media-btn:active {
 }
 
 .faqs-name::after {
-  content: url(../img/btn-icons/plus.svg);
+  content: url(../img/icons/plus.svg);
   float: right;
 }
 
@@ -587,7 +620,7 @@ header .media-btn:active {
 }
 
 .faqs-card[open] .faqs-name::after {
-  content: url(../img/btn-icons/minus.svg);
+  content: url(../img/icons/minus.svg);
 }
 
 .faqs-content {
@@ -634,13 +667,15 @@ footer .media-btn {
   width: 50px;
   height: 50px;
   margin-bottom: 20px;
+  padding: 12px 10px;
+  box-sizing: border-box;
 }
 
-.network-item img {
+.footer-media {
+  width: 26px;
+  height: 26px;
   display: block;
   margin: 0 auto;
-  padding: 14px 10px;
-  width: 26px;
 }
 
 /******************** footer-nav section *******************************/
@@ -733,11 +768,14 @@ footer .media-btn {
   margin: 0 255px;
   padding: 40px 0 48px;
   border-radius: 8px;
-  background: linear-gradient(
-    to left,
-    rgba(35, 51, 222, 1),
-    rgba(10, 190, 102, 1)
-  );
+  background-image: url(../img/bg-s/star-big.svg), url(../img/bg-s/star-big.svg),
+    url(../img/bg-s/star-big.svg),
+    linear-gradient(to left, rgba(35, 51, 222, 1), rgba(10, 190, 102, 1));
+  background-repeat: no-repeat;
+  background-size: 321.2px auto, 255.87px auto, 137.02px auto, cover;
+  background-position: top -60px right -60px, bottom -60px left -60px,
+    top left 350px, center;
+  background-blend-mode: screen;
 }
 
 .catalog-cta-text {
@@ -820,11 +858,16 @@ footer .media-btn {
 }
 
 .network-item-cat {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  box-sizing: content-box;
   background-color: transparent;
 }
 
-.network-item-cat img {
+.cat-footer-media {
   width: 20px;
+  height: 20px;
 }
 
 /***************** CATALOG ITEM PAGE *****************************/
@@ -934,7 +977,7 @@ footer .media-btn {
   text-align: center;
 }
 
-.btn-buy img {
+.bag-ico {
   width: 20px;
   height: 20px;
 }
@@ -954,9 +997,13 @@ footer .media-btn {
   width: 40%;
 }
 
-.nftcard-box-btns img {
+.cat-item-media {
   width: 24px;
   height: 24px;
+}
+
+.nftcard-box-btns a:active {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /***************** NFT cards collection section *******************************/
@@ -978,14 +1025,25 @@ footer .media-btn {
   gap: 24px;
 }
 
-/* Check during image task */
 .nft-cat-btn {
   width: 48px;
   height: 48px;
-  text-align: center;
-  font-size: 35px;
-  font-family: var(--text-font);
   box-sizing: content-box;
+}
+
+.nft-cat-btn svg {
+  stroke-width: 2;
+  width: 48px;
+  height: 48px;
+}
+
+.cat-lt-arrow {
+  stroke: rgba(255, 255, 255, 1);
+}
+
+.cat-gt-arrow {
+  stroke: var(--secondary-color);
+  transform: rotate(180deg);
 }
 
 /************************* FAQ Page ******************************/
@@ -1011,10 +1069,12 @@ footer .media-btn {
   text-align: center;
 }
 
-.contact-info img {
+.contact-info svg {
   width: 56px;
   height: 56px;
+  fill: var(--btn-primary-color);
 }
+
 .contact-info h2 {
   margin-top: 20px;
   margin-bottom: 8px;
@@ -1084,4 +1144,318 @@ footer .media-btn {
 
 .about-partners {
   margin-bottom: 100px;
+}
+
+/************************ BLOG PAGE ****************************/
+
+.blog-page {
+  padding-top: 100px;
+  padding-bottom: 40px;
+  background-color: var(--main-background-color);
+}
+
+.blogpage-card {
+  width: 450px;
+  padding: 30px 20px;
+  background-color: var(--secondary-color);
+  position: relative;
+  box-sizing: border-box;
+}
+
+.blogpage-card img {
+  width: 410px;
+  display: block;
+  margin: 0 auto;
+}
+
+.blog-label {
+  position: absolute;
+  top: 45px;
+  right: 35px;
+}
+
+.label-deco {
+  padding: 8px 10px;
+  font-size: 14px;
+  line-height: 22px;
+  background-color: var(--btn-primary-color);
+}
+
+.blog-data {
+  margin-top: 25px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: start;
+}
+
+.blog-data li {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-color);
+  padding-right: 6px;
+}
+
+.blog-data svg {
+  margin-right: 6px;
+  width: 20px;
+  height: 20px;
+}
+
+.blog-date-item {
+  padding-left: 6px;
+  border-left: 1px solid var(--text-color);
+}
+
+.person-icon {
+  fill: var(--btn-primary-color);
+  stroke: var(--btn-primary-color);
+}
+
+.calendar-icon {
+  fill: var(--btn-primary-color);
+  stroke: var(--btn-primary-color);
+}
+
+.blogpage-card-title {
+  font-size: 36px;
+  line-height: 44px;
+  margin-bottom: 4px;
+}
+
+.blogpage-card-text {
+  font-family: var(--text-font);
+  color: var(--text-color);
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+
+.blogpage-card-readmore {
+  padding: 0 8px;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.blogpage-card-readmore svg {
+  width: 19px;
+  height: 12px;
+}
+
+.blog-pagination {
+  background-color: var(--main-background-color);
+  padding-bottom: 200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.blog-pagination a {
+  display: block;
+  width: 48px;
+  height: 48px;
+  font-size: 20px;
+  line-height: 48px;
+  font-family: var(--text-font);
+  border: 1px solid var(--secondary-color);
+  padding: 1.5px;
+  text-align: center;
+}
+
+.blog-pagination a.active {
+  background-color: var(--secondary-color);
+  color: var(--btn-primary-color);
+}
+
+/*******************  Blog Article Page ***************************/
+
+.blog-article {
+  padding-top: 100px;
+  text-align: left;
+  background-color: var(--main-background-color);
+}
+
+.blog-article-title {
+  margin-top: 30px;
+  font-size: 36px;
+  line-height: 44px;
+  font-family: var(--btn-header-font);
+}
+
+.blogarticle-data {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: start;
+  font-size: 20px;
+  line-height: 30px;
+  font-family: var(--text-font);
+  color: var(--text-color);
+}
+
+.blogarticle-data li {
+  padding-right: 12px;
+}
+
+.blogarticle-date-item {
+  padding-left: 12px;
+  border-left: 1px solid var(--text-color);
+}
+
+.blogarticle-data svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 6px;
+}
+
+.blog-story {
+  font-size: 20px;
+  line-height: 30px;
+  font-family: var(--text-font);
+  color: var(--text-color);
+}
+
+.blog-story-quote {
+  margin-top: 24px;
+  margin-bottom: 40px;
+  padding: 26px 32px;
+  border-left: 8px solid var(--btn-primary-color);
+  background-color: rgba(33, 231, 134, 0.1);
+}
+
+.blog-story-quote blockquote {
+  margin-bottom: 12px;
+  font-family: var(--text-font);
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.blog-story-quote figcaption {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.blog-article-rating {
+  font-family: var(--text-font);
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.rating-star {
+  width: 18px;
+  height: 18px;
+}
+
+.blog-story-quote cite {
+  font-size: 16px;
+  line-height: 24px;
+  font-style: normal;
+}
+
+.blog-sub-article {
+  margin-bottom: 20px;
+}
+
+.article-block-title {
+  margin-bottom: 12px;
+  font-size: 30px;
+  line-height: 42px;
+  font-family: var(--btn-header-font);
+}
+
+.article-block-text {
+  font-family: var(--text-font);
+  color: var(--text-color);
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.article-block-title + p + p {
+  margin-top: 12px;
+}
+
+.blog-tags-share {
+  margin-top: 4px;
+  padding-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tags-block,
+.share-block {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.blog-tags-share h3 {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: var(--btn-header-font);
+}
+
+.tags {
+  font-family: var(--text-font);
+  font-size: 12px;
+  line-height: 18px;
+  padding: 8px 12px;
+  background-color: rgba(65, 69, 74, 0.4);
+}
+
+.share svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.blog-article-pages {
+  padding-bottom: 200px;
+  background-color: var(--main-background-color);
+  display: flex;
+  justify-content: space-between;
+}
+
+.blog-article-pages article {
+  padding: 21px 20px;
+  background-color: var(--secondary-color);
+  width: 411px;
+  font-family: var(--text-font);
+  font-weight: 700;
+}
+
+.blog-article-pages a {
+  display: flex;
+  gap: 16px;
+}
+
+.blog-page-reverse {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.blog-article-pages img {
+  width: 80px;
+}
+
+.blog-article-pages h2 {
+  font-size: 18px;
+  line-height: 28px;
+  margin-top: 4px;
+}
+
+.blog-article-pages p {
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--text-color);
 }
