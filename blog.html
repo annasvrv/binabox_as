@@ -424,22 +424,22 @@
 
       <!-- Pagination -->
       <div class="blog-pagination">
-        <button class="nft-cat-btn btn-border">
+        <a class="nft-cat-btn btn-border" href="#">
           <svg class="icon cat-lt-arrow">
             <use xlink:href="sprite.svg#arrow-less"></use>
           </svg>
-        </button>
-        <a href="#" style="display: none">1</a>
-        <a class="active" href="#">2</a>
-        <a href="#">3</a>
-        <a href="#">4</a>
-        <a href="#">...</a>
-        <a href="#" style="display: none">5</a>
-        <button class="nft-cat-btn btn-light">
+        </a>
+        <a class="pagination-page" href="#" style="display: none">1</a>
+        <a class="pagination-page active" href="#">2</a>
+        <a class="pagination-page" href="#">3</a>
+        <a class="pagination-page" href="#">4</a>
+        <a class="pagination-page" href="#">...</a>
+        <a class="pagination-page" href="#" style="display: none">5</a>
+        <a class="nft-cat-btn btn-light">
           <svg class="icon cat-gt-arrow">
             <use xlink:href="sprite.svg#arrow-less"></use>
           </svg>
-        </button>
+        </a>
       </div>
 
       <!-- Call action section -->
@@ -507,6 +507,25 @@
             <li><a href="#">Whitepaper</a></li>
             <li><a href="#">Help Center</a></li>
           </ul>
+        </div>
+
+        <div class="sitemap">
+          <h2 class="sitemap-title">SUBSCRIBE</h2>
+          <form action="" class="site-newsletter">
+            <label for="mail" hidden>Email:</label>
+            <input
+              class="newsletter-field"
+              type="text"
+              placeholder="Enter your email"
+              name="mail"
+              required
+            />
+            <input
+              class="btn-light basic-btn"
+              type="submit"
+              value="SUBSCRIBE"
+            />
+          </form>
         </div>
       </section>
 
