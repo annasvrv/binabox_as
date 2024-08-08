@@ -61,21 +61,21 @@
             <a href="./faqs.html">FAQS</a>
           </li>
           <li class="nav-menu-item">
-            <a href="#" class="dropdown">
+            <button class="dropdown">
               PAGES
               <svg class="icon arrow-dwn">
                 <use xlink:href="sprite.svg#arrow-down"></use>
               </svg>
-            </a>
-            <ul class="dropdown-content">
+            </button>
+            <ul class="dropdown-content" id="dropdown-menu">
               <li>
-                <a href="./catalog.html">NFT Catalog</a>
+                <a class="dropdown-item" href="./catalog.html">NFT Catalog</a>
               </li>
               <li>
-                <a href="./blog.html">Blog</a>
+                <a class="dropdown-item" href="./blog.html">Blog</a>
               </li>
               <li>
-                <a href="./contact-us.html">Contact Us</a>
+                <a class="dropdown-item" href="./contact-us.html">Contact Us</a>
               </li>
             </ul>
           </li>
@@ -83,11 +83,19 @@
       </nav>
 
       <div class="btn-box">
-        <button class="switch-mode">
-          <svg class="icon switch-ico">
-            <use xlink:href="sprite.svg#switch"></use>
-          </svg>
-        </button>
+        <form class="darkmode" action="" method="">
+          <input
+            type="checkbox"
+            name="darkmode"
+            id="darkmode"
+            class="visually-hidden darkmode-toggle"
+          />
+          <label class="switch-mode" for="darkmode">
+            <svg class="icon switch-ico">
+              <use xlink:href="sprite.svg#switch"></use>
+            </svg>
+          </label>
+        </form>
 
         <a href="#" class="basic-btn media-btn">
           <svg class="icon discord-btn">
@@ -121,104 +129,526 @@
       </section>
 
       <!-- NFT Collection -->
-      <section class="nft-collection container" id="nft-collection">
-        <h2 class="secondary-heading">All Items</h2>
-        <!-- <form action="/search">
-          <input type="text" placeholder="Search NFT" />
-          <button type="submit">
-            <img src="./img/btn-icons/icon-search.svg" alt="search" />
-          </button>
-        </form> -->
+      <section class="container nft-collection">
+        <form action="" method="">
+          <details class="nft-filter" open>
+            <summary class="nft-filter-name">CLOTHING</summary>
+            <ul class="nft-filter-list">
+              <li>
+                <input
+                  class="visually-hidden catalog-checkbox"
+                  type="checkbox"
+                  name="clothing"
+                  value="combatant"
+                  id="clothing-combatant"
+                />
+                <label for="clothing-combatant">Combatant</label>
+              </li>
+              <li>
+                <input
+                  class="visually-hidden catalog-checkbox"
+                  type="checkbox"
+                  name="clothing"
+                  value="ninja"
+                  id="clothing-ninja"
+                />
+                <label for="clothing-ninja">Ninja </label>
+              </li>
 
-        <article class="nft-card">
-          <a href="./catalog-item.html">
-            <img
-              src="./img/img-nftcatalog/nft-picture1.webp"
-              alt="NFT picture"
-            />
-            <h3 class="nft-card-title">SKISIRS#2</h3>
-          </a>
-        </article>
+              <li>
+                <input
+                  class="visually-hidden catalog-checkbox"
+                  checked
+                  type="checkbox"
+                  name="clothing"
+                  value="king"
+                  id="clothing-king"
+                />
+                <label for="clothing-king">King</label>
+              </li>
 
-        <article class="nft-card">
-          <a href="./catalog-item.html">
-            <img
-              src="./img/img-nftcatalog/nft-picture2.webp"
-              alt="NFT picture"
-            />
-            <h3 class="nft-card-title">SKISIRS#2</h3>
-          </a>
-        </article>
+              <li>
+                <input
+                  class="visually-hidden catalog-checkbox"
+                  type="checkbox"
+                  name="clothing"
+                  value="queen"
+                  id="clothing-queen"
+                />
+                <label for="clothing-queen">Queen</label>
+              </li>
 
-        <article class="nft-card">
-          <a href="./catalog-item.html">
-            <img
-              src="./img/img-nftcatalog/nft-picture3.webp"
-              alt="NFT picture"
-            />
-            <h3 class="nft-card-title">SKISIRS#2</h3>
-          </a>
-        </article>
+              <li>
+                <input
+                  class="visually-hidden catalog-checkbox"
+                  type="checkbox"
+                  name="clothing"
+                  value="robot"
+                  id="clothing-robot"
+                />
+                <label for="clothing-robot">Robot</label>
+              </li>
+            </ul>
+          </details>
 
-        <article class="nft-card">
-          <a href="./catalog-item.html">
-            <img
-              src="./img/img-nftcatalog/nft-picture4.webp"
-              alt="NFT picture"
-            />
-            <h3 class="nft-card-title">SKISIRS#2</h3>
-          </a>
-        </article>
+          <details class="nft-filter" open>
+            <summary class="nft-filter-name">EYES</summary>
+            <ul class="nft-filter-list">
+              <li>
+                <input
+                  class="visually-hidden catalog-checkbox"
+                  type="checkbox"
+                  name="eyes"
+                  value="yellow"
+                  id="eyes-yellow"
+                />
+                <label for="eyes-yellow">Yellow</label>
+              </li>
 
-        <article class="nft-card">
-          <a href="./catalog-item.html">
-            <img
-              src="./img/img-nftcatalog/nft-picture5.webp"
-              alt="NFT picture"
-            />
-            <h3 class="nft-card-title">SKISIRS#2</h3>
-          </a>
-        </article>
+              <li>
+                <input
+                  class="visually-hidden catalog-checkbox"
+                  type="checkbox"
+                  name="eyes"
+                  value="green"
+                  id="eyes-green"
+                />
+                <label for="eyes-green">Green </label>
+              </li>
 
-        <article class="nft-card">
-          <a href="./catalog-item.html">
-            <img
-              src="./img/img-nftcatalog/nft-picture6.webp"
-              alt="NFT picture"
-            />
-            <h3 class="nft-card-title">SKISIRS#2</h3>
-          </a>
-        </article>
+              <li>
+                <input
+                  class="visually-hidden catalog-checkbox"
+                  checked
+                  type="checkbox"
+                  name="eyes"
+                  value="mix"
+                  id="eyes-mix"
+                />
+                <label for="eyes-mix">Mix </label>
+              </li>
 
-        <article class="nft-card">
-          <a href="./catalog-item.html">
-            <img
-              src="./img/img-nftcatalog/nft-picture7.webp"
-              alt="NFT picture"
-            />
-            <h3 class="nft-card-title">SKISIRS#2</h3>
-          </a>
-        </article>
+              <li>
+                <input
+                  class="visually-hidden catalog-checkbox"
+                  type="checkbox"
+                  name="eyes"
+                  value="orange"
+                  id="eyes-orange"
+                />
+                <label for="eyes-orange">Orange </label>
+              </li>
 
-        <article class="nft-card">
-          <a href="./catalog-item.html">
-            <img
-              src="./img/img-nftcatalog/nft-picture8.webp"
-              alt="NFT picture"
-            />
-            <h3 class="nft-card-title">SKISIRS#2</h3>
-          </a>
-        </article>
+              <li>
+                <input
+                  class="visually-hidden catalog-checkbox"
+                  type="checkbox"
+                  name="eyes"
+                  value="glow"
+                  id="eyes-glow"
+                />
+                <label for="eyes-glow">Glow </label>
+              </li>
 
-        <article class="nft-card">
-          <a href="./catalog-item.html">
-            <img
-              src="./img/img-nftcatalog/nft-picture9.webp"
-              alt="NFT picture"
-            />
-            <h3 class="nft-card-title">SKISIRS#2</h3>
-          </a>
-        </article>
+              <li>
+                <input
+                  class="visually-hidden catalog-checkbox"
+                  type="checkbox"
+                  name="eyes"
+                  value="blue"
+                  id="eyes-blue"
+                />
+                <label for="eyes-blue">Blue</label>
+              </li>
+            </ul>
+          </details>
+
+          <details class="nft-filter">
+            <summary class="nft-filter-name">FACE</summary>
+            <ul class="nft-filter-list">
+              <li>
+                <input
+                  class="visually-hidden catalog-checkbox"
+                  type="checkbox"
+                  name="face"
+                  value=""
+                  id=""
+                />
+                <label for="">Face</label>
+              </li>
+              <li>
+                <input
+                  class="visually-hidden catalog-checkbox"
+                  type="checkbox"
+                  name="face"
+                  value=""
+                  id=""
+                />
+                <label for="">Face</label>
+              </li>
+
+              <li>
+                <input
+                  class="visually-hidden catalog-checkbox"
+                  type="checkbox"
+                  name="face"
+                  value=""
+                  id=""
+                />
+                <label for="">Face</label>
+              </li>
+
+              <li>
+                <input
+                  class="visually-hidden catalog-checkbox"
+                  type="checkbox"
+                  name="face"
+                  value=""
+                  id=""
+                />
+                <label for="">Face</label>
+              </li>
+
+              <li>
+                <input
+                  class="visually-hidden catalog-checkbox"
+                  type="checkbox"
+                  name="face"
+                  value=""
+                  id=""
+                />
+                <label for="">Face</label>
+              </li>
+            </ul>
+          </details>
+
+          <details class="nft-filter">
+            <summary class="nft-filter-name">SKIN</summary>
+            <ul class="nft-filter-list">
+              <li>
+                <input
+                  class="visually-hidden catalog-checkbox"
+                  type="checkbox"
+                  name="skin"
+                  value=""
+                  id=""
+                />
+                <label for="">Skin</label>
+              </li>
+              <li>
+                <input
+                  class="visually-hidden catalog-checkbox"
+                  type="checkbox"
+                  name="skin"
+                  value=""
+                  id=""
+                />
+                <label for="">Skin</label>
+              </li>
+
+              <li>
+                <input
+                  class="visually-hidden catalog-checkbox"
+                  type="checkbox"
+                  name="skin"
+                  value=""
+                  id=""
+                />
+                <label for="">Skin</label>
+              </li>
+
+              <li>
+                <input
+                  class="visually-hidden catalog-checkbox"
+                  type="checkbox"
+                  name="skin"
+                  value=""
+                  id=""
+                />
+                <label for="">Skin</label>
+              </li>
+
+              <li>
+                <input
+                  class="visually-hidden catalog-checkbox"
+                  type="checkbox"
+                  name="skin"
+                  value=""
+                  id=""
+                />
+                <label for="">Skin</label>
+              </li>
+            </ul>
+          </details>
+
+          <details class="nft-filter">
+            <summary class="nft-filter-name">BACKGROUND</summary>
+            <ul class="nft-filter-list">
+              <li>
+                <input
+                  class="visually-hidden catalog-checkbox"
+                  type="checkbox"
+                  name="background"
+                  value=""
+                  id=""
+                />
+                <label for="">Background</label>
+              </li>
+              <li>
+                <input
+                  class="visually-hidden catalog-checkbox"
+                  type="checkbox"
+                  name="background"
+                  value=""
+                  id=""
+                />
+                <label for="">Background</label>
+              </li>
+
+              <li>
+                <input
+                  class="visually-hidden catalog-checkbox"
+                  type="checkbox"
+                  name="background"
+                  value=""
+                  id=""
+                />
+                <label for="">Background</label>
+              </li>
+
+              <li>
+                <input
+                  class="visually-hidden catalog-checkbox"
+                  type="checkbox"
+                  name="background"
+                  value=""
+                  id=""
+                />
+                <label for="">Background</label>
+              </li>
+
+              <li>
+                <input
+                  class="visually-hidden catalog-checkbox"
+                  type="checkbox"
+                  name="background"
+                  value=""
+                  id=""
+                />
+                <label for="">Background</label>
+              </li>
+            </ul>
+          </details>
+
+          <details class="nft-filter" open>
+            <summary class="nft-filter-name">SPECIAL</summary>
+            <ul class="nft-filter-list">
+              <li>
+                <input
+                  class="visually-hidden catalog-checkbox"
+                  type="checkbox"
+                  name="special"
+                  value="cat"
+                  id="special-cat"
+                />
+                <label for="special-cat">Cat</label>
+              </li>
+
+              <li>
+                <input
+                  class="visually-hidden catalog-checkbox"
+                  type="checkbox"
+                  name="special"
+                  value="sakura"
+                  id="special-sakura"
+                />
+                <label for="special-sakura">Sakura</label>
+              </li>
+
+              <li>
+                <input
+                  class="visually-hidden catalog-checkbox"
+                  checked
+                  type="checkbox"
+                  name="special"
+                  value="snake"
+                  id="special-snake"
+                />
+                <label for="special-snake">Snake</label>
+              </li>
+
+              <li>
+                <input
+                  class="visually-hidden catalog-checkbox"
+                  type="checkbox"
+                  name="special"
+                  value="eath"
+                  id="special-eath"
+                />
+                <label for="special-eath">Eath</label>
+              </li>
+
+              <li>
+                <input
+                  class="visually-hidden catalog-checkbox"
+                  type="checkbox"
+                  name="special"
+                  value="water"
+                  id="special-water"
+                />
+                <label for="special-water">Water</label>
+              </li>
+            </ul>
+          </details>
+        </form>
+
+        <section class="catalogpage-content" id="nft-collection">
+          <section class="nft-collection-search">
+            <h2 class="secondary-heading">All Items</h2>
+            <form action="" method="" role="search" class="search-form">
+              <label for="site-search" class="visually-hidden">
+                Search the site:
+              </label>
+              <input
+                class="search-field"
+                type="search"
+                name="search"
+                id="site-search"
+                pattern="[^'\x22]+"
+                title="Invalid input"
+                placeholder="Search NFT"
+                aria-label="Search through site content"
+              />
+              <button type="submit" class="search-btn">
+                <svg class="icon search-icon">
+                  <use xlink:href="sprite.svg#icon-search"></use>
+                </svg>
+              </button>
+            </form>
+          </section>
+
+          <ul class="current-filters-block">
+            <li class="current-label">
+              King
+              <button type="button">
+                <svg class="icon close-icon">
+                  <use xlink:href="sprite.svg#plus"></use>
+                </svg>
+              </button>
+            </li>
+            <li class="current-label">
+              Mix
+              <button type="button">
+                <svg class="icon close-icon">
+                  <use xlink:href="sprite.svg#plus"></use>
+                </svg>
+              </button>
+            </li>
+            <li class="current-label">
+              Skacura
+              <button type="button">
+                <svg class="icon close-icon">
+                  <use xlink:href="sprite.svg#plus"></use>
+                </svg>
+              </button>
+            </li>
+            <li>
+              <button type="reset">
+                <span class="highlighted-text">Clear All</span>
+              </button>
+            </li>
+          </ul>
+
+          <article class="nft-card">
+            <a href="./catalog-item.html">
+              <img
+                src="./img/img-nftcatalog/nft-picture1.webp"
+                alt="NFT picture"
+              />
+              <h3 class="nft-card-title">SKISIRS#2</h3>
+            </a>
+          </article>
+
+          <article class="nft-card">
+            <a href="./catalog-item.html">
+              <img
+                src="./img/img-nftcatalog/nft-picture2.webp"
+                alt="NFT picture"
+              />
+              <h3 class="nft-card-title">SKISIRS#2</h3>
+            </a>
+          </article>
+
+          <article class="nft-card">
+            <a href="./catalog-item.html">
+              <img
+                src="./img/img-nftcatalog/nft-picture3.webp"
+                alt="NFT picture"
+              />
+              <h3 class="nft-card-title">SKISIRS#2</h3>
+            </a>
+          </article>
+
+          <article class="nft-card">
+            <a href="./catalog-item.html">
+              <img
+                src="./img/img-nftcatalog/nft-picture4.webp"
+                alt="NFT picture"
+              />
+              <h3 class="nft-card-title">SKISIRS#2</h3>
+            </a>
+          </article>
+
+          <article class="nft-card">
+            <a href="./catalog-item.html">
+              <img
+                src="./img/img-nftcatalog/nft-picture5.webp"
+                alt="NFT picture"
+              />
+              <h3 class="nft-card-title">SKISIRS#2</h3>
+            </a>
+          </article>
+
+          <article class="nft-card">
+            <a href="./catalog-item.html">
+              <img
+                src="./img/img-nftcatalog/nft-picture6.webp"
+                alt="NFT picture"
+              />
+              <h3 class="nft-card-title">SKISIRS#2</h3>
+            </a>
+          </article>
+
+          <article class="nft-card">
+            <a href="./catalog-item.html">
+              <img
+                src="./img/img-nftcatalog/nft-picture7.webp"
+                alt="NFT picture"
+              />
+              <h3 class="nft-card-title">SKISIRS#2</h3>
+            </a>
+          </article>
+
+          <article class="nft-card">
+            <a href="./catalog-item.html">
+              <img
+                src="./img/img-nftcatalog/nft-picture8.webp"
+                alt="NFT picture"
+              />
+              <h3 class="nft-card-title">SKISIRS#2</h3>
+            </a>
+          </article>
+
+          <article class="nft-card">
+            <a href="./catalog-item.html">
+              <img
+                src="./img/img-nftcatalog/nft-picture9.webp"
+                alt="NFT picture"
+              />
+              <h3 class="nft-card-title">SKISIRS#2</h3>
+            </a>
+          </article>
+        </section>
       </section>
 
       <!-- Call Action section -->
@@ -287,6 +717,30 @@
             <li><a href="#">Help Center</a></li>
           </ul>
         </div>
+
+        <form action="" method="" class="site-newsletter">
+          <fieldset>
+            <legend class="sitemap-title">SUBSCRIBE</legend>
+            <div>
+              <label for="mail" class="visually-hidden">Email:</label>
+              <input
+                class="newsletter-field"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter your email"
+                autocomplete="email"
+                required
+                pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+              />
+              <input
+                class="btn-light basic-btn"
+                type="submit"
+                value="SUBSCRIBE"
+              />
+            </div>
+          </fieldset>
+        </form>
       </section>
 
       <section class="footer-copyright">
