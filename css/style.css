@@ -54,12 +54,6 @@ button {
   gap: 8px;
 }
 
-.media-btn img {
-  width: 24px;
-  height: 24px;
-  background-color: transparent;
-}
-
 .btn-light {
   border: none;
   background-color: var(--btn-primary-color);
@@ -94,9 +88,15 @@ button {
 
 header {
   margin: 30px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo-block {
+  display: flex;
+  align-items: center;
   font-size: 32px;
   line-height: 42px;
   gap: 16px;
@@ -110,6 +110,11 @@ header {
 /************* Header navigation styles *******************/
 
 .nav-menu-items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: stretch;
+  width: 100%;
   gap: 32px;
 }
 
@@ -119,46 +124,133 @@ header {
   letter-spacing: 10%;
 }
 
-.arrow-dwn {
-  width: 15px;
-  height: 15px;
-  margin-left: 5px;
-}
+/******** Needed to finish popup menu!!!  ***************/
 
-.dropdown-content a {
+.dropdown {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 10%;
 }
 
+.dropdown:hover,
+.dropdown:focus {
+  border-bottom: 1px solid var(--btn-primary-color);
+}
+
+.nav-dropdown-item {
+  position: relative;
+  /* display: inline-block; */
+}
+
+.arrow-dwn {
+  width: 15px;
+  height: 15px;
+  margin-left: 4px;
+  padding: 8px;
+}
+
+.dropdown-content {
+  display: none;
+  width: 221px;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  margin-top: 18px;
+  padding: 16px 20px;
+  background-color: var(--secondary-color);
+  box-shadow: 0 10px 25px rgba(71, 92, 133, 0.1);
+  z-index: 1;
+}
+
+.dropdown-content::before {
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: 12px;
+  border: 10px solid transparent;
+  border-bottom-color: var(--secondary-color);
+}
+
+.nav-dropdown-item:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content li {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 10%;
+  margin-bottom: 14px;
+}
+
+.dropdown-content a:hover {
+  color: var(--btn-primary-color);
+}
+
 .btn-box {
+  display: flex;
+  align-items: center;
   gap: 20px;
 }
 
-.switch-mode {
+.darkmode {
+  display: flex;
   width: 48px;
   height: 48px;
-  margin: 0 auto;
-  background-color: transparent;
-  border: none;
 }
 
-.switch-mode .switch-ico {
+.switch-mode {
+  display: flex;
+  align-items: center;
+}
+
+.darkmode-toggle:not(:checked) + .switch-mode .switch-ico {
   width: 24px;
   height: 24px;
   padding: 12px;
-  border-radius: 41px;
-  background-color: var(--secondary-color);
+  border-radius: 50%;
+  cursor: pointer;
   fill: var(--btn-primary-color);
-  transition: all 0.3s ease-in-out;
+  background-color: var(--secondary-color);
 }
 
-.switch-mode .switch-ico:active {
-  background-color: var(--btn-primary-color);
+.darkmode-toggle:checked + .switch-mode .switch-ico {
+  width: 24px;
+  height: 24px;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
   fill: var(--secondary-color);
+  background-color: var(--btn-primary-color);
 }
+
+/* ************************** */
+
+/* .darkmode-toggle + .switch-mode::before {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 60px;
+  content: url(../img/icons/switch.svg);
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+} */
+
+/* .darkmode-toggle:checked + .switch-mode::before {
+  content: url(../img/icons/switch-dark.svg);
+  background-color: var(--btn-primary-color);
+} */
+
+/* ************************** */
 
 header .media-btn {
+  display: flex;
   background-color: var(--secondary-color);
   transition: color 0.3s ease-in-out;
 }
@@ -171,6 +263,10 @@ header .media-btn:active {
 .discord-btn {
   width: 24px;
   height: 24px;
+}
+
+header .btn-light {
+  display: flex;
 }
 
 .wallet-icon {
@@ -294,8 +390,7 @@ header .media-btn:active {
   width: 570px;
   height: 224px;
   box-sizing: border-box;
-  border-color: transparent;
-  transition: all 0.3s ease-in-out;
+  position: relative;
 }
 
 .about-list li::marker {
@@ -306,22 +401,45 @@ header .media-btn:active {
   text-shadow: 0px 0px 1px var(--btn-primary-color);
 }
 
-/* I couldn't add another angle border effect */
-.about-list li:hover {
+.hover-effect::before,
+.hover-effect::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   border-width: 3px;
   border-style: solid;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.hover-effect::before {
   border-image: linear-gradient(
       to bottom right,
       rgba(33, 231, 134, 1) 0%,
       rgba(33, 231, 134, 0) 20%
     )
     1;
-  /* border-image: linear-gradient(
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.hover-effect::after {
+  border-image: linear-gradient(
       to top left,
       rgba(33, 231, 134, 1) 0%,
       rgba(33, 231, 134, 0) 20%
     )
-    1; */
+    1;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.hover-effect:hover::before,
+.hover-effect:hover::after {
+  opacity: 1;
 }
 
 .about-list article {
@@ -365,6 +483,8 @@ header .media-btn:active {
   margin-bottom: 30px;
   padding: 30px 30px 26px;
   width: 330px;
+  /* height: 210px; */
+  position: relative;
 }
 
 /* Change position of the marker and image */
@@ -378,24 +498,14 @@ header .media-btn:active {
 
 .workflow-card img {
   margin: 0 auto;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   display: block;
 }
 
 .workflow-card p {
   font-size: 24px;
   line-height: 32px;
-}
-
-.workflow-card:hover {
-  border-width: 3px;
-  border-style: solid;
-  border-image: linear-gradient(
-      to bottom right,
-      rgba(33, 231, 134, 1) 0%,
-      rgba(33, 231, 134, 0) 20%
-    )
-    1;
+  margin-top: 75px;
 }
 
 /************************ Road Map section **********************************/
@@ -521,17 +631,7 @@ header .media-btn:active {
   height: 339px;
   margin-bottom: 30px;
   box-sizing: border-box;
-}
-
-.team-card:hover {
-  border-width: 3px;
-  border-style: solid;
-  border-image: linear-gradient(
-      to bottom right,
-      rgba(33, 231, 134, 1) 0%,
-      rgba(33, 231, 134, 0) 20%
-    )
-    1;
+  position: relative;
 }
 
 .team-card h3 {
@@ -659,14 +759,71 @@ footer .media-btn {
   background-color: rgba(88, 101, 242, 1);
 }
 
+/* Homepage newsletter subcribtion form */
+
+.home-newsletter {
+  margin: 0 auto;
+  display: flex;
+  width: 690px;
+}
+
+.site-newsletter {
+  width: 441px;
+}
+
+.site-newsletter fieldset {
+  border: none;
+}
+
+.site-newsletter div {
+  display: flex;
+}
+
+.newsletter-field {
+  padding: 14px 24px;
+  background-color: rgba(194, 195, 197, 0.15);
+  border: none;
+  width: 100%;
+  font-family: var(--text-font);
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.field-validation:valid:not(:placeholder-shown) {
+  border: 1px solid var(--btn-primary-color);
+}
+
+.field-validation:invalid:not(:placeholder-shown) {
+  border: 1px solid red;
+}
+
+/* .newsletter-field:is(:-webkit-autofill, :autofill) {
+  background-color: rgba(194, 195, 197, 0.15);
+} */
+
+input::placeholder {
+  font-family: var(--text-font);
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 26px;
+  opacity: 0.6;
+}
+
 /****************** social-networks Footer *****************************/
+
+.social-networks-items {
+  display: inline-flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
 
 .network-item {
   margin: 0 auto;
   background-color: rgba(194, 195, 197, 0.15);
   width: 50px;
   height: 50px;
-  margin-bottom: 20px;
   padding: 12px 10px;
   box-sizing: border-box;
 }
@@ -745,14 +902,180 @@ footer .media-btn {
 /********** Catalog NFT Collection ***************************/
 
 .nft-collection {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 80px;
   background-color: var(--main-background-color);
   padding-top: 100px;
   padding-bottom: 200px;
 }
 
-.nft-collection h2 {
-  text-align: left;
+.catalogpage-content {
+  width: 100%;
+}
+
+.nft-collection-search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/*********** Search form ***********/
+
+.search-form {
+  background-color: var(--secondary-color);
+  width: 280px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 13px 20px 9px 24px;
+}
+
+.search-field {
+  all: unset;
+  height: 100%;
+  width: 100%;
+  font-family: var(--text-font);
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--text-color);
+}
+
+.search-btn {
+  all: unset;
+  cursor: pointer;
+}
+
+.search-form svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/************ Current filter display ********************/
+
+.current-filters-block {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
   margin-bottom: 40px;
+  background-color: var(--secondary-color);
+}
+
+.current-label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 13px 9px 20px;
+  border: 1px solid rgba(65, 69, 74, 1);
+  font-family: var(--text-font);
+  font-size: 16px;
+  line-height: 26px;
+  color: rgba(247, 247, 247, 1);
+}
+
+.close-icon {
+  width: 24px;
+  height: 24px;
+  stroke: rgba(247, 247, 247, 1);
+  transform: rotate(45deg);
+  stroke-width: 2px;
+}
+
+.current-filters-block button {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.current-filters-block button:hover {
+  opacity: 0.6;
+}
+
+/************ Aside filter form catalog section ******************/
+
+.nft-filter {
+  display: flex;
+  background-color: var(--secondary-color);
+  width: 280px;
+  margin-bottom: 12px;
+}
+
+.nft-filter-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  line-height: 28px;
+  padding: 16px 12px;
+  list-style: none;
+}
+
+.nft-filter-name::after {
+  background-image: url(../img/icons/plus.svg);
+  background-size: 24px 24px;
+  display: inline-block;
+  content: "";
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.nft-filter[open] .nft-filter-name::after {
+  content: "";
+  background-image: url(../img/icons/minus.svg);
+}
+
+.nft-filter-list {
+  padding: 20px 23px;
+  border-top: 1px solid rgba(67, 67, 67, 1);
+  font-family: var(--text-font);
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--text-color);
+}
+
+.nft-filter-list li {
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.catalog-checkbox + label::before {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+  cursor: pointer;
+  text-align: center;
+  content: "";
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--text-color);
+  border-radius: 2px;
+}
+
+.catalog-checkbox:checked + label::before {
+  content: url(../img/icons/checked.svg);
+  background-color: var(--btn-primary-color);
+  line-height: 15px;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 /******************** Call Action section - Coloful ***********************/
@@ -1059,13 +1382,15 @@ footer .media-btn {
   padding-top: 100px;
   padding-bottom: 40px;
   background-color: var(--main-background-color);
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }
 
 .contact-info li {
   border: 1px solid rgba(67, 67, 67, 1);
-  margin-bottom: 30px;
   padding: 40px 30px;
-  width: 33%;
+  width: 450px;
   text-align: center;
 }
 
@@ -1108,20 +1433,38 @@ footer .media-btn {
 .get-intouch-block form {
   width: 690px;
   margin: 0 auto;
+  box-sizing: content-box;
 }
 
-.get-intouch-block input,
-.get-intouch-block textarea {
+.form-block {
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.form-block-input,
+.form-textarea {
   background-color: rgba(194, 195, 197, 0.15);
   padding: 14px 24px;
   font-family: var(--text-font);
+  color: var(--text-color);
   font-size: 16px;
   line-height: 26px;
   border: none;
   margin-bottom: 20px;
-  /* temporary display and width for better viewing */
   display: block;
   width: 100%;
+  box-sizing: border-box;
+}
+
+.get-intouch-block input[name="name"] {
+  width: 240px;
+}
+
+.form-textarea {
+  height: 150px;
+  resize: vertical;
 }
 
 .get-intouch-block button {
@@ -1256,7 +1599,7 @@ footer .media-btn {
   gap: 16px;
 }
 
-.blog-pagination a {
+.pagination-page {
   display: block;
   width: 48px;
   height: 48px;
@@ -1268,17 +1611,31 @@ footer .media-btn {
   text-align: center;
 }
 
-.blog-pagination a.active {
+.pagination-page.active {
   background-color: var(--secondary-color);
   color: var(--btn-primary-color);
 }
 
+.pagination-page:hover {
+  background-color: var(--secondary-color);
+}
+
 /*******************  Blog Article Page ***************************/
 
-.blog-article {
+.blog-article-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
   padding-top: 100px;
-  text-align: left;
+  padding-bottom: 200px;
   background-color: var(--main-background-color);
+}
+
+/******* Blog article main content block **************************/
+
+.blog-article {
+  width: 1020px;
+  text-align: left;
 }
 
 .blog-article-title {
@@ -1420,8 +1777,7 @@ footer .media-btn {
 }
 
 .blog-article-pages {
-  padding-bottom: 200px;
-  background-color: var(--main-background-color);
+  margin-bottom: 60px;
   display: flex;
   justify-content: space-between;
 }
@@ -1459,3 +1815,172 @@ footer .media-btn {
   line-height: 22px;
   color: var(--text-color);
 }
+
+/************* Blog article sidebar form block ***********/
+
+.blog-article-form {
+  margin: 0 auto;
+}
+
+.blog-article-form fieldset {
+  border: none;
+  background-color: var(--secondary-color);
+  width: 330px;
+  box-sizing: border-box;
+}
+
+.blog-article-form .search-form {
+  margin-bottom: 21px;
+}
+
+.blog-filters {
+  margin-bottom: 40px;
+}
+
+.blog-filters-list {
+  padding: 20px 24px;
+}
+
+.sidebar-card-name {
+  padding: 16px 24px;
+  font-size: 20px;
+  line-height: 28px;
+  background-color: var(--secondary-color);
+  border-bottom: 1px solid rgba(67, 67, 67, 1);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.blog-filter-item {
+  font-family: var(--text-font);
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--text-color);
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.filter-categories:checked + .blog-filter-item {
+  color: var(--btn-primary-color);
+}
+
+/* Blog article sidebar form recent posts block */
+
+.recent-post {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.recent-post img {
+  width: 100px;
+  height: 100px;
+}
+
+.recent-post h2 {
+  font-family: var(--text-font);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 4px;
+}
+
+.recent-post-list {
+  display: flex;
+  font-family: var(--text-font);
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--text-color);
+  letter-spacing: 0.5px;
+}
+
+.recent-post-list span {
+  padding-right: 6px;
+  /* margin-right: 6px; */
+}
+
+.recent-post-list time {
+  padding-left: 6px;
+  border-left: 1px solid var(--text-color);
+}
+
+/* blog filters tags block */
+
+.blog-filters-tags {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 8px;
+  padding: 20px 24px 8px;
+  font-family: var(--text-font);
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 1px;
+}
+
+.blog-filters-tags li {
+  margin-bottom: 12px;
+}
+
+/*  Feedback Form in the Blog Article page */
+
+.feedback-section h2 {
+  font-size: 36px;
+  line-height: 44px;
+  margin-bottom: 4px;
+}
+
+.feedback-section p {
+  font-family: var(--text-font);
+  color: var(--text-color);
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+
+.feedback-form {
+  margin: 0 auto;
+  box-sizing: content-box;
+}
+
+.feedback-form input[name="name"],
+.feedback-form input[name="phone"] {
+  width: 335px;
+}
+
+/* .get-intouch-block form {
+  width: 690px;
+  margin: 0 auto;
+  box-sizing: content-box;
+} */
+
+/* .form-block {
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+} */
+
+/* .form-block input,
+.form-block textarea {
+  background-color: rgba(194, 195, 197, 0.15);
+  padding: 14px 24px;
+  font-family: var(--text-font);
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 26px;
+  border: none;
+  margin-bottom: 20px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+} */
+
+/* .get-intouch-block input[name="name"] {
+  width: 240px;
+} */
+
+/* .form-textarea {
+  height: 150px;
+  resize: vertical;
+} */
