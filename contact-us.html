@@ -52,29 +52,32 @@
           <li class="nav-menu-item">
             <a href="./about.html">ABOUT</a>
           </li>
-          <li class="nav-menu-item"><a href="#roadmap-block">ROADMAP</a></li>
+          <li class="nav-menu-item">
+            <a href="./index.html#roadmap-block">ROADMAP</a>
+          </li>
           <li class="nav-menu-item">
             <a href="./catalog.html">COLLECTION</a>
           </li>
           <li class="nav-menu-item">
             <a href="./faqs.html">FAQS</a>
           </li>
-          <li class="nav-menu-item">
-            <a href="#" class="dropdown">
+
+          <li class="nav-menu-item nav-dropdown-item">
+            <button class="dropdown" type="button">
               PAGES
               <svg class="icon arrow-dwn">
                 <use xlink:href="sprite.svg#arrow-down"></use>
               </svg>
-            </a>
-            <ul class="dropdown-content">
+            </button>
+            <ul class="dropdown-content" id="dropdown-menu">
               <li>
-                <a href="./catalog.html">NFT Catalog</a>
+                <a class="dropdown-item" href="./catalog.html">NFT Catalog</a>
               </li>
               <li>
-                <a href="./blog.html">Blog</a>
+                <a class="dropdown-item" href="./blog.html">Blog</a>
               </li>
               <li>
-                <a href="./contact-us.html">Contact Us</a>
+                <a class="dropdown-item" href="./contact-us.html">Contact Us</a>
               </li>
             </ul>
           </li>
@@ -82,11 +85,19 @@
       </nav>
 
       <div class="btn-box">
-        <button class="switch-mode">
-          <svg class="icon switch-ico">
-            <use xlink:href="sprite.svg#switch"></use>
-          </svg>
-        </button>
+        <form class="darkmode" action="" method="post">
+          <input
+            type="checkbox"
+            name="darkmode"
+            id="darkmode"
+            class="visually-hidden darkmode-toggle"
+          />
+          <label class="switch-mode" for="darkmode">
+            <svg class="icon switch-ico">
+              <use xlink:href="sprite.svg#switch"></use>
+            </svg>
+          </label>
+        </form>
 
         <a href="#" class="basic-btn media-btn">
           <svg class="icon discord-btn">
@@ -95,7 +106,7 @@
           DISCORD
         </a>
 
-        <button class="basic-btn btn-light">
+        <button class="basic-btn btn-light" type="button">
           <svg class="icon wallet-icon">
             <use xlink:href="sprite.svg#wallet"></use>
           </svg>
@@ -150,11 +161,51 @@
       <section class="get-intouch-block container">
         <h2 class="secondary-heading">Get in touch</h2>
         <p>Browse through the most freuently asked questions</p>
-        <form action="post">
-          <input type="text" placeholder="Name" />
-          <input type="email" placeholder="Enter your email" />
-          <input type="tel" placeholder="Phone Number" />
-          <textarea name="comment" rows="5" placeholder="Message"></textarea>
+        <form action="" method="post">
+          <fieldset class="form-block">
+            <label class="visually-hidden" for="name">Your full name:</label>
+            <input
+              class="field-validation form-block-input"
+              type="text"
+              name="name"
+              id="name"
+              required
+              placeholder="Name *"
+            />
+
+            <label class="visually-hidden" for="mail">E-mail:</label>
+            <input
+              class="field-validation form-block-input"
+              type="email"
+              name="email"
+              id="mail"
+              required
+              autocomplete="email"
+              pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+              placeholder="Enter your email *"
+            />
+          </fieldset>
+
+          <label class="visually-hidden" for="tel-number">Phone number:</label>
+          <input
+            class="field-validation form-block-input"
+            type="tel"
+            name="phone"
+            id="tel-number"
+            title="Should match format XXX-XXX-XXXX"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            placeholder="Phone Number"
+          />
+
+          <label class="visually-hidden" for="message">Your message:</label>
+          <textarea
+            class="field-validation form-textarea"
+            name="comment"
+            id="message"
+            required
+            placeholder="Message *"
+          ></textarea>
+
           <button type="submit" class="btn-border">SEND MESSAGE</button>
         </form>
       </section>
@@ -177,7 +228,7 @@
               </svg>
               DISCORD
             </a>
-            <button class="basic-btn btn-light">WHITELIST NOW</button>
+            <button class="basic-btn btn-light" type="button">WHITELIST NOW</button>
           </div>
         </article>
       </section>
@@ -225,6 +276,30 @@
             <li><a href="#">Help Center</a></li>
           </ul>
         </div>
+
+        <form action="" method="post" class="site-newsletter">
+          <fieldset>
+            <legend class="sitemap-title">SUBSCRIBE</legend>
+            <div>
+              <label for="email" class="visually-hidden">Email:</label>
+              <input
+                class="newsletter-field field-validation"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter your email"
+                autocomplete="email"
+                required
+                pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+              />
+              <input
+                class="btn-light basic-btn"
+                type="submit"
+                value="SUBSCRIBE"
+              />
+            </div>
+          </fieldset>
+        </form>
       </section>
 
       <section class="footer-copyright">
