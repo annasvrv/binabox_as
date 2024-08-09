@@ -55,29 +55,32 @@
           <li class="nav-menu-item">
             <a href="./about.html">ABOUT</a>
           </li>
-          <li class="nav-menu-item"><a href="#roadmap-block">ROADMAP</a></li>
+          <li class="nav-menu-item">
+            <a href="./index.html#roadmap-block">ROADMAP</a>
+          </li>
           <li class="nav-menu-item">
             <a href="./catalog.html">COLLECTION</a>
           </li>
           <li class="nav-menu-item">
             <a href="./faqs.html">FAQS</a>
           </li>
-          <li class="nav-menu-item">
-            <a href="#" class="dropdown">
+
+          <li class="nav-menu-item nav-dropdown-item">
+            <button class="dropdown" type="button">
               PAGES
               <svg class="icon arrow-dwn">
                 <use xlink:href="sprite.svg#arrow-down"></use>
               </svg>
-            </a>
-            <ul class="dropdown-content">
+            </button>
+            <ul class="dropdown-content" id="dropdown-menu">
               <li>
-                <a href="./catalog.html">NFT Catalog</a>
+                <a class="dropdown-item" href="./catalog.html">NFT Catalog</a>
               </li>
               <li>
-                <a href="./blog.html">Blog</a>
+                <a class="dropdown-item" href="./blog.html">Blog</a>
               </li>
               <li>
-                <a href="./contact-us.html">Contact Us</a>
+                <a class="dropdown-item" href="./contact-us.html">Contact Us</a>
               </li>
             </ul>
           </li>
@@ -85,11 +88,19 @@
       </nav>
 
       <div class="btn-box">
-        <button class="switch-mode">
-          <svg class="icon switch-ico">
-            <use xlink:href="sprite.svg#switch"></use>
-          </svg>
-        </button>
+        <form class="darkmode" action="" method="post">
+          <input
+            type="checkbox"
+            name="darkmode"
+            id="darkmode"
+            class="visually-hidden darkmode-toggle"
+          />
+          <label class="switch-mode" for="darkmode">
+            <svg class="icon switch-ico">
+              <use xlink:href="sprite.svg#switch"></use>
+            </svg>
+          </label>
+        </form>
 
         <a href="#" class="basic-btn media-btn">
           <svg class="icon discord-btn">
@@ -98,7 +109,7 @@
           DISCORD
         </a>
 
-        <button class="basic-btn btn-light">
+        <button class="basic-btn btn-light" type="button">
           <svg class="icon wallet-icon">
             <use xlink:href="sprite.svg#wallet"></use>
           </svg>
@@ -143,7 +154,7 @@
 
         <!-- About card list -->
         <ol class="about-list">
-          <li class="aboutpage-list-item">
+          <li class="aboutpage-list-item hover-effect">
             <article>
               <h3>HIGH QUAILITY</h3>
               <p class="about-list-description">
@@ -152,7 +163,7 @@
               </p>
             </article>
           </li>
-          <li class="aboutpage-list-item">
+          <li class="aboutpage-list-item hover-effect">
             <article>
               <h3>BiG COLLECTION</h3>
               <p class="about-list-description">
@@ -161,7 +172,7 @@
               </p>
             </article>
           </li>
-          <li class="aboutpage-list-item">
+          <li class="aboutpage-list-item hover-effect">
             <article>
               <h3>TOP RESOURCE</h3>
               <p class="about-list-description">
@@ -170,7 +181,7 @@
               </p>
             </article>
           </li>
-          <li class="aboutpage-list-item">
+          <li class="aboutpage-list-item hover-effect">
             <article>
               <h3>BIG COMMUNITY</h3>
               <p class="about-list-description">
@@ -185,7 +196,7 @@
       <!-- Team section -->
       <section class="team container" id="team-block">
         <h2 class="secondary-heading">OUR TEAM</h2>
-        <article class="team-card">
+        <article class="team-card hover-effect">
           <img src="./img/img-team/team-photo1.webp" alt="Team member photo" />
           <h3 class="team-name">Ralph Edwards</h3>
           <p class="team-title">Founder</p>
@@ -221,7 +232,7 @@
           </ul>
         </article>
 
-        <article class="team-card">
+        <article class="team-card hover-effect">
           <img src="./img/img-team/team-photo2.webp" alt="Team member photo" />
           <h3 class="team-name">Jason Smith</h3>
           <p class="team-title">Co - Founder</p>
@@ -257,7 +268,7 @@
           </ul>
         </article>
 
-        <article class="team-card">
+        <article class="team-card hover-effect">
           <img src="./img/img-team/team-photo3.webp" alt="Team member photo" />
           <h3 class="team-name">Tony Wings</h3>
           <p class="team-title">Web Designer</p>
@@ -294,7 +305,7 @@
           </ul>
         </article>
 
-        <article class="team-card">
+        <article class="team-card hover-effect">
           <img src="./img/img-team/team-photo4.webp" alt="Team member photo" />
           <h3 class="team-name">Esther Howard</h3>
           <p class="team-title">Project Manager</p>
@@ -330,7 +341,7 @@
           </ul>
         </article>
 
-        <article class="team-card">
+        <article class="team-card hover-effect">
           <img src="./img/img-team/team-photo5.webp" alt="Team member photo" />
           <h3 class="team-name">Jenny Wilson</h3>
           <p class="team-title">Artist</p>
@@ -366,7 +377,7 @@
           </ul>
         </article>
 
-        <article class="team-card">
+        <article class="team-card hover-effect">
           <img src="./img/img-team/team-photo6.webp" alt="Team member photo" />
           <h3 class="team-name">Robert Fox</h3>
           <p class="team-title">UI/UX Designer</p>
@@ -402,7 +413,7 @@
           </ul>
         </article>
 
-        <article class="team-card">
+        <article class="team-card hover-effect">
           <img src="./img/img-team/team-photo7.webp" alt="Team member photo" />
           <h3 class="team-name">Devon Lane</h3>
           <p class="team-title">Ux Architect</p>
@@ -610,7 +621,9 @@
               </svg>
               DISCORD
             </a>
-            <button class="basic-btn btn-light">WHITELIST NOW</button>
+            <button class="basic-btn btn-light" type="button">
+              WHITELIST NOW
+            </button>
           </div>
         </article>
       </section>
@@ -659,24 +672,29 @@
           </ul>
         </div>
 
-        <div class="sitemap">
-          <h2 class="sitemap-title">SUBSCRIBE</h2>
-          <form action="" class="site-newsletter">
-            <label for="mail" hidden>Email:</label>
-            <input
-              class="newsletter-field"
-              type="text"
-              placeholder="Enter your email"
-              name="mail"
-              required
-            />
-            <input
-              class="btn-light basic-btn"
-              type="submit"
-              value="SUBSCRIBE"
-            />
-          </form>
-        </div>
+        <form action="" method="post" class="site-newsletter">
+          <fieldset>
+            <legend class="sitemap-title">SUBSCRIBE</legend>
+            <div>
+              <label for="email" class="visually-hidden">Email:</label>
+              <input
+                class="newsletter-field field-validation"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter your email"
+                autocomplete="email"
+                required
+                pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+              />
+              <input
+                class="btn-light basic-btn"
+                type="submit"
+                value="SUBSCRIBE"
+              />
+            </div>
+          </fieldset>
+        </form>
       </section>
 
       <section class="footer-copyright">
