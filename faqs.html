@@ -46,38 +46,44 @@
       <!-- Navigation Menu -->
       <nav class="nav-menu">
         <ul class="nav-menu-items">
-          <li class="nav-menu-item">
-            <a href="index.html">HOME</a>
+          <li>
+            <a href="index.html" class="nav-menu-item">HOME</a>
           </li>
-          <li class="nav-menu-item">
-            <a href="./about.html">ABOUT</a>
+          <li>
+            <a href="./about.html" class="nav-menu-item">ABOUT</a>
           </li>
-          <li class="nav-menu-item">
-            <a href="./index.html#roadmap-block">ROADMAP</a>
+          <li>
+            <a href="./index.html#roadmap-block" class="nav-menu-item"
+              >ROADMAP</a
+            >
           </li>
-          <li class="nav-menu-item">
-            <a href="./catalog.html">COLLECTION</a>
+          <li>
+            <a href="./catalog.html" class="nav-menu-item">COLLECTION</a>
           </li>
-          <li class="nav-menu-item">
-            <a href="./faqs.html">FAQS</a>
+          <li>
+            <a href="./faqs.html" class="nav-menu-item">FAQS</a>
           </li>
 
-          <li class="nav-menu-item nav-dropdown-item">
-            <button class="dropdown" type="button">
+          <li class="nav-dropdown-item">
+            <a class="nav-menu-item">
               PAGES
               <svg class="icon arrow-down">
                 <use xlink:href="sprite.svg#arrow-down"></use>
               </svg>
-            </button>
+            </a>
             <ul class="dropdown-content" id="dropdown-menu">
-              <li>
-                <a class="dropdown-item" href="./catalog.html">NFT Catalog</a>
+              <li class="dropdown-item">
+                <a class="dropdown-item-link" href="./catalog.html"
+                  >NFT Catalog</a
+                >
               </li>
-              <li>
-                <a class="dropdown-item" href="./blog.html">Blog</a>
+              <li class="dropdown-item">
+                <a class="dropdown-item-link" href="./blog.html">Blog</a>
               </li>
-              <li>
-                <a class="dropdown-item" href="./contact-us.html">Contact Us</a>
+              <li class="dropdown-item">
+                <a class="dropdown-item-link" href="./contact-us.html"
+                  >Contact Us</a
+                >
               </li>
             </ul>
           </li>
@@ -99,7 +105,7 @@
           </label>
         </form>
 
-        <a href="#" class="btn-basic btn-media">
+        <a href="#" class="btn-basic btn-media-header">
           <svg class="icon discord-btn">
             <use xlink:href="sprite.svg#discord-btn"></use>
           </svg>
@@ -120,18 +126,22 @@
       <!-- Breadcrumbs -->
       <section class="breadcrumbs container">
         <h1 class="secondary-heading">HOW CAN WE HELP?</h1>
-        <ul>
-          <li class="inactive-link"><a href="./index.html">HOME</a></li>
+        <ul class="breadcrumbs-list">
           <li>
-            <a href="#faqs-page"><span class="highlighted-text">FAQS</span></a>
+            <a class="breadcrumbs-item inactive-link" href="./index.html"
+              >HOME</a
+            >
+          </li>
+          <li>
+            <a class="breadcrumbs-item" href="#faqs-page"
+              ><span class="highlighted-text">FAQS</span></a
+            >
           </li>
         </ul>
       </section>
 
       <!-- FAQs section -->
       <section class="faq-box container" id="faqs-page">
-        <h2 style="display: none">FAQS</h2>
-
         <div class="q-box">
           <details open class="faqs-card">
             <summary class="faqs-name open">What are the NFTs?</summary>
@@ -204,44 +214,58 @@
             BINABOX
           </a>
 
-          <p>We are the best way to check the rarity of NFT collection.</p>
+          <p class="catalog-footer-text">
+            We are the best way to check the rarity of NFT collection.
+          </p>
         </div>
 
         <div class="sitemap">
           <h2 class="sitemap-title">SUBSCRIBE</h2>
-          <ul class="sitemap-list">
-            <li>
-              <a href="./index.html">Home</a>
+          <ul>
+            <li class="sitemap-list">
+              <a class="nav-pages-item" href="./index.html">Home</a>
             </li>
-            <li>
-              <a href="./about.html"> About </a>
+            <li class="sitemap-list">
+              <a class="nav-pages-item" href="./about.html"> About </a>
             </li>
-            <li class="nav-pages-item">
-              <a href="./index.html#roadmap-block"> Roadmap </a>
+            <li class="sitemap-list">
+              <a class="nav-pages-item" href="./index.html#roadmap-block">
+                Roadmap
+              </a>
             </li>
-            <li class="nav-pages-item">
-              <a href="./about.html#team-block"> Our Team </a>
+            <li class="sitemap-list">
+              <a class="nav-pages-item" href="./about.html#team-block">
+                Our Team
+              </a>
             </li>
-            <li class="nav-pages-item">
-              <a href="./faqs.html"> FAQS </a>
+            <li class="sitemap-list">
+              <a class="nav-pages-item" href="./faqs.html"> FAQS </a>
             </li>
           </ul>
         </div>
 
         <div class="sitemap">
           <h2 class="sitemap-title">COMPANY</h2>
-          <ul class="sitemap-list">
-            <li><a href="#">Terms Canditions</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Whitepaper</a></li>
-            <li><a href="#">Help Center</a></li>
+          <ul>
+            <li class="sitemap-list">
+              <a class="nav-pages-item" href="#">Terms Canditions</a>
+            </li>
+            <li class="sitemap-list">
+              <a class="nav-pages-item" href="#">Privacy Policy</a>
+            </li>
+            <li class="sitemap-list">
+              <a class="nav-pages-item" href="#">Whitepaper</a>
+            </li>
+            <li class="sitemap-list">
+              <a class="nav-pages-item" href="#">Help Center</a>
+            </li>
           </ul>
         </div>
 
         <form action="" method="post" class="site-newsletter">
-          <fieldset>
+          <fieldset class="site-newsletter-fieldset">
             <legend class="sitemap-title">SUBSCRIBE</legend>
-            <div>
+            <div class="site-newsletter-wrapper">
               <label for="email" class="visually-hidden">Email:</label>
               <input
                 class="newsletter-field field-validation"
@@ -264,7 +288,7 @@
       </section>
 
       <div class="footer-copyright">
-        <p>BINABOX 2022 - ALL rights reserved</p>
+        <p class="footer-copyright-text">BINABOX 2022 - ALL rights reserved</p>
         <div class="social-networks">
           <ul class="social-networks-items">
             <!-- Twitter add icon -->

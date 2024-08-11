@@ -54,7 +54,14 @@ button {
   gap: 8px;
 }
 
+.btn-media {
+  display: inline-flex;
+  background-color: rgb(88, 101, 242);
+}
+
 .btn-light {
+  display: inline-flex;
+  align-items: center;
   border: none;
   background-color: var(--btn-primary-color);
   color: var(--secondary-color);
@@ -118,7 +125,7 @@ header {
   gap: 32px;
 }
 
-.nav-menu-item a {
+.nav-menu-item {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 10%;
@@ -126,18 +133,7 @@ header {
 
 /******** Needed to finish popup menu!!!  ***************/
 
-.dropdown {
-  all: unset;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 10%;
-}
-
-.dropdown:hover,
-.dropdown:focus {
+.nav-menu-item:hover {
   border-bottom: 1px solid var(--btn-primary-color);
 }
 
@@ -149,8 +145,9 @@ header {
 .arrow-down {
   width: 15px;
   height: 15px;
+  vertical-align: middle;
   margin-left: 4px;
-  padding: 8px;
+  padding-bottom: 4px;
 }
 
 .dropdown-content {
@@ -169,7 +166,7 @@ header {
 .dropdown-content::before {
   content: "";
   position: absolute;
-  top: -18px;
+  top: -20px;
   left: 12px;
   border: 10px solid transparent;
   border-bottom-color: var(--secondary-color);
@@ -179,14 +176,14 @@ header {
   display: block;
 }
 
-.dropdown-content li {
+.dropdown-item {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 10%;
   margin-bottom: 14px;
 }
 
-.dropdown-content a:hover {
+.dropdown-item-link:hover {
   color: var(--btn-primary-color);
 }
 
@@ -249,13 +246,13 @@ header {
 
 /* ************************** */
 
-header .btn-media {
+.btn-media-header {
   display: flex;
   background-color: var(--secondary-color);
   transition: color 0.3s ease-in-out;
 }
 
-header .btn-media:active {
+.btn-media-header:active {
   background-color: rgb(35, 46, 57);
   border: 2px solid var(--secondary-color);
 }
@@ -263,10 +260,6 @@ header .btn-media:active {
 .discord-btn {
   width: 24px;
   height: 24px;
-}
-
-header .btn-light {
-  display: flex;
 }
 
 .wallet-icon {
@@ -382,7 +375,7 @@ header .btn-light {
   text-align: left;
 }
 
-.about-list li {
+.about-list-item {
   margin: 0 auto;
   padding: 30px;
   background-color: var(--secondary-color);
@@ -393,7 +386,7 @@ header .btn-light {
   position: relative;
 }
 
-.about-list li::marker {
+.about-list-item::marker {
   content: counter(list-item, decimal-leading-zero);
   color: var(--secondary-color);
   font-size: 80px;
@@ -442,12 +435,12 @@ header .btn-light {
   opacity: 1;
 }
 
-.about-list article {
+.about-list-card {
   position: relative;
   bottom: 48px;
 }
 
-.about-list h3 {
+.about-list-title {
   font-size: 24px;
   line-height: 1.25;
   margin-bottom: 26px;
@@ -467,11 +460,8 @@ header .btn-light {
   background-color: var(--main-background-color);
 }
 
-.workflow h2 {
-  margin-bottom: 40px;
-}
-
 .workflow-cards {
+  margin-top: 40px;
   /* gap: 30px; */
   list-style-position: inside;
   text-align: center;
@@ -502,10 +492,10 @@ header .btn-light {
   display: block;
 }
 
-.workflow-card p {
+.workflow-card-text {
   font-size: 24px;
   line-height: 1.33;
-  margin-top: 75px;
+  /* margin-top: 75px; */
 }
 
 /************************ Road Map section **********************************/
@@ -516,13 +506,10 @@ header .btn-light {
   background-color: var(--main-background-color);
 }
 
-.roadmap h2 {
-  margin-bottom: 60px;
-}
-
 .roadmap-card {
   background-color: var(--article-bg-color);
   padding: 48px 43px;
+  margin-top: 60px;
   margin-bottom: 25px;
 }
 
@@ -618,36 +605,31 @@ header .btn-light {
   background-color: var(--main-background-color);
 }
 
-.team h2 {
-  margin-bottom: 60px;
-}
-
 .team-card {
-  margin: 0 auto;
+  margin: 60px auto 0;
   background-color: var(--secondary-color);
   text-align: center;
   padding: 40px 20px;
   width: 330px;
   height: 339px;
-  margin-bottom: 30px;
   box-sizing: border-box;
   position: relative;
 }
 
-.team-card h3 {
+.team-name {
   font-size: 24px;
   line-height: 1.25;
   margin-top: 31px;
   margin-bottom: 4px;
 }
 
-.team-card p {
+.team-title {
   font-family: var(--text-font);
   color: var(--text-color);
   margin-bottom: 26px;
 }
 
-.team-card ul {
+.team-connect-list {
   display: flex;
   justify-content: center;
   gap: 16px;
@@ -665,11 +647,8 @@ header .btn-light {
   background-color: var(--main-background-color);
 }
 
-.partners h2 {
-  margin-bottom: 58px;
-}
-
 .partners-cards {
+  margin-top: 58px;
   text-align: center;
 }
 
@@ -690,11 +669,11 @@ header .btn-light {
   background-color: var(--main-background-color);
 }
 
-.faq-box h2 {
+.faq-title {
   margin-bottom: 60px;
 }
 
-.faq-box details {
+.faqs-card {
   margin: 0 auto;
   background-color: var(--secondary-color);
   padding: 30px 20px;
@@ -732,31 +711,27 @@ header .btn-light {
 
 /*********************** Homepage Footer ***********************/
 
-footer {
-  padding-top: 50px;
-}
-
 /********************** Homepage call-action section ******************/
 
-.call-action {
+.cta-homepage {
   margin: 0 auto;
   text-align: center;
   margin-bottom: 80px;
+  padding-top: 50px;
 }
 
-.call-action p {
+.cta-homepage-text {
   font-family: var(--text-font);
   color: var(--text-color);
   margin-top: 8px;
   margin-bottom: 40px;
 }
 
-.footer-btn-box {
+.cta-homepage-btns {
+  display: flex;
+  justify-content: center;
+  gap: 37px;
   margin-bottom: 40px;
-}
-
-footer .btn-media {
-  background-color: rgb(88, 101, 242);
 }
 
 /* Homepage newsletter subcribtion form */
@@ -771,11 +746,11 @@ footer .btn-media {
   width: 441px;
 }
 
-.site-newsletter fieldset {
+.site-newsletter-fieldset {
   border: none;
 }
 
-.site-newsletter div {
+.site-newsletter-wrapper {
   display: flex;
 }
 
@@ -853,22 +828,24 @@ input::placeholder {
   height: 26px;
 }
 
-.footer-logo-box p {
+.footer-copyright-text {
   font-family: var(--text-font);
   color: var(--text-color);
   font-size: 14px;
   line-height: 1.57;
-  text-align: right;
+  /* check other pages with this class for text align */
+  /* text-align: right; */
 }
 
 /************************ Homepage Footer Pages *************************/
 
-.nav-pages-item a {
+.nav-pages-item {
   font-family: var(--text-font);
   color: var(--text-color);
   font-size: 14px;
   line-height: 1.57;
-  text-align: right;
+  /* do not put text align - its will effect other pages tags */
+  /* text-align: right; */
 }
 
 /************************* CATALOG Page **************************/
@@ -882,19 +859,19 @@ input::placeholder {
   text-align: center;
 }
 
-.breadcrumbs ul {
+.breadcrumbs-list {
   margin-top: 12px;
   display: flex;
   justify-content: center;
-}
-
-.breadcrumbs a {
-  padding: 0 8px;
   font-size: 14px;
   line-height: 1.43;
 }
 
-.inactive-link a {
+.breadcrumbs-item {
+  padding: 0 8px;
+}
+
+.inactive-link {
   color: var(--inactive-color);
   border-right: 2px solid var(--inactive-color);
 }
@@ -987,7 +964,7 @@ input::placeholder {
   stroke-width: 2px;
 }
 
-.current-filters-block button {
+.current-filters-btn {
   all: unset;
   cursor: pointer;
   display: flex;
@@ -996,7 +973,7 @@ input::placeholder {
   line-height: 1.57;
 }
 
-.current-filters-block button:hover {
+.current-filters-btn:hover {
   opacity: 0.6;
 }
 
@@ -1043,7 +1020,7 @@ input::placeholder {
   color: var(--text-color);
 }
 
-.nft-filter-list li {
+.nft-filter-item {
   margin-bottom: 6px;
   display: flex;
   align-items: center;
@@ -1113,10 +1090,6 @@ input::placeholder {
   text-align: center;
 }
 
-.cta-section .btn-media {
-  background-color: rgb(88, 101, 242);
-}
-
 /********************** Catalog Footer ******************************/
 
 .catalog-footer {
@@ -1139,7 +1112,7 @@ input::placeholder {
   height: 36px;
 }
 
-.catalog-footer-logobox p {
+.catalog-footer-text {
   font-size: 16px;
   line-height: 1.63;
   font-family: var(--text-font);
@@ -1153,15 +1126,8 @@ input::placeholder {
   margin-bottom: 20px;
 }
 
-.sitemap-list li {
+.sitemap-list {
   margin-bottom: 16px;
-}
-
-.sitemap-list a {
-  font-family: var(--text-font);
-  font-size: 14px;
-  line-height: 1.57;
-  color: var(--text-color);
 }
 
 /*********************** Footer Copyright section in catalog   ******************/
@@ -1170,14 +1136,6 @@ input::placeholder {
   border-top: 1px solid rgb(67, 67, 67);
   padding-top: 20px;
   padding-bottom: 20px;
-}
-
-.footer-copyright h2 {
-  font-family: var(--text-font);
-  color: var(--text-color);
-  font-size: 14px;
-  line-height: 1.57;
-  text-align: left;
 }
 
 .network-item-cat {
@@ -1212,7 +1170,7 @@ input::placeholder {
 .time-counter {
   width: 608px;
   background-color: rgba(255, 255, 255, 0.3);
-  text-align: center;
+  /* text-align: center; */
   padding: 20px;
 }
 
@@ -1222,21 +1180,21 @@ input::placeholder {
   margin-bottom: 12px;
 }
 
-.nftcard-box-timer dt {
+.countdown-number {
   text-align: left;
 }
 
 .time-counter-span {
-  text-align: right;
   color: var(--text-color);
   margin-left: 20px;
+  /* text-align: right; */
 }
 
-.nftcard-box-timer dd {
+.countdown-name {
   font-size: 20px;
   line-height: 1.4;
   color: rgb(246, 246, 246);
-  text-align: left;
+  /* text-align: left; */
 }
 
 /***************************** NFT Details section ***************************/
@@ -1250,7 +1208,7 @@ input::placeholder {
   margin-bottom: 24px;
 }
 
-.nftcard-details p {
+.nftcard-details-text {
   font-size: 20px;
   line-height: 1.5;
   font-family: var(--text-font);
@@ -1262,7 +1220,7 @@ input::placeholder {
   margin-bottom: 30px;
 }
 
-.nft-features dt {
+.nft-category {
   font-size: 16px;
   line-height: 1.63;
   font-family: var(--text-font);
@@ -1272,7 +1230,7 @@ input::placeholder {
   background-color: var(--secondary-color);
 }
 
-.nft-features dd {
+.nft-feature-var {
   font-size: 24px;
   line-height: 1.25;
   padding: 0 20px 20px 20px;
@@ -1283,15 +1241,12 @@ input::placeholder {
 
 /******************************* NFT price block ******************************/
 
-.nft-price dt,
-.nft-price dd {
-  font-size: 36px;
-  display: inline;
-  margin-right: 14px;
-}
-
 .nft-price {
+  display: inline-flex;
+  gap: 14px;
   margin-bottom: 40px;
+  font-size: 36px;
+  line-height: 1.22;
 }
 
 .btn-buy {
@@ -1300,18 +1255,13 @@ input::placeholder {
   text-align: center;
 }
 
-.bag-ico {
-  width: 20px;
-  height: 20px;
-}
-
 .nftcard-box-btns {
   text-align: center;
   margin-top: 24px;
   width: 100%;
 }
 
-.nftcard-box-btns a {
+.nftcard-media-btn {
   display: inline-block;
   border: 2px solid rgb(136, 139, 142);
   padding: 16px 24px;
@@ -1325,7 +1275,7 @@ input::placeholder {
   height: 24px;
 }
 
-.nftcard-box-btns a:active {
+.nftcard-media-btn:active {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -1387,26 +1337,24 @@ input::placeholder {
   gap: 30px;
 }
 
-.contact-info li {
+.contact-info-option {
   border: 1px solid rgb(67, 67, 67);
   padding: 40px 30px;
   width: 450px;
   text-align: center;
 }
 
-.contact-info svg {
-  width: 56px;
-  height: 56px;
+.contact-info-icon {
   fill: var(--btn-primary-color);
 }
 
-.contact-info h2 {
+.contact-info-title {
   margin-top: 20px;
   margin-bottom: 8px;
   font-size: 36px;
   line-height: 1.22;
 }
-.contact-info a {
+.contact-details {
   font-family: var(--text-font);
   color: var(--text-color);
 }
@@ -1419,18 +1367,15 @@ input::placeholder {
   background-color: var(--main-background-color);
 }
 
-.get-intouch-block h2 {
-  margin-bottom: 4px;
-}
-
-.get-intouch-block p {
+.get-intouch-text {
+  margin-top: 4px;
   margin-bottom: 60px;
   font-size: 20px;
   line-height: 1.5;
   font-family: var(--text-font);
 }
 
-.get-intouch-block form {
+.get-intouch-form {
   width: 690px;
   margin: 0 auto;
   box-sizing: content-box;
@@ -1467,7 +1412,7 @@ input::placeholder {
   resize: vertical;
 }
 
-.get-intouch-block button {
+.btn-get-intouch {
   margin-top: 40px;
   padding: 12px 36px;
 }
@@ -1481,7 +1426,7 @@ input::placeholder {
   padding-bottom: 50px;
 }
 
-.story-section p {
+.story-section-text {
   margin-bottom: 40px;
 }
 
@@ -1505,7 +1450,7 @@ input::placeholder {
   box-sizing: border-box;
 }
 
-.blogpage-card img {
+.blogpage-img {
   width: 410px;
   display: block;
   margin: 0 auto;
@@ -1531,22 +1476,17 @@ input::placeholder {
   justify-content: start;
 }
 
-.blog-data li {
+.blog-author {
   display: flex;
   align-items: center;
+  gap: 6px;
   font-size: 16px;
   line-height: 1.5;
   color: var(--text-color);
   padding-right: 6px;
 }
 
-.blog-data svg {
-  margin-right: 6px;
-  width: 20px;
-  height: 20px;
-}
-
-.blog-date-item {
+.blog-date {
   padding-left: 6px;
   border-left: 1px solid var(--text-color);
 }
@@ -1582,11 +1522,6 @@ input::placeholder {
   display: flex;
   align-items: center;
   gap: 4px;
-}
-
-.blogpage-card-readmore svg {
-  width: 19px;
-  height: 12px;
 }
 
 .blog-pagination {
@@ -1656,19 +1591,20 @@ input::placeholder {
   color: var(--text-color);
 }
 
-.blogarticle-data li {
+.blogarticle-item,
+.blogarticle-date-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.blogarticle-item {
   padding-right: 12px;
 }
 
 .blogarticle-date-item {
   padding-left: 12px;
   border-left: 1px solid var(--text-color);
-}
-
-.blogarticle-data svg {
-  width: 24px;
-  height: 24px;
-  margin-right: 6px;
 }
 
 .blog-story {
@@ -1686,14 +1622,14 @@ input::placeholder {
   background-color: rgba(33, 231, 134, 0.1);
 }
 
-.blog-story-quote blockquote {
+.blog-story-text {
   margin-bottom: 12px;
   font-family: var(--text-font);
   font-size: 24px;
   line-height: 1.25;
 }
 
-.blog-story-quote figcaption {
+.blog-story-rating {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -1714,7 +1650,7 @@ input::placeholder {
   height: 18px;
 }
 
-.blog-story-quote cite {
+.blog-quote-author {
   font-size: 16px;
   line-height: 1.5;
   font-style: normal;
@@ -1738,7 +1674,7 @@ input::placeholder {
   line-height: 1.5;
 }
 
-.article-block-title + p + p {
+.article-block-text:not(:first-of-type) {
   margin-top: 12px;
 }
 
@@ -1756,7 +1692,7 @@ input::placeholder {
   align-items: center;
 }
 
-.blog-tags-share h3 {
+.blog-tags-title {
   font-size: 16px;
   line-height: 1.5;
   font-family: var(--btn-header-font);
@@ -1770,9 +1706,7 @@ input::placeholder {
   background-color: rgba(65, 69, 74, 0.4);
 }
 
-.share svg {
-  width: 20px;
-  height: 20px;
+.share-icon {
   display: block;
 }
 
@@ -1782,7 +1716,7 @@ input::placeholder {
   justify-content: space-between;
 }
 
-.blog-article-pages article {
+.blog-article-mini {
   padding: 21px 20px;
   background-color: var(--secondary-color);
   width: 411px;
@@ -1790,27 +1724,25 @@ input::placeholder {
   font-weight: 700;
 }
 
-.blog-article-pages a {
+.blogpage-mini-link {
   display: flex;
   gap: 16px;
 }
 
 .blog-page-reverse {
+  display: flex;
+  gap: 16px;
   flex-direction: row-reverse;
   text-align: right;
 }
 
-.blog-article-pages img {
-  width: 80px;
-}
-
-.blog-article-pages h2 {
+.content-block-title {
   font-size: 18px;
   line-height: 1.56;
   margin-top: 4px;
 }
 
-.blog-article-pages p {
+.content-block-text {
   font-size: 14px;
   line-height: 1.57;
   color: var(--text-color);
@@ -1822,7 +1754,8 @@ input::placeholder {
   margin: 0 auto;
 }
 
-.blog-article-form fieldset {
+.blog-article-form .search-form,
+.blog-filters {
   border: none;
   background-color: var(--secondary-color);
   width: 330px;
@@ -1873,12 +1806,7 @@ input::placeholder {
   margin-bottom: 12px;
 }
 
-.recent-post img {
-  width: 100px;
-  height: 100px;
-}
-
-.recent-post h2 {
+.recent-post-title {
   font-family: var(--text-font);
   font-weight: 700;
   font-size: 18px;
@@ -1895,12 +1823,11 @@ input::placeholder {
   letter-spacing: 0.5px;
 }
 
-.recent-post-list span {
+.recent-post-item {
   padding-right: 6px;
-  /* margin-right: 6px; */
 }
 
-.recent-post-list time {
+.recent-post-time {
   padding-left: 6px;
   border-left: 1px solid var(--text-color);
 }
@@ -1911,26 +1838,22 @@ input::placeholder {
   display: flex;
   flex-flow: row wrap;
   gap: 8px;
-  padding: 20px 24px 8px;
+  padding: 20px 24px;
   font-family: var(--text-font);
   font-size: 12px;
   line-height: 1.5;
   letter-spacing: 1px;
 }
 
-.blog-filters-tags li {
-  margin-bottom: 12px;
-}
-
 /*  Feedback Form in the Blog Article page */
 
-.feedback-section h2 {
+.feedback-section-title {
   font-size: 36px;
   line-height: 1.22;
   margin-bottom: 4px;
 }
 
-.feedback-section p {
+.feedback-section-description {
   font-family: var(--text-font);
   color: var(--text-color);
   font-size: 20px;

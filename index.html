@@ -50,36 +50,42 @@
       <!-- Navigation Menu -->
       <nav class="nav-menu">
         <ul class="nav-menu-items">
-          <li class="nav-menu-item">
-            <a href="index.html">HOME</a>
+          <li>
+            <a href="index.html" class="nav-menu-item">HOME</a>
           </li>
-          <li class="nav-menu-item">
-            <a href="./about.html">ABOUT</a>
+          <li>
+            <a href="./about.html" class="nav-menu-item">ABOUT</a>
           </li>
-          <li class="nav-menu-item"><a href="#roadmap-block">ROADMAP</a></li>
-          <li class="nav-menu-item">
-            <a href="./catalog.html">COLLECTION</a>
+          <li>
+            <a href="#roadmap-block" class="nav-menu-item">ROADMAP</a>
           </li>
-          <li class="nav-menu-item">
-            <a href="./faqs.html">FAQS</a>
+          <li>
+            <a href="./catalog.html" class="nav-menu-item">COLLECTION</a>
+          </li>
+          <li>
+            <a href="./faqs.html" class="nav-menu-item">FAQS</a>
           </li>
 
-          <li class="nav-menu-item nav-dropdown-item">
-            <button class="dropdown" type="button">
+          <li class="nav-dropdown-item">
+            <a class="nav-menu-item">
               PAGES
               <svg class="icon arrow-down">
                 <use xlink:href="sprite.svg#arrow-down"></use>
               </svg>
-            </button>
+            </a>
             <ul class="dropdown-content" id="dropdown-menu">
-              <li>
-                <a class="dropdown-item" href="./catalog.html">NFT Catalog</a>
+              <li class="dropdown-item">
+                <a class="dropdown-item-link" href="./catalog.html"
+                  >NFT Catalog</a
+                >
               </li>
-              <li>
-                <a class="dropdown-item" href="./blog.html">Blog</a>
+              <li class="dropdown-item">
+                <a class="dropdown-item-link" href="./blog.html">Blog</a>
               </li>
-              <li>
-                <a class="dropdown-item" href="./contact-us.html">Contact Us</a>
+              <li class="dropdown-item">
+                <a class="dropdown-item-link" href="./contact-us.html"
+                  >Contact Us</a
+                >
               </li>
             </ul>
           </li>
@@ -101,7 +107,7 @@
           </label>
         </form>
 
-        <a href="#" class="btn-basic btn-media">
+        <a href="#" class="btn-basic btn-media-header">
           <svg class="icon discord-btn">
             <use xlink:href="sprite.svg#discord-btn"></use>
           </svg>
@@ -229,9 +235,9 @@
         </p>
 
         <ol class="about-list">
-          <li class="hover-effect">
-            <article>
-              <h3>HIGH QUAILITY</h3>
+          <li class="about-list-item hover-effect">
+            <article class="about-list-card">
+              <h3 class="about-list-title">HIGH QUAILITY</h3>
               <p class="about-list-description">
                 Lorem Ipsum is simply dummy text of the printing and Ipsum
                 typesetting industry.
@@ -239,9 +245,9 @@
             </article>
           </li>
 
-          <li class="hover-effect">
-            <article>
-              <h3>BiG COLLECTION</h3>
+          <li class="about-list-item hover-effect">
+            <article class="about-list-card">
+              <h3 class="about-list-title">BiG COLLECTION</h3>
               <p class="about-list-description">
                 Lorem Ipsum is simply dummy text of the printing and Ipsum
                 typesetting industry.
@@ -249,9 +255,9 @@
             </article>
           </li>
 
-          <li class="hover-effect">
-            <article>
-              <h3>TOP RESOURCE</h3>
+          <li class="about-list-item hover-effect">
+            <article class="about-list-card">
+              <h3 class="about-list-title">TOP RESOURCE</h3>
               <p class="about-list-description">
                 Lorem Ipsum is simply dummy text of the printing and Ipsum
                 typesetting industry.
@@ -259,9 +265,9 @@
             </article>
           </li>
 
-          <li class="hover-effect">
-            <article>
-              <h3>BIG COMMUNITY</h3>
+          <li class="about-list-item hover-effect">
+            <article class="about-list-card">
+              <h3 class="about-list-title">BIG COMMUNITY</h3>
               <p class="about-list-description">
                 Lorem Ipsum is simply dummy text of the printing and Ipsum
                 typesetting industry.
@@ -282,19 +288,19 @@
         <ol class="workflow-cards">
           <li class="workflow-card hover-effect">
             <img src="./img/img-workflow/icon1.svg" alt="" />
-            <p>Connect Your Wallet</p>
+            <p class="workflow-card-text">Connect Your Wallet</p>
           </li>
           <li class="workflow-card hover-effect">
             <img src="./img/img-workflow/icon2.svg" alt="" />
-            <p>Sellect Your Quaility</p>
+            <p class="workflow-card-text">Sellect Your Quaility</p>
           </li>
           <li class="workflow-card hover-effect">
             <img src="./img/img-workflow/icon3.svg" alt="" />
-            <p>Confirm the Transaction</p>
+            <p class="workflow-card-text">Confirm the Transaction</p>
           </li>
           <li class="workflow-card hover-effect">
             <img src="./img/img-workflow/icon4.svg" alt="" />
-            <p>Receive Your NFTs</p>
+            <p class="workflow-card-text">Receive Your NFTs</p>
           </li>
         </ol>
       </section>
@@ -364,7 +370,7 @@
           <img src="./img/img-team/team-photo1.webp" alt="Team member photo" />
           <h3 class="team-name">Ralph Edwards</h3>
           <p class="team-title">Founder</p>
-          <ul>
+          <ul class="team-connect-list">
             <li>
               <a href="#">
                 <svg class="icon team-media">
@@ -400,7 +406,7 @@
           <img src="./img/img-team/team-photo2.webp" alt="Team member photo" />
           <h3 class="team-name">Jason Smith</h3>
           <p class="team-title">Co - Founder</p>
-          <ul>
+          <ul class="team-connect-list">
             <li>
               <a href="#">
                 <svg class="icon team-media">
@@ -437,7 +443,7 @@
           <h3 class="team-name">Tony Wings</h3>
           <p class="team-title">Web Designer</p>
 
-          <ul>
+          <ul class="team-connect-list">
             <li>
               <a href="#">
                 <svg class="icon team-media">
@@ -473,7 +479,7 @@
           <img src="./img/img-team/team-photo4.webp" alt="Team member photo" />
           <h3 class="team-name">Esther Howard</h3>
           <p class="team-title">Project Manager</p>
-          <ul>
+          <ul class="team-connect-list">
             <li>
               <a href="#">
                 <svg class="icon team-media">
@@ -509,7 +515,7 @@
           <img src="./img/img-team/team-photo5.webp" alt="Team member photo" />
           <h3 class="team-name">Jenny Wilson</h3>
           <p class="team-title">Artist</p>
-          <ul>
+          <ul class="team-connect-list">
             <li>
               <a href="#">
                 <svg class="icon team-media">
@@ -545,7 +551,7 @@
           <img src="./img/img-team/team-photo6.webp" alt="Team member photo" />
           <h3 class="team-name">Robert Fox</h3>
           <p class="team-title">UI/UX Designer</p>
-          <ul>
+          <ul class="team-connect-list">
             <li>
               <a href="#">
                 <svg class="icon team-media">
@@ -581,7 +587,7 @@
           <img src="./img/img-team/team-photo7.webp" alt="Team member photo" />
           <h3 class="team-name">Devon Lane</h3>
           <p class="team-title">Ux Architect</p>
-          <ul>
+          <ul class="team-connect-list">
             <li>
               <a href="#">
                 <svg class="icon team-media">
@@ -769,7 +775,7 @@
 
       <!-- FAQs section -->
       <section class="faq-box container">
-        <h2 class="secondary-heading">FAQS</h2>
+        <h2 class="faq-title secondary-heading">FAQS</h2>
 
         <details open class="faqs-card">
           <summary class="faqs-name open">What are the NFTs?</summary>
@@ -809,14 +815,14 @@
 
     <!-- Footer -->
     <footer>
-      <section class="call-action container">
+      <section class="cta-homepage container">
         <h2 class="secondary-heading">JOIN OUR COMMUNITY</h2>
-        <p>
+        <p class="cta-homepage-text">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry.
         </p>
 
-        <div class="footer-btn-box">
+        <div class="cta-homepage-btns">
           <a href="#" class="btn-basic btn-media">
             <svg class="icon discord-btn">
               <use xlink:href="sprite.svg#discord-btn"></use>
@@ -903,20 +909,29 @@
               <img src="./img/logo.svg" alt="Binabox logo" />
               BINABOX
             </a>
-            <p>BINABOX 2022 - ALL rights reserved</p>
+            <p class="footer-copyright-text">
+              BINABOX 2022 - ALL rights reserved
+            </p>
           </div>
           <nav class="nav-pages">
             <ul class="nav-pages-items">
-              <li class="nav-pages-item"><a href="index.html">Home</a></li>
-              <li class="nav-pages-item"><a href="./about.html">About</a></li>
-              <li class="nav-pages-item">
-                <a href="#roadmap-block">Roadmap</a>
+              <li>
+                <a class="nav-pages-item" href="index.html">Home</a>
               </li>
-
-              <li class="nav-pages-item">
-                <a href="./about.html#team-block">Our Team</a>
+              <li>
+                <a class="nav-pages-item" href="./about.html">About</a>
               </li>
-              <li class="nav-pages-item"><a href="./faqs.html">FAQS</a></li>
+              <li>
+                <a class="nav-pages-item" href="#roadmap-block">Roadmap</a>
+              </li>
+              <li>
+                <a class="nav-pages-item" href="./about.html#team-block">
+                  Our Team
+                </a>
+              </li>
+              <li>
+                <a class="nav-pages-item" href="./faqs.html">FAQS</a>
+              </li>
             </ul>
           </nav>
         </nav>

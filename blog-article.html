@@ -49,38 +49,44 @@
       <!-- Navigation Menu -->
       <nav class="nav-menu">
         <ul class="nav-menu-items">
-          <li class="nav-menu-item">
-            <a href="index.html">HOME</a>
+          <li>
+            <a href="index.html" class="nav-menu-item">HOME</a>
           </li>
-          <li class="nav-menu-item">
-            <a href="./about.html">ABOUT</a>
+          <li>
+            <a href="./about.html" class="nav-menu-item">ABOUT</a>
           </li>
-          <li class="nav-menu-item">
-            <a href="./index.html#roadmap-block">ROADMAP</a>
+          <li>
+            <a href="./index.html#roadmap-block" class="nav-menu-item"
+              >ROADMAP</a
+            >
           </li>
-          <li class="nav-menu-item">
-            <a href="./catalog.html">COLLECTION</a>
+          <li>
+            <a href="./catalog.html" class="nav-menu-item">COLLECTION</a>
           </li>
-          <li class="nav-menu-item">
-            <a href="./faqs.html">FAQS</a>
+          <li>
+            <a href="./faqs.html" class="nav-menu-item">FAQS</a>
           </li>
 
-          <li class="nav-menu-item nav-dropdown-item">
-            <button class="dropdown" type="button">
+          <li class="nav-dropdown-item">
+            <a class="nav-menu-item">
               PAGES
               <svg class="icon arrow-down">
                 <use xlink:href="sprite.svg#arrow-down"></use>
               </svg>
-            </button>
+            </a>
             <ul class="dropdown-content" id="dropdown-menu">
-              <li>
-                <a class="dropdown-item" href="./catalog.html">NFT Catalog</a>
+              <li class="dropdown-item">
+                <a class="dropdown-item-link" href="./catalog.html"
+                  >NFT Catalog</a
+                >
               </li>
-              <li>
-                <a class="dropdown-item" href="./blog.html">Blog</a>
+              <li class="dropdown-item">
+                <a class="dropdown-item-link" href="./blog.html">Blog</a>
               </li>
-              <li>
-                <a class="dropdown-item" href="./contact-us.html">Contact Us</a>
+              <li class="dropdown-item">
+                <a class="dropdown-item-link" href="./contact-us.html"
+                  >Contact Us</a
+                >
               </li>
             </ul>
           </li>
@@ -102,7 +108,7 @@
           </label>
         </form>
 
-        <a href="#" class="btn-basic btn-media">
+        <a href="#" class="btn-basic btn-media-header">
           <svg class="icon discord-btn">
             <use xlink:href="sprite.svg#discord-btn"></use>
           </svg>
@@ -123,11 +129,19 @@
       <!-- Breadcrumbs -->
       <section class="breadcrumbs container">
         <h1 class="secondary-heading">BLOG DETAIL</h1>
-        <ul>
-          <li class="inactive-link"><a href="./index.html">HOME</a></li>
-          <li class="inactive-link"><a href="./blog.html">OUR BLOG</a></li>
+        <ul class="breadcrumbs-list">
           <li>
-            <a href="#blog-detail"
+            <a class="breadcrumbs-item inactive-link" href="./index.html"
+              >HOME</a
+            >
+          </li>
+          <li>
+            <a class="breadcrumbs-item inactive-link" href="./blog.html"
+              >OUR BLOG</a
+            >
+          </li>
+          <li>
+            <a class="breadcrumbs-item" href="#blog-detail"
               ><span class="highlighted-text">BLOG DETAIL</span></a
             >
           </li>
@@ -145,14 +159,14 @@
           </h2>
           <span class="label-deco blog-article-label">GAMING</span>
           <ul class="blogarticle-data">
-            <li>
-              <svg class="icon person-icon">
+            <li class="blogarticle-item">
+              <svg class="icon person-icon" width="24" height="24">
                 <use xlink:href="sprite.svg#person-icon"></use>
               </svg>
               TONY NGUYEN
             </li>
             <li class="blogarticle-date-item">
-              <svg class="icon calendar-icon">
+              <svg class="icon calendar-icon" width="24" height="24">
                 <use xlink:href="sprite.svg#calendar"></use>
               </svg>
               <time> 20 Jun 2022 </time>
@@ -169,18 +183,18 @@
             organization (DAO) called the Balthazar DAO.
           </p>
           <figure class="blog-story-quote">
-            <blockquote>
+            <blockquote class="blog-story-text">
               “The first huge metaverse arena to arrange live sports, hang out
               and even make bets and wagers”
             </blockquote>
-            <figcaption>
+            <figcaption class="blog-story-rating">
               <div class="blog-article-rating">
                 <svg class="icon rating-star">
                   <use xlink:href="sprite.svg#star"></use>
                 </svg>
                 8.5/ 10
               </div>
-              <cite>Markout Corporation</cite>
+              <cite class="blog-quote-author">Markout Corporation</cite>
             </figcaption>
           </figure>
           <!-- group pics with tag figure -->
@@ -226,25 +240,25 @@
           <!-- Tags and share block -->
           <section class="blog-tags-share">
             <div class="tags-block">
-              <h3>Tags:</h3>
+              <h3 class="blog-tags-title">Tags:</h3>
               <a class="tags" href="#" target="_blank">ICO</a>
               <a class="tags" href="#" target="_blank">CYPPUNK</a>
               <a class="tags" href="#" target="_blank">LIGHT</a>
             </div>
             <div class="share-block">
-              <h3>Share:</h3>
+              <h3 class="blog-tags-title">Share:</h3>
               <a class="share" href="#">
-                <svg class="icon">
+                <svg class="icon share-icon" width="20" height="20">
                   <use xlink:href="sprite.svg#footer-discord"></use>
                 </svg>
               </a>
               <a class="share" href="#">
-                <svg class="icon">
+                <svg class="icon share-icon" width="20" height="20">
                   <use xlink:href="sprite.svg#footer-twitter"></use>
                 </svg>
               </a>
               <a class="share" href="#">
-                <svg class="icon">
+                <svg class="icon share-icon" width="20" height="20">
                   <use xlink:href="sprite.svg#footer-youtube"></use>
                 </svg>
               </a>
@@ -253,35 +267,45 @@
 
           <!-- Blog pages -->
           <section class="blog-article-pages">
-            <article>
-              <a href="./blog-article.html">
+            <article class="blog-article-mini">
+              <a class="blogpage-mini-link" href="./blog-article.html">
                 <img
                   src="./img/img-nftcatalog/nft-picture5.webp"
                   alt="nft picture"
+                  width="80"
+                  height="80"
                 />
                 <div class="content-block">
-                  <p>PREVIOUS</p>
-                  <h2>Enior Apple Employee Alleges Sexism At</h2>
+                  <p class="content-block-text">PREVIOUS</p>
+                  <h2 class="content-block-title">
+                    Enior Apple Employee Alleges Sexism At
+                  </h2>
                 </div>
               </a>
             </article>
-            <article>
+            <article class="blog-article-mini">
               <a class="blog-page-reverse" href="./blog-article.html">
                 <img
                   src="./img/img-nftcatalog/nft-picture3.webp"
                   alt="nft picture"
+                  width="80"
+                  height="80"
                 />
                 <div class="content-block">
-                  <p><span class="highlighted-text">NEXT</span></p>
-                  <h2>Enior Apple Employee Alleges Sexism At</h2>
+                  <p class="content-block-text">
+                    <span class="highlighted-text">NEXT</span>
+                  </p>
+                  <h2 class="content-block-title">
+                    Enior Apple Employee Alleges Sexism At
+                  </h2>
                 </div>
               </a>
             </article>
           </section>
 
           <section class="feedback-section">
-            <h2>LEAVE A REPLY</h2>
-            <p>
+            <h2 class="feedback-section-title">LEAVE A REPLY</h2>
+            <p class="feedback-section-description">
               Your email address will not be published. Required fields are
               marked
             </p>
@@ -471,14 +495,21 @@
             <ul class="blog-filters-list">
               <li>
                 <article class="recent-post">
-                  <img src="./img/img-nftcatalog/nft-picture5.webp" alt="" />
+                  <img
+                    src="./img/img-nftcatalog/nft-picture5.webp"
+                    alt=""
+                    width="100"
+                    height="100"
+                  />
                   <a href="./blog-article.html">
-                    <h2>Enior Apple Employee Alleges Sexism At</h2>
+                    <h2 class="recent-post-title">
+                      Enior Apple Employee Alleges Sexism At
+                    </h2>
                     <ul class="recent-post-list">
-                      <li>
+                      <li class="recent-post-item">
                         <span class="highlighted-text">GAMMING</span>
                       </li>
-                      <li>
+                      <li class="recent-post-time">
                         <time datetime="2022-06-20">20 Jun 2022</time>
                       </li>
                     </ul>
@@ -487,14 +518,21 @@
               </li>
               <li>
                 <article class="recent-post">
-                  <img src="./img/img-nftcatalog/nft-picture9.webp" alt="" />
+                  <img
+                    src="./img/img-nftcatalog/nft-picture9.webp"
+                    alt=""
+                    width="100"
+                    height="100"
+                  />
                   <a href="./blog-article.html">
-                    <h2>Enior Apple Employee Alleges Sexism At</h2>
+                    <h2 class="recent-post-title">
+                      Enior Apple Employee Alleges Sexism At
+                    </h2>
                     <ul class="recent-post-list">
-                      <li>
+                      <li class="recent-post-item">
                         <span class="highlighted-text">LAUCHPAD</span>
                       </li>
-                      <li>
+                      <li class="recent-post-time">
                         <time datetime="2022-06-20">20 Jun 2022</time>
                       </li>
                     </ul>
@@ -503,14 +541,21 @@
               </li>
               <li>
                 <article class="recent-post">
-                  <img src="./img/img-nftcatalog/nft-picture3.webp" alt="" />
+                  <img
+                    src="./img/img-nftcatalog/nft-picture3.webp"
+                    alt=""
+                    width="100"
+                    height="100"
+                  />
                   <a href="./blog-article.html">
-                    <h2>Enior Apple Employee Alleges Sexism At</h2>
+                    <h2 class="recent-post-title">
+                      Enior Apple Employee Alleges Sexism At
+                    </h2>
                     <ul class="recent-post-list">
-                      <li>
+                      <li class="recent-post-item">
                         <span class="highlighted-text">ART</span>
                       </li>
-                      <li>
+                      <li class="recent-post-time">
                         <time datetime="2022-06-20">20 Jun 2022</time>
                       </li>
                     </ul>
@@ -523,13 +568,15 @@
           <fieldset class="blog-filters">
             <legend class="sidebar-card-name">TAG</legend>
             <ul class="blog-filters-tags">
-              <li><a class="tags" href="#">NFT</a></li>
-              <li><a class="tags" href="#">ICO</a></li>
-              <li><a class="tags" href="#">CRYPTO</a></li>
-              <li><a class="tags" href="#">LAUCHPAD</a></li>
-              <li><a class="tags" href="#">Robot</a></li>
-              <li><a class="tags" href="#">Gamming</a></li>
-              <li><a class="tags" href="#">Meraverse</a></li>
+              <li class="tags">
+                <a href="#">NFT</a>
+              </li>
+              <li class="tags"><a href="#">ICO</a></li>
+              <li class="tags"><a href="#">CRYPTO</a></li>
+              <li class="tags"><a href="#">LAUCHPAD</a></li>
+              <li class="tags"><a href="#">Robot</a></li>
+              <li class="tags"><a href="#">Gamming</a></li>
+              <li class="tags"><a href="#">Meraverse</a></li>
             </ul>
           </fieldset>
         </form>
@@ -570,44 +617,58 @@
             BINABOX
           </a>
 
-          <p>We are the best way to check the rarity of NFT collection.</p>
+          <p class="catalog-footer-text">
+            We are the best way to check the rarity of NFT collection.
+          </p>
         </div>
 
         <div class="sitemap">
           <h2 class="sitemap-title">SUBSCRIBE</h2>
-          <ul class="sitemap-list">
-            <li>
-              <a href="./index.html">Home</a>
+          <ul>
+            <li class="sitemap-list">
+              <a class="nav-pages-item" href="./index.html">Home</a>
             </li>
-            <li>
-              <a href="./about.html"> About </a>
+            <li class="sitemap-list">
+              <a class="nav-pages-item" href="./about.html"> About </a>
             </li>
-            <li class="nav-pages-item">
-              <a href="./index.html#roadmap-block"> Roadmap </a>
+            <li class="sitemap-list">
+              <a class="nav-pages-item" href="./index.html#roadmap-block">
+                Roadmap
+              </a>
             </li>
-            <li class="nav-pages-item">
-              <a href="./about.html#team-block"> Our Team </a>
+            <li class="sitemap-list">
+              <a class="nav-pages-item" href="./about.html#team-block">
+                Our Team
+              </a>
             </li>
-            <li class="nav-pages-item">
-              <a href="./faqs.html"> FAQS </a>
+            <li class="sitemap-list">
+              <a class="nav-pages-item" href="./faqs.html"> FAQS </a>
             </li>
           </ul>
         </div>
 
         <div class="sitemap">
           <h2 class="sitemap-title">COMPANY</h2>
-          <ul class="sitemap-list">
-            <li><a href="#">Terms Canditions</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Whitepaper</a></li>
-            <li><a href="#">Help Center</a></li>
+          <ul>
+            <li class="sitemap-list">
+              <a class="nav-pages-item" href="#">Terms Canditions</a>
+            </li>
+            <li class="sitemap-list">
+              <a class="nav-pages-item" href="#">Privacy Policy</a>
+            </li>
+            <li class="sitemap-list">
+              <a class="nav-pages-item" href="#">Whitepaper</a>
+            </li>
+            <li class="sitemap-list">
+              <a class="nav-pages-item" href="#">Help Center</a>
+            </li>
           </ul>
         </div>
 
         <form action="" method="post" class="site-newsletter">
-          <fieldset>
+          <fieldset class="site-newsletter-fieldset">
             <legend class="sitemap-title">SUBSCRIBE</legend>
-            <div>
+            <div class="site-newsletter-wrapper">
               <label for="email" class="visually-hidden">Email:</label>
               <input
                 class="newsletter-field field-validation"
@@ -630,7 +691,7 @@
       </section>
 
       <div class="footer-copyright">
-        <p>BINABOX 2022 - ALL rights reserved</p>
+        <p class="footer-copyright-text">BINABOX 2022 - ALL rights reserved</p>
         <div class="social-networks">
           <ul class="social-networks-items">
             <!-- Twitter add icon -->

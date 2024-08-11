@@ -54,38 +54,44 @@
       <!-- Navigation Menu -->
       <nav class="nav-menu">
         <ul class="nav-menu-items">
-          <li class="nav-menu-item">
-            <a href="index.html">HOME</a>
+          <li>
+            <a href="index.html" class="nav-menu-item">HOME</a>
           </li>
-          <li class="nav-menu-item">
-            <a href="./about.html">ABOUT</a>
+          <li>
+            <a href="./about.html" class="nav-menu-item">ABOUT</a>
           </li>
-          <li class="nav-menu-item">
-            <a href="./index.html#roadmap-block">ROADMAP</a>
+          <li>
+            <a href="./index.html#roadmap-block" class="nav-menu-item"
+              >ROADMAP</a
+            >
           </li>
-          <li class="nav-menu-item">
-            <a href="./catalog.html">COLLECTION</a>
+          <li>
+            <a href="./catalog.html" class="nav-menu-item">COLLECTION</a>
           </li>
-          <li class="nav-menu-item">
-            <a href="./faqs.html">FAQS</a>
+          <li>
+            <a href="./faqs.html" class="nav-menu-item">FAQS</a>
           </li>
 
-          <li class="nav-menu-item nav-dropdown-item">
-            <button class="dropdown" type="button">
+          <li class="nav-dropdown-item">
+            <a class="nav-menu-item">
               PAGES
               <svg class="icon arrow-down">
                 <use xlink:href="sprite.svg#arrow-down"></use>
               </svg>
-            </button>
+            </a>
             <ul class="dropdown-content" id="dropdown-menu">
-              <li>
-                <a class="dropdown-item" href="./catalog.html">NFT Catalog</a>
+              <li class="dropdown-item">
+                <a class="dropdown-item-link" href="./catalog.html">
+                  NFT Catalog
+                </a>
               </li>
-              <li>
-                <a class="dropdown-item" href="./blog.html">Blog</a>
+              <li class="dropdown-item">
+                <a class="dropdown-item-link" href="./blog.html"> Blog </a>
               </li>
-              <li>
-                <a class="dropdown-item" href="./contact-us.html">Contact Us</a>
+              <li class="dropdown-item">
+                <a class="dropdown-item-link" href="./contact-us.html">
+                  Contact Us
+                </a>
               </li>
             </ul>
           </li>
@@ -107,7 +113,7 @@
           </label>
         </form>
 
-        <a href="#" class="btn-basic btn-media">
+        <a href="#" class="btn-basic btn-media-header">
           <svg class="icon discord-btn">
             <use xlink:href="sprite.svg#discord-btn"></use>
           </svg>
@@ -126,14 +132,18 @@
     <!-- Main -->
     <main>
       <!-- Breadcrumbs -->
-      <section class="breadcrumbs">
+      <section class="breadcrumbs container">
         <h1 class="secondary-heading">ABOUT US</h1>
-        <ul>
-          <li class="inactive-link"><a href="./index.html">HOME</a></li>
+        <ul class="breadcrumbs-list">
           <li>
-            <a href="#about-story"
-              ><span class="highlighted-text">ABOUT US</span></a
+            <a class="breadcrumbs-item inactive-link" href="./index.html"
+              >HOME</a
             >
+          </li>
+          <li>
+            <a class="breadcrumbs-item" href="#about-story">
+              <span class="highlighted-text">ABOUT US</span>
+            </a>
           </li>
         </ul>
       </section>
@@ -141,7 +151,7 @@
       <!-- Story section -->
       <section class="story-section container" id="about-story">
         <h2 class="secondary-heading">THE STORY</h2>
-        <p class="about-description">
+        <p class="about-description story-section-text">
           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
           dolore eu fugiat nulla pariatur. Excepteur sint occae cat cupidatat
           non proident, sunt in culpa qui officia dese runt mollit anim id est
@@ -159,36 +169,36 @@
 
         <!-- About card list -->
         <ol class="about-list">
-          <li class="aboutpage-list-item hover-effect">
-            <article>
-              <h3>HIGH QUAILITY</h3>
+          <li class="about-list-item hover-effect">
+            <article class="about-list-card">
+              <h3 class="about-list-title">HIGH QUAILITY</h3>
               <p class="about-list-description">
                 Lorem Ipsum is simply dummy text of the printing and Ipsum
                 typesetting industry.
               </p>
             </article>
           </li>
-          <li class="aboutpage-list-item hover-effect">
-            <article>
-              <h3>BiG COLLECTION</h3>
+          <li class="about-list-item hover-effect">
+            <article class="about-list-card">
+              <h3 class="about-list-title">BiG COLLECTION</h3>
               <p class="about-list-description">
                 Lorem Ipsum is simply dummy text of the printing and Ipsum
                 typesetting industry.
               </p>
             </article>
           </li>
-          <li class="aboutpage-list-item hover-effect">
-            <article>
-              <h3>TOP RESOURCE</h3>
+          <li class="about-list-item hover-effect">
+            <article class="about-list-card">
+              <h3 class="about-list-title">TOP RESOURCE</h3>
               <p class="about-list-description">
                 Lorem Ipsum is simply dummy text of the printing and Ipsum
                 typesetting industry.
               </p>
             </article>
           </li>
-          <li class="aboutpage-list-item hover-effect">
-            <article>
-              <h3>BIG COMMUNITY</h3>
+          <li class="about-list-item hover-effect">
+            <article class="about-list-card">
+              <h3 class="about-list-title">BIG COMMUNITY</h3>
               <p class="about-list-description">
                 Lorem Ipsum is simply dummy text of the printing and Ipsum
                 typesetting industry.
@@ -205,7 +215,7 @@
           <img src="./img/img-team/team-photo1.webp" alt="Team member photo" />
           <h3 class="team-name">Ralph Edwards</h3>
           <p class="team-title">Founder</p>
-          <ul>
+          <ul class="team-connect-list">
             <li>
               <a href="#">
                 <svg class="icon team-media">
@@ -241,7 +251,7 @@
           <img src="./img/img-team/team-photo2.webp" alt="Team member photo" />
           <h3 class="team-name">Jason Smith</h3>
           <p class="team-title">Co - Founder</p>
-          <ul>
+          <ul class="team-connect-list">
             <li>
               <a href="#">
                 <svg class="icon team-media">
@@ -278,7 +288,7 @@
           <h3 class="team-name">Tony Wings</h3>
           <p class="team-title">Web Designer</p>
 
-          <ul>
+          <ul class="team-connect-list">
             <li>
               <a href="#">
                 <svg class="icon team-media">
@@ -314,7 +324,7 @@
           <img src="./img/img-team/team-photo4.webp" alt="Team member photo" />
           <h3 class="team-name">Esther Howard</h3>
           <p class="team-title">Project Manager</p>
-          <ul>
+          <ul class="team-connect-list">
             <li>
               <a href="#">
                 <svg class="icon team-media">
@@ -350,7 +360,7 @@
           <img src="./img/img-team/team-photo5.webp" alt="Team member photo" />
           <h3 class="team-name">Jenny Wilson</h3>
           <p class="team-title">Artist</p>
-          <ul>
+          <ul class="team-connect-list">
             <li>
               <a href="#">
                 <svg class="icon team-media">
@@ -386,7 +396,7 @@
           <img src="./img/img-team/team-photo6.webp" alt="Team member photo" />
           <h3 class="team-name">Robert Fox</h3>
           <p class="team-title">UI/UX Designer</p>
-          <ul>
+          <ul class="team-connect-list">
             <li>
               <a href="#">
                 <svg class="icon team-media">
@@ -422,7 +432,7 @@
           <img src="./img/img-team/team-photo7.webp" alt="Team member photo" />
           <h3 class="team-name">Devon Lane</h3>
           <p class="team-title">Ux Architect</p>
-          <ul>
+          <ul class="team-connect-list">
             <li>
               <a href="#">
                 <svg class="icon team-media">
@@ -643,44 +653,58 @@
             BINABOX
           </a>
 
-          <p>We are the best way to check the rarity of NFT collection.</p>
+          <p class="catalog-footer-text">
+            We are the best way to check the rarity of NFT collection.
+          </p>
         </div>
 
         <div class="sitemap">
           <h2 class="sitemap-title">SUBSCRIBE</h2>
-          <ul class="sitemap-list">
-            <li>
-              <a href="./index.html">Home</a>
+          <ul>
+            <li class="sitemap-list">
+              <a class="nav-pages-item" href="./index.html">Home</a>
             </li>
-            <li>
-              <a href="./about.html"> About </a>
+            <li class="sitemap-list">
+              <a class="nav-pages-item" href="./about.html"> About </a>
             </li>
-            <li class="nav-pages-item">
-              <a href="./index.html#roadmap-block"> Roadmap </a>
+            <li class="sitemap-list">
+              <a class="nav-pages-item" href="./index.html#roadmap-block">
+                Roadmap
+              </a>
             </li>
-            <li class="nav-pages-item">
-              <a href="./about.html#team-block"> Our Team </a>
+            <li class="sitemap-list">
+              <a class="nav-pages-item" href="./about.html#team-block">
+                Our Team
+              </a>
             </li>
-            <li class="nav-pages-item">
-              <a href="./faqs.html"> FAQS </a>
+            <li class="sitemap-list">
+              <a class="nav-pages-item" href="./faqs.html"> FAQS </a>
             </li>
           </ul>
         </div>
 
         <div class="sitemap">
           <h2 class="sitemap-title">COMPANY</h2>
-          <ul class="sitemap-list">
-            <li><a href="#">Terms Canditions</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Whitepaper</a></li>
-            <li><a href="#">Help Center</a></li>
+          <ul>
+            <li class="sitemap-list">
+              <a class="nav-pages-item" href="#">Terms Canditions</a>
+            </li>
+            <li class="sitemap-list">
+              <a class="nav-pages-item" href="#">Privacy Policy</a>
+            </li>
+            <li class="sitemap-list">
+              <a class="nav-pages-item" href="#">Whitepaper</a>
+            </li>
+            <li class="sitemap-list">
+              <a class="nav-pages-item" href="#">Help Center</a>
+            </li>
           </ul>
         </div>
 
         <form action="" method="post" class="site-newsletter">
-          <fieldset>
+          <fieldset class="site-newsletter-fieldset">
             <legend class="sitemap-title">SUBSCRIBE</legend>
-            <div>
+            <div class="site-newsletter-wrapper">
               <label for="email" class="visually-hidden">Email:</label>
               <input
                 class="newsletter-field field-validation"
@@ -703,7 +727,7 @@
       </section>
 
       <div class="footer-copyright">
-        <p>BINABOX 2022 - ALL rights reserved</p>
+        <p class="footer-copyright-text">BINABOX 2022 - ALL rights reserved</p>
         <div class="social-networks">
           <ul class="social-networks-items">
             <!-- Twitter add icon -->

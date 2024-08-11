@@ -49,38 +49,44 @@
       <!-- Navigation Menu -->
       <nav class="nav-menu">
         <ul class="nav-menu-items">
-          <li class="nav-menu-item">
-            <a href="index.html">HOME</a>
+          <li>
+            <a href="index.html" class="nav-menu-item">HOME</a>
           </li>
-          <li class="nav-menu-item">
-            <a href="./about.html">ABOUT</a>
+          <li>
+            <a href="./about.html" class="nav-menu-item">ABOUT</a>
           </li>
-          <li class="nav-menu-item">
-            <a href="./index.html#roadmap-block">ROADMAP</a>
+          <li>
+            <a href="./index.html#roadmap-block" class="nav-menu-item"
+              >ROADMAP</a
+            >
           </li>
-          <li class="nav-menu-item">
-            <a href="./catalog.html">COLLECTION</a>
+          <li>
+            <a href="./catalog.html" class="nav-menu-item">COLLECTION</a>
           </li>
-          <li class="nav-menu-item">
-            <a href="./faqs.html">FAQS</a>
+          <li>
+            <a href="./faqs.html" class="nav-menu-item">FAQS</a>
           </li>
 
-          <li class="nav-menu-item nav-dropdown-item">
-            <button class="dropdown" type="button">
+          <li class="nav-dropdown-item">
+            <a class="nav-menu-item">
               PAGES
               <svg class="icon arrow-down">
                 <use xlink:href="sprite.svg#arrow-down"></use>
               </svg>
-            </button>
+            </a>
             <ul class="dropdown-content" id="dropdown-menu">
-              <li>
-                <a class="dropdown-item" href="./catalog.html">NFT Catalog</a>
+              <li class="dropdown-item">
+                <a class="dropdown-item-link" href="./catalog.html"
+                  >NFT Catalog</a
+                >
               </li>
-              <li>
-                <a class="dropdown-item" href="./blog.html">Blog</a>
+              <li class="dropdown-item">
+                <a class="dropdown-item-link" href="./blog.html">Blog</a>
               </li>
-              <li>
-                <a class="dropdown-item" href="./contact-us.html">Contact Us</a>
+              <li class="dropdown-item">
+                <a class="dropdown-item-link" href="./contact-us.html"
+                  >Contact Us</a
+                >
               </li>
             </ul>
           </li>
@@ -102,7 +108,7 @@
           </label>
         </form>
 
-        <a href="#" class="btn-basic btn-media">
+        <a href="#" class="btn-basic btn-media-header">
           <svg class="icon discord-btn">
             <use xlink:href="sprite.svg#discord-btn"></use>
           </svg>
@@ -122,12 +128,14 @@
       <!-- Breadcrumbs -->
       <section class="breadcrumbs container">
         <h1 class="secondary-heading">ITEM DETAIL</h1>
-        <ul>
-          <li class="inactive-link">
-            <a href="./index.html">HOME</a>
+        <ul class="breadcrumbs-list">
+          <li>
+            <a class="breadcrumbs-item inactive-link" href="./index.html"
+              >HOME</a
+            >
           </li>
           <li>
-            <a href="#nftcard-details"
+            <a class="breadcrumbs-item" href="#nftcard-details"
               ><span class="highlighted-text">ITEM DETAIL</span></a
             >
           </li>
@@ -142,53 +150,53 @@
         <div class="time-counter">
           <h2 class="time-counter-title">PUPLIC END IN</h2>
           <dl class="nftcard-box-timer">
-            <dt class="secondary-heading">
+            <dt class="countdown-number secondary-heading">
               16 <span class="time-counter-span secondary-heading">:</span>
             </dt>
-            <dd>DAYS</dd>
+            <dd class="countdown-name">DAYS</dd>
 
-            <dt class="secondary-heading">
+            <dt class="countdown-number secondary-heading">
               20 <span class="time-counter-span secondary-heading">:</span>
             </dt>
-            <dd>HOURS</dd>
+            <dd class="countdown-name">HOURS</dd>
 
-            <dt class="secondary-heading">
+            <dt class="countdown-number secondary-heading">
               11 <span class="time-counter-span secondary-heading">:</span>
             </dt>
-            <dd>MINUTES</dd>
+            <dd class="countdown-name">MINUTES</dd>
 
-            <dt class="secondary-heading">08</dt>
-            <dd>SECONDS</dd>
+            <dt class="countdown-number secondary-heading">08</dt>
+            <dd class="countdown-name">SECONDS</dd>
           </dl>
         </div>
 
         <div class="nftcard-details" id="nftcard-details">
           <h2 class="secondary-heading nftcard-details-title">SKISIRS#4587</h2>
 
-          <p>
+          <p class="nftcard-details-text">
             As the first hero of the Neoh Universe, collection has over 9,999
             unique skins drawn from the different missions and challenges he
             faced throughout his life.
           </p>
 
           <dl class="nft-features">
-            <dt>Clothing</dt>
-            <dd>SNAKE</dd>
+            <dt class="nft-category">Clothing</dt>
+            <dd class="nft-feature-var">SNAKE</dd>
 
-            <dt>Eyes</dt>
-            <dd>MIX</dd>
+            <dt class="nft-category">Eyes</dt>
+            <dd class="nft-feature-var">MIX</dd>
 
-            <dt>Face</dt>
-            <dd>GREEN</dd>
+            <dt class="nft-category">Face</dt>
+            <dd class="nft-feature-var">GREEN</dd>
 
-            <dt>Skin</dt>
-            <dd>GREEN</dd>
+            <dt class="nft-category">Skin</dt>
+            <dd class="nft-feature-var">GREEN</dd>
 
-            <dt>Background</dt>
-            <dd>GREEN LIGHT</dd>
+            <dt class="nft-category">Background</dt>
+            <dd class="nft-feature-var">GREEN LIGHT</dd>
 
-            <dt>Special</dt>
-            <dd>CAT</dd>
+            <dt class="nft-category">Special</dt>
+            <dd class="nft-feature-var">CAT</dd>
           </dl>
 
           <dl class="nft-price">
@@ -197,20 +205,20 @@
           </dl>
 
           <a href="#" class="btn-buy btn-light">
-            <svg class="icon bag-ico">
+            <svg class="icon bag-icon" width="20" height="20">
               <use xlink:href="sprite.svg#bag-icon"></use>
             </svg>
             BUY ON OPENSEA
           </a>
 
           <div class="nftcard-box-btns">
-            <a href="#">
+            <a class="nftcard-media-btn" href="#">
               <svg class="icon cat-item-media">
                 <use xlink:href="sprite.svg#discord-btn"></use>
               </svg>
               JOIN DISCORD</a
             >
-            <a href="#">
+            <a class="nftcard-media-btn" href="#">
               <svg class="icon cat-item-media">
                 <use xlink:href="sprite.svg#footer-twitter"></use>
               </svg>
@@ -229,7 +237,6 @@
               <img
                 src="./img/img-nftcatalog/nft-picture1.webp"
                 alt="NFT picture"
-                
               />
               <h2 class="nft-card-title">SKISIRS#2</h2>
             </a>
@@ -335,44 +342,58 @@
             BINABOX
           </a>
 
-          <p>We are the best way to check the rarity of NFT collection.</p>
+          <p class="catalog-footer-text">
+            We are the best way to check the rarity of NFT collection.
+          </p>
         </div>
 
         <div class="sitemap">
           <h2 class="sitemap-title">SUBSCRIBE</h2>
-          <ul class="sitemap-list">
-            <li>
-              <a href="./index.html">Home</a>
+          <ul>
+            <li class="sitemap-list">
+              <a class="nav-pages-item" href="./index.html">Home</a>
             </li>
-            <li>
-              <a href="./about.html"> About </a>
+            <li class="sitemap-list">
+              <a class="nav-pages-item" href="./about.html"> About </a>
             </li>
-            <li class="nav-pages-item">
-              <a href="./index.html#roadmap-block"> Roadmap </a>
+            <li class="sitemap-list">
+              <a class="nav-pages-item" href="./index.html#roadmap-block">
+                Roadmap
+              </a>
             </li>
-            <li class="nav-pages-item">
-              <a href="./about.html#team-block"> Our Team </a>
+            <li class="sitemap-list">
+              <a class="nav-pages-item" href="./about.html#team-block">
+                Our Team
+              </a>
             </li>
-            <li class="nav-pages-item">
-              <a href="./faqs.html"> FAQS </a>
+            <li class="sitemap-list">
+              <a class="nav-pages-item" href="./faqs.html"> FAQS </a>
             </li>
           </ul>
         </div>
 
         <div class="sitemap">
           <h2 class="sitemap-title">COMPANY</h2>
-          <ul class="sitemap-list">
-            <li><a href="#">Terms Canditions</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Whitepaper</a></li>
-            <li><a href="#">Help Center</a></li>
+          <ul>
+            <li class="sitemap-list">
+              <a class="nav-pages-item" href="#">Terms Canditions</a>
+            </li>
+            <li class="sitemap-list">
+              <a class="nav-pages-item" href="#">Privacy Policy</a>
+            </li>
+            <li class="sitemap-list">
+              <a class="nav-pages-item" href="#">Whitepaper</a>
+            </li>
+            <li class="sitemap-list">
+              <a class="nav-pages-item" href="#">Help Center</a>
+            </li>
           </ul>
         </div>
 
         <form action="" method="post" class="site-newsletter">
-          <fieldset>
+          <fieldset class="site-newsletter-fieldset">
             <legend class="sitemap-title">SUBSCRIBE</legend>
-            <div>
+            <div class="site-newsletter-wrapper">
               <label for="email" class="visually-hidden">Email:</label>
               <input
                 class="newsletter-field field-validation"
@@ -395,7 +416,7 @@
       </section>
 
       <div class="footer-copyright">
-        <p>BINABOX 2022 - ALL rights reserved</p>
+        <p class="footer-copyright-text">BINABOX 2022 - ALL rights reserved</p>
         <div class="social-networks">
           <ul class="social-networks-items">
             <!-- Twitter add icon -->
