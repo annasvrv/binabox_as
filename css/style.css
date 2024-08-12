@@ -16,6 +16,20 @@
   margin: 0;
 }
 
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
 body {
   background-color: rgb(4, 11, 17);
   font-family: "Bakbak One", "Arial Black", Arial, sans-serif;
@@ -24,6 +38,12 @@ body {
   font-size: 18px;
   line-height: 1.56;
   color: rgb(255, 255, 255);
+}
+
+img {
+  /* display: block; */
+  max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -109,11 +129,6 @@ header {
   gap: 16px;
 }
 
-.logo-block img {
-  width: 36px;
-  height: 40px;
-}
-
 /************* Header navigation styles *******************/
 
 .nav-menu-items {
@@ -143,8 +158,6 @@ header {
 }
 
 .arrow-down {
-  width: 15px;
-  height: 15px;
   vertical-align: middle;
   margin-left: 4px;
   padding-bottom: 4px;
@@ -193,40 +206,7 @@ header {
   gap: 20px;
 }
 
-.darkmode {
-  display: flex;
-  width: 48px;
-  height: 48px;
-}
-
-.switch-mode {
-  display: flex;
-  align-items: center;
-}
-
-.darkmode-toggle:not(:checked) + .switch-mode .switch-icon {
-  width: 24px;
-  height: 24px;
-  padding: 12px;
-  border-radius: 50%;
-  cursor: pointer;
-  fill: var(--btn-primary-color);
-  background-color: var(--secondary-color);
-}
-
-.darkmode-toggle:checked + .switch-mode .switch-icon {
-  width: 24px;
-  height: 24px;
-  padding: 12px;
-  border-radius: 50%;
-  cursor: pointer;
-  fill: var(--secondary-color);
-  background-color: var(--btn-primary-color);
-}
-
-/* ************************** */
-
-/* .darkmode-toggle + .switch-mode::before {
+.darkmode-toggle + .switch-mode::before {
   display: inline-block;
   vertical-align: middle;
   text-align: center;
@@ -237,12 +217,12 @@ header {
   width: 48px;
   height: 48px;
   cursor: pointer;
-} */
+}
 
-/* .darkmode-toggle:checked + .switch-mode::before {
+.darkmode-toggle:checked + .switch-mode::before {
   content: url(../img/icons/switch-dark.svg);
   background-color: var(--btn-primary-color);
-} */
+}
 
 /* ************************** */
 
@@ -257,16 +237,6 @@ header {
   border: 2px solid var(--secondary-color);
 }
 
-.discord-btn {
-  width: 24px;
-  height: 24px;
-}
-
-.wallet-icon {
-  width: 24px;
-  height: 24px;
-}
-
 /**************** Hero section **************************/
 
 .hero-box {
@@ -278,7 +248,7 @@ header {
       rgba(48, 113, 101, 0.3) 10%,
       rgba(20, 27, 34, 0.3) 70%
     );
-  background-size: 496.05px auto, cover, 950px 278px;
+  background-size: 496px auto, cover, 950px 278px;
   background-position: bottom -50px right -170px, bottom, top -100px left -200px;
   background-repeat: no-repeat;
   background-color: var(--secondary-color);
@@ -339,12 +309,6 @@ header {
   background-color: var(--article-bg-color);
 }
 
-.nft-card img {
-  width: 330px;
-  height: 330px;
-  margin: 0 auto;
-}
-
 .nft-card-title {
   padding-top: 10px;
   font-size: 20px;
@@ -382,7 +346,6 @@ header {
   margin-bottom: 30px;
   width: 570px;
   height: 224px;
-  box-sizing: border-box;
   position: relative;
 }
 
@@ -391,7 +354,7 @@ header {
   color: var(--secondary-color);
   font-size: 80px;
   line-height: 1.2;
-  text-shadow: 0px 0px 1px var(--btn-primary-color);
+  text-shadow: 0 0 1px var(--btn-primary-color);
 }
 
 .hover-effect::before,
@@ -404,7 +367,6 @@ header {
   height: 100%;
   border-width: 3px;
   border-style: solid;
-  box-sizing: border-box;
   pointer-events: none;
 }
 
@@ -465,17 +427,44 @@ header {
   /* gap: 30px; */
   list-style-position: inside;
   text-align: center;
+  /* border: 1px solid #e13131; */
+  position: relative;
 }
 
 .workflow-card {
   margin: 0 auto;
   background-color: var(--secondary-color);
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   padding: 30px 30px 26px;
   width: 330px;
-  /* height: 210px; */
+  height: 210px;
+  /* border: 1px solid #70ca10; */
   position: relative;
 }
+
+/* .wc-1 {
+  background-image: url(../img/img-workflow/icon1.svg);
+  background-repeat: no-repeat;
+  background-position: top 10px center;
+} */
+
+/* .wc-2 {
+  background-image: url(../img/img-workflow/icon2.svg);
+  background-repeat: no-repeat;
+  background-position: top 10px center;
+} */
+
+/* .wc-3 {
+  background-image: url(../img/img-workflow/icon3.svg);
+  background-repeat: no-repeat;
+  background-position: top 10px center;
+} */
+
+/* .wc-4 {
+  background-image: url(../img/img-workflow/icon4.svg);
+  background-repeat: no-repeat;
+  background-position: top 10px center;
+} */
 
 /* Change position of the marker and image */
 
@@ -486,16 +475,11 @@ header {
   color: var(--btn-primary-color);
 }
 
-.workflow-card img {
-  margin: 0 auto;
-  /* margin-bottom: 20px; */
-  display: block;
-}
-
 .workflow-card-text {
+  /* position: absolute; */
+  /* bottom: 30px; */
   font-size: 24px;
   line-height: 1.33;
-  /* margin-top: 75px; */
 }
 
 /************************ Road Map section **********************************/
@@ -543,15 +527,11 @@ header {
 }
 
 .arrow-less-btn {
-  width: 24px;
-  height: 24px;
   stroke: #888b8e;
   stroke-width: 4;
 }
 
 .arrow-greater-btn {
-  width: 24px;
-  height: 24px;
   stroke: var(--btn-primary-color);
   stroke-width: 4;
   transform: rotate(180deg);
@@ -575,8 +555,6 @@ header {
 }
 
 .elipse-default {
-  width: 30px;
-  height: 30px;
   margin: 0 auto;
   display: block;
   position: relative;
@@ -612,7 +590,6 @@ header {
   padding: 40px 20px;
   width: 330px;
   height: 339px;
-  box-sizing: border-box;
   position: relative;
 }
 
@@ -633,11 +610,6 @@ header {
   display: flex;
   justify-content: center;
   gap: 16px;
-}
-
-.team-media {
-  width: 20px;
-  height: 20px;
 }
 
 /**************************** Partners section *****************************/
@@ -800,14 +772,6 @@ input::placeholder {
   width: 50px;
   height: 50px;
   padding: 12px 10px;
-  box-sizing: border-box;
-}
-
-.footer-media {
-  width: 26px;
-  height: 26px;
-  display: block;
-  margin: 0 auto;
 }
 
 /******************** footer-nav section *******************************/
@@ -821,11 +785,6 @@ input::placeholder {
   font-size: 22px;
   line-height: 1.36;
   gap: 16px;
-}
-
-.footer-logo img {
-  width: 24px;
-  height: 26px;
 }
 
 .footer-copyright-text {
@@ -925,12 +884,6 @@ input::placeholder {
   cursor: pointer;
 }
 
-.search-form svg {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
-}
-
 /************ Current filter display ********************/
 
 .current-filters-block {
@@ -957,8 +910,6 @@ input::placeholder {
 }
 
 .close-icon {
-  width: 24px;
-  height: 24px;
   stroke: rgb(247, 247, 247);
   transform: rotate(45deg);
   stroke-width: 2px;
@@ -1107,11 +1058,6 @@ input::placeholder {
   margin-bottom: 12px;
 }
 
-.footer-cat-logo img {
-  width: 32px;
-  height: 36px;
-}
-
 .catalog-footer-text {
   font-size: 16px;
   line-height: 1.63;
@@ -1141,14 +1087,6 @@ input::placeholder {
 .network-item-cat {
   width: 20px;
   height: 20px;
-  padding: 0;
-  box-sizing: content-box;
-  background-color: transparent;
-}
-
-.cat-footer-media {
-  width: 20px;
-  height: 20px;
 }
 
 /***************** CATALOG ITEM PAGE *****************************/
@@ -1161,11 +1099,6 @@ input::placeholder {
 }
 
 /******************************** Image block **********************************/
-
-.nftcard-img img {
-  width: 690px;
-  height: 690px;
-}
 
 .time-counter {
   width: 608px;
@@ -1270,11 +1203,6 @@ input::placeholder {
   width: 40%;
 }
 
-.cat-item-media {
-  width: 24px;
-  height: 24px;
-}
-
 .nftcard-media-btn:active {
   background-color: rgba(255, 255, 255, 0.1);
 }
@@ -1301,20 +1229,16 @@ input::placeholder {
 .btn-nft-cat {
   width: 48px;
   height: 48px;
-  box-sizing: content-box;
-}
-
-.btn-nft-cat svg {
-  stroke-width: 2;
-  width: 48px;
-  height: 48px;
 }
 
 .cat-lt-arrow {
+  stroke-width: 2;
   stroke: rgb(255, 255, 255);
+  padding-bottom: 2px;
 }
 
 .cat-gt-arrow {
+  stroke-width: 2;
   stroke: var(--secondary-color);
   transform: rotate(180deg);
 }
@@ -1378,7 +1302,6 @@ input::placeholder {
 .get-intouch-form {
   width: 690px;
   margin: 0 auto;
-  box-sizing: content-box;
 }
 
 .form-block {
@@ -1400,7 +1323,6 @@ input::placeholder {
   margin-bottom: 20px;
   display: block;
   width: 100%;
-  box-sizing: border-box;
 }
 
 .get-intouch-block input[name="name"] {
@@ -1447,13 +1369,6 @@ input::placeholder {
   padding: 30px 20px;
   background-color: var(--secondary-color);
   position: relative;
-  box-sizing: border-box;
-}
-
-.blogpage-img {
-  width: 410px;
-  display: block;
-  margin: 0 auto;
 }
 
 .blog-label {
@@ -1570,7 +1485,6 @@ input::placeholder {
 
 .blog-article {
   width: 1020px;
-  text-align: left;
 }
 
 .blog-article-title {
@@ -1643,11 +1557,6 @@ input::placeholder {
   display: flex;
   align-items: center;
   gap: 4px;
-}
-
-.rating-star {
-  width: 18px;
-  height: 18px;
 }
 
 .blog-quote-author {
@@ -1759,7 +1668,6 @@ input::placeholder {
   border: none;
   background-color: var(--secondary-color);
   width: 330px;
-  box-sizing: border-box;
 }
 
 .blog-article-form .search-form {
@@ -1781,7 +1689,6 @@ input::placeholder {
   background-color: var(--secondary-color);
   border-bottom: 1px solid rgb(67, 67, 67);
   width: 100%;
-  box-sizing: border-box;
 }
 
 .blog-filter-item {
@@ -1861,49 +1768,7 @@ input::placeholder {
   margin-bottom: 30px;
 }
 
-.feedback-form {
-  margin: 0 auto;
-  box-sizing: content-box;
-}
-
 .feedback-form input[name="name"],
 .feedback-form input[name="phone"] {
   width: 335px;
 }
-
-/* .get-intouch-block form {
-  width: 690px;
-  margin: 0 auto;
-  box-sizing: content-box;
-} */
-
-/* .form-block {
-  border: none;
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-} */
-
-/* .form-block input,
-.form-block textarea {
-  background-color: rgba(194, 195, 197, 0.15);
-  padding: 14px 24px;
-  font-family: var(--text-font);
-  color: var(--text-color);
-  font-size: 16px;
-  line-height: 1.63;
-  border: none;
-  margin-bottom: 20px;
-  display: block;
-  width: 100%;
-  box-sizing: border-box;
-} */
-
-/* .get-intouch-block input[name="name"] {
-  width: 240px;
-} */
-
-/* .form-textarea {
-  height: 150px;
-  resize: vertical;
-} */
