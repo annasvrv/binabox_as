@@ -41,7 +41,7 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="container">
+    <header class="header container">
       <a href="./index.html" class="logo-block">
         <img src="./img/logo.svg" alt="Binabox logo" width="36" height="40" />
         BINABOX
@@ -121,7 +121,7 @@
     </header>
 
     <!-- Main -->
-    <main>
+    <main class="main">
       <!-- Breadcrumbs -->
       <section class="breadcrumbs container">
         <h1 class="secondary-heading">BLOG DETAIL</h1>
@@ -161,13 +161,13 @@
               <svg class="icon person-icon" width="24" height="24">
                 <use xlink:href="sprite.svg#person-icon"></use>
               </svg>
-              TONY NGUYEN
+              tony nguyen
             </li>
             <li class="blogarticle-date-item">
               <svg class="icon calendar-icon" width="24" height="24">
                 <use xlink:href="sprite.svg#calendar"></use>
               </svg>
-              <time> 20 Jun 2022 </time>
+              <time> 20 jun 2022 </time>
             </li>
           </ul>
           <p class="blog-story">
@@ -687,11 +687,9 @@
                 required
                 pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
               />
-              <input
-                class="btn-light btn-basic"
-                type="submit"
-                value="SUBSCRIBE"
-              />
+              <button class="btn-light btn-basic" type="submit">
+                subscribe
+              </button>
             </div>
           </fieldset>
         </form>

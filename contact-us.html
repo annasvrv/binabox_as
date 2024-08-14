@@ -38,7 +38,7 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="container">
+    <header class="header container">
       <a href="./index.html" class="logo-block">
         <img src="./img/logo.svg" alt="Binabox logo" width="36" height="40" />
         BINABOX
@@ -118,7 +118,7 @@
     </header>
 
     <!-- Main -->
-    <main>
+    <main class="main">
       <!-- Breadcrumbs -->
       <section class="breadcrumbs container">
         <h1 class="secondary-heading">CONTACT US</h1>
@@ -175,7 +175,7 @@
           Browse through the most freuently asked questions
         </p>
         <form action="" method="post" class="get-intouch-form">
-          <fieldset class="form-block">
+          <div class="form-block">
             <label class="visually-hidden" for="name">Your full name:</label>
             <input
               class="field-validation form-block-input"
@@ -197,7 +197,7 @@
               pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
               placeholder="Enter your email *"
             />
-          </fieldset>
+          </div>
 
           <label class="visually-hidden" for="tel-number">Phone number:</label>
           <input
@@ -328,11 +328,9 @@
                 required
                 pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
               />
-              <input
-                class="btn-light btn-basic"
-                type="submit"
-                value="SUBSCRIBE"
-              />
+              <button class="btn-light btn-basic" type="submit">
+                subscribe
+              </button>
             </div>
           </fieldset>
         </form>

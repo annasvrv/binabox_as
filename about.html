@@ -41,7 +41,7 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="container">
+    <header class="header container">
       <a href="./index.html" class="logo-block">
         <img src="./img/logo.svg" alt="Binabox logo" width="36" height="40" />
         BINABOX
@@ -121,7 +121,7 @@
     </header>
 
     <!-- Main -->
-    <main>
+    <main class="main">
       <!-- Breadcrumbs -->
       <section class="breadcrumbs container">
         <h1 class="secondary-heading">ABOUT US</h1>
@@ -783,11 +783,9 @@
                 required
                 pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
               />
-              <input
-                class="btn-light btn-basic"
-                type="submit"
-                value="SUBSCRIBE"
-              />
+              <button class="btn-light btn-basic" type="submit">
+                subscribe
+              </button>
             </div>
           </fieldset>
         </form>

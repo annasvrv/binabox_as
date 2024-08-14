@@ -72,6 +72,7 @@ button {
   font-size: 16px;
   line-height: 1.5;
   gap: 8px;
+  text-transform: uppercase;
 }
 
 .btn-media {
@@ -109,16 +110,27 @@ button {
   font-size: 44px;
   line-height: 1.27;
   text-align: center;
+  text-transform: uppercase;
+}
+
+.main {
+  margin-top: 108px;
 }
 
 /********************* Header styles *****************************/
 
-header {
-  margin: 30px 0;
+.header {
+  /* padding: 30px auto; */
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  background-color: rgb(4, 11, 17);
+  position: fixed;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 108px;
+  z-index: 1;
 }
 
 .logo-block {
@@ -127,6 +139,7 @@ header {
   font-size: 32px;
   line-height: 1.31;
   gap: 16px;
+  text-transform: uppercase;
 }
 
 /************* Header navigation styles *******************/
@@ -144,6 +157,7 @@ header {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 10%;
+  text-transform: uppercase;
 }
 
 /******** Needed to finish popup menu!!!  ***************/
@@ -194,6 +208,7 @@ header {
   line-height: 1.5;
   letter-spacing: 10%;
   margin-bottom: 14px;
+  text-transform: capitalize;
 }
 
 .dropdown-item-link:hover {
@@ -211,7 +226,7 @@ header {
   vertical-align: middle;
   text-align: center;
   line-height: 60px;
-  content: url(../img/icons/switch.svg);
+  content: url("../img/icons/switch.svg");
   background-color: var(--secondary-color);
   border-radius: 50%;
   width: 48px;
@@ -220,7 +235,7 @@ header {
 }
 
 .darkmode-toggle:checked + .switch-mode::before {
-  content: url(../img/icons/switch-dark.svg);
+  content: url("../img/icons/switch-dark.svg");
   background-color: var(--btn-primary-color);
 }
 
@@ -228,6 +243,7 @@ header {
 
 .btn-media-header {
   display: flex;
+  border: 2px solid transparent;
   background-color: var(--secondary-color);
   transition: color 0.3s ease-in-out;
 }
@@ -241,7 +257,7 @@ header {
 
 .hero-box {
   padding-top: 141px;
-  background-image: url(../img/bg-s/star-big.svg),
+  background-image: url("../img/bg-s/star-big.svg"),
     linear-gradient(to top, rgb(4, 11, 17), rgba(4, 11, 17, 0)),
     radial-gradient(
       ellipse at center,
@@ -261,6 +277,7 @@ header {
 .hero-title {
   font-size: 72px;
   line-height: 1.11;
+  text-transform: uppercase;
 }
 
 .hero-text {
@@ -268,6 +285,10 @@ header {
   font-size: 20px;
   line-height: 1.5;
   margin: 20px 0 24px;
+}
+
+.hero-text::first-letter {
+  text-transform: capitalize;
 }
 
 .hero-number {
@@ -281,6 +302,10 @@ header {
   font-size: 16px;
   line-height: 1.63;
   color: var(--text-color);
+}
+
+.hero-description::first-letter {
+  text-transform: capitalize;
 }
 
 .hero-btn {
@@ -304,7 +329,6 @@ header {
 .nft-card {
   margin: 0 auto;
   width: 330px;
-  height: 378px;
   padding: 20px;
   background-color: var(--article-bg-color);
 }
@@ -314,6 +338,7 @@ header {
   font-size: 20px;
   line-height: 1.4;
   text-align: left;
+  text-transform: uppercase;
 }
 
 /***************************** About section *******************************/
@@ -331,6 +356,10 @@ header {
   font-family: var(--text-font);
   color: var(--text-color);
   width: 930px;
+}
+
+.about-description::first-letter {
+  text-transform: capitalize;
 }
 
 .about-list {
@@ -406,12 +435,17 @@ header {
   font-size: 24px;
   line-height: 1.25;
   margin-bottom: 26px;
+  text-transform: uppercase;
 }
 
 .about-list-description {
   font-family: var(--text-font);
   color: var(--text-color);
   width: 510px;
+}
+
+.about-list-description::first-letter {
+  text-transform: capitalize;
 }
 
 /*********************** Workflow section ***************************/
@@ -480,6 +514,8 @@ header {
   /* bottom: 30px; */
   font-size: 24px;
   line-height: 1.33;
+  text-transform: capitalize;
+  text-wrap: nowrap;
 }
 
 /************************ Road Map section **********************************/
@@ -505,11 +541,12 @@ header {
   font-size: 36px;
   line-height: 1.22;
   margin-bottom: 16px;
+  text-transform: uppercase;
 }
 
 .roadmap-list {
   margin-bottom: 30px;
-  list-style-image: url(../img/icons/phase-icon.svg);
+  list-style-image: url("../img/icons/phase-icon.svg");
 }
 
 .roadmap-items {
@@ -517,6 +554,7 @@ header {
   /* gap: 12px; */
   font-family: var(--text-font);
   color: var(--text-color);
+  text-transform: capitalize;
 }
 
 /* Phase line */
@@ -598,12 +636,14 @@ header {
   line-height: 1.25;
   margin-top: 31px;
   margin-bottom: 4px;
+  text-transform: capitalize;
 }
 
 .team-title {
   font-family: var(--text-font);
   color: var(--text-color);
   margin-bottom: 26px;
+  text-transform: capitalize;
 }
 
 .team-connect-list {
@@ -661,8 +701,13 @@ header {
   list-style: none;
 }
 
+.faqs-name::first-letter,
+.faqs-content::first-letter {
+  text-transform: capitalize;
+}
+
 .faqs-name::after {
-  content: url(../img/icons/plus.svg);
+  content: url("../img/icons/plus.svg");
   float: right;
 }
 
@@ -671,7 +716,7 @@ header {
 }
 
 .faqs-card[open] .faqs-name::after {
-  content: url(../img/icons/minus.svg);
+  content: url("../img/icons/minus.svg");
 }
 
 .faqs-content {
@@ -697,6 +742,10 @@ header {
   color: var(--text-color);
   margin-top: 8px;
   margin-bottom: 40px;
+}
+
+.cta-homepage-text::first-letter {
+  text-transform: capitalize;
 }
 
 .cta-homepage-btns {
@@ -729,7 +778,7 @@ header {
 .newsletter-field {
   padding: 14px 24px;
   background-color: rgba(194, 195, 197, 0.15);
-  border: none;
+  border: 1px solid transparent;
   width: 100%;
   font-family: var(--text-font);
   color: var(--text-color);
@@ -755,6 +804,10 @@ input::placeholder {
   font-size: 16px;
   line-height: 1.63;
   opacity: 0.6;
+}
+
+input::placeholder::first-letter {
+  text-transform: capitalize;
 }
 
 /****************** social-networks Footer *****************************/
@@ -785,6 +838,7 @@ input::placeholder {
   font-size: 22px;
   line-height: 1.36;
   gap: 16px;
+  text-transform: uppercase;
 }
 
 .footer-copyright-text {
@@ -803,6 +857,7 @@ input::placeholder {
   color: var(--text-color);
   font-size: 14px;
   line-height: 1.57;
+  text-transform: capitalize;
   /* do not put text align - its will effect other pages tags */
   /* text-align: right; */
 }
@@ -824,6 +879,7 @@ input::placeholder {
   justify-content: center;
   font-size: 14px;
   line-height: 1.43;
+  text-transform: uppercase;
 }
 
 .breadcrumbs-item {
@@ -907,6 +963,7 @@ input::placeholder {
   font-size: 16px;
   line-height: 1.63;
   color: rgb(247, 247, 247);
+  text-transform: capitalize;
 }
 
 .close-icon {
@@ -922,6 +979,7 @@ input::placeholder {
   align-items: center;
   font-size: 14px;
   line-height: 1.57;
+  text-transform: capitalize;
 }
 
 .current-filters-btn:hover {
@@ -945,10 +1003,11 @@ input::placeholder {
   line-height: 1.4;
   padding: 16px 12px;
   list-style: none;
+  text-transform: uppercase;
 }
 
 .nft-filter-name::after {
-  background-image: url(../img/icons/plus.svg);
+  background-image: url("../img/icons/plus.svg");
   background-size: 24px 24px;
   display: inline-block;
   content: "";
@@ -958,8 +1017,7 @@ input::placeholder {
 }
 
 .nft-filter[open] .nft-filter-name::after {
-  content: "";
-  background-image: url(../img/icons/minus.svg);
+  background-image: url("../img/icons/minus.svg");
 }
 
 .nft-filter-list {
@@ -969,6 +1027,7 @@ input::placeholder {
   font-size: 14px;
   line-height: 1.57;
   color: var(--text-color);
+  text-transform: capitalize;
 }
 
 .nft-filter-item {
@@ -991,7 +1050,7 @@ input::placeholder {
 }
 
 .catalog-checkbox:checked + label::before {
-  content: url(../img/icons/checked.svg);
+  content: url("../img/icons/checked.svg");
   background-color: var(--btn-primary-color);
   line-height: 15px;
 }
@@ -1019,8 +1078,8 @@ input::placeholder {
   margin: 0 255px;
   padding: 40px 0 48px;
   border-radius: 8px;
-  background-image: url(../img/bg-s/star-big.svg), url(../img/bg-s/star-big.svg),
-    url(../img/bg-s/star-big.svg),
+  background-image: url("../img/bg-s/star-big.svg"),
+    url("../img/bg-s/star-big.svg"), url("../img/bg-s/star-big.svg"),
     linear-gradient(to left, rgb(35, 51, 222), rgb(10, 190, 102));
   background-repeat: no-repeat;
   background-size: 321.2px auto, 255.87px auto, 137.02px auto, cover;
@@ -1035,6 +1094,10 @@ input::placeholder {
   text-align: center;
   font-family: var(--text-font);
   color: rgb(247, 247, 249);
+}
+
+.catalog-cta-text::first-letter {
+  text-transform: capitalize;
 }
 
 .cta-catbtn-box {
@@ -1056,6 +1119,7 @@ input::placeholder {
   font-size: 30px;
   line-height: 1.4;
   margin-bottom: 12px;
+  text-transform: uppercase;
 }
 
 .catalog-footer-text {
@@ -1064,12 +1128,17 @@ input::placeholder {
   font-family: var(--text-font);
 }
 
+.catalog-footer-text::first-letter {
+  text-transform: capitalize;
+}
+
 /********************** Catalog Sitemap section ***************************/
 
 .sitemap-title {
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .sitemap-list {
@@ -1111,6 +1180,7 @@ input::placeholder {
   font-size: 24px;
   line-height: 1.25;
   margin-bottom: 12px;
+  text-transform: uppercase;
 }
 
 .countdown-number {
@@ -1128,6 +1198,7 @@ input::placeholder {
   line-height: 1.4;
   color: rgb(246, 246, 246);
   /* text-align: left; */
+  text-transform: uppercase;
 }
 
 /***************************** NFT Details section ***************************/
@@ -1149,6 +1220,10 @@ input::placeholder {
   margin-bottom: 20px;
 }
 
+.nftcard-details-text::first-letter {
+  text-transform: capitalize;
+}
+
 .nft-features {
   margin-bottom: 30px;
 }
@@ -1161,6 +1236,7 @@ input::placeholder {
   width: 196px;
   padding: 20px 20px 4px 20px;
   background-color: var(--secondary-color);
+  text-transform: capitalize;
 }
 
 .nft-feature-var {
@@ -1170,6 +1246,7 @@ input::placeholder {
   background-color: var(--secondary-color);
   width: 196px;
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 /******************************* NFT price block ******************************/
@@ -1180,6 +1257,7 @@ input::placeholder {
   margin-bottom: 40px;
   font-size: 36px;
   line-height: 1.22;
+  text-transform: uppercase;
 }
 
 .btn-buy {
@@ -1201,6 +1279,7 @@ input::placeholder {
   font-size: 16px;
   line-height: 1.5;
   width: 40%;
+  text-transform: uppercase;
 }
 
 .nftcard-media-btn:active {
@@ -1277,6 +1356,7 @@ input::placeholder {
   margin-bottom: 8px;
   font-size: 36px;
   line-height: 1.22;
+  text-transform: capitalize;
 }
 .contact-details {
   font-family: var(--text-font);
@@ -1299,6 +1379,10 @@ input::placeholder {
   font-family: var(--text-font);
 }
 
+.get-intouch-text::first-letter {
+  text-transform: capitalize;
+}
+
 .get-intouch-form {
   width: 690px;
   margin: 0 auto;
@@ -1319,7 +1403,7 @@ input::placeholder {
   color: var(--text-color);
   font-size: 16px;
   line-height: 1.63;
-  border: none;
+  border: 1px solid transparent;
   margin-bottom: 20px;
   display: block;
   width: 100%;
@@ -1335,8 +1419,9 @@ input::placeholder {
 }
 
 .btn-get-intouch {
-  margin-top: 40px;
+  margin-top: 20px;
   padding: 12px 36px;
+  text-transform: uppercase;
 }
 
 /********************** About Us Page ****************************/
@@ -1350,6 +1435,10 @@ input::placeholder {
 
 .story-section-text {
   margin-bottom: 40px;
+}
+
+.story-section-text::first-letter {
+  text-transform: capitalize;
 }
 
 .about-partners {
@@ -1382,6 +1471,7 @@ input::placeholder {
   font-size: 14px;
   line-height: 1.57;
   background-color: var(--btn-primary-color);
+  text-transform: uppercase;
 }
 
 .blog-data {
@@ -1399,11 +1489,16 @@ input::placeholder {
   line-height: 1.5;
   color: var(--text-color);
   padding-right: 6px;
+  text-transform: uppercase;
 }
 
 .blog-date {
   padding-left: 6px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-color);
   border-left: 1px solid var(--text-color);
+  text-transform: uppercase;
 }
 
 .person-icon {
@@ -1420,6 +1515,7 @@ input::placeholder {
   font-size: 36px;
   line-height: 1.22;
   margin-bottom: 4px;
+  text-transform: uppercase;
 }
 
 .blogpage-card-text {
@@ -1430,6 +1526,10 @@ input::placeholder {
   margin-bottom: 20px;
 }
 
+.blogpage-card-text::first-letter {
+  text-transform: capitalize;
+}
+
 .blogpage-card-readmore {
   padding: 0 8px;
   font-size: 16px;
@@ -1437,6 +1537,7 @@ input::placeholder {
   display: flex;
   align-items: center;
   gap: 4px;
+  text-transform: uppercase;
 }
 
 .blog-pagination {
@@ -1477,7 +1578,7 @@ input::placeholder {
   justify-content: space-between;
   gap: 60px;
   padding-top: 100px;
-  padding-bottom: 200px;
+  padding-bottom: 180px;
   background-color: var(--main-background-color);
 }
 
@@ -1491,7 +1592,7 @@ input::placeholder {
   margin-top: 30px;
   font-size: 36px;
   line-height: 1.22;
-  font-family: var(--btn-header-font);
+  text-transform: capitalize;
 }
 
 .blogarticle-data {
@@ -1510,6 +1611,7 @@ input::placeholder {
   display: flex;
   align-items: center;
   gap: 6px;
+  text-transform: capitalize;
 }
 
 .blogarticle-item {
@@ -1528,6 +1630,10 @@ input::placeholder {
   color: var(--text-color);
 }
 
+.blog-story::first-letter {
+  text-transform: capitalize;
+}
+
 .blog-story-quote {
   margin-top: 24px;
   margin-bottom: 40px;
@@ -1541,6 +1647,10 @@ input::placeholder {
   font-family: var(--text-font);
   font-size: 24px;
   line-height: 1.25;
+}
+
+.blog-story-text::first-letter {
+  text-transform: capitalize;
 }
 
 .blog-story-rating {
@@ -1563,6 +1673,7 @@ input::placeholder {
   font-size: 16px;
   line-height: 1.5;
   font-style: normal;
+  text-transform: capitalize;
 }
 
 .blog-sub-article {
@@ -1573,7 +1684,7 @@ input::placeholder {
   margin-bottom: 12px;
   font-size: 30px;
   line-height: 1.4;
-  font-family: var(--btn-header-font);
+  text-transform: capitalize;
 }
 
 .article-block-text {
@@ -1581,6 +1692,10 @@ input::placeholder {
   color: var(--text-color);
   font-size: 20px;
   line-height: 1.5;
+}
+
+.article-block-text::first-letter {
+  text-transform: capitalize;
 }
 
 .article-block-text:not(:first-of-type) {
@@ -1605,6 +1720,7 @@ input::placeholder {
   font-size: 16px;
   line-height: 1.5;
   font-family: var(--btn-header-font);
+  text-transform: capitalize;
 }
 
 .tags {
@@ -1613,6 +1729,7 @@ input::placeholder {
   line-height: 1.5;
   padding: 8px 12px;
   background-color: rgba(65, 69, 74, 0.4);
+  text-transform: uppercase;
 }
 
 .share-icon {
@@ -1649,12 +1766,14 @@ input::placeholder {
   font-size: 18px;
   line-height: 1.56;
   margin-top: 4px;
+  text-transform: capitalize;
 }
 
 .content-block-text {
   font-size: 14px;
   line-height: 1.57;
   color: var(--text-color);
+  text-transform: uppercase;
 }
 
 /************* Blog article sidebar form block ***********/
@@ -1689,6 +1808,7 @@ input::placeholder {
   background-color: var(--secondary-color);
   border-bottom: 1px solid rgb(67, 67, 67);
   width: 100%;
+  text-transform: uppercase;
 }
 
 .blog-filter-item {
@@ -1698,6 +1818,7 @@ input::placeholder {
   color: var(--text-color);
   margin-bottom: 10px;
   cursor: pointer;
+  text-transform: capitalize;
 }
 
 .filter-categories:checked + .blog-filter-item {
@@ -1719,6 +1840,7 @@ input::placeholder {
   font-size: 18px;
   line-height: 1.56;
   margin-bottom: 4px;
+  text-transform: capitalize;
 }
 
 .recent-post-list {
@@ -1732,11 +1854,13 @@ input::placeholder {
 
 .recent-post-item {
   padding-right: 6px;
+  text-transform: uppercase;
 }
 
 .recent-post-time {
   padding-left: 6px;
   border-left: 1px solid var(--text-color);
+  text-transform: capitalize;
 }
 
 /* blog filters tags block */
@@ -1750,6 +1874,7 @@ input::placeholder {
   font-size: 12px;
   line-height: 1.5;
   letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 /*  Feedback Form in the Blog Article page */
@@ -1758,6 +1883,7 @@ input::placeholder {
   font-size: 36px;
   line-height: 1.22;
   margin-bottom: 4px;
+  text-transform: uppercase;
 }
 
 .feedback-section-description {
@@ -1766,6 +1892,10 @@ input::placeholder {
   font-size: 20px;
   line-height: 1.5;
   margin-bottom: 30px;
+}
+
+.feedback-section-description::first-letter {
+  text-transform: capitalize;
 }
 
 .feedback-form input[name="name"],
