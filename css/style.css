@@ -457,68 +457,69 @@ button {
 }
 
 .workflow-cards {
-  margin-top: 40px;
-  /* gap: 30px; */
-  list-style-position: inside;
+  margin-top: 60px;
+  display: flex;
+  gap: 30px;
   text-align: center;
-  /* border: 1px solid #e13131; */
-  position: relative;
+  list-style: none;
 }
 
 .workflow-card {
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
   background-color: var(--secondary-color);
-  /* margin-bottom: 30px; */
   padding: 30px 30px 26px;
   width: 330px;
   height: 210px;
-  /* border: 1px solid #70ca10; */
-  position: relative;
-}
-
-/* .wc-1 {
-  background-image: url(../img/img-workflow/icon1.svg);
-  background-repeat: no-repeat;
-  background-position: top 10px center;
-} */
-
-/* .wc-2 {
-  background-image: url(../img/img-workflow/icon2.svg);
-  background-repeat: no-repeat;
-  background-position: top 10px center;
-} */
-
-/* .wc-3 {
-  background-image: url(../img/img-workflow/icon3.svg);
-  background-repeat: no-repeat;
-  background-position: top 10px center;
-} */
-
-/* .wc-4 {
-  background-image: url(../img/img-workflow/icon4.svg);
-  background-repeat: no-repeat;
-  background-position: top 10px center;
-} */
-
-/* Change position of the marker and image */
-
-.workflow-card::marker {
-  content: "STEP " counter(list-item);
-  font-size: 22px;
-  line-height: 1.36;
-  color: var(--btn-primary-color);
+  counter-increment: count list-item;
 }
 
 .workflow-card-text {
-  /* position: absolute; */
-  /* bottom: 30px; */
   font-size: 24px;
   line-height: 1.33;
   text-transform: capitalize;
   text-wrap: nowrap;
 }
 
-/************************ Road Map section **********************************/
+.workflow-card-title {
+  font-size: 22px;
+  line-height: 1.36;
+  color: var(--btn-primary-color);
+  text-transform: uppercase;
+}
+
+.workflow-card-title::before {
+  content: "step " counter(count);
+}
+
+.wc-1 {
+  background-image: url("../img/img-workflow/icon1.svg");
+  background-repeat: no-repeat;
+  background-position: top 10px center;
+}
+
+.wc-2 {
+  background-image: url("../img/img-workflow/icon2.svg");
+  background-repeat: no-repeat;
+  background-position: top 15px center;
+}
+
+.wc-3 {
+  background-image: url("../img/img-workflow/icon3.svg");
+  background-repeat: no-repeat;
+  background-position: top 10px center;
+}
+
+.wc-4 {
+  background-image: url("../img/img-workflow/icon4.svg");
+  background-repeat: no-repeat;
+  background-position: top 10px center;
+}
+
+/************************ Road Map section ***********************/
 
 .roadmap {
   padding-top: 50px;
