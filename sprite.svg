@@ -43,7 +43,7 @@
   </symbol>
 
   <symbol fill="inherit" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" id="elipse-default">
-    <circle  opacity="0.1" cx="15" cy="15" r="15" fill="white"></circle>
+    <circle  opacity="0.1" cx="15" cy="15" r="15" fill="inherit"></circle>
     <circle  cx="15" cy="15" r="7.5" fill="inherit"></circle>
   </symbol>
 

@@ -160,8 +160,6 @@ button {
   text-transform: uppercase;
 }
 
-/******** Needed to finish popup menu!!!  ***************/
-
 .nav-menu-item:hover {
   border-bottom: 1px solid var(--btn-primary-color);
 }
@@ -313,7 +311,7 @@ button {
   gap: 24px;
 }
 
-/**********************  nft-cards section **************************/
+/*******************  nft-cards section ****************/
 
 .nft-cards {
   padding-top: 60px;
@@ -341,7 +339,7 @@ button {
   text-transform: uppercase;
 }
 
-/***************************** About section *******************************/
+/********************* About section ***********************/
 
 .about {
   padding-top: 50px;
@@ -448,7 +446,7 @@ button {
   text-transform: capitalize;
 }
 
-/*********************** Workflow section ***************************/
+/******************* Workflow section ********************/
 
 .workflow {
   padding-top: 50px;
@@ -531,7 +529,7 @@ button {
   background-color: var(--article-bg-color);
   padding: 48px 43px;
   margin-top: 60px;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 }
 
 .roadmap-img-box {
@@ -558,63 +556,87 @@ button {
   text-transform: capitalize;
 }
 
-/* Phase line */
+/******** Phase line **********/
 
 .roadmap-nav {
   display: flex;
   justify-content: space-between;
+  align-items: start;
 }
 
-.arrow-less-btn {
-  stroke: #888b8e;
+.btn-arrow {
+  stroke: var(--text-color);
   stroke-width: 4;
+  cursor: pointer;
 }
 
-.arrow-greater-btn {
+.btn-arrow:hover {
   stroke: var(--btn-primary-color);
-  stroke-width: 4;
+}
+
+.btn-arrow-reverse {
   transform: rotate(180deg);
 }
 
 .roadmap-nav-item-list {
-  margin: 0 auto;
-  border-top: 2px solid rgb(67, 67, 67);
   display: flex;
-  justify-content: space-around;
   width: 90%;
-  padding-top: 20px;
   position: relative;
-  top: 10px;
-  list-style-position: inside;
+  top: 12px;
+  list-style: none;
+  counter-increment: count (list-item);
 }
 
 .roadmap-nav-item {
+  height: 2px;
+  background-color: rgb(67, 67, 67);
+  width: 100%;
   font-size: 20px;
   line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--text-color);
+  text-align: center;
+  cursor: pointer;
 }
 
-.elipse-default {
-  margin: 0 auto;
-  display: block;
-  position: relative;
-  top: -65px;
-  fill: #888b8e;
-}
-
-.elipse-default.active {
+.roadmap-nav-item.active .elipse-default {
   fill: var(--btn-primary-color);
 }
 
-.roadmap-nav-item::marker {
-  content: "PHASE " counter(list-item);
-  color: var(--inactive-color);
-}
-
-.roadmap-nav-item.active::marker {
+.roadmap-nav-item.active {
   color: rgb(255, 255, 255);
 }
 
-/****************************** Team section **********************************/
+.roadmap-nav-item.active::before {
+  content: "";
+  display: block;
+  width: 50%;
+  border-top: 2px solid var(--text-color);
+}
+
+/* For future phase change */
+
+/* .roadmap-nav-item.passed::before {
+  content: "";
+  width: 100%;
+} */
+
+.elipse-default {
+  position: relative;
+  top: -15px;
+  fill: #888b8e;
+}
+
+.roadmap-phase-name {
+  position: relative;
+  top: -15px;
+}
+
+.roadmap-phase-name::before {
+  content: "phase " counter(list-item);
+}
+
+/************************* Team section ************************/
 
 .team {
   padding-top: 50px;
@@ -653,7 +675,7 @@ button {
   gap: 16px;
 }
 
-/**************************** Partners section *****************************/
+/*********************** Partners section ***********************/
 .partners {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -674,7 +696,7 @@ button {
   background-color: var(--secondary-color);
 }
 
-/************************** FAQs section *********************************/
+/************************** FAQs section ***********************/
 
 .faq-box {
   padding-top: 50px;
@@ -729,7 +751,7 @@ button {
 
 /*********************** Homepage Footer ***********************/
 
-/********************** Homepage call-action section ******************/
+/******************* Homepage call-action section **************/
 
 .cta-homepage {
   margin: 0 auto;
