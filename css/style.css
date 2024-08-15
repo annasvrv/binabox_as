@@ -699,13 +699,19 @@ button {
 /************************** FAQs section ***********************/
 
 .faq-box {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 435px;
   background-color: var(--main-background-color);
+  position: relative;
 }
 
 .faq-title {
   margin-bottom: 60px;
+}
+
+.details-wrapper {
+  position: absolute;
+  top: 0;
+  left: 26%;
 }
 
 .faqs-card {
@@ -757,7 +763,7 @@ button {
   margin: 0 auto;
   text-align: center;
   margin-bottom: 80px;
-  padding-top: 50px;
+  padding-top: 350px;
 }
 
 .cta-homepage-text {
