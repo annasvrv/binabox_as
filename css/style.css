@@ -32,6 +32,7 @@ html {
 }
 
 body {
+  min-height: 100vh;
   background-color: rgb(4, 11, 17);
   font-family: "Bakbak One", "Arial Black", Arial, sans-serif;
   font-weight: 400;
@@ -42,7 +43,6 @@ body {
 }
 
 img {
-  /* display: block; */
   max-width: 100%;
   height: auto;
 }
@@ -58,8 +58,20 @@ ul {
   margin: 0;
 }
 
+/* section {
+  border: 2px solid red;
+} */
+
 .container {
-  padding: 0 255px;
+  /* padding: 1rem max(1rem, (50% - 585px)); */
+  padding: 0 20px;
+}
+
+.wrapper {
+  /* border: 2px solid green; */
+  max-width: 1410px;
+  width: 100%;
+  margin: auto;
 }
 
 /**************** Buttons styles ****************/
@@ -122,8 +134,6 @@ button {
 
 .header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   background-color: rgb(4, 11, 17);
   position: fixed;
   top: 0px;
@@ -133,23 +143,31 @@ button {
   z-index: 1;
 }
 
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .logo-block {
   display: flex;
   align-items: center;
   font-size: 32px;
   line-height: 1.31;
-  gap: 16px;
+  gap: 0 16px;
   text-transform: uppercase;
 }
 
 /************* Header navigation styles *******************/
+.nav-menu {
+  max-width: 709px;
+  width: 100%;
+}
 
 .nav-menu-items {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: stretch;
-  width: 100%;
+  justify-content: space-between;
   gap: 32px;
 }
 
@@ -166,7 +184,6 @@ button {
 
 .nav-dropdown-item {
   position: relative;
-  /* display: inline-block; */
 }
 
 .arrow-down {
@@ -221,7 +238,6 @@ button {
 
 .darkmode-toggle + .switch-mode::before {
   display: inline-block;
-  vertical-align: middle;
   text-align: center;
   line-height: 60px;
   content: url("../img/icons/switch.svg");
@@ -230,6 +246,7 @@ button {
   width: 48px;
   height: 48px;
   cursor: pointer;
+  transition: color 0.3s ease-in-out;
 }
 
 .darkmode-toggle:checked + .switch-mode::before {
@@ -252,9 +269,7 @@ button {
 }
 
 /**************** Hero section **************************/
-
-.hero-box {
-  padding-top: 141px;
+.hero-section {
   background-image: url("../img/bg-s/star-big.svg"),
     linear-gradient(to top, rgb(4, 11, 17), rgba(4, 11, 17, 0)),
     radial-gradient(
@@ -268,11 +283,19 @@ button {
   background-color: var(--secondary-color);
 }
 
+.hero-box {
+  display: flex;
+  align-items: center;
+}
+
 .hero-content {
   width: 750px;
+  padding-top: 141px;
+  padding-bottom: 191px;
 }
 
 .hero-title {
+  width: inherit;
   font-size: 72px;
   line-height: 1.11;
   text-transform: uppercase;
@@ -287,6 +310,31 @@ button {
 
 .hero-text::first-letter {
   text-transform: capitalize;
+}
+
+.hero-counter {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 0.4fr;
+  grid-column-gap: 79px;
+  grid-row-gap: 8px;
+  width: 395px;
+}
+
+.hero-counter1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.hero-counter2 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.hero-counter3 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.hero-counter4 {
+  grid-area: 2 / 2 / 3 / 3;
 }
 
 .hero-number {
@@ -307,8 +355,14 @@ button {
 }
 
 .hero-btn {
+  display: flex;
   margin-top: 48px;
   gap: 24px;
+}
+
+.hero-image {
+  position: relative;
+  right: 180px;
 }
 
 /*******************  nft-cards section ****************/
@@ -317,17 +371,18 @@ button {
   padding-top: 60px;
   padding-bottom: 50px;
   background-color: var(--main-background-color);
-  text-align: center;
   display: flex;
+  justify-content: center;
   gap: 30px;
   overflow-x: auto;
   white-space: nowrap;
 }
 
 .nft-card {
-  margin: 0 auto;
   width: 330px;
   padding: 20px;
+  flex-basis: 330px;
+  flex-shrink: 0;
   background-color: var(--article-bg-color);
 }
 
@@ -341,16 +396,19 @@ button {
 
 /********************* About section ***********************/
 
-.about {
+.about-section {
   padding-top: 50px;
   padding-bottom: 50px;
   text-align: center;
   background-color: var(--main-background-color);
 }
 
+.about {
+  padding-bottom: 12px;
+}
+
 .about-description {
-  margin: 0 auto;
-  margin-top: 16px;
+  margin: 16px auto 60px;
   font-family: var(--text-font);
   color: var(--text-color);
   width: 930px;
@@ -361,16 +419,18 @@ button {
 }
 
 .about-list {
-  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
   list-style-position: inside;
   text-align: left;
+  margin-bottom: 40px;
 }
 
 .about-list-item {
-  margin: 0 auto;
   padding: 30px;
   background-color: var(--secondary-color);
-  margin-bottom: 30px;
   width: 570px;
   height: 224px;
   position: relative;
@@ -463,16 +523,15 @@ button {
 }
 
 .workflow-card {
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: end;
-  align-items: center;
   background-color: var(--secondary-color);
   padding: 30px 30px 26px;
   width: 330px;
   height: 210px;
   counter-increment: count list-item;
+  position: relative;
 }
 
 .workflow-card-text {
@@ -519,13 +578,16 @@ button {
 
 /************************ Road Map section ***********************/
 
-.roadmap {
+.roadmap-section {
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 80px;
   background-color: var(--main-background-color);
 }
 
 .roadmap-card {
+  display: flex;
+  column-gap: 79px;
+  align-items: center;
   background-color: var(--article-bg-color);
   padding: 48px 43px;
   margin-top: 60px;
@@ -534,6 +596,21 @@ button {
 
 .roadmap-img-box {
   width: 715px;
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.roadmap-img-1 {
+  grid-area: 1 / 1 / 3 / 2;
+}
+.roadmap-img-2 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.roadmap-img-3 {
+  grid-area: 2 / 2 / 3 / 3;
 }
 
 .roadmap-card-title {
@@ -545,15 +622,22 @@ button {
 
 .roadmap-list {
   margin-bottom: 30px;
-  list-style-image: url("../img/icons/phase-icon.svg");
 }
 
 .roadmap-items {
-  margin-bottom: 20px;
-  /* gap: 12px; */
+  display: flex;
+  column-gap: 8px;
   font-family: var(--text-font);
   color: var(--text-color);
   text-transform: capitalize;
+}
+
+.roadmap-items:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.roadmap-items::before {
+  content: url("../img/icons/phase-icon.svg");
 }
 
 /******** Phase line **********/
@@ -638,14 +722,21 @@ button {
 
 /************************* Team section ************************/
 
-.team {
+.team-section {
   padding-top: 50px;
   padding-bottom: 50px;
   background-color: var(--main-background-color);
 }
 
+.team-list {
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
 .team-card {
-  margin: 60px auto 0;
   background-color: var(--secondary-color);
   text-align: center;
   padding: 40px 20px;
@@ -684,12 +775,20 @@ button {
 
 .partners-cards {
   margin-top: 58px;
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.partners-card-item {
+  width: 210px;
+  height: 100px;
+  padding: 20px 24px;
 }
 
 .partner-banner {
-  padding: 20px 24px;
-  margin-bottom: 30px;
+  display: block;
 }
 
 .banner-bg {
@@ -698,20 +797,25 @@ button {
 
 /************************** FAQs section ***********************/
 
-.faq-box {
-  padding-top: 435px;
+.faq-box-section {
+  padding-top: 50px;
   background-color: var(--main-background-color);
   position: relative;
+  height: 490px;
 }
 
 .faq-title {
   margin-bottom: 60px;
 }
 
-.details-wrapper {
-  position: absolute;
+.faq-box {
+  position: relative;
+  /* position: absolute; */
+  /* top: 50px; */
   top: 0;
-  left: 26%;
+  left: 0;
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
 }
 
 .faqs-card {
@@ -719,6 +823,9 @@ button {
   background-color: var(--secondary-color);
   padding: 30px 20px;
   width: 930px;
+}
+
+.faqs-card:not(:last-child) {
   margin-bottom: 24px;
 }
 
@@ -763,6 +870,7 @@ button {
   margin: 0 auto;
   text-align: center;
   margin-bottom: 80px;
+  /* padding-top: 50px; */
   padding-top: 350px;
 }
 
@@ -780,7 +888,7 @@ button {
 .cta-homepage-btns {
   display: flex;
   justify-content: center;
-  gap: 37px;
+  column-gap: 37px;
   margin-bottom: 40px;
 }
 
@@ -839,7 +947,7 @@ input::placeholder::first-letter {
   text-transform: capitalize;
 }
 
-/****************** social-networks Footer *****************************/
+/****************** social-networks Footer *********************/
 
 .social-networks-items {
   display: inline-flex;
@@ -849,21 +957,33 @@ input::placeholder::first-letter {
 }
 
 .network-item {
-  margin: 0 auto;
+  /* margin: 0 auto; */
   background-color: rgba(194, 195, 197, 0.15);
   width: 50px;
   height: 50px;
   padding: 12px 10px;
 }
 
-/******************** footer-nav section *******************************/
+/******************** footer-nav section *********************/
 
 .footer-border {
   border-top: 1px solid rgb(67, 67, 67);
   padding: 19px 0;
 }
 
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-logo-box {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
 .footer-logo {
+  display: flex;
   font-size: 22px;
   line-height: 1.36;
   gap: 16px;
@@ -875,11 +995,14 @@ input::placeholder::first-letter {
   color: var(--text-color);
   font-size: 14px;
   line-height: 1.57;
-  /* check other pages with this class for text align */
-  /* text-align: right; */
 }
 
-/************************ Homepage Footer Pages *************************/
+/************************ Homepage Footer Pages ******************/
+
+.nav-pages-items {
+  display: flex;
+  column-gap: 47px;
+}
 
 .nav-pages-item {
   font-family: var(--text-font);
@@ -887,8 +1010,6 @@ input::placeholder::first-letter {
   font-size: 14px;
   line-height: 1.57;
   text-transform: capitalize;
-  /* do not put text align - its will effect other pages tags */
-  /* text-align: right; */
 }
 
 /************************* CATALOG Page **************************/
@@ -899,7 +1020,6 @@ input::placeholder::first-letter {
   background-color: var(--secondary-color);
   padding-top: 77px;
   padding-bottom: 77px;
-  text-align: center;
 }
 
 .breadcrumbs-list {
@@ -922,18 +1042,28 @@ input::placeholder::first-letter {
 
 /********** Catalog NFT Collection ***************************/
 
-.nft-collection {
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
-  gap: 80px;
+.nft-collection-section {
   background-color: var(--main-background-color);
   padding-top: 100px;
   padding-bottom: 200px;
 }
 
+.nft-collection {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 80px;
+}
+
 .catalogpage-content {
   width: 100%;
+}
+
+.nft-card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 }
 
 .nft-collection-search {
@@ -973,7 +1103,6 @@ input::placeholder::first-letter {
 
 .current-filters-block {
   display: flex;
-  justify-content: left;
   align-items: center;
   gap: 12px;
   padding: 12px 20px;
@@ -1094,17 +1223,17 @@ input::placeholder::first-letter {
   width: 1px;
 }
 
-/******************** Call Action section - Coloful ***********************/
+/*************** Call Action section - Coloful **************/
 
 .cta-section {
   background-color: var(--secondary-color);
 }
 
 .call-action-catalog {
+  margin-bottom: -40px;
   background-color: var(--secondary-color);
   position: relative;
   top: -100px;
-  margin: 0 255px;
   padding: 40px 0 48px;
   border-radius: 8px;
   background-image: url("../img/bg-s/star-big.svg"),
@@ -1130,21 +1259,30 @@ input::placeholder::first-letter {
 }
 
 .cta-catbtn-box {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
 }
 
-/********************** Catalog Footer ******************************/
+/********************** Catalog Footer *******************/
 
 .catalog-footer {
   background-color: var(--secondary-color);
 }
 
+.footer-nftcatalog {
+  display: flex;
+  gap: 156px;
+  justify-content: space-between;
+}
+
 .catalog-footer-logobox {
   width: 324px;
-  margin-bottom: 156px;
 }
 
 .footer-cat-logo {
+  display: flex;
+  gap: 16px;
   font-size: 30px;
   line-height: 1.4;
   margin-bottom: 12px;
@@ -1161,7 +1299,13 @@ input::placeholder::first-letter {
   text-transform: capitalize;
 }
 
-/********************** Catalog Sitemap section ***************************/
+.footer-nav-section {
+  display: flex;
+  gap: 130px;
+  margin-bottom: 43px;
+}
+
+/**************** Catalog Sitemap section *******************/
 
 .sitemap-title {
   font-size: 16px;
@@ -1170,16 +1314,24 @@ input::placeholder::first-letter {
   text-transform: uppercase;
 }
 
-.sitemap-list {
+.sitemap-list:not(:last-child) {
   margin-bottom: 16px;
 }
 
-/*********************** Footer Copyright section in catalog   ******************/
+/************** Footer Copyright section in catalog *************/
 
 .footer-copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border-top: 1px solid rgb(67, 67, 67);
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.footer-media-list {
+  display: flex;
+  gap: 40px;
 }
 
 .network-item-cat {
@@ -1189,51 +1341,73 @@ input::placeholder::first-letter {
 
 /***************** CATALOG ITEM PAGE *****************************/
 
-/********************** NFT card item ***********************************/
+/***************** NFT card item ***********************/
 
 .nftcard-box {
   padding-top: 100px;
   background-color: var(--main-background-color);
 }
 
-/******************************** Image block **********************************/
+.card-details {
+  display: flex;
+  position: relative;
+  /* align-items: start; */
+}
+
+/******************* Image block ***********************/
+
+.nftcard-img {
+  flex-shrink: 0;
+}
 
 .time-counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 12px;
   width: 608px;
   background-color: rgba(255, 255, 255, 0.3);
-  /* text-align: center; */
-  padding: 20px;
+  backdrop-filter: blur(10px);
+  padding: 20px 74px;
+  position: absolute;
+  margin: 0 40px 29px;
+  bottom: 0px;
 }
 
 .time-counter-title {
   font-size: 24px;
   line-height: 1.25;
-  margin-bottom: 12px;
   text-transform: uppercase;
 }
 
-.countdown-number {
-  text-align: left;
+/*  Counter list */
+.nftcard-box-timer {
+  display: flex;
+  gap: 22px;
 }
 
-.time-counter-span {
+.countdown-item {
+  text-align: center;
+}
+
+.time-counter-div {
   color: var(--text-color);
-  margin-left: 20px;
-  /* text-align: right; */
+  position: relative;
+  top: -4px;
 }
 
 .countdown-name {
   font-size: 20px;
   line-height: 1.4;
   color: rgb(246, 246, 246);
-  /* text-align: left; */
   text-transform: uppercase;
 }
 
-/***************************** NFT Details section ***************************/
+/******************* NFT Details section *******************/
 
 .nftcard-details {
   width: 620px;
+  margin-left: auto;
 }
 
 .nftcard-details-title {
@@ -1255,6 +1429,16 @@ input::placeholder::first-letter {
 
 .nft-features {
   margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 23px 16px;
+}
+
+.nft-feature {
+  padding: 20px;
+  width: 196px;
+  background-color: var(--secondary-color);
 }
 
 .nft-category {
@@ -1262,23 +1446,16 @@ input::placeholder::first-letter {
   line-height: 1.63;
   font-family: var(--text-font);
   color: var(--text-color);
-  width: 196px;
-  padding: 20px 20px 4px 20px;
-  background-color: var(--secondary-color);
   text-transform: capitalize;
 }
 
 .nft-feature-var {
   font-size: 24px;
   line-height: 1.25;
-  padding: 0 20px 20px 20px;
-  background-color: var(--secondary-color);
-  width: 196px;
-  margin-bottom: 20px;
   text-transform: uppercase;
 }
 
-/******************************* NFT price block ******************************/
+/********************** NFT price block ******************/
 
 .nft-price {
   display: inline-flex;
@@ -1290,24 +1467,29 @@ input::placeholder::first-letter {
 }
 
 .btn-buy {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
   padding: 16px 24px;
-  text-align: center;
 }
 
 .nftcard-box-btns {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
   margin-top: 24px;
-  width: 100%;
 }
 
 .nftcard-media-btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   border: 2px solid rgb(136, 139, 142);
   padding: 16px 24px;
   font-size: 16px;
   line-height: 1.5;
-  width: 40%;
+  flex-basis: 290px;
   text-transform: uppercase;
 }
 
@@ -1315,7 +1497,7 @@ input::placeholder::first-letter {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-/***************** NFT cards collection section *******************************/
+/*********** NFT cards collection section ********************/
 
 .nft-cards-section {
   padding-top: 100px;
@@ -1354,16 +1536,19 @@ input::placeholder::first-letter {
 /************************* FAQ Page ******************************/
 
 .q-box {
-  margin-top: 50px;
-  margin-bottom: 150px;
+  margin-top: 100px;
+  margin-bottom: 200px;
 }
 
-/********************** Contact Us Page ****************************/
+/****************** Contact Us Page *******************/
 
-.contact-info {
+.contact-info-section {
   padding-top: 100px;
   padding-bottom: 40px;
   background-color: var(--main-background-color);
+}
+
+.contact-info {
   display: flex;
   justify-content: center;
   gap: 30px;
@@ -1470,8 +1655,68 @@ input::placeholder::first-letter {
   text-transform: capitalize;
 }
 
+.about-counter {
+  margin: 0 auto;
+  margin-bottom: 60px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 0.4fr 1fr;
+  grid-column-gap: 60px;
+  grid-row-gap: 0;
+  width: 395px;
+}
+
+/********* about page cards ***************/
+
+.aboutpage-list {
+  display: flex;
+  gap: 30px;
+  list-style-position: inside;
+}
+
+.aboutpage-list-item {
+  padding: 25px;
+  background-color: var(--secondary-color);
+  position: relative;
+}
+
+.aboutpage-list-item::marker {
+  content: counter(list-item, decimal-leading-zero);
+  color: rgba(33, 231, 134, 0.3);
+  font-size: 80px;
+  line-height: 1.2;
+}
+
+.aboutpage-list-card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  flex-basis: 330px;
+  flex-shrink: 0;
+  position: relative;
+  bottom: 45px;
+  margin-bottom: -45px;
+}
+
+.aboutpage-list-title {
+  font-size: 24px;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.aboutpage-list-description {
+  font-family: var(--text-font);
+  color: var(--text-color);
+}
+
+.about-list-description::first-letter {
+  text-transform: capitalize;
+}
+
 .about-partners {
-  margin-bottom: 100px;
+  padding-top: 50px;
+  padding-bottom: 200px;
+  background-color: var(--main-background-color);
 }
 
 /************************ BLOG PAGE ****************************/
@@ -1480,6 +1725,12 @@ input::placeholder::first-letter {
   padding-top: 100px;
   padding-bottom: 40px;
   background-color: var(--main-background-color);
+}
+
+.blogpage-card-list {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 .blogpage-card {
@@ -1507,7 +1758,7 @@ input::placeholder::first-letter {
   margin-top: 25px;
   margin-bottom: 8px;
   display: flex;
-  justify-content: start;
+  gap: 6px;
 }
 
 .blog-author {
@@ -1517,11 +1768,12 @@ input::placeholder::first-letter {
   font-size: 16px;
   line-height: 1.5;
   color: var(--text-color);
-  padding-right: 6px;
   text-transform: uppercase;
 }
 
 .blog-date {
+  display: flex;
+  gap: 6px;
   padding-left: 6px;
   font-size: 16px;
   line-height: 1.5;
@@ -1603,17 +1855,19 @@ input::placeholder::first-letter {
 /*******************  Blog Article Page ***************************/
 
 .blog-article-content {
-  display: flex;
-  justify-content: space-between;
-  gap: 60px;
   padding-top: 100px;
   padding-bottom: 180px;
   background-color: var(--main-background-color);
 }
 
+.blog-article {
+  display: flex;
+  gap: 60px;
+}
+
 /******* Blog article main content block **************************/
 
-.blog-article {
+.blog-article-section {
   width: 1020px;
 }
 
@@ -1624,11 +1878,17 @@ input::placeholder::first-letter {
   text-transform: capitalize;
 }
 
+.blog-article-label {
+  float: inline-end;
+  position: relative;
+  top: -42px;
+}
+
 .blogarticle-data {
   margin-top: 40px;
   margin-bottom: 20px;
   display: flex;
-  justify-content: start;
+  gap: 12px;
   font-size: 20px;
   line-height: 1.5;
   font-family: var(--text-font);
@@ -1641,10 +1901,6 @@ input::placeholder::first-letter {
   align-items: center;
   gap: 6px;
   text-transform: capitalize;
-}
-
-.blogarticle-item {
-  padding-right: 12px;
 }
 
 .blogarticle-date-item {
@@ -1684,7 +1940,7 @@ input::placeholder::first-letter {
 
 .blog-story-rating {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 8px;
 }
 
@@ -1694,7 +1950,6 @@ input::placeholder::first-letter {
   line-height: 1.57;
   color: var(--text-color);
   display: flex;
-  align-items: center;
   gap: 4px;
 }
 
@@ -1705,8 +1960,15 @@ input::placeholder::first-letter {
   text-transform: capitalize;
 }
 
+.blog-article-sub-imgs {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
 .blog-sub-article {
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .article-block-title {
@@ -1733,7 +1995,7 @@ input::placeholder::first-letter {
 
 .blog-tags-share {
   margin-top: 4px;
-  padding-bottom: 32px;
+  margin-bottom: 32px;
   display: flex;
   justify-content: space-between;
 }
@@ -1806,10 +2068,6 @@ input::placeholder::first-letter {
 }
 
 /************* Blog article sidebar form block ***********/
-
-.blog-article-form {
-  margin: 0 auto;
-}
 
 .blog-article-form .search-form,
 .blog-filters {
@@ -1896,9 +2154,9 @@ input::placeholder::first-letter {
 
 .blog-filters-tags {
   display: flex;
-  flex-flow: row wrap;
-  gap: 8px;
-  padding: 20px 24px;
+  flex-wrap: wrap;
+  gap: 12px 8px;
+  padding: 20px 0 20px 24px;
   font-family: var(--text-font);
   font-size: 12px;
   line-height: 1.5;
