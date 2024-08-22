@@ -39,81 +39,83 @@
   <body>
     <!-- Header -->
     <header class="header container">
-      <a href="./index.html" class="logo-block">
-        <img src="./img/logo.svg" alt="Binabox logo" width="36" height="40" />
-        BINABOX
-      </a>
-      <!-- Navigation Menu -->
-      <nav class="nav-menu">
-        <ul class="nav-menu-items">
-          <li>
-            <a href="index.html" class="nav-menu-item">HOME</a>
-          </li>
-          <li>
-            <a href="./about.html" class="nav-menu-item">ABOUT</a>
-          </li>
-          <li>
-            <a href="./index.html#roadmap-block" class="nav-menu-item"
-              >ROADMAP</a
-            >
-          </li>
-          <li>
-            <a href="./catalog.html" class="nav-menu-item">COLLECTION</a>
-          </li>
-          <li>
-            <a href="./faqs.html" class="nav-menu-item">FAQS</a>
-          </li>
-
-          <li class="nav-dropdown-item">
-            <a class="nav-menu-item">
-              PAGES
-              <svg class="icon arrow-down" width="15" height="15">
-                <use xlink:href="sprite.svg#arrow-down"></use>
-              </svg>
-            </a>
-            <ul class="dropdown-content" id="dropdown-menu">
-              <li class="dropdown-item">
-                <a class="dropdown-item-link" href="./catalog.html"
-                  >NFT Catalog</a
-                >
-              </li>
-              <li class="dropdown-item">
-                <a class="dropdown-item-link" href="./blog.html">Blog</a>
-              </li>
-              <li class="dropdown-item">
-                <a class="dropdown-item-link" href="./contact-us.html"
-                  >Contact Us</a
-                >
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-
-      <div class="btn-box">
-        <form class="darkmode" action="" method="post">
-          <input
-            type="checkbox"
-            name="darkmode"
-            id="darkmode"
-            class="visually-hidden darkmode-toggle"
-          />
-          <label class="switch-mode" for="darkmode"> </label>
-        </form>
-
-        <a href="#" class="btn-basic btn-media-header">
-          <svg class="icon discord-btn" width="24" height="24">
-            <use xlink:href="sprite.svg#discord-btn"></use>
-          </svg>
-          DISCORD
+      <div class="wrapper header-content">
+        <a href="./index.html" class="logo-block">
+          <img src="./img/logo.svg" alt="Binabox logo" width="36" height="40" />
+          BINABOX
         </a>
+        <!-- Navigation Menu -->
+        <nav class="nav-menu">
+          <ul class="nav-menu-items">
+            <li>
+              <a href="index.html" class="nav-menu-item">HOME</a>
+            </li>
+            <li>
+              <a href="./about.html" class="nav-menu-item">ABOUT</a>
+            </li>
+            <li>
+              <a href="./index.html#roadmap-block" class="nav-menu-item"
+                >ROADMAP</a
+              >
+            </li>
+            <li>
+              <a href="./catalog.html" class="nav-menu-item">COLLECTION</a>
+            </li>
+            <li>
+              <a href="./faqs.html" class="nav-menu-item">FAQS</a>
+            </li>
 
-        <button class="btn-basic btn-light" type="button">
-          <svg class="icon wallet-icon" width="24" height="24">
-            <use xlink:href="sprite.svg#wallet"></use>
-          </svg>
-          CONNECT
-        </button>
+            <li class="nav-dropdown-item">
+              <a class="nav-menu-item">
+                PAGES
+                <svg class="icon arrow-down" width="15" height="15">
+                  <use xlink:href="sprite.svg#arrow-down"></use>
+                </svg>
+              </a>
+              <ul class="dropdown-content" id="dropdown-menu">
+                <li class="dropdown-item">
+                  <a class="dropdown-item-link" href="./catalog.html"
+                    >NFT Catalog</a
+                  >
+                </li>
+                <li class="dropdown-item">
+                  <a class="dropdown-item-link" href="./blog.html">Blog</a>
+                </li>
+                <li class="dropdown-item">
+                  <a class="dropdown-item-link" href="./contact-us.html"
+                    >Contact Us</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="btn-box">
+          <form class="darkmode" action="" method="post">
+            <input
+              type="checkbox"
+              name="darkmode"
+              id="darkmode"
+              class="visually-hidden darkmode-toggle"
+            />
+            <label class="switch-mode" for="darkmode"> </label>
+          </form>
+
+          <a href="#" class="btn-basic btn-media-header">
+            <svg class="icon discord-btn" width="24" height="24">
+              <use xlink:href="sprite.svg#discord-btn"></use>
+            </svg>
+            DISCORD
+          </a>
+
+          <button class="btn-basic btn-light" type="button">
+            <svg class="icon wallet-icon" width="24" height="24">
+              <use xlink:href="sprite.svg#wallet"></use>
+            </svg>
+            CONNECT
+          </button>
+        </div>
       </div>
     </header>
 
@@ -121,113 +123,117 @@
     <main class="main">
       <!-- Breadcrumbs -->
       <section class="breadcrumbs container">
-        <h1 class="secondary-heading">CONTACT US</h1>
-        <ul class="breadcrumbs-list">
-          <li>
-            <a class="breadcrumbs-item inactive-link" href="./index.html"
-              >HOME</a
+        <div class="wrapper">
+          <h1 class="secondary-heading">CONTACT US</h1>
+          <ul class="breadcrumbs-list">
+            <li>
+              <a class="breadcrumbs-item inactive-link" href="./index.html"
+                >HOME</a
+              >
+            </li>
+            <li>
+              <a class="breadcrumbs-item" href="#contact-info"
+                ><span class="highlighted-text">CONTACT US</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="container contact-info-section">
+        <!-- Contact info cards  -->
+        <ul class="contact-info wrapper" id="contact-info">
+          <li class="contact-info-option">
+            <svg class="icon contact-info-icon" width="56" height="56">
+              <use xlink:href="sprite.svg#location"></use>
+            </svg>
+            <h2 class="contact-info-title">Location</h2>
+            <a
+              class="contact-details"
+              href="https://maps.app.goo.gl/qJvwvcxLTHW6qtAg6"
+              target="_blank"
+              >2163 Phillips Gap Rd West Jefferson</a
             >
           </li>
-          <li>
-            <a class="breadcrumbs-item" href="#contact-info"
-              ><span class="highlighted-text">CONTACT US</span></a
+          <li class="contact-info-option">
+            <svg class="icon contact-info-icon" width="56" height="56">
+              <use xlink:href="sprite.svg#email"></use>
+            </svg>
+            <h2 class="contact-info-title">Email</h2>
+            <a class="contact-details" href="mailto:Info.avitex@gmail.com"
+              >Info.avitex@gmail.com</a
             >
+          </li>
+          <li class="contact-info-option">
+            <svg class="icon contact-info-icon" width="56" height="56">
+              <use xlink:href="sprite.svg#phone"></use>
+            </svg>
+            <h2 class="contact-info-title">Phone</h2>
+            <a class="contact-details" href="tel:+16668888">+1 666 8888</a>
           </li>
         </ul>
       </section>
 
-      <!-- Contact info cards  -->
-      <ul class="contact-info container" id="contact-info">
-        <li class="contact-info-option">
-          <svg class="icon contact-info-icon" width="56" height="56">
-            <use xlink:href="sprite.svg#location"></use>
-          </svg>
-          <h2 class="contact-info-title">Location</h2>
-          <a
-            class="contact-details"
-            href="https://maps.app.goo.gl/qJvwvcxLTHW6qtAg6"
-            target="_blank"
-            >2163 Phillips Gap Rd West Jefferson</a
-          >
-        </li>
-        <li class="contact-info-option">
-          <svg class="icon contact-info-icon" width="56" height="56">
-            <use xlink:href="sprite.svg#email"></use>
-          </svg>
-          <h2 class="contact-info-title">Email</h2>
-          <a class="contact-details" href="mailto:Info.avitex@gmail.com"
-            >Info.avitex@gmail.com</a
-          >
-        </li>
-        <li class="contact-info-option">
-          <svg class="icon contact-info-icon" width="56" height="56">
-            <use xlink:href="sprite.svg#phone"></use>
-          </svg>
-          <h2 class="contact-info-title">Phone</h2>
-          <a class="contact-details" href="tel:+16668888">+1 666 8888</a>
-        </li>
-      </ul>
-
       <!-- Get in touch section -->
       <section class="get-intouch-block container">
-        <h2 class="secondary-heading">Get in touch</h2>
-        <p class="get-intouch-text">
-          Browse through the most freuently asked questions
-        </p>
-        <form action="" method="post" class="get-intouch-form">
-          <div class="form-block">
-            <label class="visually-hidden" for="name">Your full name:</label>
+        <div class="wrapper">
+          <h2 class="secondary-heading">Get in touch</h2>
+          <p class="get-intouch-text">
+            Browse through the most freuently asked questions
+          </p>
+          <form action="" method="post" class="get-intouch-form">
+            <div class="form-block">
+              <label class="visually-hidden" for="name">Your full name:</label>
+              <input
+                class="field-validation form-block-input"
+                type="text"
+                name="name"
+                id="name"
+                required
+                placeholder="Name *"
+              />
+              <label class="visually-hidden" for="mail">E-mail:</label>
+              <input
+                class="field-validation form-block-input"
+                type="email"
+                name="email"
+                id="mail"
+                required
+                autocomplete="email"
+                pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                placeholder="Enter your email *"
+              />
+            </div>
+            <label class="visually-hidden" for="tel-number"
+              >Phone number:</label
+            >
             <input
               class="field-validation form-block-input"
-              type="text"
-              name="name"
-              id="name"
-              required
-              placeholder="Name *"
+              type="tel"
+              name="phone"
+              id="tel-number"
+              title="Should match format XXX-XXX-XXXX"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              placeholder="Phone Number"
             />
-
-            <label class="visually-hidden" for="mail">E-mail:</label>
-            <input
-              class="field-validation form-block-input"
-              type="email"
-              name="email"
-              id="mail"
+            <label class="visually-hidden" for="message">Your message:</label>
+            <textarea
+              class="field-validation form-textarea"
+              name="comment"
+              id="message"
               required
-              autocomplete="email"
-              pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
-              placeholder="Enter your email *"
-            />
-          </div>
-
-          <label class="visually-hidden" for="tel-number">Phone number:</label>
-          <input
-            class="field-validation form-block-input"
-            type="tel"
-            name="phone"
-            id="tel-number"
-            title="Should match format XXX-XXX-XXXX"
-            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-            placeholder="Phone Number"
-          />
-
-          <label class="visually-hidden" for="message">Your message:</label>
-          <textarea
-            class="field-validation form-textarea"
-            name="comment"
-            id="message"
-            required
-            placeholder="Message *"
-          ></textarea>
-
-          <button type="submit" class="btn-get-intouch btn-border">
-            SEND MESSAGE
-          </button>
-        </form>
+              placeholder="Message *"
+            ></textarea>
+            <button type="submit" class="btn-get-intouch btn-border">
+              SEND MESSAGE
+            </button>
+          </form>
+        </div>
       </section>
 
       <!-- Call action section -->
       <section class="cta-section">
-        <article class="call-action-catalog">
+        <article class="call-action-catalog wrapper">
           <h2 class="secondary-heading catalog-cta-title">
             JOIN OUR COMMUNITY
           </h2>
@@ -253,7 +259,7 @@
 
     <!-- Footer -->
     <footer class="container catalog-footer">
-      <section class="footer-nftcatalog">
+      <section class="footer-nftcatalog wrapper">
         <div class="catalog-footer-logobox">
           <a href="./index.html" class="footer-cat-logo">
             <img
@@ -270,76 +276,76 @@
           </p>
         </div>
 
-        <div class="sitemap">
-          <h2 class="sitemap-title">SUBSCRIBE</h2>
-          <ul>
-            <li class="sitemap-list">
-              <a class="nav-pages-item" href="./index.html">Home</a>
-            </li>
-            <li class="sitemap-list">
-              <a class="nav-pages-item" href="./about.html"> About </a>
-            </li>
-            <li class="sitemap-list">
-              <a class="nav-pages-item" href="./index.html#roadmap-block">
-                Roadmap
-              </a>
-            </li>
-            <li class="sitemap-list">
-              <a class="nav-pages-item" href="./about.html#team-block">
-                Our Team
-              </a>
-            </li>
-            <li class="sitemap-list">
-              <a class="nav-pages-item" href="./faqs.html"> FAQS </a>
-            </li>
-          </ul>
+        <div class="footer-nav-section">
+          <div class="sitemap">
+            <h2 class="sitemap-title">SUBSCRIBE</h2>
+            <ul>
+              <li class="sitemap-list">
+                <a class="nav-pages-item" href="./index.html">Home</a>
+              </li>
+              <li class="sitemap-list">
+                <a class="nav-pages-item" href="./about.html"> About </a>
+              </li>
+              <li class="sitemap-list">
+                <a class="nav-pages-item" href="./index.html#roadmap-block">
+                  Roadmap
+                </a>
+              </li>
+              <li class="sitemap-list">
+                <a class="nav-pages-item" href="./about.html#team-block">
+                  Our Team
+                </a>
+              </li>
+              <li class="sitemap-list">
+                <a class="nav-pages-item" href="./faqs.html"> FAQS </a>
+              </li>
+            </ul>
+          </div>
+          <div class="sitemap">
+            <h2 class="sitemap-title">COMPANY</h2>
+            <ul>
+              <li class="sitemap-list">
+                <a class="nav-pages-item" href="#">Terms Canditions</a>
+              </li>
+              <li class="sitemap-list">
+                <a class="nav-pages-item" href="#">Privacy Policy</a>
+              </li>
+              <li class="sitemap-list">
+                <a class="nav-pages-item" href="#">Whitepaper</a>
+              </li>
+              <li class="sitemap-list">
+                <a class="nav-pages-item" href="#">Help Center</a>
+              </li>
+            </ul>
+          </div>
+          <form action="" method="post" class="site-newsletter">
+            <fieldset class="site-newsletter-fieldset">
+              <legend class="sitemap-title">SUBSCRIBE</legend>
+              <div class="site-newsletter-wrapper">
+                <label for="email" class="visually-hidden">Email:</label>
+                <input
+                  class="newsletter-field field-validation"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Enter your email"
+                  autocomplete="email"
+                  required
+                  pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                />
+                <button class="btn-light btn-basic" type="submit">
+                  subscribe
+                </button>
+              </div>
+            </fieldset>
+          </form>
         </div>
-
-        <div class="sitemap">
-          <h2 class="sitemap-title">COMPANY</h2>
-          <ul>
-            <li class="sitemap-list">
-              <a class="nav-pages-item" href="#">Terms Canditions</a>
-            </li>
-            <li class="sitemap-list">
-              <a class="nav-pages-item" href="#">Privacy Policy</a>
-            </li>
-            <li class="sitemap-list">
-              <a class="nav-pages-item" href="#">Whitepaper</a>
-            </li>
-            <li class="sitemap-list">
-              <a class="nav-pages-item" href="#">Help Center</a>
-            </li>
-          </ul>
-        </div>
-
-        <form action="" method="post" class="site-newsletter">
-          <fieldset class="site-newsletter-fieldset">
-            <legend class="sitemap-title">SUBSCRIBE</legend>
-            <div class="site-newsletter-wrapper">
-              <label for="email" class="visually-hidden">Email:</label>
-              <input
-                class="newsletter-field field-validation"
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Enter your email"
-                autocomplete="email"
-                required
-                pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
-              />
-              <button class="btn-light btn-basic" type="submit">
-                subscribe
-              </button>
-            </div>
-          </fieldset>
-        </form>
       </section>
 
-      <div class="footer-copyright">
+      <div class="footer-copyright wrapper">
         <p class="footer-copyright-text">BINABOX 2022 - ALL rights reserved</p>
         <div class="social-networks">
-          <ul class="social-networks-items">
+          <ul class="footer-media-list">
             <!-- Twitter add icon -->
             <li class="network-item-cat">
               <a href="#">
