@@ -10,7 +10,7 @@
   --header-height: 108px;
 }
 
-/********************** General css **********************************/
+/********************** General css *********************/
 
 * {
   padding: 0;
@@ -58,17 +58,11 @@ ul {
   margin: 0;
 }
 
-/* section {
-  border: 2px solid red;
-} */
-
 .container {
-  /* padding: 1rem max(1rem, (50% - 585px)); */
   padding: 0 20px;
 }
 
 .wrapper {
-  /* border: 2px solid green; */
   max-width: 1410px;
   width: 100%;
   margin: auto;
@@ -1025,10 +1019,6 @@ button {
   border: 1px solid red;
 }
 
-/* .newsletter-field:is(:-webkit-autofill, :autofill) {
-  background-color: rgba(194, 195, 197, 0.15);
-} */
-
 input::placeholder {
   font-family: var(--text-font);
   color: var(--text-color);
@@ -1051,7 +1041,6 @@ input::placeholder::first-letter {
 }
 
 .network-item {
-  /* margin: 0 auto; */
   background-color: rgba(194, 195, 197, 0.15);
   width: 50px;
   height: 50px;
