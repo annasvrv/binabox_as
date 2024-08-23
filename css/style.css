@@ -269,18 +269,39 @@ button {
 }
 
 /**************** Hero section **************************/
+
 .hero-section {
-  background-image: url("../img/bg-s/star-big.svg"),
-    linear-gradient(to top, rgb(4, 11, 17), rgba(4, 11, 17, 0)),
+  background-image: linear-gradient(
+      to top,
+      rgb(4, 11, 17) 15%,
+      rgba(4, 11, 17, 0) 55%
+    ),
     radial-gradient(
-      ellipse at center,
-      rgba(48, 113, 101, 0.3) 10%,
-      rgba(20, 27, 34, 0.3) 70%
+      ellipse at top left,
+      rgba(48, 113, 101, 0.8) 10%,
+      rgba(20, 27, 34, 0.6) 70%
     );
-  background-size: 496px auto, cover, 950px 278px;
-  background-position: bottom -50px right -170px, bottom, top -100px left -200px;
   background-repeat: no-repeat;
+  background-size: auto, 750px 278px;
+  background-position: bottom, top -100px left 0px;
   background-color: var(--secondary-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: " ";
+  width: 496px;
+  height: 496px;
+  display: inline-block;
+  background-image: url("../img/bg-s/star-big.svg");
+  background-size: 496px;
+  background-repeat: no-repeat;
+  transform: rotate(-30deg);
+  position: absolute;
+  right: -150px;
+  bottom: -60px;
+  opacity: 70%;
 }
 
 .hero-box {
@@ -401,6 +422,22 @@ button {
   padding-bottom: 50px;
   text-align: center;
   background-color: var(--main-background-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-section::before {
+  content: " ";
+  width: 400px;
+  height: 400px;
+  background-image: url("../img/bg-s/star-big.svg");
+  background-size: 400px;
+  background-repeat: no-repeat;
+  transform: rotate(-65deg);
+  position: absolute;
+  bottom: 100px;
+  left: -150px;
+  opacity: 80%;
 }
 
 .about {
@@ -512,6 +549,22 @@ button {
   padding-top: 50px;
   padding-bottom: 50px;
   background-color: var(--main-background-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.workflow::before {
+  content: " ";
+  width: 561px;
+  height: 561px;
+  background-image: url("../img/bg-s/star-big.svg");
+  background-size: 561px;
+  background-repeat: no-repeat;
+  transform: rotate(33deg);
+  position: absolute;
+  top: 170px;
+  right: -230px;
+  opacity: 60%;
 }
 
 .workflow-cards {
@@ -582,6 +635,22 @@ button {
   padding-top: 50px;
   padding-bottom: 80px;
   background-color: var(--main-background-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.roadmap-section::before {
+  content: " ";
+  width: 561px;
+  height: 561px;
+  background-image: url("../img/bg-s/star-big.svg");
+  background-size: 561px;
+  background-repeat: no-repeat;
+  transform: rotate(33deg);
+  position: absolute;
+  top: -250px;
+  right: -230px;
+  opacity: 60%;
 }
 
 .roadmap-card {
@@ -726,6 +795,22 @@ button {
   padding-top: 50px;
   padding-bottom: 50px;
   background-color: var(--main-background-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.team-section::before {
+  content: "";
+  width: 450px;
+  height: 450px;
+  background-image: url("../img/bg-s/star-big.svg");
+  background-size: 450px;
+  background-repeat: no-repeat;
+  transform: rotate(-65deg);
+  position: absolute;
+  bottom: 100px;
+  left: -210px;
+  opacity: 80%;
 }
 
 .team-list {
@@ -771,6 +856,22 @@ button {
   padding-top: 50px;
   padding-bottom: 50px;
   background-color: var(--main-background-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.partners::before {
+  content: "";
+  width: 284px;
+  height: 284px;
+  background-image: url("../img/bg-s/star-small.svg");
+  background-size: 284px;
+  background-repeat: no-repeat;
+  transform: rotate(165deg);
+  position: absolute;
+  bottom: 30px;
+  left: -160px;
+  opacity: 80%;
 }
 
 .partners-cards {
@@ -798,10 +899,8 @@ button {
 /************************** FAQs section ***********************/
 
 .faq-box-section {
-  padding-top: 50px;
   background-color: var(--main-background-color);
-  position: relative;
-  height: 490px;
+  margin-top: -200px;
 }
 
 .faq-title {
@@ -810,12 +909,8 @@ button {
 
 .faq-box {
   position: relative;
-  /* position: absolute; */
-  /* top: 50px; */
-  top: 0;
+  top: 250px;
   left: 0;
-  /* left: 50%; */
-  /* transform: translateX(-50%); */
 }
 
 .faqs-card {
@@ -870,7 +965,6 @@ button {
   margin: 0 auto;
   text-align: center;
   margin-bottom: 80px;
-  /* padding-top: 50px; */
   padding-top: 350px;
 }
 
@@ -1233,17 +1327,46 @@ input::placeholder::first-letter {
   margin-bottom: -40px;
   background-color: var(--secondary-color);
   position: relative;
+  overflow: hidden;
   top: -100px;
   padding: 40px 0 48px;
   border-radius: 8px;
-  background-image: url("../img/bg-s/star-big.svg"),
-    url("../img/bg-s/star-big.svg"), url("../img/bg-s/star-big.svg"),
+  background-image: url("../img/bg-s/star-small.svg"),
     linear-gradient(to left, rgb(35, 51, 222), rgb(10, 190, 102));
   background-repeat: no-repeat;
-  background-size: 321.2px auto, 255.87px auto, 137.02px auto, cover;
-  background-position: top -60px right -60px, bottom -60px left -60px,
-    top left 350px, center;
+  background-size: 137px auto, cover;
+  background-position: top left 25%, center;
   background-blend-mode: screen;
+}
+
+.call-action-catalog::before {
+  content: "";
+  width: 256px;
+  height: 256px;
+  background-image: url("../img/bg-s/star-big.svg");
+  background-size: 256px auto;
+  background-repeat: no-repeat;
+  transform: rotate(-10deg);
+  position: absolute;
+  top: 40px;
+  left: -50px;
+  opacity: 30%;
+  filter: invert(1);
+}
+
+.call-action-catalog::after {
+  content: "";
+  width: 321px;
+  height: 321px;
+  background-image: url("../img/bg-s/star-big.svg");
+  background-size: 321px auto;
+  background-repeat: no-repeat;
+  transform: rotate(-45deg);
+  position: absolute;
+  top: -65px;
+  right: -50px;
+  opacity: 40%;
+  filter: invert(0.7);
 }
 
 .catalog-cta-text {
@@ -1536,8 +1659,9 @@ input::placeholder::first-letter {
 /************************* FAQ Page ******************************/
 
 .q-box {
-  margin-top: 100px;
-  margin-bottom: 200px;
+  background-color: var(--main-background-color);
+  padding-top: 100px;
+  padding-bottom: 200px;
 }
 
 /****************** Contact Us Page *******************/
@@ -1645,6 +1769,36 @@ input::placeholder::first-letter {
   background-color: var(--main-background-color);
   padding-top: 100px;
   padding-bottom: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.story-section::before {
+  content: "";
+  width: 276px;
+  height: 276px;
+  background-image: url("../img/bg-s/star-small.svg");
+  background-size: 276px;
+  background-repeat: no-repeat;
+  transform: rotate(25deg);
+  position: absolute;
+  top: 50px;
+  left: 350px;
+  opacity: 80%;
+}
+
+.story-section::after {
+  content: "";
+  width: 184px;
+  height: 184px;
+  background-image: url("../img/bg-s/star-small.svg");
+  background-size: 184px;
+  background-repeat: no-repeat;
+  transform: rotate(180deg);
+  position: absolute;
+  top: 200px;
+  right: 430px;
+  opacity: 80%;
 }
 
 .story-section-text {
@@ -1717,6 +1871,22 @@ input::placeholder::first-letter {
   padding-top: 50px;
   padding-bottom: 200px;
   background-color: var(--main-background-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-partners::before {
+  content: "";
+  width: 284px;
+  height: 284px;
+  background-image: url("../img/bg-s/star-small.svg");
+  background-size: 284px;
+  background-repeat: no-repeat;
+  transform: rotate(165deg);
+  position: absolute;
+  top: 35%;
+  left: -160px;
+  opacity: 80%;
 }
 
 /************************ BLOG PAGE ****************************/
