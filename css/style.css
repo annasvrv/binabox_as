@@ -7,7 +7,6 @@
   --inactive-color: rgb(136, 139, 142);
   --text-font: "Poppins", "Helvetica Neue", Arial, sans-serif;
   --btn-header-font: "Bakbak One", "Arial Black", Arial, sans-serif;
-  --header-height: 108px;
 }
 
 /********************** General css *********************/
@@ -58,14 +57,11 @@ ul {
   margin: 0;
 }
 
-.container {
-  padding: 0 20px;
-}
-
 .wrapper {
-  max-width: 1410px;
+  max-width: 1450px;
   width: 100%;
   margin: auto;
+  padding-inline: 20px;
 }
 
 /**************** Buttons styles ****************/
@@ -120,20 +116,17 @@ button {
   text-transform: uppercase;
 }
 
-.main {
-  margin-top: var(--header-height);
-}
-
 /********************* Header styles *****************************/
 
 .header {
   display: flex;
   background-color: rgb(4, 11, 17);
-  position: fixed;
+  position: sticky;
+  padding-top: 30px;
+  padding-bottom: 30px;
   top: 0px;
   left: 0;
   width: 100%;
-  height: var(--header-height);
   z-index: 1;
 }
 
@@ -141,6 +134,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  column-gap: 60px;
 }
 
 .logo-block {
@@ -154,15 +148,16 @@ button {
 
 /************* Header navigation styles *******************/
 .nav-menu {
-  max-width: 709px;
+  max-width: 710px;
   width: 100%;
 }
 
 .nav-menu-items {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: 32px;
+  justify-content: center;
+  column-gap: 30px;
 }
 
 .nav-menu-item {
@@ -188,12 +183,13 @@ button {
 
 .dropdown-content {
   display: none;
-  width: 221px;
+  width: max-content;
   position: absolute;
   left: 0;
   top: 100%;
   margin-top: 18px;
   padding: 16px 20px;
+  padding: 16px 100px 16px 20px;
   background-color: var(--secondary-color);
   box-shadow: 0 10px 25px rgba(71, 92, 133, 0.1);
   z-index: 1;
@@ -212,11 +208,14 @@ button {
   display: block;
 }
 
+.dropdown-item:not(:last-child) {
+  padding-bottom: 14px;
+}
+
 .dropdown-item {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 10%;
-  margin-bottom: 14px;
   text-transform: capitalize;
 }
 
@@ -227,7 +226,7 @@ button {
 .btn-box {
   display: flex;
   align-items: center;
-  gap: 20px;
+  column-gap: 20px;
 }
 
 .darkmode-toggle + .switch-mode::before {
@@ -303,10 +302,16 @@ button {
   align-items: center;
 }
 
+.hero-image {
+  flex-shrink: 0;
+  padding-left: 150px;
+  position: relative;
+}
+
 .hero-content {
-  width: 750px;
-  padding-top: 141px;
-  padding-bottom: 191px;
+  width: 600px;
+  padding-top: 140px;
+  padding-bottom: 190px;
 }
 
 .hero-title {
@@ -320,7 +325,7 @@ button {
   font-family: var(--text-font);
   font-size: 20px;
   line-height: 1.5;
-  margin: 20px 0 24px;
+  padding: 20px 0 24px;
 }
 
 .hero-text::first-letter {
@@ -331,25 +336,28 @@ button {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr 0.4fr;
-  grid-column-gap: 79px;
+  grid-template-areas:
+    "hero-total  hero-profiles"
+    "hero-total-tx hero-profiles-tx";
+  grid-column-gap: 80px;
   grid-row-gap: 8px;
-  width: 395px;
+  max-width: 395px;
 }
 
-.hero-counter1 {
-  grid-area: 1 / 1 / 2 / 2;
+.hero-total-nb {
+  grid-area: hero-total;
 }
 
-.hero-counter2 {
-  grid-area: 2 / 1 / 3 / 2;
+.hero-profiles-nb {
+  grid-area: hero-profiles;
 }
 
-.hero-counter3 {
-  grid-area: 1 / 2 / 2 / 3;
+.hero-total-tx {
+  grid-area: hero-total-tx;
 }
 
-.hero-counter4 {
-  grid-area: 2 / 2 / 3 / 3;
+.hero-profiles-tx {
+  grid-area: hero-profiles-tx;
 }
 
 .hero-number {
@@ -371,13 +379,8 @@ button {
 
 .hero-btn {
   display: flex;
-  margin-top: 48px;
+  padding-top: 48px;
   gap: 24px;
-}
-
-.hero-image {
-  position: relative;
-  right: 180px;
 }
 
 /*******************  nft-cards section ****************/
@@ -387,22 +390,22 @@ button {
   padding-bottom: 50px;
   background-color: var(--main-background-color);
   display: flex;
-  justify-content: center;
-  gap: 30px;
+  column-gap: 30px;
   overflow-x: auto;
   white-space: nowrap;
+  justify-content: space-between;
 }
 
 .nft-card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
   width: 330px;
   padding: 20px;
-  flex-basis: 330px;
-  flex-shrink: 0;
   background-color: var(--article-bg-color);
 }
 
 .nft-card-title {
-  padding-top: 10px;
   font-size: 20px;
   line-height: 1.4;
   text-align: left;
@@ -434,15 +437,13 @@ button {
   opacity: 80%;
 }
 
-.about {
-  padding-bottom: 12px;
-}
-
 .about-description {
-  margin: 16px auto 60px;
+  padding-top: 16px;
+  padding-bottom: 60px;
+  margin: auto;
   font-family: var(--text-font);
   color: var(--text-color);
-  width: 930px;
+  max-width: 930px;
 }
 
 .about-description::first-letter {
@@ -456,15 +457,40 @@ button {
   gap: 30px;
   list-style-position: inside;
   text-align: left;
-  margin-bottom: 40px;
+  padding-bottom: 30px;
 }
 
 .about-list-item {
   padding: 30px;
   background-color: var(--secondary-color);
-  width: 570px;
-  height: 224px;
+  max-width: 570px;
   position: relative;
+}
+
+.about-list-card {
+  position: relative;
+  bottom: 48px;
+  margin-bottom: -48px;
+}
+
+.about-list-title {
+  font-size: 24px;
+  line-height: 1.25;
+  margin-bottom: 26px;
+  text-transform: uppercase;
+}
+
+.about-list-description {
+  font-family: var(--text-font);
+  color: var(--text-color);
+}
+
+.about-list-description::first-letter {
+  text-transform: capitalize;
+}
+
+.hp-about-btn {
+  display: inline-block;
 }
 
 .about-list-item::marker {
@@ -515,28 +541,6 @@ button {
   opacity: 1;
 }
 
-.about-list-card {
-  position: relative;
-  bottom: 48px;
-}
-
-.about-list-title {
-  font-size: 24px;
-  line-height: 1.25;
-  margin-bottom: 26px;
-  text-transform: uppercase;
-}
-
-.about-list-description {
-  font-family: var(--text-font);
-  color: var(--text-color);
-  width: 510px;
-}
-
-.about-list-description::first-letter {
-  text-transform: capitalize;
-}
-
 /******************* Workflow section ********************/
 
 .workflow {
@@ -549,10 +553,10 @@ button {
 
 .workflow::before {
   content: " ";
-  width: 561px;
-  height: 561px;
+  width: 560px;
+  height: 560px;
   background-image: url("../img/bg-s/star-big.svg");
-  background-size: 561px;
+  background-size: 560px;
   background-repeat: no-repeat;
   transform: rotate(33deg);
   position: absolute;
@@ -562,23 +566,24 @@ button {
 }
 
 .workflow-cards {
-  margin-top: 60px;
-  display: flex;
+  padding-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 330px);
+  grid-template-rows: repeat(auto-fit, 210px);
+  justify-content: center;
   gap: 30px;
   text-align: center;
   list-style: none;
 }
 
-.workflow-card {
+.workflow-item {
+  background-color: var(--secondary-color);
+  padding: 30px 30px 26px;
+  counter-increment: count list-item;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: end;
-  background-color: var(--secondary-color);
-  padding: 30px 30px 26px;
-  width: 330px;
-  height: 210px;
-  counter-increment: count list-item;
-  position: relative;
 }
 
 .workflow-card-text {
@@ -599,35 +604,35 @@ button {
   content: "step " counter(count);
 }
 
-.wc-1 {
-  background-image: url("../img/img-workflow/icon1.svg");
-  background-repeat: no-repeat;
-  background-position: top 10px center;
+.step-connect::before {
+  content: url("../img/img-workflow/icon1.svg");
+  position: relative;
+  top: -16px;
 }
 
-.wc-2 {
-  background-image: url("../img/img-workflow/icon2.svg");
-  background-repeat: no-repeat;
-  background-position: top 15px center;
+.step-select::before {
+  content: url("../img/img-workflow/icon2.svg");
+  position: relative;
+  top: -6px;
 }
 
-.wc-3 {
-  background-image: url("../img/img-workflow/icon3.svg");
-  background-repeat: no-repeat;
-  background-position: top 10px center;
+.step-confirm::before {
+  content: url("../img/img-workflow/icon3.svg");
+  position: relative;
+  top: -15px;
 }
 
-.wc-4 {
-  background-image: url("../img/img-workflow/icon4.svg");
-  background-repeat: no-repeat;
-  background-position: top 10px center;
+.step-receive::before {
+  content: url("../img/img-workflow/icon4.svg");
+  position: relative;
+  top: -14px;
 }
 
 /************************ Road Map section ***********************/
 
 .roadmap-section {
   padding-top: 50px;
-  padding-bottom: 80px;
+  padding-bottom: 50px;
   background-color: var(--main-background-color);
   position: relative;
   overflow: hidden;
@@ -635,10 +640,10 @@ button {
 
 .roadmap-section::before {
   content: " ";
-  width: 561px;
-  height: 561px;
+  width: 560px;
+  height: 560px;
   background-image: url("../img/bg-s/star-big.svg");
-  background-size: 561px;
+  background-size: 560px;
   background-repeat: no-repeat;
   transform: rotate(33deg);
   position: absolute;
@@ -649,31 +654,36 @@ button {
 
 .roadmap-card {
   display: flex;
-  column-gap: 79px;
+  column-gap: 80px;
   align-items: center;
   background-color: var(--article-bg-color);
-  padding: 48px 43px;
+  padding: 48px 44px;
   margin-top: 60px;
   margin-bottom: 24px;
 }
 
 .roadmap-img-box {
-  width: 715px;
   display: grid;
   grid-template-columns: 1fr 0.5fr;
   grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "roadmap-img-big roadmap-img-sm"
+    "roadmap-img-big roadmap-img-sm-last";
   grid-column-gap: 20px;
   grid-row-gap: 20px;
+  align-items: stretch;
 }
 
-.roadmap-img-1 {
-  grid-area: 1 / 1 / 3 / 2;
+.roadmap-img-big {
+  grid-area: roadmap-img-big;
 }
+
 .roadmap-img-2 {
-  grid-area: 1 / 2 / 2 / 3;
+  grid-area: roadmap-img-sm;
 }
-.roadmap-img-3 {
-  grid-area: 2 / 2 / 3 / 3;
+
+.roadmap-img-sm-last {
+  grid-area: roadmap-img-sm-last;
 }
 
 .roadmap-card-title {
@@ -709,6 +719,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: start;
+  height: 78px;
 }
 
 .btn-arrow {
@@ -728,6 +739,7 @@ button {
 .roadmap-nav-item-list {
   display: flex;
   width: 90%;
+  height: 66px;
   position: relative;
   top: 12px;
   list-style: none;
@@ -808,7 +820,7 @@ button {
 }
 
 .team-list {
-  margin-top: 60px;
+  padding-top: 60px;
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
@@ -820,14 +832,13 @@ button {
   text-align: center;
   padding: 40px 20px;
   width: 330px;
-  height: 339px;
   position: relative;
 }
 
 .team-name {
   font-size: 24px;
   line-height: 1.25;
-  margin-top: 31px;
+  margin-top: 30px;
   margin-bottom: 4px;
   text-transform: capitalize;
 }
@@ -869,7 +880,7 @@ button {
 }
 
 .partners-cards {
-  margin-top: 58px;
+  padding-top: 60px;
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
@@ -877,8 +888,6 @@ button {
 }
 
 .partners-card-item {
-  width: 210px;
-  height: 100px;
   padding: 20px 24px;
 }
 
@@ -894,7 +903,6 @@ button {
 
 .faq-box-section {
   background-color: var(--main-background-color);
-  margin-top: -200px;
 }
 
 .faq-title {
@@ -905,13 +913,14 @@ button {
   position: relative;
   top: 250px;
   left: 0;
+  margin-top: -200px;
 }
 
 .faqs-card {
   margin: 0 auto;
   background-color: var(--secondary-color);
   padding: 30px 20px;
-  width: 930px;
+  max-width: 930px;
 }
 
 .faqs-card:not(:last-child) {
@@ -958,15 +967,15 @@ button {
 .cta-homepage {
   margin: 0 auto;
   text-align: center;
-  margin-bottom: 80px;
+  padding-bottom: 80px;
   padding-top: 350px;
 }
 
 .cta-homepage-text {
   font-family: var(--text-font);
   color: var(--text-color);
-  margin-top: 8px;
-  margin-bottom: 40px;
+  padding-top: 8px;
+  padding-bottom: 40px;
 }
 
 .cta-homepage-text::first-letter {
@@ -976,8 +985,8 @@ button {
 .cta-homepage-btns {
   display: flex;
   justify-content: center;
-  column-gap: 37px;
-  margin-bottom: 40px;
+  column-gap: 36px;
+  padding-bottom: 40px;
 }
 
 /* Homepage newsletter subcribtion form */
@@ -985,11 +994,11 @@ button {
 .home-newsletter {
   margin: 0 auto;
   display: flex;
-  width: 690px;
+  max-width: 690px;
 }
 
 .site-newsletter {
-  width: 441px;
+  width: 440px;
 }
 
 .site-newsletter-fieldset {
@@ -1037,7 +1046,7 @@ input::placeholder::first-letter {
   display: inline-flex;
   justify-content: center;
   gap: 30px;
-  margin-top: 30px;
+  padding-top: 30px;
 }
 
 .network-item {
@@ -1051,7 +1060,7 @@ input::placeholder::first-letter {
 
 .footer-border {
   border-top: 1px solid rgb(67, 67, 67);
-  padding: 19px 0;
+  padding: 20px 0;
 }
 
 .footer-nav {
@@ -1084,7 +1093,7 @@ input::placeholder::first-letter {
 
 .nav-pages-items {
   display: flex;
-  column-gap: 47px;
+  column-gap: 46px;
 }
 
 .nav-pages-item {
@@ -1101,12 +1110,12 @@ input::placeholder::first-letter {
 
 .breadcrumbs {
   background-color: var(--secondary-color);
-  padding-top: 77px;
-  padding-bottom: 77px;
+  padding-top: 75px;
+  padding-bottom: 75px;
 }
 
 .breadcrumbs-list {
-  margin-top: 12px;
+  padding-top: 12px;
   display: flex;
   justify-content: center;
   font-size: 14px;
@@ -1135,7 +1144,7 @@ input::placeholder::first-letter {
   display: flex;
   justify-content: space-between;
   align-items: start;
-  gap: 80px;
+  column-gap: 80px;
 }
 
 .catalogpage-content {
@@ -1143,9 +1152,10 @@ input::placeholder::first-letter {
 }
 
 .nft-card-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  padding-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  justify-items: center;
   gap: 30px;
 }
 
@@ -1153,7 +1163,7 @@ input::placeholder::first-letter {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 /*********** Search form ***********/
@@ -1162,9 +1172,8 @@ input::placeholder::first-letter {
   background-color: var(--secondary-color);
   width: 280px;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  padding: 13px 20px 9px 24px;
+  padding: 12px 20px 10px 24px;
 }
 
 .search-field {
@@ -1189,7 +1198,6 @@ input::placeholder::first-letter {
   align-items: center;
   gap: 12px;
   padding: 12px 20px;
-  margin-bottom: 40px;
   background-color: var(--secondary-color);
 }
 
@@ -1198,7 +1206,7 @@ input::placeholder::first-letter {
   flex-direction: row;
   align-items: center;
   gap: 10px;
-  padding: 9px 13px 9px 20px;
+  padding: 10px 12px 10px 20px;
   border: 1px solid rgb(65, 69, 74);
   font-family: var(--text-font);
   font-size: 16px;
@@ -1262,7 +1270,7 @@ input::placeholder::first-letter {
 }
 
 .nft-filter-list {
-  padding: 20px 23px;
+  padding: 20px 22px;
   border-top: 1px solid rgb(67, 67, 67);
   font-family: var(--text-font);
   font-size: 14px;
@@ -1345,10 +1353,10 @@ input::placeholder::first-letter {
 
 .call-action-catalog::after {
   content: "";
-  width: 321px;
-  height: 321px;
+  width: 320px;
+  height: 320px;
   background-image: url("../img/bg-s/star-big.svg");
-  background-size: 321px auto;
+  background-size: 320px auto;
   background-repeat: no-repeat;
   transform: rotate(-45deg);
   position: absolute;
@@ -1359,8 +1367,8 @@ input::placeholder::first-letter {
 }
 
 .catalog-cta-text {
-  margin-top: 4px;
-  margin-bottom: 22px;
+  padding-top: 4px;
+  padding-bottom: 22px;
   text-align: center;
   font-family: var(--text-font);
   color: rgb(247, 247, 249);
@@ -1397,7 +1405,7 @@ input::placeholder::first-letter {
   gap: 16px;
   font-size: 30px;
   line-height: 1.4;
-  margin-bottom: 12px;
+  padding-bottom: 12px;
   text-transform: uppercase;
 }
 
@@ -1413,8 +1421,9 @@ input::placeholder::first-letter {
 
 .footer-nav-section {
   display: flex;
+  flex-wrap: wrap;
   gap: 130px;
-  margin-bottom: 43px;
+  padding-bottom: 42px;
 }
 
 /**************** Catalog Sitemap section *******************/
@@ -1422,12 +1431,12 @@ input::placeholder::first-letter {
 .sitemap-title {
   font-size: 16px;
   line-height: 1.5;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
   text-transform: uppercase;
 }
 
 .sitemap-list:not(:last-child) {
-  margin-bottom: 16px;
+  padding-bottom: 16px;
 }
 
 /************** Footer Copyright section in catalog *************/
@@ -1463,7 +1472,6 @@ input::placeholder::first-letter {
 .card-details {
   display: flex;
   position: relative;
-  /* align-items: start; */
 }
 
 /******************* Image block ***********************/
@@ -1482,8 +1490,8 @@ input::placeholder::first-letter {
   backdrop-filter: blur(10px);
   padding: 20px 74px;
   position: absolute;
-  margin: 0 40px 29px;
-  bottom: 0px;
+  margin: 0 40px 30px;
+  bottom: 10px;
 }
 
 .time-counter-title {
@@ -1518,13 +1526,13 @@ input::placeholder::first-letter {
 /******************* NFT Details section *******************/
 
 .nftcard-details {
-  width: 620px;
+  max-width: 620px;
   margin-left: auto;
 }
 
 .nftcard-details-title {
   text-align: left;
-  margin-bottom: 24px;
+  padding-bottom: 24px;
 }
 
 .nftcard-details-text {
@@ -1532,7 +1540,7 @@ input::placeholder::first-letter {
   line-height: 1.5;
   font-family: var(--text-font);
   color: var(--text-color);
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .nftcard-details-text::first-letter {
@@ -1540,11 +1548,11 @@ input::placeholder::first-letter {
 }
 
 .nft-features {
-  margin-bottom: 30px;
+  padding-bottom: 30px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 23px 16px;
+  gap: 22px 16px;
 }
 
 .nft-feature {
@@ -1572,7 +1580,7 @@ input::placeholder::first-letter {
 .nft-price {
   display: inline-flex;
   gap: 14px;
-  margin-bottom: 40px;
+  padding-bottom: 40px;
   font-size: 36px;
   line-height: 1.22;
   text-transform: uppercase;
@@ -1589,7 +1597,7 @@ input::placeholder::first-letter {
 .nftcard-box-btns {
   display: flex;
   justify-content: space-between;
-  margin-top: 24px;
+  padding-top: 24px;
 }
 
 .nftcard-media-btn {
@@ -1679,8 +1687,8 @@ input::placeholder::first-letter {
 }
 
 .contact-info-title {
-  margin-top: 20px;
-  margin-bottom: 8px;
+  padding-top: 20px;
+  padding-bottom: 8px;
   font-size: 36px;
   line-height: 1.22;
   text-transform: capitalize;
@@ -1699,8 +1707,8 @@ input::placeholder::first-letter {
 }
 
 .get-intouch-text {
-  margin-top: 4px;
-  margin-bottom: 60px;
+  padding-top: 4px;
+  padding-bottom: 60px;
   font-size: 20px;
   line-height: 1.5;
   font-family: var(--text-font);
@@ -1711,8 +1719,11 @@ input::placeholder::first-letter {
 }
 
 .get-intouch-form {
-  width: 690px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  max-width: 690px;
+  margin: auto;
 }
 
 .form-block {
@@ -1731,8 +1742,6 @@ input::placeholder::first-letter {
   font-size: 16px;
   line-height: 1.63;
   border: 1px solid transparent;
-  margin-bottom: 20px;
-  display: block;
   width: 100%;
 }
 
@@ -1741,11 +1750,12 @@ input::placeholder::first-letter {
 }
 
 .form-textarea {
-  height: 150px;
   resize: vertical;
 }
 
 .btn-get-intouch {
+  margin: auto;
+  width: fit-content;
   margin-top: 20px;
   padding: 12px 36px;
   text-transform: uppercase;
@@ -1791,7 +1801,9 @@ input::placeholder::first-letter {
 }
 
 .story-section-text {
-  margin-bottom: 40px;
+  font-family: var(--text-font);
+  color: var(--text-color);
+  padding: 16px 240px 40px;
 }
 
 .story-section-text::first-letter {
@@ -1800,10 +1812,13 @@ input::placeholder::first-letter {
 
 .about-counter {
   margin: 0 auto;
-  margin-bottom: 60px;
+  padding-bottom: 60px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 0.4fr 1fr;
+  grid-template-areas:
+    "hero-total-tx hero-profiles-tx"
+    "hero-total hero-profiles";
   grid-column-gap: 60px;
   grid-row-gap: 0;
   width: 395px;
@@ -1814,10 +1829,12 @@ input::placeholder::first-letter {
 .aboutpage-list {
   display: flex;
   gap: 30px;
+  justify-content: center;
   list-style-position: inside;
 }
 
 .aboutpage-list-item {
+  max-width: 330px;
   padding: 25px;
   background-color: var(--secondary-color);
   position: relative;
@@ -1834,7 +1851,6 @@ input::placeholder::first-letter {
   display: flex;
   flex-direction: column;
   row-gap: 24px;
-  flex-basis: 330px;
   flex-shrink: 0;
   position: relative;
   bottom: 45px;
@@ -1914,8 +1930,8 @@ input::placeholder::first-letter {
 }
 
 .blog-data {
-  margin-top: 25px;
-  margin-bottom: 8px;
+  padding-top: 25px;
+  padding-bottom: 8px;
   display: flex;
   gap: 6px;
 }
@@ -1954,7 +1970,7 @@ input::placeholder::first-letter {
 .blogpage-card-title {
   font-size: 36px;
   line-height: 1.22;
-  margin-bottom: 4px;
+  padding-bottom: 4px;
   text-transform: uppercase;
 }
 
@@ -1963,7 +1979,7 @@ input::placeholder::first-letter {
   color: var(--text-color);
   font-size: 20px;
   line-height: 1.5;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .blogpage-card-text::first-letter {
@@ -2026,12 +2042,8 @@ input::placeholder::first-letter {
 
 /******* Blog article main content block **************************/
 
-.blog-article-section {
-  width: 1020px;
-}
-
 .blog-article-title {
-  margin-top: 30px;
+  padding-top: 30px;
   font-size: 36px;
   line-height: 1.22;
   text-transform: capitalize;
@@ -2044,8 +2056,8 @@ input::placeholder::first-letter {
 }
 
 .blogarticle-data {
-  margin-top: 40px;
-  margin-bottom: 20px;
+  padding-top: 40px;
+  padding-bottom: 20px;
   display: flex;
   gap: 12px;
   font-size: 20px;
@@ -2072,6 +2084,7 @@ input::placeholder::first-letter {
   line-height: 1.5;
   font-family: var(--text-font);
   color: var(--text-color);
+  padding-bottom: 24px;
 }
 
 .blog-story::first-letter {
@@ -2079,15 +2092,13 @@ input::placeholder::first-letter {
 }
 
 .blog-story-quote {
-  margin-top: 24px;
-  margin-bottom: 40px;
   padding: 26px 32px;
   border-left: 8px solid var(--btn-primary-color);
   background-color: rgba(33, 231, 134, 0.1);
 }
 
 .blog-story-text {
-  margin-bottom: 12px;
+  padding-bottom: 12px;
   font-family: var(--text-font);
   font-size: 24px;
   line-height: 1.25;
@@ -2120,10 +2131,11 @@ input::placeholder::first-letter {
 }
 
 .blog-article-sub-imgs {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px;
+  padding-top: 40px;
+  padding-bottom: 30px;
 }
 
 .blog-sub-article {
@@ -2131,7 +2143,7 @@ input::placeholder::first-letter {
 }
 
 .article-block-title {
-  margin-bottom: 12px;
+  padding-bottom: 12px;
   font-size: 30px;
   line-height: 1.4;
   text-transform: capitalize;
@@ -2149,12 +2161,12 @@ input::placeholder::first-letter {
 }
 
 .article-block-text:not(:first-of-type) {
-  margin-top: 12px;
+  padding-top: 12px;
 }
 
 .blog-tags-share {
-  margin-top: 4px;
-  margin-bottom: 32px;
+  padding-top: 4px;
+  padding-bottom: 32px;
   display: flex;
   justify-content: space-between;
 }
@@ -2187,27 +2199,22 @@ input::placeholder::first-letter {
 }
 
 .blog-article-pages {
-  margin-bottom: 60px;
+  padding-bottom: 60px;
   display: flex;
   justify-content: space-between;
 }
 
 .blog-article-mini {
-  padding: 21px 20px;
+  display: flex;
+  gap: 16px;
+  padding: 20px 20px;
   background-color: var(--secondary-color);
-  width: 411px;
+  max-width: 410px;
   font-family: var(--text-font);
   font-weight: 700;
 }
 
-.blogpage-mini-link {
-  display: flex;
-  gap: 16px;
-}
-
 .blog-page-reverse {
-  display: flex;
-  gap: 16px;
   flex-direction: row-reverse;
   text-align: right;
 }
@@ -2215,7 +2222,7 @@ input::placeholder::first-letter {
 .content-block-title {
   font-size: 18px;
   line-height: 1.56;
-  margin-top: 4px;
+  padding-top: 4px;
   text-transform: capitalize;
 }
 
@@ -2228,15 +2235,19 @@ input::placeholder::first-letter {
 
 /************* Blog article sidebar form block ***********/
 
+.blog-article-form {
+  width: 330px;
+}
+
 .blog-article-form .search-form,
 .blog-filters {
   border: none;
   background-color: var(--secondary-color);
-  width: 330px;
+  width: inherit;
 }
 
 .blog-article-form .search-form {
-  margin-bottom: 21px;
+  margin-bottom: 20px;
 }
 
 .blog-filters {
@@ -2262,7 +2273,6 @@ input::placeholder::first-letter {
   font-size: 14px;
   line-height: 1.57;
   color: var(--text-color);
-  margin-bottom: 10px;
   cursor: pointer;
   text-transform: capitalize;
 }
@@ -2277,7 +2287,7 @@ input::placeholder::first-letter {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-bottom: 12px;
+  padding-bottom: 12px;
 }
 
 .recent-post-title {
@@ -2285,7 +2295,7 @@ input::placeholder::first-letter {
   font-weight: 700;
   font-size: 18px;
   line-height: 1.56;
-  margin-bottom: 4px;
+  padding-bottom: 4px;
   text-transform: capitalize;
 }
 
@@ -2328,7 +2338,6 @@ input::placeholder::first-letter {
 .feedback-section-title {
   font-size: 36px;
   line-height: 1.22;
-  margin-bottom: 4px;
   text-transform: uppercase;
 }
 
@@ -2337,14 +2346,158 @@ input::placeholder::first-letter {
   color: var(--text-color);
   font-size: 20px;
   line-height: 1.5;
-  margin-bottom: 30px;
+  padding-top: 4px;
+  padding-bottom: 30px;
 }
 
 .feedback-section-description::first-letter {
   text-transform: capitalize;
 }
 
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
 .feedback-form input[name="name"],
 .feedback-form input[name="phone"] {
   width: 335px;
+}
+
+@media (max-width: 720px) {
+  .header-content {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .logo-block {
+    justify-content: center;
+  }
+
+  .btn-box {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .social-networks-items {
+    flex-wrap: wrap;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+  }
+
+  .nav-pages-items {
+    flex-wrap: wrap;
+    column-gap: 22px;
+  }
+
+  .roadmap-card {
+    flex-direction: column;
+  }
+
+  .footer-nftcatalog {
+    flex-direction: column;
+    row-gap: 50px;
+  }
+
+  .footer-nav-section {
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+
+  .footer-copyright {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .nft-collection-search {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .current-filters-block {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 950px) {
+  .header-content {
+    column-gap: 30px;
+  }
+
+  .logo-block {
+    width: 100%;
+    gap: 0 8px;
+  }
+
+  .nav-menu-items {
+    column-gap: 15px;
+  }
+
+  .nav-menu-item {
+    font-size: 14px;
+  }
+
+  .hero-section::before {
+    background-size: 300px;
+    right: -350px;
+    bottom: -130px;
+  }
+
+  .hero-box {
+    justify-content: center;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-counter {
+    margin: auto;
+  }
+
+  .hero-btn {
+    justify-content: center;
+  }
+
+  .hero-image {
+    display: none;
+  }
+
+  .card-details {
+    flex-direction: column;
+  }
+  .time-counter {
+    top: 500px;
+    height: fit-content;
+  }
+
+  .nftcard-details {
+    margin: 0;
+  }
+
+  .story-section::before {
+    left: -10px;
+  }
+
+  .story-section::after {
+    right: 30px;
+  }
+
+  .aboutpage-list {
+    flex-wrap: wrap;
+  }
+
+  .blog-article {
+    flex-direction: column;
+  }
+
+  .blog-article-form {
+    width: 100%;
+  }
 }
