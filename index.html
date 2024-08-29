@@ -45,7 +45,13 @@
     <header class="header container">
       <div class="wrapper header-content">
         <a href="./index.html" class="logo-block">
-          <img src="./img/logo.svg" alt="Binabox logo" width="36" height="40" />
+          <img
+            src="./img/logo.svg"
+            alt="Binabox logo"
+            width="36"
+            height="40"
+            class="logo-img"
+          />
           BINABOX
         </a>
         <!-- Navigation Menu -->
@@ -131,10 +137,10 @@
             </p>
             <!--  Hero counter  -->
             <dl class="hero-counter">
-              <dt class="hero-number hero-counter1">2240+</dt>
-              <dd class="hero-description hero-counter2">Total Iteam</dd>
-              <dt class="hero-number hero-counter3">1000+</dt>
-              <dd class="hero-description hero-counter4">
+              <dt class="hero-number hero-total-nb">2240+</dt>
+              <dd class="hero-description hero-total-tx">Total Iteam</dd>
+              <dt class="hero-number hero-profiles-nb">1000+</dt>
+              <dd class="hero-description hero-profiles-tx">
                 Profiles whitelisted
               </dd>
             </dl>
@@ -148,20 +154,21 @@
               </button>
             </div>
           </div>
-          <img
-            src="./img/content-img/hero_cube.png"
-            alt="Circuit cube with Binabox label on it"
-            class="hero-image"
-            width="970"
-            height="846"
-          />
+          <div class="hero-image">
+            <img
+              src="./img/content-img/hero_cube.png"
+              alt="Circuit cube with Binabox label on it"
+              width="970"
+              height="846"
+            />
+          </div>
         </div>
       </section>
 
       <!-- NFT section -->
       <section class="nft-cards">
-        <article class="nft-card">
-          <a href="./catalog-item.html">
+        <a href="./catalog-item.html">
+          <article class="nft-card">
             <img
               src="./img/img-nftcatalog/nft-picture1.webp"
               alt="Woman's face - NFT Card"
@@ -169,11 +176,11 @@
               height="330"
             />
             <h2 class="nft-card-title">SKISIRS#2</h2>
-          </a>
-        </article>
+          </article>
+        </a>
 
-        <article class="nft-card">
-          <a href="./catalog-item.html">
+        <a href="./catalog-item.html">
+          <article class="nft-card">
             <img
               src="./img/img-nftcatalog/nft-picture2.webp"
               alt="Human Skeleton - NFT Card"
@@ -181,11 +188,11 @@
               height="330"
             />
             <h2 class="nft-card-title">SKISIRS#2</h2>
-          </a>
-        </article>
+          </article>
+        </a>
 
-        <article class="nft-card">
-          <a href="./catalog-item.html">
+        <a href="./catalog-item.html">
+          <article class="nft-card">
             <img
               src="./img/img-nftcatalog/nft-picture3.webp"
               alt="Cat's Head - NFT Card"
@@ -193,11 +200,11 @@
               height="330"
             />
             <h2 class="nft-card-title">SKISIRS#2</h2>
-          </a>
-        </article>
+          </article>
+        </a>
 
-        <article class="nft-card">
-          <a href="./catalog-item.html">
+        <a href="./catalog-item.html">
+          <article class="nft-card">
             <img
               src="./img/img-nftcatalog/nft-picture4.webp"
               alt="Scissors - NFT Card"
@@ -205,11 +212,11 @@
               height="330"
             />
             <h2 class="nft-card-title">SKISIRS#2</h2>
-          </a>
-        </article>
+          </article>
+        </a>
 
-        <article class="nft-card">
-          <a href="./catalog-item.html">
+        <a href="./catalog-item.html">
+          <article class="nft-card">
             <img
               src="./img/img-nftcatalog/nft-picture5.webp"
               alt="Disk - NFT Card"
@@ -217,11 +224,11 @@
               height="330"
             />
             <h2 class="nft-card-title">SKISIRS#2</h2>
-          </a>
-        </article>
+          </article>
+        </a>
 
-        <article class="nft-card">
-          <a href="./catalog-item.html">
+        <a href="./catalog-item.html">
+          <article class="nft-card">
             <img
               src="./img/img-nftcatalog/nft-picture6.webp"
               alt="Play Box - NFT Card"
@@ -229,8 +236,8 @@
               height="330"
             />
             <h2 class="nft-card-title">SKISIRS#2</h2>
-          </a>
-        </article>
+          </article>
+        </a>
       </section>
 
       <!-- About section -->
@@ -282,7 +289,9 @@
               </article>
             </li>
           </ol>
-          <a href="./about.html" class="btn-basic btn-border">READ MORE</a>
+          <a href="./about.html" class="btn-basic btn-border hp-about-btn">
+            READ MORE
+          </a>
         </div>
       </section>
 
@@ -293,23 +302,45 @@
             HOW TO <span class="highlighted-text">BINABOX</span> WORK
           </h2>
           <ol class="workflow-cards">
-            <li class="workflow-card hover-effect wc-1">
+            <li class="workflow-item hover-effect">
+              <div class="step-connect"></div>
               <h3 class="workflow-card-title"></h3>
               <p class="workflow-card-text">Connect Your Wallet</p>
             </li>
-            <li class="workflow-card hover-effect wc-2">
+            <li class="workflow-item hover-effect">
+              <div class="step-select"></div>
               <h3 class="workflow-card-title"></h3>
               <p class="workflow-card-text">Sellect Your Quaility</p>
             </li>
-            <li class="workflow-card hover-effect wc-3">
+            <li class="workflow-item hover-effect">
+              <div class="step-confirm"></div>
               <h3 class="workflow-card-title"></h3>
               <p class="workflow-card-text">Confirm the Transaction</p>
             </li>
-            <li class="workflow-card hover-effect wc-4">
+            <li class="workflow-item hover-effect">
+              <div class="step-receive"></div>
               <h3 class="workflow-card-title"></h3>
               <p class="workflow-card-text">Receive Your NFTs</p>
             </li>
           </ol>
+          <!-- <ol class="workflow-cards">
+            <li class="workflow-item hover-effect wc-1">
+              <h3 class="workflow-card-title"></h3>
+              <p class="workflow-card-text">Connect Your Wallet</p>
+            </li>
+            <li class="workflow-item hover-effect wc-2">
+              <h3 class="workflow-card-title"></h3>
+              <p class="workflow-card-text">Sellect Your Quaility</p>
+            </li>
+            <li class="workflow-item hover-effect wc-3">
+              <h3 class="workflow-card-title"></h3>
+              <p class="workflow-card-text">Confirm the Transaction</p>
+            </li>
+            <li class="workflow-item hover-effect wc-4">
+              <h3 class="workflow-card-title"></h3>
+              <p class="workflow-card-text">Receive Your NFTs</p>
+            </li>
+          </ol> -->
         </div>
       </section>
 
@@ -324,21 +355,21 @@
                 alt="circuit"
                 width="470"
                 height="470"
-                class="roadmap-img-1"
+                class="roadmap-img-big"
               />
               <img
                 src="./img/content-img/roadmap-img-2.webp"
                 alt="circuit"
                 width="225"
                 height="225"
-                class="roadmap-img-2"
+                class="roadmap-img-sm"
               />
               <img
                 src="./img/content-img/roadmap-img-3.webp"
                 alt="circuit"
                 width="225"
                 height="225"
-                class="roadmap-img-3"
+                class="roadmap-img-sm-last"
               />
             </figure>
             <div class="roadmap-card-description">
