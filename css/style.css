@@ -569,7 +569,6 @@ button {
   padding-top: 60px;
   display: grid;
   grid-template-columns: repeat(auto-fit, 330px);
-  grid-template-rows: repeat(auto-fit, 210px);
   justify-content: center;
   gap: 30px;
   text-align: center;
