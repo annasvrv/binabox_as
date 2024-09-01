@@ -321,6 +321,12 @@ button {
   text-transform: uppercase;
 }
 
+.last-line::before {
+  content: "";
+  white-space: pre;
+  display: block;
+}
+
 .hero-text {
   font-family: var(--text-font);
   font-size: 20px;
