@@ -163,7 +163,7 @@ button {
 .nav-menu-item {
   font-size: 16px;
   line-height: 1.5;
-  letter-spacing: 10%;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
@@ -188,7 +188,6 @@ button {
   left: 0;
   top: 100%;
   margin-top: 18px;
-  padding: 16px 20px;
   padding: 16px 100px 16px 20px;
   background-color: var(--secondary-color);
   box-shadow: 0 10px 25px rgba(71, 92, 133, 0.1);
@@ -215,7 +214,7 @@ button {
 .dropdown-item {
   font-size: 16px;
   line-height: 1.5;
-  letter-spacing: 10%;
+  letter-spacing: 0.1em;
   text-transform: capitalize;
 }
 
@@ -745,10 +744,9 @@ button {
 }
 
 .roadmap-nav-item-list {
-  list-style: none;
-  counter-increment: count (list-item);
   display: flex;
   width: 90%;
+  list-style: none;
 }
 
 .roadmap-nav-item {
