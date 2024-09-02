@@ -726,10 +726,14 @@ button {
   align-items: start;
 }
 
+.btn-roadmap {
+  background: none;
+  border: none;
+}
+
 .btn-arrow {
   stroke: var(--text-color);
   stroke-width: 4;
-  cursor: pointer;
 }
 
 .btn-arrow:hover {
@@ -741,57 +745,64 @@ button {
 }
 
 .roadmap-nav-item-list {
-  border-top: 2px solid rgb(67, 67, 67);
-  display: flex;
-  width: 90%;
-  position: relative;
-  top: 12px;
   list-style: none;
   counter-increment: count (list-item);
+  display: flex;
+  width: 90%;
 }
 
 .roadmap-nav-item {
   width: 100%;
+}
+
+.roadmap-label {
   font-size: 20px;
   line-height: 1.4;
   text-transform: uppercase;
   color: var(--text-color);
   text-align: center;
+  display: block;
   cursor: pointer;
-  position: relative;
-  top: -2px;
 }
 
-.roadmap-nav-item.active .elipse-default {
-  position: relative;
-  top: -16px;
-  fill: var(--btn-primary-color);
-}
-
-.roadmap-nav-item.active {
+.roadmap-input:checked + .roadmap-label {
   color: rgb(255, 255, 255);
 }
 
-.roadmap-nav-item.active::before {
-  content: "";
+.roadmap-input:checked + .roadmap-label .elipse-default {
+  fill: var(--btn-primary-color);
+}
+
+.roadmap-input:checked + .roadmap-label .progress-line::before {
+  background-color: rgb(136, 139, 142);
+}
+
+.roadmap-input:checked + .passed .progress-line::after {
+  background-color: rgb(136, 139, 142);
+}
+
+.roadmap-label::after {
+  content: " " counter(list-item);
+}
+
+.progress-line {
+  display: flex;
+  align-items: center;
+  padding-bottom: 8px;
+}
+
+.progress-line::before,
+.progress-line::after {
+  content: " ";
   display: block;
   width: 50%;
-  border-top: 2px solid var(--text-color);
+  height: 2px;
+  background-color: rgb(67, 67, 67);
 }
 
 .elipse-default {
-  position: relative;
-  top: -14px;
   fill: #888b8e;
-}
-
-.roadmap-phase-name {
-  position: relative;
-  top: -14px;
-}
-
-.roadmap-phase-name::before {
-  content: "phase " counter(list-item);
+  flex-shrink: 0;
 }
 
 /************************* Team section ************************/

@@ -129,7 +129,8 @@
         <div class="wrapper hero-box">
           <div class="hero-content">
             <h1 class="hero-title">
-              WITH <span class="highlighted-text">BINABOX</span> EXPLORE <span class="last-line">NFT COLLECTION</span>
+              WITH <span class="highlighted-text">BINABOX</span> EXPLORE
+              <span class="last-line">NFT COLLECTION</span>
             </h1>
             <p class="hero-text">
               We are the best way to check the rarity of NFT collection
@@ -365,44 +366,93 @@
             </div>
           </div>
 
-          <div class="roadmap-nav">
-            <svg class="icon btn-arrow" width="24" height="24">
-              <use xlink:href="sprite.svg#arrow-less"></use>
-            </svg>
+          <form action="" method="get" class="roadmap-nav">
+            <button type="button" class="btn-roadmap active">
+              <svg class="icon btn-arrow" width="24" height="24">
+                <use xlink:href="sprite.svg#arrow-less"></use>
+              </svg>
+            </button>
             <ol class="roadmap-nav-item-list">
-              <li class="roadmap-nav-item active">
-                <svg class="icon elipse-default" width="30" height="30">
-                  <use xlink:href="sprite.svg#elipse-default"></use>
-                </svg>
-                <p class="roadmap-phase-name"></p>
+              <li class="roadmap-nav-item">
+                <input
+                  type="checkbox"
+                  name="phase"
+                  value="phase-1"
+                  id="phase-1"
+                  checked
+                  class="visually-hidden roadmap-input"
+                />
+                <label for="phase-1" class="roadmap-label">
+                  <div class="progress-line">
+                    <svg class="icon elipse-default" width="30" height="30">
+                      <use xlink:href="sprite.svg#elipse-default"></use>
+                    </svg>
+                  </div>
+                  <span>PHASE</span>
+                </label>
               </li>
               <li class="roadmap-nav-item">
-                <svg class="icon elipse-default" width="30" height="30">
-                  <use xlink:href="sprite.svg#elipse-default"></use>
-                </svg>
-                <p class="roadmap-phase-name"></p>
+                <input
+                  type="checkbox"
+                  name="phase"
+                  value="phase-2"
+                  id="phase-2"
+                  class="visually-hidden roadmap-input"
+                />
+                <label for="phase-2" class="roadmap-label">
+                  <div class="progress-line">
+                    <svg class="icon elipse-default" width="30" height="30">
+                      <use xlink:href="sprite.svg#elipse-default"></use>
+                    </svg>
+                  </div>
+                  PHASE
+                </label>
               </li>
               <li class="roadmap-nav-item">
-                <svg class="icon elipse-default" width="30" height="30">
-                  <use xlink:href="sprite.svg#elipse-default"></use>
-                </svg>
-                <p class="roadmap-phase-name"></p>
+                <input
+                  type="checkbox"
+                  name="phase"
+                  value="phase-3"
+                  id="phase-3"
+                  class="visually-hidden roadmap-input"
+                />
+                <label for="phase-3" class="roadmap-label">
+                  <div class="progress-line">
+                    <svg class="icon elipse-default" width="30" height="30">
+                      <use xlink:href="sprite.svg#elipse-default"></use>
+                    </svg>
+                  </div>
+                  PHASE
+                </label>
               </li>
               <li class="roadmap-nav-item">
-                <svg class="icon elipse-default" width="30" height="30">
-                  <use xlink:href="sprite.svg#elipse-default"></use>
-                </svg>
-                <p class="roadmap-phase-name"></p>
+                <input
+                  type="checkbox"
+                  name="phase"
+                  value="phase-4"
+                  id="phase-4"
+                  class="visually-hidden roadmap-input"
+                />
+                <label for="phase-4" class="roadmap-label">
+                  <div class="progress-line">
+                    <svg class="icon elipse-default" width="30" height="30">
+                      <use xlink:href="sprite.svg#elipse-default"></use>
+                    </svg>
+                  </div>
+                  PHASE
+                </label>
               </li>
             </ol>
-            <svg
-              class="icon btn-arrow btn-arrow-reverse"
-              width="24"
-              height="24"
-            >
-              <use xlink:href="sprite.svg#arrow-less"></use>
-            </svg>
-          </div>
+            <button type="button" class="btn-roadmap">
+              <svg
+                class="icon btn-arrow btn-arrow-reverse"
+                width="24"
+                height="24"
+              >
+                <use xlink:href="sprite.svg#arrow-less"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </section>
 
