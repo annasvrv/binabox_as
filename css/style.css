@@ -765,19 +765,19 @@ button {
   cursor: pointer;
 }
 
-.roadmap-input:checked + .roadmap-label {
+.active:checked + .roadmap-label {
   color: rgb(255, 255, 255);
 }
 
-.roadmap-input:checked + .roadmap-label .elipse-default {
+.active:checked + .roadmap-label .elipse-default {
   fill: var(--btn-primary-color);
 }
 
-.roadmap-input:checked + .roadmap-label .progress-line::before {
+.active:checked + .roadmap-label .progress-line::before {
   background-color: rgb(136, 139, 142);
 }
 
-.roadmap-input:checked + .passed .progress-line::after {
+.active:checked + .completed .progress-line::after {
   background-color: rgb(136, 139, 142);
 }
 
