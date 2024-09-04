@@ -8,6 +8,11 @@
       content="The first huge metaverse arena to arrange live sports, hang out and even make bets and wagers"
     />
     <link
+      rel="icon"
+      href="./favicon_io/android-chrome-192x192.png"
+      type="image/png"
+    />
+    <link
       rel="apple-touch-icon"
       sizes="180x180"
       href="./favicon_io/apple-touch-icon.png"
@@ -41,552 +46,558 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="header container">
-      <a href="./index.html" class="logo-block">
-        <img src="./img/logo.svg" alt="Binabox logo" width="36" height="40" />
-        BINABOX
-      </a>
-      <!-- Navigation Menu -->
-      <nav class="nav-menu">
-        <ul class="nav-menu-items">
-          <li>
-            <a href="index.html" class="nav-menu-item">HOME</a>
-          </li>
-          <li>
-            <a href="./about.html" class="nav-menu-item">ABOUT</a>
-          </li>
-          <li>
-            <a href="./index.html#roadmap-block" class="nav-menu-item"
-              >ROADMAP</a
-            >
-          </li>
-          <li>
-            <a href="./catalog.html" class="nav-menu-item">COLLECTION</a>
-          </li>
-          <li>
-            <a href="./faqs.html" class="nav-menu-item">FAQS</a>
-          </li>
-
-          <li class="nav-dropdown-item">
-            <a class="nav-menu-item">
-              PAGES
-              <svg class="icon arrow-down" width="15" height="15">
-                <use xlink:href="sprite.svg#arrow-down"></use>
-              </svg>
-            </a>
-            <ul class="dropdown-content" id="dropdown-menu">
-              <li class="dropdown-item">
-                <a class="dropdown-item-link" href="./catalog.html"
-                  >NFT Catalog</a
-                >
-              </li>
-              <li class="dropdown-item">
-                <a class="dropdown-item-link" href="./blog.html">Blog</a>
-              </li>
-              <li class="dropdown-item">
-                <a class="dropdown-item-link" href="./contact-us.html"
-                  >Contact Us</a
-                >
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-
-      <div class="btn-box">
-        <form class="darkmode" action="" method="post">
-          <input
-            type="checkbox"
-            name="darkmode"
-            id="darkmode"
-            class="visually-hidden darkmode-toggle"
-          />
-          <label class="switch-mode" for="darkmode"> </label>
-        </form>
-
-        <a href="#" class="btn-basic btn-media-header">
-          <svg class="icon discord-btn" width="24" height="24">
-            <use xlink:href="sprite.svg#discord-btn"></use>
-          </svg>
-          DISCORD
+    <header class="header">
+      <div class="wrapper header-content">
+        <a href="./index.html" class="logo-block">
+          <img src="./img/logo.svg" alt="Binabox logo" width="36" height="40" />
+          BINABOX
         </a>
+        <!-- Navigation Menu -->
+        <nav class="nav-menu">
+          <ul class="nav-menu-items">
+            <li>
+              <a href="index.html" class="nav-menu-item">HOME</a>
+            </li>
+            <li>
+              <a href="./about.html" class="nav-menu-item">ABOUT</a>
+            </li>
+            <li>
+              <a href="./index.html#roadmap-block" class="nav-menu-item"
+                >ROADMAP</a
+              >
+            </li>
+            <li>
+              <a href="./catalog.html" class="nav-menu-item">COLLECTION</a>
+            </li>
+            <li>
+              <a href="./faqs.html" class="nav-menu-item">FAQS</a>
+            </li>
 
-        <button class="btn-basic btn-light" type="button">
-          <svg class="icon wallet-icon" width="24" height="24">
-            <use xlink:href="sprite.svg#wallet"></use>
-          </svg>
-          CONNECT
-        </button>
+            <li class="nav-dropdown-item">
+              <a class="nav-menu-item">
+                PAGES
+                <svg class="icon arrow-down" width="15" height="15">
+                  <use xlink:href="sprite.svg#arrow-down"></use>
+                </svg>
+              </a>
+              <ul class="dropdown-content" id="dropdown-menu">
+                <li class="dropdown-item">
+                  <a class="dropdown-item-link" href="./catalog.html"
+                    >NFT Catalog</a
+                  >
+                </li>
+                <li class="dropdown-item">
+                  <a class="dropdown-item-link" href="./blog.html">Blog</a>
+                </li>
+                <li class="dropdown-item">
+                  <a class="dropdown-item-link" href="./contact-us.html"
+                    >Contact Us</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="btn-box">
+          <form class="darkmode" action="" method="post">
+            <input
+              type="checkbox"
+              name="darkmode"
+              id="darkmode"
+              class="visually-hidden darkmode-toggle"
+            />
+            <label class="switch-mode" for="darkmode"> </label>
+          </form>
+
+          <a href="#" class="btn-basic btn-media-header">
+            <svg class="icon discord-btn" width="24" height="24">
+              <use xlink:href="sprite.svg#discord-btn"></use>
+            </svg>
+            DISCORD
+          </a>
+
+          <button class="btn-basic btn-light" type="button">
+            <svg class="icon wallet-icon" width="24" height="24">
+              <use xlink:href="sprite.svg#wallet"></use>
+            </svg>
+            CONNECT
+          </button>
+        </div>
       </div>
     </header>
 
     <!-- Main -->
     <main class="main">
       <!-- Breadcrumbs -->
-      <section class="breadcrumbs container">
-        <h1 class="secondary-heading">BLOG DETAIL</h1>
-        <ul class="breadcrumbs-list">
-          <li>
-            <a class="breadcrumbs-item inactive-link" href="./index.html"
-              >HOME</a
-            >
-          </li>
-          <li>
-            <a class="breadcrumbs-item inactive-link" href="./blog.html"
-              >OUR BLOG</a
-            >
-          </li>
-          <li>
-            <a class="breadcrumbs-item" href="#blog-detail"
-              ><span class="highlighted-text">BLOG DETAIL</span></a
-            >
-          </li>
-        </ul>
-      </section>
-
-      <div class="container blog-article-content">
-        <section class="blog-article" id="blog-detail">
-          <img
-            src="./img/content-img/img-blog-article_main.webp"
-            alt="The man standing infront of the giant green dragon"
-            width="1020"
-            height="557"
-          />
-          <h2 class="blog-article-title">
-            Enior Apple Employee Alleges Sexism At
-          </h2>
-          <span class="label-deco blog-article-label">GAMING</span>
-          <ul class="blogarticle-data">
-            <li class="blogarticle-item">
-              <svg class="icon person-icon" width="24" height="24">
-                <use xlink:href="sprite.svg#person-icon"></use>
-              </svg>
-              tony nguyen
+      <section class="breadcrumbs">
+        <div class="wrapper">
+          <h1 class="secondary-heading">BLOG DETAIL</h1>
+          <ul class="breadcrumbs-list">
+            <li>
+              <a class="breadcrumbs-item inactive-link" href="./index.html"
+                >HOME</a
+              >
             </li>
-            <li class="blogarticle-date-item">
-              <svg class="icon calendar-icon" width="24" height="24">
-                <use xlink:href="sprite.svg#calendar"></use>
-              </svg>
-              <time> 20 jun 2022 </time>
+            <li>
+              <a class="breadcrumbs-item inactive-link" href="./blog.html"
+                >OUR BLOG</a
+              >
+            </li>
+            <li>
+              <a class="breadcrumbs-item" href="#blog-detail"
+                ><span class="highlighted-text">BLOG DETAIL</span></a
+              >
             </li>
           </ul>
-          <p class="blog-story">
-            The Basilisks that players collect are represented with NFTs on
-            Ethereum’s blockchain with real-world value. Players use the
-            Basilisks they have gathered to battle other players to win ether
-            (ETH). In Balthazar Dragons, players are immersed in a 3D open world
-            to explore and capture dragon-like beasts called Basilisks.
-            Balthazar Dragons is an upcoming fantasy role-playing game developed
-            on the Ethereum blockchain by a decentralized autonomous
-            organization (DAO) called the Balthazar DAO.
-          </p>
-          <figure class="blog-story-quote">
-            <blockquote class="blog-story-text">
-              “The first huge metaverse arena to arrange live sports, hang out
-              and even make bets and wagers”
-            </blockquote>
-            <figcaption class="blog-story-rating">
-              <div class="blog-article-rating">
-                <svg class="icon rating-star" width="18" height="18">
-                  <use xlink:href="sprite.svg#star"></use>
-                </svg>
-                8.5/ 10
-              </div>
-              <cite class="blog-quote-author">Markout Corporation</cite>
-            </figcaption>
-          </figure>
-          <!-- group pics with tag figure -->
-          <figure>
+        </div>
+      </section>
+
+      <div class="blog-article-content">
+        <div class="wrapper blog-article">
+          <section class="blog-article-section" id="blog-detail">
             <img
-              src="./img/content-img/img-blog1.webp"
-              alt="Green dragon head"
-              width="495"
-              height="390"
+              src="./img/content-img/img-blog-article_main.webp"
+              alt="The man standing infront of the giant green dragon"
+              width="1020"
+              height="557"
+              class="blog-article-img"
             />
-            <img
-              src="./img/content-img/img-blog2.webp"
-              alt="Warrior is standing infront of giant green dragon"
-              width="495"
-              height="390"
-            />
-          </figure>
-          <section class="blog-sub-article">
-            <h3 class="article-block-title">
-              NFTs are digital assets that represent real-world objects
-            </h3>
-            <p class="article-block-text">
-              Setting up your avatar and personalizing your nickname on Binance
-              is quick and easy. Users can go to binance.com under Dashboard >
-              Settings > My Profile > Avatar and Nickname. For those of you who
-              own NFT assets, you can select the NFT you want to use from your
-              collection as your avatar to personalize your profile. For users
-              who do not own any NFT avatars, check out the NFT avatar
-              collections page to get started.
-            </p>
-            <p class="article-block-text">
-              Alternatively, if you’re on nft.binance.com, go to User Center >
-              Settings > Basic > Set Avatar and Nickname, and you’ll be
-              redirected to the main site. Binance NFT Creators have the option
-              of setting their Avatars on nft.binance.com. Once you set your new
-              unique nickname, it will be standardized and used across the
-              Binance ecosystem.
-            </p>
-          </section>
-          <section class="blog-sub-article">
-            <h3 class="article-block-title">NFT Avatar Generators</h3>
-            <p class="article-block-text">
-              You can find a range of NFT marketplaces where you can buy
-              existing NFTs or list your own NFTs for sale.
-            </p>
-          </section>
-          <!-- Tags and share block -->
-          <section class="blog-tags-share">
-            <div class="tags-block">
-              <h3 class="blog-tags-title">Tags:</h3>
-              <a class="tags" href="#" target="_blank">ICO</a>
-              <a class="tags" href="#" target="_blank">CYPPUNK</a>
-              <a class="tags" href="#" target="_blank">LIGHT</a>
-            </div>
-            <div class="share-block">
-              <h3 class="blog-tags-title">Share:</h3>
-              <a class="share" href="#">
-                <svg class="icon share-icon" width="20" height="20">
-                  <use xlink:href="sprite.svg#footer-discord"></use>
+            <h2 class="blog-article-title">
+              Enior Apple Employee Alleges Sexism At
+            </h2>
+            <span class="label-deco blog-article-label">GAMING</span>
+            <ul class="blogarticle-data">
+              <li class="blogarticle-item">
+                <svg class="icon person-icon" width="24" height="24">
+                  <use xlink:href="sprite.svg#person-icon"></use>
                 </svg>
-              </a>
-              <a class="share" href="#">
-                <svg class="icon share-icon" width="20" height="20">
-                  <use xlink:href="sprite.svg#footer-twitter"></use>
+                tony nguyen
+              </li>
+              <li class="blogarticle-date-item">
+                <svg class="icon calendar-icon" width="24" height="24">
+                  <use xlink:href="sprite.svg#calendar"></use>
                 </svg>
-              </a>
-              <a class="share" href="#">
-                <svg class="icon share-icon" width="20" height="20">
-                  <use xlink:href="sprite.svg#footer-youtube"></use>
-                </svg>
-              </a>
-            </div>
-          </section>
-
-          <!-- Blog pages -->
-          <section class="blog-article-pages">
-            <article class="blog-article-mini">
-              <a class="blogpage-mini-link" href="./blog-article.html">
-                <img
-                  src="./img/img-nftcatalog/nft-picture5.webp"
-                  alt="Disk - NFT Card"
-                  width="80"
-                  height="80"
-                />
-                <div class="content-block">
-                  <p class="content-block-text">PREVIOUS</p>
-                  <h2 class="content-block-title">
-                    Enior Apple Employee Alleges Sexism At
-                  </h2>
-                </div>
-              </a>
-            </article>
-            <article class="blog-article-mini">
-              <a class="blog-page-reverse" href="./blog-article.html">
-                <img
-                  src="./img/img-nftcatalog/nft-picture3.webp"
-                  alt="Cat's Head - NFT Card"
-                  width="80"
-                  height="80"
-                />
-                <div class="content-block">
-                  <p class="content-block-text">
-                    <span class="highlighted-text">NEXT</span>
-                  </p>
-                  <h2 class="content-block-title">
-                    Enior Apple Employee Alleges Sexism At
-                  </h2>
-                </div>
-              </a>
-            </article>
-          </section>
-
-          <section class="feedback-section">
-            <h2 class="feedback-section-title">LEAVE A REPLY</h2>
-            <p class="feedback-section-description">
-              Your email address will not be published. Required fields are
-              marked
-            </p>
-            <form action="submit" method="post" class="feedback-form">
-              <fieldset class="form-block">
-                <label class="visually-hidden" for="name"
-                  >Your full name:</label
-                >
-                <input
-                  class="field-validation form-block-input"
-                  type="text"
-                  name="name"
-                  id="name"
-                  required
-                  placeholder="Name *"
-                />
-
-                <label class="visually-hidden" for="mail">E-mail:</label>
-                <input
-                  class="field-validation form-block-input"
-                  type="email"
-                  name="email"
-                  id="mail"
-                  required
-                  autocomplete="email"
-                  pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
-                  placeholder="Enter your email *"
-                />
-              </fieldset>
-
-              <fieldset class="form-block">
-                <label class="visually-hidden" for="tel-number"
-                  >Phone number:</label
-                >
-                <input
-                  class="field-validation form-block-input"
-                  type="tel"
-                  name="phone"
-                  id="tel-number"
-                  required
-                  title="Should match format XXX-XXX-XXXX"
-                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                  placeholder="Phone Number *"
-                />
-
-                <label for="website" class="visually-hidden">Website:</label>
-                <input
-                  class="field-validation form-block-input"
-                  type="url"
-                  id="website"
-                  name="website"
-                  pattern="https?://.+"
-                  title="Include http://"
-                  placeholder="Website"
-                />
-              </fieldset>
-
-              <label class="visually-hidden" for="message">Your message:</label>
-              <textarea
-                class="field-validation form-textarea"
-                name="comment"
-                id="message"
-                required
-                placeholder="Message *"
-              ></textarea>
-            </form>
-          </section>
-        </section>
-
-        <form action="" method="get" role="search" class="blog-article-form">
-          <fieldset class="search-form">
-            <label for="site-search" class="visually-hidden">
-              Search the site:
-            </label>
-            <input
-              class="search-field"
-              type="search"
-              name="search"
-              id="site-search"
-              pattern="[^'\x22]+"
-              title="Invalid input"
-              placeholder="Search NFT"
-              aria-label="Search through site content"
-            />
-            <button type="submit" class="search-btn">
-              <svg class="icon search-icon" width="20" height="20">
-                <use xlink:href="sprite.svg#icon-search"></use>
-              </svg>
-            </button>
-          </fieldset>
-
-          <fieldset class="blog-filters">
-            <legend class="sidebar-card-name">CATEGORIES</legend>
-            <ul class="blog-filters-list">
-              <li>
-                <input
-                  class="visually-hidden filter-categories"
-                  type="checkbox"
-                  name="categories"
-                  value="nft"
-                  id="categories-nft"
-                  checked
-                />
-                <label class="blog-filter-item" for="categories-nft">
-                  NFT (12)
-                </label>
-              </li>
-              <li>
-                <input
-                  class="visually-hidden filter-categories"
-                  type="checkbox"
-                  name="categories"
-                  value="metaverse"
-                  id="categories-metaverse"
-                />
-                <label class="blog-filter-item" for="categories-metaverse">
-                  Metaverse (24)
-                </label>
-              </li>
-              <li>
-                <input
-                  class="visually-hidden filter-categories"
-                  type="checkbox"
-                  name="categories"
-                  value="gaming"
-                  id="categories-gaming"
-                />
-                <label class="blog-filter-item" for="categories-gaming">
-                  Gaming (100)
-                </label>
-              </li>
-
-              <li>
-                <input
-                  class="visually-hidden filter-categories"
-                  type="checkbox"
-                  name="categories"
-                  value="art"
-                  id="categories-art"
-                />
-                <label class="blog-filter-item" for="categories-art"
-                  >Art (230)</label
-                >
-              </li>
-
-              <li>
-                <input
-                  class="visually-hidden filter-categories"
-                  type="checkbox"
-                  name="categories"
-                  value="robot"
-                  id="categories-robot"
-                />
-                <label class="blog-filter-item" for="categories-robot"
-                  >Robot (430)</label
-                >
-              </li>
-              <li>
-                <input
-                  class="visually-hidden filter-categories"
-                  type="checkbox"
-                  name="categories"
-                  value="lauchpad"
-                  id="categories-lauchpad"
-                />
-                <label class="blog-filter-item" for="categories-lauchpad"
-                  >Lauchpad (430)</label
-                >
-              </li>
-              <li>
-                <input
-                  class="visually-hidden filter-categories"
-                  type="checkbox"
-                  name="categories"
-                  value="crypto"
-                  id="categories-crypto"
-                />
-                <label class="blog-filter-item" for="categories-crypto"
-                  >Crypto (430)</label
-                >
+                <time> 20 jun 2022 </time>
               </li>
             </ul>
-          </fieldset>
+            <p class="blog-story">
+              The Basilisks that players collect are represented with NFTs on
+              Ethereum’s blockchain with real-world value. Players use the
+              Basilisks they have gathered to battle other players to win ether
+              (ETH). In Balthazar Dragons, players are immersed in a 3D open
+              world to explore and capture dragon-like beasts called Basilisks.
+              Balthazar Dragons is an upcoming fantasy role-playing game
+              developed on the Ethereum blockchain by a decentralized autonomous
+              organization (DAO) called the Balthazar DAO.
+            </p>
+            <figure class="blog-story-quote">
+              <blockquote class="blog-story-text">
+                “The first huge metaverse arena to arrange live sports, hang out
+                and even make bets and wagers”
+              </blockquote>
+              <figcaption class="blog-story-rating">
+                <div class="blog-article-rating">
+                  <svg class="icon rating-star" width="22" height="22">
+                    <use xlink:href="sprite.svg#star"></use>
+                  </svg>
+                  8.5/ 10
+                </div>
+                <cite class="blog-quote-author">Markout Corporation</cite>
+              </figcaption>
+            </figure>
 
-          <fieldset class="blog-filters">
-            <legend class="sidebar-card-name">RECENT POSTS</legend>
-            <ul class="blog-filters-list">
-              <li>
-                <article class="recent-post">
+            <!-- group pics with tag figure -->
+            <figure class="blog-article-sub-imgs">
+              <img
+                src="./img/content-img/img-blog1.webp"
+                alt="Green dragon head"
+                width="495"
+                height="390"
+              />
+              <img
+                src="./img/content-img/img-blog2.webp"
+                alt="Warrior is standing infront of giant green dragon"
+                width="495"
+                height="390"
+              />
+            </figure>
+
+            <section class="blog-sub-article">
+              <h3 class="article-block-title">
+                NFTs are digital assets that represent real-world objects
+              </h3>
+              <p class="article-block-text">
+                Setting up your avatar and personalizing your nickname on
+                Binance is quick and easy. Users can go to binance.com under
+                Dashboard > Settings > My Profile > Avatar and Nickname. For
+                those of you who own NFT assets, you can select the NFT you want
+                to use from your collection as your avatar to personalize your
+                profile. For users who do not own any NFT avatars, check out the
+                NFT avatar collections page to get started.
+              </p>
+              <p class="article-block-text">
+                Alternatively, if you’re on nft.binance.com, go to User Center >
+                Settings > Basic > Set Avatar and Nickname, and you’ll be
+                redirected to the main site. Binance NFT Creators have the
+                option of setting their Avatars on nft.binance.com. Once you set
+                your new unique nickname, it will be standardized and used
+                across the Binance ecosystem.
+              </p>
+            </section>
+
+            <section class="blog-sub-article">
+              <h3 class="article-block-title">NFT Avatar Generators</h3>
+              <p class="article-block-text">
+                You can find a range of NFT marketplaces where you can buy
+                existing NFTs or list your own NFTs for sale.
+              </p>
+            </section>
+
+            <!-- Tags and share block -->
+            <section class="blog-tags-share">
+              <div class="tags-block">
+                <h3 class="blog-tags-title">Tags:</h3>
+                <a class="tags" href="#" target="_blank">ICO</a>
+                <a class="tags" href="#" target="_blank">CYPPUNK</a>
+                <a class="tags" href="#" target="_blank">LIGHT</a>
+              </div>
+              <div class="share-block">
+                <h3 class="blog-tags-title">Share:</h3>
+                <a class="share" href="#">
+                  <svg class="icon share-icon" width="20" height="20">
+                    <use xlink:href="sprite.svg#footer-discord"></use>
+                  </svg>
+                </a>
+                <a class="share" href="#">
+                  <svg class="icon share-icon" width="20" height="20">
+                    <use xlink:href="sprite.svg#footer-twitter"></use>
+                  </svg>
+                </a>
+                <a class="share" href="#">
+                  <svg class="icon share-icon" width="20" height="20">
+                    <use xlink:href="sprite.svg#footer-youtube"></use>
+                  </svg>
+                </a>
+              </div>
+            </section>
+            <!-- Blog pages -->
+            <section class="blog-article-pages">
+              <a href="./blog-article.html">
+                <article class="blog-article-mini">
                   <img
                     src="./img/img-nftcatalog/nft-picture5.webp"
                     alt="Disk - NFT Card"
-                    width="100"
-                    height="100"
+                    width="80"
+                    height="80"
                   />
-                  <a href="./blog-article.html">
-                    <h2 class="recent-post-title">
+                  <div class="content-block">
+                    <p class="content-block-text">PREVIOUS</p>
+                    <h2 class="content-block-title">
                       Enior Apple Employee Alleges Sexism At
                     </h2>
-                    <ul class="recent-post-list">
-                      <li class="recent-post-item">
-                        <span class="highlighted-text">GAMMING</span>
-                      </li>
-                      <li class="recent-post-time">
-                        <time datetime="2022-06-20">20 Jun 2022</time>
-                      </li>
-                    </ul>
-                  </a>
+                  </div>
                 </article>
-              </li>
-              <li>
-                <article class="recent-post">
-                  <img
-                    src="./img/img-nftcatalog/nft-picture9.webp"
-                    alt="Duck - NFT Card"
-                    width="100"
-                    height="100"
-                  />
-                  <a href="./blog-article.html">
-                    <h2 class="recent-post-title">
-                      Enior Apple Employee Alleges Sexism At
-                    </h2>
-                    <ul class="recent-post-list">
-                      <li class="recent-post-item">
-                        <span class="highlighted-text">LAUCHPAD</span>
-                      </li>
-                      <li class="recent-post-time">
-                        <time datetime="2022-06-20">20 Jun 2022</time>
-                      </li>
-                    </ul>
-                  </a>
-                </article>
-              </li>
-              <li>
-                <article class="recent-post">
+              </a>
+              <a href="./blog-article.html">
+                <article class="blog-article-mini blog-page-reverse">
                   <img
                     src="./img/img-nftcatalog/nft-picture3.webp"
                     alt="Cat's Head - NFT Card"
-                    width="100"
-                    height="100"
+                    width="80"
+                    height="80"
                   />
-                  <a href="./blog-article.html">
-                    <h2 class="recent-post-title">
+                  <div class="content-block">
+                    <p class="content-block-text">
+                      <span class="highlighted-text">NEXT</span>
+                    </p>
+                    <h2 class="content-block-title">
                       Enior Apple Employee Alleges Sexism At
                     </h2>
-                    <ul class="recent-post-list">
-                      <li class="recent-post-item">
-                        <span class="highlighted-text">ART</span>
-                      </li>
-                      <li class="recent-post-time">
-                        <time datetime="2022-06-20">20 Jun 2022</time>
-                      </li>
-                    </ul>
-                  </a>
+                  </div>
                 </article>
-              </li>
-            </ul>
-          </fieldset>
+              </a>
+            </section>
+            <section class="feedback-section">
+              <h2 class="feedback-section-title">LEAVE A REPLY</h2>
+              <p class="feedback-section-description">
+                Your email address will not be published. Required fields are
+                marked
+              </p>
+              <form action="submit" method="post" class="feedback-form">
+                <fieldset class="form-block">
+                  <label class="visually-hidden" for="name"
+                    >Your full name:</label
+                  >
+                  <input
+                    class="field-validation form-block-input"
+                    type="text"
+                    name="name"
+                    id="name"
+                    required
+                    placeholder="Name *"
+                  />
+                  <label class="visually-hidden" for="mail">E-mail:</label>
+                  <input
+                    class="field-validation form-block-input"
+                    type="email"
+                    name="email"
+                    id="mail"
+                    required
+                    autocomplete="email"
+                    pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                    placeholder="Enter your email *"
+                  />
+                </fieldset>
+                <fieldset class="form-block">
+                  <label class="visually-hidden" for="tel-number"
+                    >Phone number:</label
+                  >
+                  <input
+                    class="field-validation form-block-input"
+                    type="tel"
+                    name="phone"
+                    id="tel-number"
+                    required
+                    title="Should match format XXX-XXX-XXXX"
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    placeholder="Phone Number *"
+                  />
+                  <label for="website" class="visually-hidden">Website:</label>
+                  <input
+                    class="field-validation form-block-input"
+                    type="url"
+                    id="website"
+                    name="website"
+                    pattern="https?://.+"
+                    title="Include http://"
+                    placeholder="Website"
+                  />
+                </fieldset>
+                <label class="visually-hidden" for="message"
+                  >Your message:</label
+                >
+                <textarea
+                  class="field-validation form-textarea"
+                  name="comment"
+                  id="message"
+                  rows="5"
+                  required
+                  placeholder="Message *"
+                ></textarea>
+              </form>
+            </section>
+          </section>
 
-          <fieldset class="blog-filters">
-            <legend class="sidebar-card-name">TAG</legend>
-            <ul class="blog-filters-tags">
-              <li class="tags">
-                <a href="#">NFT</a>
-              </li>
-              <li class="tags"><a href="#">ICO</a></li>
-              <li class="tags"><a href="#">CRYPTO</a></li>
-              <li class="tags"><a href="#">LAUCHPAD</a></li>
-              <li class="tags"><a href="#">Robot</a></li>
-              <li class="tags"><a href="#">Gamming</a></li>
-              <li class="tags"><a href="#">Meraverse</a></li>
-            </ul>
-          </fieldset>
-        </form>
+          <form action="" method="get" role="search" class="blog-article-form">
+            <fieldset class="search-form">
+              <label for="site-search" class="visually-hidden">
+                Search the site:
+              </label>
+              <input
+                class="search-field"
+                type="search"
+                name="search"
+                id="site-search"
+                pattern="[^'\x22]+"
+                title="Invalid input"
+                placeholder="Search NFT"
+                aria-label="Search through site content"
+              />
+              <button type="submit" class="search-btn">
+                <svg class="icon search-icon" width="20" height="20">
+                  <use xlink:href="sprite.svg#icon-search"></use>
+                </svg>
+              </button>
+            </fieldset>
+
+            <fieldset class="blog-filters">
+              <legend class="sidebar-card-name">CATEGORIES</legend>
+              <ul class="blog-filters-list">
+                <li>
+                  <input
+                    class="visually-hidden filter-categories"
+                    type="checkbox"
+                    name="categories"
+                    value="nft"
+                    id="categories-nft"
+                    checked
+                  />
+                  <label class="blog-filter-item" for="categories-nft">
+                    NFT (12)
+                  </label>
+                </li>
+                <li>
+                  <input
+                    class="visually-hidden filter-categories"
+                    type="checkbox"
+                    name="categories"
+                    value="metaverse"
+                    id="categories-metaverse"
+                  />
+                  <label class="blog-filter-item" for="categories-metaverse">
+                    Metaverse (24)
+                  </label>
+                </li>
+                <li>
+                  <input
+                    class="visually-hidden filter-categories"
+                    type="checkbox"
+                    name="categories"
+                    value="gaming"
+                    id="categories-gaming"
+                  />
+                  <label class="blog-filter-item" for="categories-gaming">
+                    Gaming (100)
+                  </label>
+                </li>
+                <li>
+                  <input
+                    class="visually-hidden filter-categories"
+                    type="checkbox"
+                    name="categories"
+                    value="art"
+                    id="categories-art"
+                  />
+                  <label class="blog-filter-item" for="categories-art"
+                    >Art (230)</label
+                  >
+                </li>
+                <li>
+                  <input
+                    class="visually-hidden filter-categories"
+                    type="checkbox"
+                    name="categories"
+                    value="robot"
+                    id="categories-robot"
+                  />
+                  <label class="blog-filter-item" for="categories-robot"
+                    >Robot (430)</label
+                  >
+                </li>
+                <li>
+                  <input
+                    class="visually-hidden filter-categories"
+                    type="checkbox"
+                    name="categories"
+                    value="lauchpad"
+                    id="categories-lauchpad"
+                  />
+                  <label class="blog-filter-item" for="categories-lauchpad"
+                    >Lauchpad (430)</label
+                  >
+                </li>
+                <li>
+                  <input
+                    class="visually-hidden filter-categories"
+                    type="checkbox"
+                    name="categories"
+                    value="crypto"
+                    id="categories-crypto"
+                  />
+                  <label class="blog-filter-item" for="categories-crypto"
+                    >Crypto (430)</label
+                  >
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="blog-filters">
+              <legend class="sidebar-card-name">RECENT POSTS</legend>
+              <ul class="blog-filters-list">
+                <li>
+                  <article class="recent-post">
+                    <img
+                      src="./img/img-nftcatalog/nft-picture5.webp"
+                      alt="Disk - NFT Card"
+                      width="100"
+                      height="100"
+                    />
+                    <a href="./blog-article.html">
+                      <h2 class="recent-post-title">
+                        Enior Apple Employee Alleges Sexism At
+                      </h2>
+                      <ul class="recent-post-list">
+                        <li class="recent-post-item">
+                          <span class="highlighted-text">GAMMING</span>
+                        </li>
+                        <li class="recent-post-time">
+                          <time datetime="2022-06-20">20 Jun 2022</time>
+                        </li>
+                      </ul>
+                    </a>
+                  </article>
+                </li>
+                <li>
+                  <article class="recent-post">
+                    <img
+                      src="./img/img-nftcatalog/nft-picture9.webp"
+                      alt="Duck - NFT Card"
+                      width="100"
+                      height="100"
+                    />
+                    <a href="./blog-article.html">
+                      <h2 class="recent-post-title">
+                        Enior Apple Employee Alleges Sexism At
+                      </h2>
+                      <ul class="recent-post-list">
+                        <li class="recent-post-item">
+                          <span class="highlighted-text">LAUCHPAD</span>
+                        </li>
+                        <li class="recent-post-time">
+                          <time datetime="2022-06-20">20 Jun 2022</time>
+                        </li>
+                      </ul>
+                    </a>
+                  </article>
+                </li>
+                <li>
+                  <article class="recent-post">
+                    <img
+                      src="./img/img-nftcatalog/nft-picture3.webp"
+                      alt="Cat's Head - NFT Card"
+                      width="100"
+                      height="100"
+                    />
+                    <a href="./blog-article.html">
+                      <h2 class="recent-post-title">
+                        Enior Apple Employee Alleges Sexism At
+                      </h2>
+                      <ul class="recent-post-list">
+                        <li class="recent-post-item">
+                          <span class="highlighted-text">ART</span>
+                        </li>
+                        <li class="recent-post-time">
+                          <time datetime="2022-06-20">20 Jun 2022</time>
+                        </li>
+                      </ul>
+                    </a>
+                  </article>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="blog-filters">
+              <legend class="sidebar-card-name">TAG</legend>
+              <ul class="blog-filters-tags">
+                <li class="tags">
+                  <a href="#">NFT</a>
+                </li>
+                <li class="tags"><a href="#">ICO</a></li>
+                <li class="tags"><a href="#">CRYPTO</a></li>
+                <li class="tags"><a href="#">LAUCHPAD</a></li>
+                <li class="tags"><a href="#">Robot</a></li>
+                <li class="tags"><a href="#">Gamming</a></li>
+                <li class="tags"><a href="#">Meraverse</a></li>
+              </ul>
+            </fieldset>
+          </form>
+        </div>
       </div>
 
       <!-- Call action section -->
       <section class="cta-section">
-        <article class="call-action-catalog">
+        <article class="call-action-catalog wrapper">
           <h2 class="secondary-heading catalog-cta-title">
             JOIN OUR COMMUNITY
           </h2>
@@ -611,8 +622,8 @@
     </main>
 
     <!-- Footer -->
-    <footer class="container catalog-footer">
-      <section class="footer-nftcatalog">
+    <footer class="catalog-footer">
+      <section class="footer-nftcatalog wrapper">
         <div class="catalog-footer-logobox">
           <a href="./index.html" class="footer-cat-logo">
             <img
@@ -629,76 +640,76 @@
           </p>
         </div>
 
-        <div class="sitemap">
-          <h2 class="sitemap-title">SUBSCRIBE</h2>
-          <ul>
-            <li class="sitemap-list">
-              <a class="nav-pages-item" href="./index.html">Home</a>
-            </li>
-            <li class="sitemap-list">
-              <a class="nav-pages-item" href="./about.html"> About </a>
-            </li>
-            <li class="sitemap-list">
-              <a class="nav-pages-item" href="./index.html#roadmap-block">
-                Roadmap
-              </a>
-            </li>
-            <li class="sitemap-list">
-              <a class="nav-pages-item" href="./about.html#team-block">
-                Our Team
-              </a>
-            </li>
-            <li class="sitemap-list">
-              <a class="nav-pages-item" href="./faqs.html"> FAQS </a>
-            </li>
-          </ul>
+        <div class="footer-nav-section">
+          <div class="sitemap">
+            <h2 class="sitemap-title">SUBSCRIBE</h2>
+            <ul>
+              <li class="sitemap-list">
+                <a class="nav-pages-item" href="./index.html">Home</a>
+              </li>
+              <li class="sitemap-list">
+                <a class="nav-pages-item" href="./about.html"> About </a>
+              </li>
+              <li class="sitemap-list">
+                <a class="nav-pages-item" href="./index.html#roadmap-block">
+                  Roadmap
+                </a>
+              </li>
+              <li class="sitemap-list">
+                <a class="nav-pages-item" href="./about.html#team-block">
+                  Our Team
+                </a>
+              </li>
+              <li class="sitemap-list">
+                <a class="nav-pages-item" href="./faqs.html"> FAQS </a>
+              </li>
+            </ul>
+          </div>
+          <div class="sitemap">
+            <h2 class="sitemap-title">COMPANY</h2>
+            <ul>
+              <li class="sitemap-list">
+                <a class="nav-pages-item" href="#">Terms Canditions</a>
+              </li>
+              <li class="sitemap-list">
+                <a class="nav-pages-item" href="#">Privacy Policy</a>
+              </li>
+              <li class="sitemap-list">
+                <a class="nav-pages-item" href="#">Whitepaper</a>
+              </li>
+              <li class="sitemap-list">
+                <a class="nav-pages-item" href="#">Help Center</a>
+              </li>
+            </ul>
+          </div>
+          <form action="" method="post" class="site-newsletter">
+            <fieldset class="site-newsletter-fieldset">
+              <legend class="sitemap-title">SUBSCRIBE</legend>
+              <div class="site-newsletter-wrapper">
+                <label for="email" class="visually-hidden">Email:</label>
+                <input
+                  class="newsletter-field field-validation"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Enter your email"
+                  autocomplete="email"
+                  required
+                  pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                />
+                <button class="btn-light btn-basic" type="submit">
+                  subscribe
+                </button>
+              </div>
+            </fieldset>
+          </form>
         </div>
-
-        <div class="sitemap">
-          <h2 class="sitemap-title">COMPANY</h2>
-          <ul>
-            <li class="sitemap-list">
-              <a class="nav-pages-item" href="#">Terms Canditions</a>
-            </li>
-            <li class="sitemap-list">
-              <a class="nav-pages-item" href="#">Privacy Policy</a>
-            </li>
-            <li class="sitemap-list">
-              <a class="nav-pages-item" href="#">Whitepaper</a>
-            </li>
-            <li class="sitemap-list">
-              <a class="nav-pages-item" href="#">Help Center</a>
-            </li>
-          </ul>
-        </div>
-
-        <form action="" method="post" class="site-newsletter">
-          <fieldset class="site-newsletter-fieldset">
-            <legend class="sitemap-title">SUBSCRIBE</legend>
-            <div class="site-newsletter-wrapper">
-              <label for="email" class="visually-hidden">Email:</label>
-              <input
-                class="newsletter-field field-validation"
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Enter your email"
-                autocomplete="email"
-                required
-                pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
-              />
-              <button class="btn-light btn-basic" type="submit">
-                subscribe
-              </button>
-            </div>
-          </fieldset>
-        </form>
       </section>
 
-      <div class="footer-copyright">
+      <div class="footer-copyright wrapper">
         <p class="footer-copyright-text">BINABOX 2022 - ALL rights reserved</p>
         <div class="social-networks">
-          <ul class="social-networks-items">
+          <ul class="footer-media-list">
             <!-- Twitter add icon -->
             <li class="network-item-cat">
               <a href="#">

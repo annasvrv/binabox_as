@@ -8,6 +8,11 @@
       content="BINABOX is the best platform to check the rarity of NFT collection"
     />
     <link
+      rel="icon"
+      href="./favicon_io/android-chrome-192x192.png"
+      type="image/png"
+    />
+    <link
       rel="apple-touch-icon"
       sizes="180x180"
       href="./favicon_io/apple-touch-icon.png"
@@ -42,126 +47,133 @@
 
   <body>
     <!-- Header -->
-    <header class="header container">
-      <a href="./index.html" class="logo-block">
-        <img src="./img/logo.svg" alt="Binabox logo" width="36" height="40" />
-        BINABOX
-      </a>
-      <!-- Navigation Menu -->
-      <nav class="nav-menu">
-        <ul class="nav-menu-items">
-          <li>
-            <a href="index.html" class="nav-menu-item">HOME</a>
-          </li>
-          <li>
-            <a href="./about.html" class="nav-menu-item">ABOUT</a>
-          </li>
-          <li>
-            <a href="#roadmap-block" class="nav-menu-item">ROADMAP</a>
-          </li>
-          <li>
-            <a href="./catalog.html" class="nav-menu-item">COLLECTION</a>
-          </li>
-          <li>
-            <a href="./faqs.html" class="nav-menu-item">FAQS</a>
-          </li>
-
-          <li class="nav-dropdown-item">
-            <a class="nav-menu-item">
-              PAGES
-              <svg class="icon arrow-down" width="15" height="15">
-                <use xlink:href="sprite.svg#arrow-down"></use>
-              </svg>
-            </a>
-            <ul class="dropdown-content" id="dropdown-menu">
-              <li class="dropdown-item">
-                <a class="dropdown-item-link" href="./catalog.html"
-                  >NFT Catalog</a
-                >
-              </li>
-              <li class="dropdown-item">
-                <a class="dropdown-item-link" href="./blog.html">Blog</a>
-              </li>
-              <li class="dropdown-item">
-                <a class="dropdown-item-link" href="./contact-us.html"
-                  >Contact Us</a
-                >
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-
-      <div class="btn-box">
-        <form class="darkmode" action="" method="post">
-          <input
-            type="checkbox"
-            name="darkmode"
-            id="darkmode"
-            class="visually-hidden darkmode-toggle"
+    <header class="header">
+      <div class="wrapper header-content">
+        <a href="./index.html" class="logo-block">
+          <img
+            src="./img/logo.svg"
+            alt="Binabox logo"
+            width="36"
+            height="40"
+            class="logo-img"
           />
-          <label class="switch-mode" for="darkmode"> </label>
-        </form>
-
-        <a href="#" class="btn-basic btn-media-header">
-          <svg class="icon discord-btn" width="24" height="24">
-            <use xlink:href="sprite.svg#discord-btn"></use>
-          </svg>
-          DISCORD
+          BINABOX
         </a>
-
-        <button class="btn-basic btn-light" type="button">
-          <svg class="icon wallet-icon" width="24" height="24">
-            <use xlink:href="sprite.svg#wallet"></use>
-          </svg>
-          CONNECT
-        </button>
+        <!-- Navigation Menu -->
+        <nav class="nav-menu">
+          <ul class="nav-menu-items">
+            <li>
+              <a href="index.html" class="nav-menu-item">HOME</a>
+            </li>
+            <li>
+              <a href="./about.html" class="nav-menu-item">ABOUT</a>
+            </li>
+            <li>
+              <a href="#roadmap-block" class="nav-menu-item">ROADMAP</a>
+            </li>
+            <li>
+              <a href="./catalog.html" class="nav-menu-item">COLLECTION</a>
+            </li>
+            <li>
+              <a href="./faqs.html" class="nav-menu-item">FAQS</a>
+            </li>
+            <li class="nav-dropdown-item">
+              <a class="nav-menu-item">
+                PAGES
+                <svg class="icon arrow-down" width="15" height="15">
+                  <use xlink:href="sprite.svg#arrow-down"></use>
+                </svg>
+              </a>
+              <ul class="dropdown-content" id="dropdown-menu">
+                <li class="dropdown-item">
+                  <a class="dropdown-item-link" href="./catalog.html"
+                    >NFT Catalog</a
+                  >
+                </li>
+                <li class="dropdown-item">
+                  <a class="dropdown-item-link" href="./blog.html">Blog</a>
+                </li>
+                <li class="dropdown-item">
+                  <a class="dropdown-item-link" href="./contact-us.html"
+                    >Contact Us</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="btn-box">
+          <form class="darkmode" action="" method="post">
+            <input
+              type="checkbox"
+              name="darkmode"
+              id="darkmode"
+              class="visually-hidden darkmode-toggle"
+            />
+            <label class="switch-mode" for="darkmode"> </label>
+          </form>
+          <a href="#" class="btn-basic btn-media-header">
+            <svg class="icon discord-btn" width="24" height="24">
+              <use xlink:href="sprite.svg#discord-btn"></use>
+            </svg>
+            DISCORD
+          </a>
+          <button class="btn-basic btn-light" type="button">
+            <svg class="icon wallet-icon" width="24" height="24">
+              <use xlink:href="sprite.svg#wallet"></use>
+            </svg>
+            CONNECT
+          </button>
+        </div>
       </div>
     </header>
 
     <main class="main">
       <!-- Hero section -->
-      <section class="hero-box container">
-        <div class="hero-content">
-          <h1 class="hero-title">
-            WITH <span class="highlighted-text">BINABOX</span> EXPLORE NFT
-            COLLECTION
-          </h1>
-          <p class="hero-text">
-            We are the best way to check the rarity of NFT collection
-          </p>
-          <!--  Hero counter  -->
-          <dl class="hero-counter">
-            <dt class="hero-number">2240+</dt>
-            <dd class="hero-description">Total Iteam</dd>
-            <dt class="hero-number">1000+</dt>
-            <dd class="hero-description">Profiles whitelisted</dd>
-          </dl>
-
-          <!-- Hero Btns -->
-          <div class="hero-btn">
-            <button class="btn-basic btn-light" type="button">
-              CONNECT WALLET
-            </button>
-            <button class="btn-basic btn-border" type="button">
-              WHITELIST NOW
-            </button>
+      <section class="hero-section">
+        <div class="wrapper hero-box">
+          <div class="hero-content">
+            <h1 class="hero-title">
+              WITH <span class="highlighted-text">BINABOX</span> EXPLORE
+              <span class="last-line">NFT COLLECTION</span>
+            </h1>
+            <p class="hero-text">
+              We are the best way to check the rarity of NFT collection
+            </p>
+            <!--  Hero counter  -->
+            <dl class="hero-counter">
+              <dt class="hero-number hero-total-nb">2240+</dt>
+              <dd class="hero-description hero-total-tx">Total Iteam</dd>
+              <dt class="hero-number hero-profiles-nb">1000+</dt>
+              <dd class="hero-description hero-profiles-tx">
+                Profiles whitelisted
+              </dd>
+            </dl>
+            <!-- Hero Btns -->
+            <div class="hero-btn">
+              <button class="btn-basic btn-light" type="button">
+                CONNECT WALLET
+              </button>
+              <button class="btn-basic btn-border" type="button">
+                WHITELIST NOW
+              </button>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img
+              src="./img/content-img/hero_cube.png"
+              alt="Circuit cube with Binabox label on it"
+              width="970"
+              height="846"
+            />
           </div>
         </div>
-
-        <img
-          src="./img/content-img/hero_cube.png"
-          alt="Circuit cube with Binabox label on it"
-          class="hero-image"
-          width="970"
-          height="846"
-        />
       </section>
 
       <!-- NFT section -->
       <section class="nft-cards">
-        <article class="nft-card">
-          <a href="./catalog-item.html">
+        <a href="./catalog-item.html">
+          <article class="nft-card">
             <img
               src="./img/img-nftcatalog/nft-picture1.webp"
               alt="Woman's face - NFT Card"
@@ -169,11 +181,11 @@
               height="330"
             />
             <h2 class="nft-card-title">SKISIRS#2</h2>
-          </a>
-        </article>
+          </article>
+        </a>
 
-        <article class="nft-card">
-          <a href="./catalog-item.html">
+        <a href="./catalog-item.html">
+          <article class="nft-card">
             <img
               src="./img/img-nftcatalog/nft-picture2.webp"
               alt="Human Skeleton - NFT Card"
@@ -181,11 +193,11 @@
               height="330"
             />
             <h2 class="nft-card-title">SKISIRS#2</h2>
-          </a>
-        </article>
+          </article>
+        </a>
 
-        <article class="nft-card">
-          <a href="./catalog-item.html">
+        <a href="./catalog-item.html">
+          <article class="nft-card">
             <img
               src="./img/img-nftcatalog/nft-picture3.webp"
               alt="Cat's Head - NFT Card"
@@ -193,11 +205,11 @@
               height="330"
             />
             <h2 class="nft-card-title">SKISIRS#2</h2>
-          </a>
-        </article>
+          </article>
+        </a>
 
-        <article class="nft-card">
-          <a href="./catalog-item.html">
+        <a href="./catalog-item.html">
+          <article class="nft-card">
             <img
               src="./img/img-nftcatalog/nft-picture4.webp"
               alt="Scissors - NFT Card"
@@ -205,11 +217,11 @@
               height="330"
             />
             <h2 class="nft-card-title">SKISIRS#2</h2>
-          </a>
-        </article>
+          </article>
+        </a>
 
-        <article class="nft-card">
-          <a href="./catalog-item.html">
+        <a href="./catalog-item.html">
+          <article class="nft-card">
             <img
               src="./img/img-nftcatalog/nft-picture5.webp"
               alt="Disk - NFT Card"
@@ -217,11 +229,11 @@
               height="330"
             />
             <h2 class="nft-card-title">SKISIRS#2</h2>
-          </a>
-        </article>
+          </article>
+        </a>
 
-        <article class="nft-card">
-          <a href="./catalog-item.html">
+        <a href="./catalog-item.html">
+          <article class="nft-card">
             <img
               src="./img/img-nftcatalog/nft-picture6.webp"
               alt="Play Box - NFT Card"
@@ -229,689 +241,753 @@
               height="330"
             />
             <h2 class="nft-card-title">SKISIRS#2</h2>
-          </a>
-        </article>
+          </article>
+        </a>
       </section>
 
       <!-- About section -->
-      <section class="about container">
-        <h2 class="secondary-heading">ABOUT US</h2>
-        <p class="about-description">
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occae cat cupidatat
-          non proident, sunt in culpa qui officia dese runt mollit anim id est
-          laborum velit esse cillum dolore eu fugiat nulla pariatu epteur sint
-          occaecat
-        </p>
-
-        <ol class="about-list">
-          <li class="about-list-item hover-effect">
-            <article class="about-list-card">
-              <h3 class="about-list-title">HIGH QUAILITY</h3>
-              <p class="about-list-description">
-                Lorem Ipsum is simply dummy text of the printing and Ipsum
-                typesetting industry.
-              </p>
-            </article>
-          </li>
-
-          <li class="about-list-item hover-effect">
-            <article class="about-list-card">
-              <h3 class="about-list-title">BiG COLLECTION</h3>
-              <p class="about-list-description">
-                Lorem Ipsum is simply dummy text of the printing and Ipsum
-                typesetting industry.
-              </p>
-            </article>
-          </li>
-
-          <li class="about-list-item hover-effect">
-            <article class="about-list-card">
-              <h3 class="about-list-title">TOP RESOURCE</h3>
-              <p class="about-list-description">
-                Lorem Ipsum is simply dummy text of the printing and Ipsum
-                typesetting industry.
-              </p>
-            </article>
-          </li>
-
-          <li class="about-list-item hover-effect">
-            <article class="about-list-card">
-              <h3 class="about-list-title">BIG COMMUNITY</h3>
-              <p class="about-list-description">
-                Lorem Ipsum is simply dummy text of the printing and Ipsum
-                typesetting industry.
-              </p>
-            </article>
-          </li>
-        </ol>
-
-        <a href="./about.html" class="btn-basic btn-border">READ MORE</a>
+      <section class="about-section">
+        <div class="wrapper about">
+          <h2 class="secondary-heading">ABOUT US</h2>
+          <p class="about-description">
+            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occae cat
+            cupidatat non proident, sunt in culpa qui officia dese runt mollit
+            anim id est laborum velit esse cillum dolore eu fugiat nulla pariatu
+            epteur sint occaecat
+          </p>
+          <ol class="about-list">
+            <li class="about-list-item hover-effect">
+              <article class="about-list-card">
+                <h3 class="about-list-title">HIGH QUAILITY</h3>
+                <p class="about-list-description">
+                  Lorem Ipsum is simply dummy text of the printing and Ipsum
+                  typesetting industry.
+                </p>
+              </article>
+            </li>
+            <li class="about-list-item hover-effect">
+              <article class="about-list-card">
+                <h3 class="about-list-title">BiG COLLECTION</h3>
+                <p class="about-list-description">
+                  Lorem Ipsum is simply dummy text of the printing and Ipsum
+                  typesetting industry.
+                </p>
+              </article>
+            </li>
+            <li class="about-list-item hover-effect">
+              <article class="about-list-card">
+                <h3 class="about-list-title">TOP RESOURCE</h3>
+                <p class="about-list-description">
+                  Lorem Ipsum is simply dummy text of the printing and Ipsum
+                  typesetting industry.
+                </p>
+              </article>
+            </li>
+            <li class="about-list-item hover-effect">
+              <article class="about-list-card">
+                <h3 class="about-list-title">BIG COMMUNITY</h3>
+                <p class="about-list-description">
+                  Lorem Ipsum is simply dummy text of the printing and Ipsum
+                  typesetting industry.
+                </p>
+              </article>
+            </li>
+          </ol>
+          <a href="./about.html" class="btn-basic btn-border hp-about-btn">
+            READ MORE
+          </a>
+        </div>
       </section>
 
       <!-- Workflow section  -->
-      <section class="workflow container">
-        <h2 class="secondary-heading">
-          HOW TO <span class="highlighted-text">BINABOX</span> WORK
-        </h2>
-
-        <ol class="workflow-cards">
-          <li class="workflow-card hover-effect wc-1">
-            <!-- <img src="./img/img-workflow/icon1.svg" alt="" /> -->
-            <p class="workflow-card-text">Connect Your Wallet</p>
-          </li>
-          <li class="workflow-card hover-effect wc-2">
-            <!-- <img src="./img/img-workflow/icon2.svg" alt="" /> -->
-            <p class="workflow-card-text">Sellect Your Quaility</p>
-          </li>
-          <li class="workflow-card hover-effect wc-3">
-            <!-- <img src="./img/img-workflow/icon3.svg" alt="" /> -->
-            <p class="workflow-card-text">Confirm the Transaction</p>
-          </li>
-          <li class="workflow-card hover-effect wc-4">
-            <!-- <img src="./img/img-workflow/icon4.svg" alt="" /> -->
-            <p class="workflow-card-text">Receive Your NFTs</p>
-          </li>
-        </ol>
+      <section class="workflow">
+        <div class="wrapper">
+          <h2 class="secondary-heading">
+            HOW TO <span class="highlighted-text">BINABOX</span> WORK
+          </h2>
+          <ol class="workflow-cards">
+            <li class="workflow-item hover-effect">
+              <div class="step-connect"></div>
+              <h3 class="workflow-card-title"></h3>
+              <p class="workflow-card-text">Connect Your Wallet</p>
+            </li>
+            <li class="workflow-item hover-effect">
+              <div class="step-select"></div>
+              <h3 class="workflow-card-title"></h3>
+              <p class="workflow-card-text">Sellect Your Quaility</p>
+            </li>
+            <li class="workflow-item hover-effect">
+              <div class="step-confirm"></div>
+              <h3 class="workflow-card-title"></h3>
+              <p class="workflow-card-text">Confirm the Transaction</p>
+            </li>
+            <li class="workflow-item hover-effect">
+              <div class="step-receive"></div>
+              <h3 class="workflow-card-title"></h3>
+              <p class="workflow-card-text">Receive Your NFTs</p>
+            </li>
+          </ol>
+        </div>
       </section>
 
       <!-- Roadmap section -->
-      <section class="roadmap container" id="roadmap-block">
-        <h2 class="secondary-heading">ROAD MAP</h2>
-
-        <div class="roadmap-card">
-          <figure class="roadmap-img-box">
-            <img
-              src="./img/content-img/roadmap-img-1.webp"
-              alt="circuit"
-              width="470"
-              height="470"
-            />
-            <img
-              src="./img/content-img/roadmap-img-2.webp"
-              alt="circuit"
-              width="225"
-              height="225"
-            />
-            <img
-              src="./img/content-img/roadmap-img-3.webp"
-              alt="circuit"
-              width="225"
-              height="225"
-            />
-          </figure>
-
-          <div class="roadmap-card-description">
-            <h3 class="roadmap-card-title">PHASE 1</h3>
-
-            <ul class="roadmap-list">
-              <li class="roadmap-items">Befriending & Chat Functions</li>
-              <li class="roadmap-items">Challenging Feature</li>
-              <li class="roadmap-items">Corsair Wheel</li>
-              <li class="roadmap-items">Mobile Version Launch</li>
-            </ul>
-            <a href="#" class="btn-basic btn-border">READ MORE</a>
+      <section class="roadmap-section" id="roadmap-block">
+        <div class="wrapper roadmap">
+          <h2 class="secondary-heading">ROAD MAP</h2>
+          <div class="roadmap-card">
+            <figure class="roadmap-img-box">
+              <img
+                src="./img/content-img/roadmap-img-1.webp"
+                alt="circuit"
+                width="470"
+                height="470"
+                class="roadmap-img-big"
+              />
+              <img
+                src="./img/content-img/roadmap-img-2.webp"
+                alt="circuit"
+                width="225"
+                height="225"
+                class="roadmap-img-sm"
+              />
+              <img
+                src="./img/content-img/roadmap-img-3.webp"
+                alt="circuit"
+                width="225"
+                height="225"
+                class="roadmap-img-sm-last"
+              />
+            </figure>
+            <div class="roadmap-card-description">
+              <h3 class="roadmap-card-title">PHASE 1</h3>
+              <ul class="roadmap-list">
+                <li class="roadmap-items">Befriending & Chat Functions</li>
+                <li class="roadmap-items">Challenging Feature</li>
+                <li class="roadmap-items">Corsair Wheel</li>
+                <li class="roadmap-items">Mobile Version Launch</li>
+              </ul>
+              <a href="#" class="btn-basic btn-border">READ MORE</a>
+            </div>
           </div>
-        </div>
 
-        <div class="roadmap-nav">
-          <svg class="icon arrow-less-btn" width="24" height="24">
-            <use xlink:href="sprite.svg#arrow-less"></use>
-          </svg>
+          <form action="" method="get" class="roadmap-nav">
+            <button type="button" class="btn-roadmap active">
+              <svg class="icon btn-arrow" width="24" height="24">
+                <use xlink:href="sprite.svg#arrow-less"></use>
+              </svg>
+            </button>
 
-          <ol class="roadmap-nav-item-list">
-            <li class="roadmap-nav-item active">
-              <svg class="icon elipse-default active" width="30" height="30">
-                <use xlink:href="sprite.svg#elipse-default"></use>
-              </svg>
-            </li>
-            <li class="roadmap-nav-item">
-              <svg class="icon elipse-default" width="30" height="30">
-                <use xlink:href="sprite.svg#elipse-default"></use>
-              </svg>
-            </li>
-            <li class="roadmap-nav-item">
-              <svg class="icon elipse-default" width="30" height="30">
-                <use xlink:href="sprite.svg#elipse-default"></use>
-              </svg>
-            </li>
-            <li class="roadmap-nav-item">
-              <svg class="icon elipse-default" width="30" height="30">
-                <use xlink:href="sprite.svg#elipse-default"></use>
-              </svg>
-            </li>
-          </ol>
+            <ol class="roadmap-nav-item-list">
+              <li class="roadmap-nav-item">
+                <input
+                  type="checkbox"
+                  name="phase"
+                  value="phase-1"
+                  id="phase-1"
+                  checked
+                  class="visually-hidden roadmap-input active"
+                />
+                <label for="phase-1" class="roadmap-label">
+                  <div class="progress-line">
+                    <svg class="icon elipse-default" width="30" height="30">
+                      <use xlink:href="sprite.svg#elipse-default"></use>
+                    </svg>
+                  </div>
+                  <span>PHASE</span>
+                </label>
+              </li>
 
-          <svg class="icon arrow-greater-btn" width="24" height="24">
-            <use xlink:href="sprite.svg#arrow-less"></use>
-          </svg>
+              <li class="roadmap-nav-item">
+                <input
+                  type="checkbox"
+                  name="phase"
+                  value="phase-2"
+                  id="phase-2"
+                  class="visually-hidden roadmap-input"
+                />
+                <label for="phase-2" class="roadmap-label">
+                  <div class="progress-line">
+                    <svg class="icon elipse-default" width="30" height="30">
+                      <use xlink:href="sprite.svg#elipse-default"></use>
+                    </svg>
+                  </div>
+                  PHASE
+                </label>
+              </li>
+
+              <li class="roadmap-nav-item">
+                <input
+                  type="checkbox"
+                  name="phase"
+                  value="phase-3"
+                  id="phase-3"
+                  class="visually-hidden roadmap-input"
+                />
+                <label for="phase-3" class="roadmap-label">
+                  <div class="progress-line">
+                    <svg class="icon elipse-default" width="30" height="30">
+                      <use xlink:href="sprite.svg#elipse-default"></use>
+                    </svg>
+                  </div>
+                  PHASE
+                </label>
+              </li>
+
+              <li class="roadmap-nav-item">
+                <input
+                  type="checkbox"
+                  name="phase"
+                  value="phase-4"
+                  id="phase-4"
+                  class="visually-hidden roadmap-input"
+                />
+                <label for="phase-4" class="roadmap-label">
+                  <div class="progress-line">
+                    <svg class="icon elipse-default" width="30" height="30">
+                      <use xlink:href="sprite.svg#elipse-default"></use>
+                    </svg>
+                  </div>
+                  PHASE
+                </label>
+              </li>
+            </ol>
+            <button type="button" class="btn-roadmap">
+              <svg
+                class="icon btn-arrow btn-arrow-reverse"
+                width="24"
+                height="24"
+              >
+                <use xlink:href="sprite.svg#arrow-less"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </section>
 
       <!-- Team section -->
-      <section class="team container">
-        <h2 class="secondary-heading">OUR TEAM</h2>
-        <article class="team-card hover-effect">
-          <img
-            src="./img/img-team/team-photo1.webp"
-            alt="Ralph Edwards's Profile Photo"
-            width="120"
-            height="120"
-          />
-          <h3 class="team-name">Ralph Edwards</h3>
-          <p class="team-title">Founder</p>
-          <ul class="team-connect-list">
+      <section class="team-section">
+        <div class="wrapper">
+          <h2 class="secondary-heading">OUR TEAM</h2>
+          <ul class="team-list">
             <li>
-              <a href="#">
-                <svg class="icon team-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#team-linkedin"></use>
-                </svg>
-              </a>
+              <article class="team-card hover-effect">
+                <img
+                  src="./img/img-team/team-photo1.webp"
+                  alt="Ralph Edwards's Profile Photo"
+                  width="120"
+                  height="120"
+                />
+                <h3 class="team-name">Ralph Edwards</h3>
+                <p class="team-title">Founder</p>
+                <ul class="team-connect-list">
+                  <li>
+                    <a href="#">
+                      <svg class="icon team-media" width="20" height="20">
+                        <use xlink:href="sprite.svg#team-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <svg class="icon team-media" width="20" height="20">
+                        <use xlink:href="sprite.svg#team-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <svg class="icon team-media" width="20" height="20">
+                        <use xlink:href="sprite.svg#team-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <svg class="icon team-media" width="20" height="20">
+                        <use xlink:href="sprite.svg#team-telegram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </article>
             </li>
+
             <li>
-              <a href="#">
-                <svg class="icon team-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#team-facebook"></use>
-                </svg>
-              </a>
+              <article class="team-card hover-effect">
+                <img
+                  src="./img/img-team/team-photo2.webp"
+                  alt="Jason Smith's Profile Photo"
+                  width="120"
+                  height="120"
+                />
+                <h3 class="team-name">Jason Smith</h3>
+                <p class="team-title">Co - Founder</p>
+                <ul class="team-connect-list">
+                  <li>
+                    <a href="#">
+                      <svg class="icon team-media" width="20" height="20">
+                        <use xlink:href="sprite.svg#team-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <svg class="icon team-media" width="20" height="20">
+                        <use xlink:href="sprite.svg#team-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <svg class="icon team-media" width="20" height="20">
+                        <use xlink:href="sprite.svg#team-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <svg class="icon team-media" width="20" height="20">
+                        <use xlink:href="sprite.svg#team-telegram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </article>
             </li>
+
             <li>
-              <a href="#">
-                <svg class="icon team-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#team-instagram"></use>
-                </svg>
-              </a>
+              <article class="team-card hover-effect">
+                <img
+                  src="./img/img-team/team-photo3.webp"
+                  alt="Tony Wings's Profile Photo"
+                  width="120"
+                  height="120"
+                />
+                <h3 class="team-name">Tony Wings</h3>
+                <p class="team-title">Web Designer</p>
+                <ul class="team-connect-list">
+                  <li>
+                    <a href="#">
+                      <svg class="icon team-media" width="20" height="20">
+                        <use xlink:href="sprite.svg#team-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <svg class="icon team-media" width="20" height="20">
+                        <use xlink:href="sprite.svg#team-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <svg class="icon team-media" width="20" height="20">
+                        <use xlink:href="sprite.svg#team-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <svg class="icon team-media" width="20" height="20">
+                        <use xlink:href="sprite.svg#team-telegram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </article>
             </li>
+
             <li>
-              <a href="#">
-                <svg class="icon team-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#team-telegram"></use>
-                </svg>
-              </a>
+              <article class="team-card hover-effect">
+                <img
+                  src="./img/img-team/team-photo4.webp"
+                  alt="Esther Howard's Profile Photo"
+                  width="120"
+                  height="120"
+                />
+                <h3 class="team-name">Esther Howard</h3>
+                <p class="team-title">Project Manager</p>
+                <ul class="team-connect-list">
+                  <li>
+                    <a href="#">
+                      <svg class="icon team-media" width="20" height="20">
+                        <use xlink:href="sprite.svg#team-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <svg class="icon team-media" width="20" height="20">
+                        <use xlink:href="sprite.svg#team-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <svg class="icon team-media" width="20" height="20">
+                        <use xlink:href="sprite.svg#team-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <svg class="icon team-media" width="20" height="20">
+                        <use xlink:href="sprite.svg#team-telegram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </article>
+            </li>
+
+            <li>
+              <article class="team-card hover-effect">
+                <img
+                  src="./img/img-team/team-photo5.webp"
+                  alt="Jenny Wilson's Profile Photo"
+                  width="120"
+                  height="120"
+                />
+                <h3 class="team-name">Jenny Wilson</h3>
+                <p class="team-title">Artist</p>
+                <ul class="team-connect-list">
+                  <li>
+                    <a href="#">
+                      <svg class="icon team-media" width="20" height="20">
+                        <use xlink:href="sprite.svg#team-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <svg class="icon team-media" width="20" height="20">
+                        <use xlink:href="sprite.svg#team-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <svg class="icon team-media" width="20" height="20">
+                        <use xlink:href="sprite.svg#team-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <svg class="icon team-media" width="20" height="20">
+                        <use xlink:href="sprite.svg#team-telegram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </article>
+            </li>
+
+            <li>
+              <article class="team-card hover-effect">
+                <img
+                  src="./img/img-team/team-photo6.webp"
+                  alt="Robert Fox's Profile Photo"
+                  width="120"
+                  height="120"
+                />
+                <h3 class="team-name">Robert Fox</h3>
+                <p class="team-title">UI/UX Designer</p>
+                <ul class="team-connect-list">
+                  <li>
+                    <a href="#">
+                      <svg class="icon team-media" width="20" height="20">
+                        <use xlink:href="sprite.svg#team-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <svg class="icon team-media" width="20" height="20">
+                        <use xlink:href="sprite.svg#team-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <svg class="icon team-media" width="20" height="20">
+                        <use xlink:href="sprite.svg#team-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <svg class="icon team-media" width="20" height="20">
+                        <use xlink:href="sprite.svg#team-telegram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </article>
+            </li>
+
+            <li>
+              <article class="team-card hover-effect">
+                <img
+                  src="./img/img-team/team-photo7.webp"
+                  alt="Devon Lane's Profile Photo"
+                  width="120"
+                  height="120"
+                />
+                <h3 class="team-name">Devon Lane</h3>
+                <p class="team-title">Ux Architect</p>
+                <ul class="team-connect-list">
+                  <li>
+                    <a href="#">
+                      <svg class="icon team-media" width="20" height="20">
+                        <use xlink:href="sprite.svg#team-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <svg class="icon team-media" width="20" height="20">
+                        <use xlink:href="sprite.svg#team-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <svg class="icon team-media" width="20" height="20">
+                        <use xlink:href="sprite.svg#team-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <svg class="icon team-media" width="20" height="20">
+                        <use xlink:href="sprite.svg#team-telegram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </article>
             </li>
           </ul>
-        </article>
-
-        <article class="team-card hover-effect">
-          <img
-            src="./img/img-team/team-photo2.webp"
-            alt="Jason Smith's Profile Photo"
-            width="120"
-            height="120"
-          />
-          <h3 class="team-name">Jason Smith</h3>
-          <p class="team-title">Co - Founder</p>
-          <ul class="team-connect-list">
-            <li>
-              <a href="#">
-                <svg class="icon team-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#team-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg class="icon team-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#team-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg class="icon team-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#team-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg class="icon team-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#team-telegram"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </article>
-
-        <article class="team-card hover-effect">
-          <img
-            src="./img/img-team/team-photo3.webp"
-            alt="Tony Wings's Profile Photo"
-            width="120"
-            height="120"
-          />
-          <h3 class="team-name">Tony Wings</h3>
-          <p class="team-title">Web Designer</p>
-
-          <ul class="team-connect-list">
-            <li>
-              <a href="#">
-                <svg class="icon team-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#team-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg class="icon team-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#team-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg class="icon team-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#team-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg class="icon team-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#team-telegram"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </article>
-
-        <article class="team-card hover-effect">
-          <img
-            src="./img/img-team/team-photo4.webp"
-            alt="Esther Howard's Profile Photo"
-            width="120"
-            height="120"
-          />
-          <h3 class="team-name">Esther Howard</h3>
-          <p class="team-title">Project Manager</p>
-          <ul class="team-connect-list">
-            <li>
-              <a href="#">
-                <svg class="icon team-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#team-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg class="icon team-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#team-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg class="icon team-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#team-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg class="icon team-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#team-telegram"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </article>
-
-        <article class="team-card hover-effect">
-          <img
-            src="./img/img-team/team-photo5.webp"
-            alt="Jenny Wilson's Profile Photo"
-            width="120"
-            height="120"
-          />
-          <h3 class="team-name">Jenny Wilson</h3>
-          <p class="team-title">Artist</p>
-          <ul class="team-connect-list">
-            <li>
-              <a href="#">
-                <svg class="icon team-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#team-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg class="icon team-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#team-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg class="icon team-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#team-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg class="icon team-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#team-telegram"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </article>
-
-        <article class="team-card hover-effect">
-          <img
-            src="./img/img-team/team-photo6.webp"
-            alt="Robert Fox's Profile Photo"
-            width="120"
-            height="120"
-          />
-          <h3 class="team-name">Robert Fox</h3>
-          <p class="team-title">UI/UX Designer</p>
-          <ul class="team-connect-list">
-            <li>
-              <a href="#">
-                <svg class="icon team-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#team-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg class="icon team-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#team-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg class="icon team-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#team-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg class="icon team-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#team-telegram"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </article>
-
-        <article class="team-card hover-effect">
-          <img
-            src="./img/img-team/team-photo7.webp"
-            alt="Devon Lane's Profile Photo"
-            width="120"
-            height="120"
-          />
-          <h3 class="team-name">Devon Lane</h3>
-          <p class="team-title">Ux Architect</p>
-          <ul class="team-connect-list">
-            <li>
-              <a href="#">
-                <svg class="icon team-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#team-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg class="icon team-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#team-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg class="icon team-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#team-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <svg class="icon team-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#team-telegram"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </article>
+        </div>
       </section>
 
       <!-- Partners section -->
-      <section class="partners container">
-        <h2 class="secondary-heading">
-          <span class="highlighted-text">BINABOX</span> PARTNER
-        </h2>
-
-        <ul class="partners-cards">
-          <li>
-            <img
-              src="./img/img-partners/partner-logo1.svg"
-              alt="Near Partner Banner"
-              class="partner-banner"
-              width="162"
-              height="60"
-            />
-          </li>
-
-          <li>
-            <img
-              src="./img/img-partners/partner-logo2.svg"
-              alt="Binance Chain Partner Banner"
-              class="partner-banner banner-bg"
-              width="162"
-              height="60"
-            />
-          </li>
-
-          <li>
-            <img
-              src="./img/img-partners/partner-logo3.svg"
-              alt="Coinbase Partner Banner"
-              class="partner-banner"
-              width="162"
-              height="60"
-            />
-          </li>
-
-          <li>
-            <img
-              src="./img/img-partners/partner-logo4.svg"
-              alt="Zerion Partner Banner"
-              class="partner-banner banner-bg"
-              width="162"
-              height="60"
-            />
-          </li>
-
-          <li>
-            <img
-              src="./img/img-partners/partner-logo5.svg"
-              alt="Zapper Partner Banner"
-              class="partner-banner"
-              width="162"
-              height="60"
-            />
-          </li>
-
-          <li>
-            <img
-              src="./img/img-partners/partner-logo6.svg"
-              alt="InstaApp Partner Banner"
-              class="partner-banner banner-bg"
-              width="162"
-              height="60"
-            />
-          </li>
-
-          <li>
-            <img
-              src="./img/img-partners/partner-logo7.svg"
-              alt="AToken Partner Banner"
-              class="partner-banner banner-bg"
-              width="162"
-              height="60"
-            />
-          </li>
-
-          <li>
-            <img
-              src="./img/img-partners/partner-logo8.svg"
-              alt="Trust Wallet Partner Banner"
-              class="partner-banner"
-              width="162"
-              height="60"
-            />
-          </li>
-
-          <li>
-            <img
-              src="./img/img-partners/partner-logo9.svg"
-              alt="Giving Black Partner Banner"
-              class="partner-banner banner-bg"
-              width="162"
-              height="60"
-            />
-          </li>
-
-          <li>
-            <img
-              src="./img/img-partners/partner-logo10.svg"
-              alt="Venly Partner Banner"
-              class="partner-banner"
-              width="162"
-              height="60"
-            />
-          </li>
-
-          <li>
-            <img
-              src="./img/img-partners/partner-logo11.svg"
-              alt="Pillar Partner Banner"
-              class="partner-banner banner-bg"
-              width="162"
-              height="60"
-            />
-          </li>
-
-          <li>
-            <img
-              src="./img/img-partners/partner-logo12.svg"
-              alt="DappRadar Partner Banner"
-              class="partner-banner"
-              width="162"
-              height="60"
-            />
-          </li>
-
-          <li>
-            <img
-              src="./img/img-partners/partner-logo13.svg"
-              alt="Synthetix Partner Banner"
-              class="partner-banner"
-              width="162"
-              height="60"
-            />
-          </li>
-
-          <li>
-            <img
-              src="./img/img-partners/partner-logo14.svg"
-              alt="Unstoppable Partner Banner"
-              class="partner-banner banner-bg"
-              width="162"
-              height="60"
-            />
-          </li>
-
-          <li>
-            <img
-              src="./img/img-partners/partner-logo15.svg"
-              alt="Live Coin Watch Partner Banner"
-              class="partner-banner"
-              width="162"
-              height="60"
-            />
-          </li>
-
-          <li>
-            <img
-              src="./img/img-partners/partner-logo16.svg"
-              alt="Bitpay Partner Banner"
-              class="partner-banner banner-bg"
-              width="162"
-              height="60"
-            />
-          </li>
-
-          <li>
-            <img
-              src="./img/img-partners/partner-logo17.svg"
-              alt="Unstoppable Domain Partner Banner"
-              class="partner-banner"
-              width="162"
-              height="60"
-            />
-          </li>
-
-          <li>
-            <img
-              src="./img/img-partners/partner-logo18.svg"
-              alt="Huobi Wallet Partner Banner"
-              class="partner-banner banner-bg"
-              width="162"
-              height="60"
-            />
-          </li>
-        </ul>
+      <section class="partners">
+        <div class="wrapper">
+          <h2 class="secondary-heading">
+            <span class="highlighted-text">BINABOX</span> PARTNER
+          </h2>
+          <ul class="partners-cards">
+            <li class="partners-card-item">
+              <img
+                src="./img/img-partners/partner-logo1.svg"
+                alt="Near Partner Banner"
+                class="partner-banner"
+                width="162"
+                height="60"
+              />
+            </li>
+            <li class="partners-card-item banner-bg">
+              <img
+                src="./img/img-partners/partner-logo2.svg"
+                alt="Binance Chain Partner Banner"
+                class="partner-banner"
+                width="162"
+                height="60"
+              />
+            </li>
+            <li class="partners-card-item">
+              <img
+                src="./img/img-partners/partner-logo3.svg"
+                alt="Coinbase Partner Banner"
+                class="partner-banner"
+                width="162"
+                height="60"
+              />
+            </li>
+            <li class="partners-card-item banner-bg">
+              <img
+                src="./img/img-partners/partner-logo4.svg"
+                alt="Zerion Partner Banner"
+                class="partner-banner"
+                width="162"
+                height="60"
+              />
+            </li>
+            <li class="partners-card-item">
+              <img
+                src="./img/img-partners/partner-logo5.svg"
+                alt="Zapper Partner Banner"
+                class="partner-banner"
+                width="162"
+                height="60"
+              />
+            </li>
+            <li class="partners-card-item banner-bg">
+              <img
+                src="./img/img-partners/partner-logo6.svg"
+                alt="InstaApp Partner Banner"
+                class="partner-banner"
+                width="162"
+                height="60"
+              />
+            </li>
+            <li class="partners-card-item banner-bg">
+              <img
+                src="./img/img-partners/partner-logo7.svg"
+                alt="AToken Partner Banner"
+                class="partner-banner"
+                width="162"
+                height="60"
+              />
+            </li>
+            <li class="partners-card-item">
+              <img
+                src="./img/img-partners/partner-logo8.svg"
+                alt="Trust Wallet Partner Banner"
+                class="partner-banner"
+                width="162"
+                height="60"
+              />
+            </li>
+            <li class="partners-card-item banner-bg">
+              <img
+                src="./img/img-partners/partner-logo9.svg"
+                alt="Giving Black Partner Banner"
+                class="partner-banner"
+                width="162"
+                height="60"
+              />
+            </li>
+            <li class="partners-card-item">
+              <img
+                src="./img/img-partners/partner-logo10.svg"
+                alt="Venly Partner Banner"
+                class="partner-banner"
+                width="162"
+                height="60"
+              />
+            </li>
+            <li class="partners-card-item banner-bg">
+              <img
+                src="./img/img-partners/partner-logo11.svg"
+                alt="Pillar Partner Banner"
+                class="partner-banner"
+                width="162"
+                height="60"
+              />
+            </li>
+            <li class="partners-card-item">
+              <img
+                src="./img/img-partners/partner-logo12.svg"
+                alt="DappRadar Partner Banner"
+                class="partner-banner"
+                width="162"
+                height="60"
+              />
+            </li>
+            <li class="partners-card-item">
+              <img
+                src="./img/img-partners/partner-logo13.svg"
+                alt="Synthetix Partner Banner"
+                class="partner-banner"
+                width="162"
+                height="60"
+              />
+            </li>
+            <li class="partners-card-item banner-bg">
+              <img
+                src="./img/img-partners/partner-logo14.svg"
+                alt="Unstoppable Partner Banner"
+                class="partner-banner"
+                width="162"
+                height="60"
+              />
+            </li>
+            <li class="partners-card-item">
+              <img
+                src="./img/img-partners/partner-logo15.svg"
+                alt="Live Coin Watch Partner Banner"
+                class="partner-banner"
+                width="162"
+                height="60"
+              />
+            </li>
+            <li class="partners-card-item banner-bg">
+              <img
+                src="./img/img-partners/partner-logo16.svg"
+                alt="Bitpay Partner Banner"
+                class="partner-banner"
+                width="162"
+                height="60"
+              />
+            </li>
+            <li class="partners-card-item">
+              <img
+                src="./img/img-partners/partner-logo17.svg"
+                alt="Unstoppable Domain Partner Banner"
+                class="partner-banner"
+                width="162"
+                height="60"
+              />
+            </li>
+            <li class="partners-card-item banner-bg">
+              <img
+                src="./img/img-partners/partner-logo18.svg"
+                alt="Huobi Wallet Partner Banner"
+                class="partner-banner"
+                width="162"
+                height="60"
+              />
+            </li>
+          </ul>
+        </div>
       </section>
 
       <!-- FAQs section -->
-      <section class="faq-box container">
-        <h2 class="faq-title secondary-heading">FAQS</h2>
-
-        <details open class="faqs-card">
-          <summary class="faqs-name open">What are the NFTs?</summary>
-          <p class="faqs-content">
-            Urna vitae erat et lacus, consectetur ac nulla vestibulum lobortis.
-            Nulla dapibus urna volutpat venenatis, risus faucibus.
-          </p>
-        </details>
-
-        <details class="faqs-card">
-          <summary class="faqs-name">How do I get NFTs?</summary>
-          <p class="faqs-content">
-            Urna vitae erat et lacus, consectetur ac nulla vestibulum lobortis.
-            Nulla dapibus urna volutpat venenatis, risus faucibus.
-          </p>
-        </details>
-
-        <details class="faqs-card">
-          <summary class="faqs-name">How can we buy your NFTs?</summary>
-          <p class="faqs-content">
-            Urna vitae erat et lacus, consectetur ac nulla vestibulum lobortis.
-            Nulla dapibus urna volutpat venenatis, risus faucibus.
-          </p>
-        </details>
-
-        <details class="faqs-card">
-          <summary class="faqs-name">
-            Who are the team behind the project?
-          </summary>
-          <p class="faqs-content">
-            Urna vitae erat et lacus, consectetur ac nulla vestibulum lobortis.
-            Nulla dapibus urna volutpat venenatis, risus faucibus.
-          </p>
-        </details>
+      <section class="faq-box-section">
+        <div class="faq-box wrapper">
+          <h2 class="faq-title secondary-heading">FAQS</h2>
+          <details open class="faqs-card">
+            <summary class="faqs-name open">What are the NFTs?</summary>
+            <p class="faqs-content">
+              Urna vitae erat et lacus, consectetur ac nulla vestibulum
+              lobortis. Nulla dapibus urna volutpat venenatis, risus faucibus.
+            </p>
+          </details>
+          <details class="faqs-card">
+            <summary class="faqs-name">How do I get NFTs?</summary>
+            <p class="faqs-content">
+              Urna vitae erat et lacus, consectetur ac nulla vestibulum
+              lobortis. Nulla dapibus urna volutpat venenatis, risus faucibus.
+            </p>
+          </details>
+          <details class="faqs-card">
+            <summary class="faqs-name">How can we buy your NFTs?</summary>
+            <p class="faqs-content">
+              Urna vitae erat et lacus, consectetur ac nulla vestibulum
+              lobortis. Nulla dapibus urna volutpat venenatis, risus faucibus.
+            </p>
+          </details>
+          <details class="faqs-card">
+            <summary class="faqs-name">
+              Who are the team behind the project?
+            </summary>
+            <p class="faqs-content">
+              Urna vitae erat et lacus, consectetur ac nulla vestibulum
+              lobortis. Nulla dapibus urna volutpat venenatis, risus faucibus.
+            </p>
+          </details>
+        </div>
       </section>
     </main>
 
     <!-- Footer -->
     <footer>
-      <section class="cta-homepage container">
+      <section class="cta-homepage wrapper">
         <h2 class="secondary-heading">JOIN OUR COMMUNITY</h2>
         <p class="cta-homepage-text">
           Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -999,7 +1075,7 @@
       </section>
 
       <section class="footer-border">
-        <nav class="footer-nav container">
+        <nav class="footer-nav wrapper">
           <div class="footer-logo-box">
             <a href="./index.html" class="footer-logo">
               <img

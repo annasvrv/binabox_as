@@ -43,7 +43,7 @@
   </symbol>
 
   <symbol fill="inherit" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" id="elipse-default">
-    <circle  opacity="0.1" cx="15" cy="15" r="15" fill="white"></circle>
+    <circle  opacity="0.1" cx="15" cy="15" r="15" fill="inherit"></circle>
     <circle  cx="15" cy="15" r="7.5" fill="inherit"></circle>
   </symbol>
 
@@ -150,13 +150,6 @@
   <symbol fill="inherit" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" id="phone">
     <path d="M51.5066 36.7576C48.078 36.7576 44.7116 36.2214 41.5215 35.1671C39.9583 34.634 38.0367 35.1231 37.0826 36.1029L30.786 40.8562C23.4837 36.9583 18.9856 32.4616 15.1409 25.2141L19.7543 19.0816C20.9529 17.8846 21.3828 16.136 20.8677 14.4954C19.809 11.2885 19.2711 7.92371 19.2711 4.49371C19.2713 2.01585 17.2554 0 14.7777 0H4.49356C2.01585 0 0 2.01585 0 4.49356C0 32.8946 23.1055 56 51.5066 56C53.9843 56 56.0002 53.9841 56.0002 51.5064V41.251C56 38.7734 53.9841 36.7576 51.5066 36.7576Z" fill="inherit"></path>
   </symbol>
-
-  <!-- <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="plus">
-    <g opacity="0.4">
-      <path d="M24.6663 16H15.9997L7.33301 16" stroke="#21E786" stroke-width="3" stroke-miterlimit="10" stroke-linecap="square" stroke-linejoin="round"></path>
-      <path d="M15.999 24.6673L15.999 16.0007L15.999 7.33398" stroke="#21E786" stroke-width="3" stroke-miterlimit="10" stroke-linecap="square" stroke-linejoin="round"></path>
-    </g>
-  </symbol> -->
 
   <symbol fill="inherit" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="plus">
     <g >
