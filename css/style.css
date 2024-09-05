@@ -7,6 +7,7 @@
   --inactive-color: rgb(136, 139, 142);
   --text-font: "Poppins", "Helvetica Neue", Arial, sans-serif;
   --btn-header-font: "Bakbak One", "Arial Black", Arial, sans-serif;
+  scroll-behavior: smooth;
 }
 
 /********************** General css *********************/
@@ -124,7 +125,7 @@ button {
   position: sticky;
   padding-top: 30px;
   padding-bottom: 30px;
-  top: 0px;
+  top: 0;
   left: 0;
   width: 100%;
   z-index: 1;
@@ -144,6 +145,7 @@ button {
   line-height: 1.31;
   gap: 0 16px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 /************* Header navigation styles *******************/
@@ -167,7 +169,11 @@ button {
   text-transform: uppercase;
 }
 
-.nav-menu-item:hover {
+.nav-menu-item.active .nav-menu-name {
+  border-bottom: 1px solid var(--btn-primary-color);
+}
+
+.nav-menu-item:hover .nav-menu-name {
   border-bottom: 1px solid var(--btn-primary-color);
 }
 
@@ -179,6 +185,11 @@ button {
   vertical-align: middle;
   margin-left: 4px;
   padding-bottom: 4px;
+}
+
+.nav-dropdown-item:hover .arrow-down {
+  transform: rotate(180deg);
+  margin-bottom: 4px;
 }
 
 .dropdown-content {
@@ -275,7 +286,7 @@ button {
     );
   background-repeat: no-repeat;
   background-size: auto, 750px 278px;
-  background-position: bottom, top -100px left 0px;
+  background-position: bottom, top -100px left 0;
   background-color: var(--secondary-color);
   position: relative;
   overflow: hidden;
@@ -368,7 +379,7 @@ button {
 .hero-number {
   font-size: 44px;
   line-height: 1.27;
-  text-shadow: 0px 4px 13px rgba(255, 255, 255, 0.4);
+  text-shadow: 0 4px 13px rgba(255, 255, 255, 0.4);
 }
 
 .hero-description {
