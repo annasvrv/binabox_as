@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Catalog of NFT collection on BINABOX" />
+    <meta
+      name="description"
+      content="Explore BINABOX's comprehensive NFT catalog to discover and evaluate the rarity of exclusive digital collectibles."
+    />
     <link
       rel="icon"
       href="./favicon_io/android-chrome-192x192.png"
@@ -39,14 +42,16 @@
       href="http://necolas.github.io/normalize.css"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>NFT Catalog</title>
+    <title>
+      NFT Catalog - Explore and Evaluate Digital Collectibles | BINABOX
+    </title>
   </head>
 
   <body>
     <!-- Header -->
     <header class="header">
       <div class="wrapper header-content">
-        <a href="./index.html" class="logo-block">
+        <a href="./index.html" class="logo-block" title="Go to homepage">
           <img src="./img/logo.svg" alt="Binabox logo" width="36" height="40" />
           BINABOX
         </a>
@@ -54,26 +59,34 @@
         <nav class="nav-menu">
           <ul class="nav-menu-items">
             <li>
-              <a href="./index.html" class="nav-menu-item">HOME</a>
+              <a href="./index.html" class="nav-menu-item">
+                <span class="nav-menu-name">HOME</span>
+              </a>
             </li>
             <li>
-              <a href="./about.html" class="nav-menu-item">ABOUT</a>
+              <a href="./about.html" class="nav-menu-item">
+                <span class="nav-menu-name">ABOUT</span>
+              </a>
             </li>
             <li>
-              <a href="./index.html#roadmap-block" class="nav-menu-item"
-                >ROADMAP</a
-              >
+              <a href="./index.html#roadmap-block" class="nav-menu-item">
+                <span class="nav-menu-name">ROADMAP</span>
+              </a>
             </li>
             <li>
-              <a href="./catalog.html" class="nav-menu-item">COLLECTION</a>
+              <a href="./catalog.html" class="nav-menu-item active">
+                <span class="nav-menu-name">COLLECTION</span>
+              </a>
             </li>
             <li>
-              <a href="./faqs.html" class="nav-menu-item">FAQS</a>
+              <a href="./faqs.html" class="nav-menu-item">
+                <span class="nav-menu-name">FAQS</span>
+              </a>
             </li>
 
             <li class="nav-dropdown-item">
               <a class="nav-menu-item">
-                PAGES
+                <span class="nav-menu-name">PAGES</span>
                 <svg class="icon arrow-down" width="15" height="15">
                   <use xlink:href="sprite.svg#arrow-down"></use>
                 </svg>
@@ -105,7 +118,11 @@
               id="darkmode"
               class="visually-hidden darkmode-toggle"
             />
-            <label class="switch-mode" for="darkmode"> </label>
+            <label
+              class="switch-mode"
+              for="darkmode"
+              title="Toggle light/dark mode"
+            ></label>
           </form>
 
           <a
@@ -120,7 +137,11 @@
             DISCORD
           </a>
 
-          <button class="btn-basic btn-light" type="button">
+          <button
+            class="btn-basic btn-light"
+            type="button"
+            title="Connect your wallet"
+          >
             <svg class="icon wallet-icon" width="24" height="24">
               <use xlink:href="sprite.svg#wallet"></use>
             </svg>
@@ -138,14 +159,11 @@
           <h1 class="secondary-heading">EXPLORE COLECTIONS</h1>
           <ul class="breadcrumbs-list">
             <li>
-              <a class="breadcrumbs-item inactive-link" href="./index.html"
-                >HOME</a
-              >
+              <a href="./index.html" class="breadcrumbs-link">HOME</a>
             </li>
+            <li class="vertical-line"></li>
             <li>
-              <a class="breadcrumbs-item" href="#nft-collection"
-                ><span class="highlighted-text">COLLECTIONS</span></a
-              >
+              <a href="#nft-collection" class="breadcrumbs-link">COLLECTIONS</a>
             </li>
           </ul>
         </div>
@@ -502,7 +520,7 @@
           <section class="catalogpage-content" id="nft-collection">
             <section class="nft-collection-search">
               <h2 class="secondary-heading">All Items</h2>
-              <form action="" method="get" role="search" class="search-form">
+              <form action="/" method="get" role="search" class="search-form">
                 <label for="site-search" class="visually-hidden">
                   Search the site:
                 </label>
@@ -549,7 +567,11 @@
                 </button>
               </li>
               <li>
-                <button class="current-filters-btn" type="reset">
+                <button
+                  class="current-filters-btn"
+                  type="reset"
+                  title="Reset all filters"
+                >
                   <span class="highlighted-text">Clear All</span>
                 </button>
               </li>
@@ -557,7 +579,11 @@
 
             <ul class="nft-card-list">
               <li>
-                <a href="./catalog-item.html">
+                <a
+                  href="./catalog-item.html"
+                  title="Click to see card details"
+                  class="nft-card-link"
+                >
                   <article class="nft-card">
                     <img
                       src="./img/img-nftcatalog/nft-picture1.webp"
@@ -571,7 +597,11 @@
               </li>
 
               <li>
-                <a href="./catalog-item.html">
+                <a
+                  href="./catalog-item.html"
+                  title="Click to see card details"
+                  class="nft-card-link"
+                >
                   <article class="nft-card">
                     <img
                       src="./img/img-nftcatalog/nft-picture2.webp"
@@ -585,7 +615,11 @@
               </li>
 
               <li>
-                <a href="./catalog-item.html">
+                <a
+                  href="./catalog-item.html"
+                  title="Click to see card details"
+                  class="nft-card-link"
+                >
                   <article class="nft-card">
                     <img
                       src="./img/img-nftcatalog/nft-picture3.webp"
@@ -599,7 +633,11 @@
               </li>
 
               <li>
-                <a href="./catalog-item.html">
+                <a
+                  href="./catalog-item.html"
+                  title="Click to see card details"
+                  class="nft-card-link"
+                >
                   <article class="nft-card">
                     <img
                       src="./img/img-nftcatalog/nft-picture4.webp"
@@ -613,7 +651,11 @@
               </li>
 
               <li>
-                <a href="./catalog-item.html">
+                <a
+                  href="./catalog-item.html"
+                  title="Click to see card details"
+                  class="nft-card-link"
+                >
                   <article class="nft-card">
                     <img
                       src="./img/img-nftcatalog/nft-picture5.webp"
@@ -627,7 +669,11 @@
               </li>
 
               <li>
-                <a href="./catalog-item.html">
+                <a
+                  href="./catalog-item.html"
+                  title="Click to see card details"
+                  class="nft-card-link"
+                >
                   <article class="nft-card">
                     <img
                       src="./img/img-nftcatalog/nft-picture6.webp"
@@ -641,7 +687,11 @@
               </li>
 
               <li>
-                <a href="./catalog-item.html">
+                <a
+                  href="./catalog-item.html"
+                  title="Click to see card details"
+                  class="nft-card-link"
+                >
                   <article class="nft-card">
                     <img
                       src="./img/img-nftcatalog/nft-picture7.webp"
@@ -655,7 +705,11 @@
               </li>
 
               <li>
-                <a href="./catalog-item.html">
+                <a
+                  href="./catalog-item.html"
+                  title="Click to see card details"
+                  class="nft-card-link"
+                >
                   <article class="nft-card">
                     <img
                       src="./img/img-nftcatalog/nft-picture8.webp"
@@ -669,7 +723,11 @@
               </li>
 
               <li>
-                <a href="./catalog-item.html">
+                <a
+                  href="./catalog-item.html"
+                  title="Click to see card details"
+                  class="nft-card-link"
+                >
                   <article class="nft-card">
                     <img
                       src="./img/img-nftcatalog/nft-picture9.webp"
@@ -688,32 +746,37 @@
 
       <!-- Call Action section -->
       <section class="cta-section">
-        <article class="call-action-catalog wrapper">
-          <h2 class="secondary-heading catalog-cta-title">
-            JOIN OUR COMMUNITY
-          </h2>
-          <p class="catalog-cta-text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
-          </p>
-
-          <div class="cta-catbtn-box">
-            <a
-              href="https://discord.com"
-              target="_blank"
-              title="Join us on Discord"
-              class="btn-basic btn-media"
-            >
-              <svg class="icon discord-btn" width="24" height="24">
-                <use xlink:href="sprite.svg#discord-btn"></use>
-              </svg>
-              DISCORD
-            </a>
-            <button class="btn-basic btn-light" type="button">
-              WHITELIST NOW
-            </button>
-          </div>
-        </article>
+        <div class="wrapper">
+          <article class="call-action-catalog">
+            <h2 class="secondary-heading catalog-cta-title">
+              JOIN OUR COMMUNITY
+            </h2>
+            <p class="catalog-cta-text">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+            <div class="cta-catbtn-box">
+              <a
+                href="https://discord.com"
+                target="_blank"
+                title="Join us on Discord"
+                class="btn-basic btn-media"
+              >
+                <svg class="icon discord-btn" width="24" height="24">
+                  <use xlink:href="sprite.svg#discord-btn"></use>
+                </svg>
+                DISCORD
+              </a>
+              <button
+                class="btn-basic btn-light"
+                type="button"
+                title="Access whitelist"
+              >
+                WHITELIST NOW
+              </button>
+            </div>
+          </article>
+        </div>
       </section>
     </main>
 
@@ -721,7 +784,7 @@
     <footer class="catalog-footer">
       <section class="footer-nftcatalog wrapper">
         <div class="catalog-footer-logobox">
-          <a href="./index.html" class="footer-cat-logo">
+          <a href="./index.html" class="footer-cat-logo" title="Go to homepage">
             <img
               src="./img/logo.svg"
               alt="Binabox logo"
@@ -810,83 +873,93 @@
         </div>
       </section>
 
-      <div class="footer-copyright wrapper">
-        <p class="footer-copyright-text">BINABOX 2022 - ALL rights reserved</p>
-        <div class="social-networks">
-          <ul class="footer-media-list">
-            <!-- Twitter add icon -->
-            <li class="network-item-cat">
-              <a
-                href="https://x.com"
-                target="_blank"
-                title="Join us on Twitter"
-              >
-                <svg class="icon cat-footer-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#footer-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <!-- Facebook add icon -->
-            <li class="network-item-cat">
-              <a
-                href="https://www.facebook.com"
-                target="_blank"
-                title="Join us on Facebook"
-              >
-                <svg class="icon cat-footer-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#footer-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <!-- Telegram add icon -->
-            <li class="network-item-cat">
-              <a
-                href="https://web.telegram.org"
-                target="_blank"
-                title="Join us on Telegram"
-              >
-                <svg class="icon cat-footer-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#footer-telegram"></use>
-                </svg>
-              </a>
-            </li>
-            <!-- YouTube add icon -->
-            <li class="network-item-cat">
-              <a
-                href="https://www.youtube.com"
-                target="_blank"
-                title="Join us on YouTube"
-              >
-                <svg class="icon cat-footer-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#footer-youtube"></use>
-                </svg>
-              </a>
-            </li>
-            <!-- Tiktok add icon -->
-            <li class="network-item-cat">
-              <a
-                href="https://www.tiktok.com"
-                target="_blank"
-                title="Join us on TikTok"
-              >
-                <svg class="icon cat-footer-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#footer-tiktok"></use>
-                </svg>
-              </a>
-            </li>
-            <!-- Discord add icon -->
-            <li class="network-item-cat">
-              <a
-                href="https://discord.com"
-                target="_blank"
-                title="Join us on Discord"
-              >
-                <svg class="icon cat-footer-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#footer-discord"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+      <div class="wrapper">
+        <div class="footer-copyright">
+          <p class="footer-copyright-text">
+            BINABOX 2022 - ALL rights reserved
+          </p>
+          <div class="social-networks">
+            <ul class="footer-media-list">
+              <!-- Twitter add icon -->
+              <li class="network-item-cat">
+                <a
+                  href="https://x.com"
+                  target="_blank"
+                  title="Join us on Twitter"
+                  class="footer-media-link"
+                >
+                  <svg class="icon cat-footer-media" width="20" height="20">
+                    <use xlink:href="sprite.svg#footer-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <!-- Facebook add icon -->
+              <li class="network-item-cat">
+                <a
+                  href="https://www.facebook.com"
+                  target="_blank"
+                  title="Join us on Facebook"
+                  class="footer-media-link"
+                >
+                  <svg class="icon cat-footer-media" width="20" height="20">
+                    <use xlink:href="sprite.svg#footer-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <!-- Telegram add icon -->
+              <li class="network-item-cat">
+                <a
+                  href="https://web.telegram.org"
+                  target="_blank"
+                  title="Join us on Telegram"
+                  class="footer-media-link"
+                >
+                  <svg class="icon cat-footer-media" width="20" height="20">
+                    <use xlink:href="sprite.svg#footer-telegram"></use>
+                  </svg>
+                </a>
+              </li>
+              <!-- YouTube add icon -->
+              <li class="network-item-cat">
+                <a
+                  href="https://www.youtube.com"
+                  target="_blank"
+                  title="Join us on YouTube"
+                  class="footer-media-link"
+                >
+                  <svg class="icon cat-footer-media" width="20" height="20">
+                    <use xlink:href="sprite.svg#footer-youtube"></use>
+                  </svg>
+                </a>
+              </li>
+              <!-- Tiktok add icon -->
+              <li class="network-item-cat">
+                <a
+                  href="https://www.tiktok.com"
+                  target="_blank"
+                  title="Join us on TikTok"
+                  class="footer-media-link"
+                >
+                  <svg class="icon cat-footer-media" width="20" height="20">
+                    <use xlink:href="sprite.svg#footer-tiktok"></use>
+                  </svg>
+                </a>
+              </li>
+              <!-- Discord add icon -->
+              <li class="network-item-cat">
+                <a
+                  href="https://discord.com"
+                  target="_blank"
+                  title="Join us on Discord"
+                  class="footer-media-link"
+                >
+                  <svg class="icon cat-footer-media" width="20" height="20">
+                    <use xlink:href="sprite.svg#footer-discord"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </footer>
