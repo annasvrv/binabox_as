@@ -229,7 +229,7 @@ button {
 .dropdown-content::before {
   content: "";
   position: absolute;
-  top: -20px;
+  top: -18px;
   left: 12px;
   border: 10px solid transparent;
   border-bottom-color: var(--secondary-color);
@@ -252,6 +252,7 @@ button {
 
 .dropdown-item-link:hover {
   color: var(--btn-primary-color);
+  transition: all 0.3s ease-in-out;
 }
 
 .btn-box {
@@ -435,13 +436,17 @@ button {
   scrollbar-width: none;
 }
 
+.nft-card-link {
+  display: block;
+  background-color: var(--article-bg-color);
+}
+
 .nft-card {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
   width: 330px;
   padding: 20px;
-  background-color: var(--article-bg-color);
 }
 
 .nft-card-title {
@@ -449,6 +454,13 @@ button {
   line-height: 1.4;
   text-align: left;
   text-transform: uppercase;
+}
+
+.nft-card-link:hover,
+.nft-card-link:active {
+  opacity: 0.5;
+  filter: invert(10%);
+  transition: all 0.3s ease-in-out;
 }
 
 /********************* About section ***********************/
@@ -904,10 +916,6 @@ button {
   gap: 16px;
 }
 
-.team-media-item:visited {
-  opacity: 0.5;
-}
-
 .team-media-linkedin {
   fill: var(--text-color);
   border: 1px solid transparent;
@@ -923,7 +931,6 @@ button {
 
 .team-media-facebook,
 .team-media-telegram {
-  /* fill: rgb(20, 27, 34); */
   fill: var(--secondary-color);
   background-color: var(--text-color);
   border: 1px solid var(--text-color);
@@ -1220,11 +1227,10 @@ input::placeholder::first-letter {
   text-transform: capitalize;
 }
 
-.nav-pages-item:visited,
 .nav-pages-item:hover,
 .nav-pages-item:active {
   border-bottom: 1px solid var(--text-color);
-  opacity: 0.6;
+  /* opacity: 0.6; */
   transition: all 0.3s ease-in-out;
 }
 
@@ -1242,18 +1248,28 @@ input::placeholder::first-letter {
   padding-top: 12px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  column-gap: 8px;
   font-size: 14px;
   line-height: 1.43;
   text-transform: uppercase;
 }
 
-.breadcrumbs-item {
-  padding: 0 8px;
+.breadcrumbs-link {
+  color: var(--inactive-color);
 }
 
-.inactive-link {
-  color: var(--inactive-color);
-  border-right: 2px solid var(--inactive-color);
+.vertical-line::before {
+  content: "";
+  display: block;
+  width: 1.5px;
+  height: 16px;
+  background-color: var(--inactive-color);
+}
+
+.breadcrumbs-link:hover {
+  color: var(--btn-primary-color);
+  transition: all 0.3s ease-in-out;
 }
 
 /********** Catalog NFT Collection ***************************/
@@ -1294,6 +1310,7 @@ input::placeholder::first-letter {
 
 .search-form {
   background-color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
   width: 280px;
   display: flex;
   align-items: center;
@@ -1310,9 +1327,33 @@ input::placeholder::first-letter {
   color: var(--text-color);
 }
 
+.search-field:-webkit-autofill,
+.search-field:-webkit-autofill:hover,
+.search-field:-webkit-autofill:focus {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: var(--text-color);
+}
+
+.search-field::placeholder {
+  font-family: var(--text-font);
+  font-size: 16px;
+  line-height: 1.63;
+  color: var(--text-color);
+}
+
+.search-form:focus-within {
+  border: 1px solid rgb(65, 69, 74);
+}
+
 .search-btn {
   all: unset;
   cursor: pointer;
+}
+
+.search-btn:hover,
+.search-btn:active {
+  opacity: 0.6;
+  transition: all 0.3s ease-in-out;
 }
 
 /************ Current filter display ********************/
@@ -1355,7 +1396,8 @@ input::placeholder::first-letter {
   text-transform: capitalize;
 }
 
-.current-filters-btn:hover {
+.current-filters-btn:hover,
+.current-filters-btn:active {
   opacity: 0.6;
 }
 
@@ -1377,6 +1419,10 @@ input::placeholder::first-letter {
   padding: 16px 12px;
   list-style: none;
   text-transform: uppercase;
+}
+
+.nft-filter-name::marker {
+  display: none;
 }
 
 .nft-filter-name::after {
@@ -1584,6 +1630,12 @@ input::placeholder::first-letter {
   height: 20px;
 }
 
+.footer-media-link:hover,
+.footer-media-link:active {
+  opacity: 0.5;
+  transition: all 0.3s ease-in-out;
+}
+
 /***************** CATALOG ITEM PAGE *****************************/
 
 /***************** NFT card item ***********************/
@@ -1737,8 +1789,10 @@ input::placeholder::first-letter {
   text-transform: uppercase;
 }
 
+.nftcard-media-btn:hover,
 .nftcard-media-btn:active {
   background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease-in-out;
 }
 
 /*********** NFT cards collection section ********************/
@@ -1765,16 +1819,24 @@ input::placeholder::first-letter {
   height: 48px;
 }
 
-.cat-lt-arrow {
+.cat-arrow {
   stroke-width: 2;
   stroke: rgb(255, 255, 255);
   padding-bottom: 2px;
 }
 
 .cat-gt-arrow {
-  stroke-width: 2;
-  stroke: var(--secondary-color);
   transform: rotate(180deg);
+}
+
+.btn-nft-cat:hover {
+  background-color: var(--btn-primary-color);
+  transition: all 0.3 ease-in-out;
+}
+
+.btn-nft-cat:hover .cat-arrow {
+  stroke: var(--secondary-color);
+  transition: all 0.3 ease-in-out;
 }
 
 /************************* FAQ Page ******************************/
@@ -1817,9 +1879,16 @@ input::placeholder::first-letter {
   line-height: 1.22;
   text-transform: capitalize;
 }
+
 .contact-details {
   font-family: var(--text-font);
   color: var(--text-color);
+}
+
+.contact-details:hover,
+.contact-details:active {
+  opacity: 0.5;
+  transition: all 0.3s ease-in-out;
 }
 
 /*****************  Get in touch form section ***************/
@@ -1867,6 +1936,21 @@ input::placeholder::first-letter {
   line-height: 1.63;
   border: 1px solid transparent;
   width: 100%;
+}
+
+.form-block-input:focus,
+.form-textarea:focus {
+  background-color: rgba(194, 195, 197, 0.1);
+  border: 1px solid var(--text-color);
+  outline: 1px inset var(--text-color);
+}
+
+.form-block-input:-webkit-autofill,
+.form-block-input:-webkit-autofill:hover,
+.form-block-input:-webkit-autofill:focus {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: var(--text-color);
+  -webkit-box-shadow: 0 0 0px 50px rgba(194, 195, 197, 0.1) inset;
 }
 
 .get-intouch-block input[name="name"] {
@@ -2045,11 +2129,18 @@ input::placeholder::first-letter {
   right: 35px;
 }
 
+.blog-label:hover .label-deco,
+.blog-label:active .label-deco {
+  background-color: rgba(33, 231, 134, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
 .label-deco {
   padding: 8px 10px;
   font-size: 14px;
   line-height: 1.57;
   background-color: var(--btn-primary-color);
+  border: 1px solid var(--btn-primary-color);
   text-transform: uppercase;
 }
 
@@ -2057,28 +2148,25 @@ input::placeholder::first-letter {
   padding-top: 25px;
   padding-bottom: 8px;
   display: flex;
-  gap: 6px;
-}
-
-.blog-author {
-  display: flex;
   align-items: center;
-  gap: 6px;
+  column-gap: 6px;
   font-size: 16px;
   line-height: 1.5;
-  color: var(--text-color);
+  color: var(--inactive-color);
   text-transform: uppercase;
 }
 
-.blog-date {
+.blog-info-line::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 16px;
+  background-color: var(--inactive-color);
+}
+
+.blog-info {
   display: flex;
-  gap: 6px;
-  padding-left: 6px;
-  font-size: 16px;
-  line-height: 1.5;
-  color: var(--text-color);
-  border-left: 1px solid var(--text-color);
-  text-transform: uppercase;
+  column-gap: 6px;
 }
 
 .person-icon {
@@ -2120,6 +2208,22 @@ input::placeholder::first-letter {
   text-transform: uppercase;
 }
 
+.readmore-arrow {
+  fill: rgb(255, 255, 255);
+}
+
+.blogpage-card-readmore:hover,
+.blogpage-card-readmore:active {
+  color: var(--inactive-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.blogpage-card-readmore:hover .readmore-arrow,
+.blogpage-card-readmore:active .readmore-arrow {
+  fill: var(--inactive-color);
+  transition: all 0.3s ease-in-out;
+}
+
 .blog-pagination {
   background-color: var(--main-background-color);
   padding-bottom: 200px;
@@ -2147,8 +2251,10 @@ input::placeholder::first-letter {
   color: var(--btn-primary-color);
 }
 
-.pagination-page:hover {
+.pagination-page:hover,
+.pagination-page:active {
   background-color: var(--secondary-color);
+  transition: all 0.3s ease-in-out;
 }
 
 /*******************  Blog Article Page ***************************/
@@ -2183,24 +2289,26 @@ input::placeholder::first-letter {
   padding-top: 40px;
   padding-bottom: 20px;
   display: flex;
+  align-items: center;
   gap: 12px;
   font-size: 20px;
   line-height: 1.5;
   font-family: var(--text-font);
-  color: var(--text-color);
-}
-
-.blogarticle-item,
-.blogarticle-date-item {
-  display: flex;
-  align-items: center;
-  gap: 6px;
+  color: var(--inactive-color);
   text-transform: capitalize;
 }
 
-.blogarticle-date-item {
-  padding-left: 12px;
-  border-left: 1px solid var(--text-color);
+.blogarticle-line::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 20px;
+  background-color: var(--inactive-color);
+}
+
+.blogarticle-item {
+  display: flex;
+  gap: 6px;
 }
 
 .blog-story {
@@ -2318,6 +2426,18 @@ input::placeholder::first-letter {
   text-transform: uppercase;
 }
 
+.tags:hover,
+.tags:active {
+  background-color: rgba(65, 69, 74, 0.9);
+  transition: all 0.3s ease-in-out;
+}
+
+.share:hover,
+.share:active {
+  opacity: 0.5;
+  transition: all 0.3s ease-in-out;
+}
+
 .share-icon {
   display: block;
 }
@@ -2326,6 +2446,11 @@ input::placeholder::first-letter {
   padding-bottom: 60px;
   display: flex;
   justify-content: space-between;
+}
+
+.blog-mini-link:hover .content-block-text,
+.blog-mini-link:active .content-block-text {
+  color: var(--btn-primary-color);
 }
 
 .blog-article-mini {
@@ -2371,7 +2496,12 @@ input::placeholder::first-letter {
 }
 
 .blog-article-form .search-form {
+  border: 1px solid var(--secondary-color);
   margin-bottom: 20px;
+}
+
+.blog-article-form .search-form:focus-within {
+  border: 1px solid rgb(65, 69, 74);
 }
 
 .blog-filters {
@@ -2407,6 +2537,12 @@ input::placeholder::first-letter {
 
 /* Blog article sidebar form recent posts block */
 
+.recent-post-link:hover,
+.recent-post-link:active {
+  filter: brightness(0.6);
+  transition: all 0.3s ease-in-out;
+}
+
 .recent-post {
   display: flex;
   align-items: center;
@@ -2425,21 +2561,25 @@ input::placeholder::first-letter {
 
 .recent-post-list {
   display: flex;
+  column-gap: 6px;
+  align-items: center;
   font-family: var(--text-font);
   font-size: 12px;
   line-height: 1.5;
-  color: var(--text-color);
+  color: var(--inactive-color);
   letter-spacing: 0.5px;
-}
-
-.recent-post-item {
-  padding-right: 6px;
   text-transform: uppercase;
 }
 
+.recent-post-line::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 12px;
+  background-color: var(--inactive-color);
+}
+
 .recent-post-time {
-  padding-left: 6px;
-  border-left: 1px solid var(--text-color);
   text-transform: capitalize;
 }
 
@@ -2449,12 +2589,28 @@ input::placeholder::first-letter {
   display: flex;
   flex-wrap: wrap;
   gap: 12px 8px;
-  padding: 20px 0 20px 24px;
+  padding: 20px 24px;
   font-family: var(--text-font);
   font-size: 12px;
   line-height: 1.5;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
+}
+
+.tag {
+  display: block;
+  padding: 8px 12px;
+  font-family: var(--text-font);
+  font-size: 12px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  background-color: rgba(65, 69, 74, 0.4);
+}
+
+.tag:hover,
+.tag:active {
+  background-color: rgba(65, 69, 74, 0.9);
+  transition: all 0.3s ease-in-out;
 }
 
 /*  Feedback Form in the Blog Article page */
