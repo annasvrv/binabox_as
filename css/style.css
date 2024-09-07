@@ -653,8 +653,8 @@ button {
   text-transform: uppercase;
 }
 
-.workflow-card-title::before {
-  content: "step " counter(count);
+.workflow-card-title::after {
+  content: " " counter(count);
 }
 
 .step-connect::before {
