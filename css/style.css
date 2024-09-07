@@ -7,6 +7,7 @@
   --inactive-color: rgb(136, 139, 142);
   --text-font: "Poppins", "Helvetica Neue", Arial, sans-serif;
   --btn-header-font: "Bakbak One", "Arial Black", Arial, sans-serif;
+  --transition-effect: all 0.3s ease-in-out;
   scroll-behavior: smooth;
 }
 
@@ -83,7 +84,7 @@ button {
   display: inline-flex;
   background-color: rgb(88, 101, 242);
   border: 1px solid rgb(88, 101, 242);
-  transition: all 0.3s ease-in-out;
+  transition: var(--transition-effect);
 }
 
 .btn-media:hover,
@@ -98,7 +99,7 @@ button {
   background-color: var(--btn-primary-color);
   color: var(--secondary-color);
   font-family: var(--btn-header-font);
-  transition: all 0.3s ease-in-out;
+  transition: var(--transition-effect);
 }
 
 .btn-light:hover,
@@ -112,7 +113,7 @@ button {
   background-color: inherit;
   color: rgb(255, 255, 255);
   font-family: var(--btn-header-font);
-  transition: all 0.3s ease-in-out;
+  transition: var(--transition-effect);
 }
 
 .btn-border:hover,
@@ -192,7 +193,7 @@ button {
 .nav-menu-item:focus,
 .nav-menu-item:active .nav-menu-name {
   border-bottom: 1px solid var(--btn-primary-color);
-  transition: all 0.3s ease-in-out;
+  transition: var(--transition-effect);
 }
 
 .nav-dropdown-item {
@@ -205,7 +206,7 @@ button {
   vertical-align: middle;
   margin-left: 4px;
   padding-bottom: 4px;
-  transition: all 0.3s ease-in-out;
+  transition: var(--transition-effect);
 }
 
 .nav-dropdown-item:hover .arrow-down {
@@ -252,7 +253,7 @@ button {
 
 .dropdown-item-link:hover {
   color: var(--btn-primary-color);
-  transition: all 0.3s ease-in-out;
+  transition: var(--transition-effect);
 }
 
 .btn-box {
@@ -271,7 +272,7 @@ button {
   width: 48px;
   height: 48px;
   cursor: pointer;
-  transition: color 0.3s ease-in-out;
+  transition: var(--transition-effect);
 }
 
 .darkmode-toggle:checked + .switch-mode::before {
@@ -285,7 +286,7 @@ button {
   display: flex;
   border: 2px solid var(--secondary-color);
   background-color: var(--secondary-color);
-  transition: all 0.3s ease-in-out;
+  transition: var(--transition-effect);
 }
 
 .btn-media-header:hover,
@@ -439,6 +440,7 @@ button {
 .nft-card-link {
   display: block;
   background-color: var(--article-bg-color);
+  transition: var(--transition-effect);
 }
 
 .nft-card {
@@ -460,7 +462,6 @@ button {
 .nft-card-link:active {
   opacity: 0.5;
   filter: invert(10%);
-  transition: all 0.3s ease-in-out;
 }
 
 /********************* About section ***********************/
@@ -575,7 +576,7 @@ button {
     )
     1;
   opacity: 0;
-  transition: all 0.3s ease-in-out;
+  transition: var(--transition-effect);
 }
 
 .hover-effect::after {
@@ -586,7 +587,7 @@ button {
     )
     1;
   opacity: 0;
-  transition: all 0.3s ease-in-out;
+  transition: var(--transition-effect);
 }
 
 .hover-effect:hover::before,
@@ -781,12 +782,12 @@ button {
 .btn-roadmap:hover .btn-arrow,
 .btn-roadmap:active .btn-arrow {
   stroke: var(--btn-primary-color);
-  transition: all 0.3s ease-in-out;
 }
 
 .btn-arrow {
   stroke: var(--text-color);
   stroke-width: 4;
+  transition: var(--transition-effect);
 }
 
 .btn-arrow-reverse {
@@ -920,13 +921,13 @@ button {
   fill: var(--text-color);
   border: 1px solid transparent;
   border-radius: 3px;
+  transition: var(--transition-effect);
 }
 
 .team-media-item:hover .team-media-linkedin {
   background-color: var(--text-color);
   fill: var(--secondary-color);
   border: 1px solid var(--text-color);
-  transition: all 0.3s ease-in-out;
 }
 
 .team-media-facebook,
@@ -935,25 +936,25 @@ button {
   background-color: var(--text-color);
   border: 1px solid var(--text-color);
   border-radius: 50%;
+  transition: var(--transition-effect);
 }
 
 .team-media-item:hover .team-media-facebook,
 .team-media-item:hover .team-media-telegram {
   fill: var(--text-color);
   background-color: var(--secondary-color);
-  transition: all 0.3s ease-in-out;
 }
 
 .team-media-instargam {
   fill: var(--text-color);
   border: 1px solid transparent;
   border-radius: 5px;
+  transition: var(--transition-effect);
 }
 
 .team-media-item:hover .team-media-instargam {
   fill: var(--secondary-color);
   background-color: var(--text-color);
-  transition: all 0.3s ease-in-out;
 }
 
 /****************** Partners section ***********************/
@@ -1168,13 +1169,13 @@ input::placeholder::first-letter {
   width: 50px;
   height: 50px;
   padding: 12px 10px;
+  transition: var(--transition-effect);
 }
 
 .network-item:hover,
 .network-item:active {
   background-color: rgba(194, 195, 197, 0.05);
   box-shadow: inset 0 0 0 1px rgba(194, 195, 197, 0.15);
-  transition: all 0.3s ease-in-out;
 }
 
 /*************** footer-nav section *********************/
@@ -1225,13 +1226,13 @@ input::placeholder::first-letter {
   font-size: 14px;
   line-height: 1.57;
   text-transform: capitalize;
+  transition: var(--transition-effect);
 }
 
 .nav-pages-item:hover,
 .nav-pages-item:active {
   border-bottom: 1px solid var(--text-color);
-  /* opacity: 0.6; */
-  transition: all 0.3s ease-in-out;
+  opacity: 0.6;
 }
 
 /************************* CATALOG Page **************************/
@@ -1257,6 +1258,7 @@ input::placeholder::first-letter {
 
 .breadcrumbs-link {
   color: var(--inactive-color);
+  transition: var(--transition-effect);
 }
 
 .vertical-line::before {
@@ -1269,7 +1271,6 @@ input::placeholder::first-letter {
 
 .breadcrumbs-link:hover {
   color: var(--btn-primary-color);
-  transition: all 0.3s ease-in-out;
 }
 
 /********** Catalog NFT Collection ***************************/
@@ -1348,12 +1349,12 @@ input::placeholder::first-letter {
 .search-btn {
   all: unset;
   cursor: pointer;
+  transition: var(--transition-effect);
 }
 
 .search-btn:hover,
 .search-btn:active {
   opacity: 0.6;
-  transition: all 0.3s ease-in-out;
 }
 
 /************ Current filter display ********************/
@@ -1394,6 +1395,7 @@ input::placeholder::first-letter {
   font-size: 14px;
   line-height: 1.57;
   text-transform: capitalize;
+  transition: var(--transition-effect);
 }
 
 .current-filters-btn:hover,
@@ -1630,10 +1632,13 @@ input::placeholder::first-letter {
   height: 20px;
 }
 
+.footer-media-link {
+  transition: var(--transition-effect);
+}
+
 .footer-media-link:hover,
 .footer-media-link:active {
   opacity: 0.5;
-  transition: all 0.3s ease-in-out;
 }
 
 /***************** CATALOG ITEM PAGE *****************************/
@@ -1787,12 +1792,12 @@ input::placeholder::first-letter {
   line-height: 1.5;
   flex-basis: 290px;
   text-transform: uppercase;
+  transition: var(--transition-effect);
 }
 
 .nftcard-media-btn:hover,
 .nftcard-media-btn:active {
   background-color: rgba(255, 255, 255, 0.1);
-  transition: all 0.3s ease-in-out;
 }
 
 /*********** NFT cards collection section ********************/
@@ -1817,12 +1822,14 @@ input::placeholder::first-letter {
 .btn-nft-cat {
   width: 48px;
   height: 48px;
+  transition: var(--transition-effect);
 }
 
 .cat-arrow {
   stroke-width: 2;
   stroke: rgb(255, 255, 255);
   padding-bottom: 2px;
+  transition: var(--transition-effect);
 }
 
 .cat-gt-arrow {
@@ -1831,12 +1838,10 @@ input::placeholder::first-letter {
 
 .btn-nft-cat:hover {
   background-color: var(--btn-primary-color);
-  transition: all 0.3 ease-in-out;
 }
 
 .btn-nft-cat:hover .cat-arrow {
   stroke: var(--secondary-color);
-  transition: all 0.3 ease-in-out;
 }
 
 /************************* FAQ Page ******************************/
@@ -1883,12 +1888,12 @@ input::placeholder::first-letter {
 .contact-details {
   font-family: var(--text-font);
   color: var(--text-color);
+  transition: var(--transition-effect);
 }
 
 .contact-details:hover,
 .contact-details:active {
   opacity: 0.5;
-  transition: all 0.3s ease-in-out;
 }
 
 /*****************  Get in touch form section ***************/
@@ -2132,7 +2137,6 @@ input::placeholder::first-letter {
 .blog-label:hover .label-deco,
 .blog-label:active .label-deco {
   background-color: rgba(33, 231, 134, 0.5);
-  transition: all 0.3s ease-in-out;
 }
 
 .label-deco {
@@ -2142,6 +2146,7 @@ input::placeholder::first-letter {
   background-color: var(--btn-primary-color);
   border: 1px solid var(--btn-primary-color);
   text-transform: uppercase;
+  transition: var(--transition-effect);
 }
 
 .blog-data {
@@ -2206,22 +2211,22 @@ input::placeholder::first-letter {
   align-items: center;
   gap: 4px;
   text-transform: uppercase;
+  transition: var(--transition-effect);
 }
 
 .readmore-arrow {
   fill: rgb(255, 255, 255);
+  transition: var(--transition-effect);
 }
 
 .blogpage-card-readmore:hover,
 .blogpage-card-readmore:active {
   color: var(--inactive-color);
-  transition: all 0.3s ease-in-out;
 }
 
 .blogpage-card-readmore:hover .readmore-arrow,
 .blogpage-card-readmore:active .readmore-arrow {
   fill: var(--inactive-color);
-  transition: all 0.3s ease-in-out;
 }
 
 .blog-pagination {
@@ -2244,6 +2249,7 @@ input::placeholder::first-letter {
   border: 1px solid var(--secondary-color);
   padding: 1.5px;
   text-align: center;
+  transition: var(--transition-effect);
 }
 
 .pagination-page.active {
@@ -2254,7 +2260,6 @@ input::placeholder::first-letter {
 .pagination-page:hover,
 .pagination-page:active {
   background-color: var(--secondary-color);
-  transition: all 0.3s ease-in-out;
 }
 
 /*******************  Blog Article Page ***************************/
@@ -2424,18 +2429,21 @@ input::placeholder::first-letter {
   padding: 8px 12px;
   background-color: rgba(65, 69, 74, 0.4);
   text-transform: uppercase;
+  transition: var(--transition-effect);
 }
 
 .tags:hover,
 .tags:active {
   background-color: rgba(65, 69, 74, 0.9);
-  transition: all 0.3s ease-in-out;
+}
+
+.share {
+  transition: var(--transition-effect);
 }
 
 .share:hover,
 .share:active {
   opacity: 0.5;
-  transition: all 0.3s ease-in-out;
 }
 
 .share-icon {
@@ -2480,6 +2488,7 @@ input::placeholder::first-letter {
   line-height: 1.57;
   color: var(--text-color);
   text-transform: uppercase;
+  transition: var(--transition-effect);
 }
 
 /************* Blog article sidebar form block ***********/
@@ -2537,10 +2546,13 @@ input::placeholder::first-letter {
 
 /* Blog article sidebar form recent posts block */
 
+.recent-post-link {
+  transition: var(--transition-effect);
+}
+
 .recent-post-link:hover,
 .recent-post-link:active {
   filter: brightness(0.6);
-  transition: all 0.3s ease-in-out;
 }
 
 .recent-post {
@@ -2605,12 +2617,12 @@ input::placeholder::first-letter {
   line-height: 1.5;
   text-transform: uppercase;
   background-color: rgba(65, 69, 74, 0.4);
+  transition: var(--transition-effect);
 }
 
 .tag:hover,
 .tag:active {
   background-color: rgba(65, 69, 74, 0.9);
-  transition: all 0.3s ease-in-out;
 }
 
 /*  Feedback Form in the Blog Article page */
