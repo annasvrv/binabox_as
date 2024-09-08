@@ -318,17 +318,18 @@ button {
 
 .hero-section::before {
   content: " ";
+  display: inline-block;
   width: 496px;
   height: 496px;
-  display: inline-block;
-  background-image: url("../img/bg-s/star-big.svg");
-  background-size: 496px;
-  background-repeat: no-repeat;
-  transform: rotate(-30deg);
   position: absolute;
+  mask-image: url(../img/bg-s/star-big.svg),
+    linear-gradient(to bottom, rgb(29, 35, 40) 0%, rgba(29, 35, 40, 0) 100%);
+  mask-composite: intersect;
+  mask-size: contain;
   right: -150px;
   bottom: -60px;
-  opacity: 70%;
+  transform: rotate(-30deg);
+  background-color: rgb(29, 35, 40);
 }
 
 .hero-box {
@@ -2736,7 +2737,7 @@ input::placeholder::first-letter {
   }
 
   .hero-section::before {
-    background-size: 300px;
+    mask-size: 300px;
     right: -350px;
     bottom: -130px;
   }
