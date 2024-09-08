@@ -376,7 +376,7 @@ button {
 .hero-counter {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(1fr 0.4fr);
+  grid-template-rows: 1fr 0.4fr;
   grid-template-areas:
     "hero-total  hero-profiles"
     "hero-total-tx hero-profiles-tx";
