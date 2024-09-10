@@ -1512,7 +1512,8 @@ input::placeholder::first-letter {
   text-transform: uppercase;
 }
 
-.nft-filter-name::marker {
+.nft-filter-name::marker,
+.nft-filter-name::-webkit-details-marker {
   display: none;
 }
 
