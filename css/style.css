@@ -288,7 +288,7 @@ button {
   width: 48px;
   height: 48px;
   cursor: pointer;
-  transition: all var(--transition-effect);
+  transition: var(--transition-effect);
 }
 
 .darkmode-toggle:checked + .switch-mode::before {
@@ -457,7 +457,7 @@ button {
 .nft-card-link {
   display: block;
   background-color: var(--article-bg-color);
-  transition: all var(--transition-effect);
+  transition: var(--transition-effect);
 }
 
 .nft-card-link:hover,
@@ -540,9 +540,7 @@ button {
 }
 
 .about-list-card {
-  position: relative;
-  bottom: 48px;
-  margin-bottom: -48px;
+  margin-top: -48px;
 }
 
 .about-list-title {
@@ -940,7 +938,7 @@ button {
   fill: var(--text-color);
   border: 1px solid transparent;
   border-radius: 3px;
-  transition: all var(--transition-effect);
+  transition: var(--transition-effect);
 }
 
 .team-media-item:hover .team-media-linkedin,
@@ -957,7 +955,7 @@ button {
   background-color: var(--text-color);
   border: 1px solid var(--text-color);
   border-radius: 50%;
-  transition: all var(--transition-effect);
+  transition: var(--transition-effect);
 }
 
 .team-media-item:hover .team-media-facebook,
@@ -974,7 +972,7 @@ button {
   fill: var(--text-color);
   border: 1px solid transparent;
   border-radius: 5px;
-  transition: all var(--transition-effect);
+  transition: var(--transition-effect);
 }
 
 .team-media-item:hover .team-media-instargam,
@@ -1177,7 +1175,7 @@ button {
 .newsletter-field:-webkit-autofill:focus {
   -webkit-background-clip: text;
   -webkit-text-fill-color: var(--text-color);
-  -webkit-box-shadow: 0 0 0px 50px rgba(194, 195, 197, 0.1) inset;
+  -webkit-box-shadow: 0 0 0 50px rgba(194, 195, 197, 0.1) inset;
 }
 
 .field-validation:valid:not(:placeholder-shown) {
@@ -1214,7 +1212,7 @@ input::placeholder::first-letter {
   width: 50px;
   height: 50px;
   padding: 12px 10px;
-  transition: all var(--transition-effect);
+  transition: var(--transition-effect);
 }
 
 .network-item:hover,
@@ -1492,7 +1490,7 @@ input::placeholder::first-letter {
   opacity: 0.6;
 }
 
-/************ Aside filter form catalog section ******************/
+/************ Aside filter form catalog section ***************/
 
 .nft-filter {
   display: flex;
@@ -1932,7 +1930,7 @@ input::placeholder::first-letter {
   stroke-width: 2;
   stroke: rgb(255, 255, 255);
   padding-bottom: 2px;
-  transition: all var(--transition-effect);
+  transition: var(--transition-effect);
 }
 
 .cat-gt-arrow {
@@ -2069,7 +2067,7 @@ input::placeholder::first-letter {
 .form-block-input:-webkit-autofill:focus {
   -webkit-background-clip: text;
   -webkit-text-fill-color: var(--text-color);
-  -webkit-box-shadow: 0 0 0px 50px rgba(194, 195, 197, 0.1) inset;
+  -webkit-box-shadow: 0 0 0 50px rgba(194, 195, 197, 0.1) inset;
 }
 
 .get-intouch-block input[name="name"] {
@@ -2179,9 +2177,7 @@ input::placeholder::first-letter {
   flex-direction: column;
   row-gap: 24px;
   flex-shrink: 0;
-  position: relative;
-  bottom: 45px;
-  margin-bottom: -45px;
+  margin-top: -45px;
 }
 
 .aboutpage-list-title {
@@ -2696,7 +2692,7 @@ input::placeholder::first-letter {
   font-size: 12px;
   line-height: 1.5;
   color: var(--inactive-color);
-  letter-spacing: 0.5px;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
@@ -2722,7 +2718,7 @@ input::placeholder::first-letter {
   font-family: var(--text-font);
   font-size: 12px;
   line-height: 1.5;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
