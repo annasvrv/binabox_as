@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="The first huge metaverse arena to arrange live sports, hang out and even make bets and wagers"
+      content="Explore the first massive metaverse arena where you can enjoy live sports, socialize, and even place bets and wagers in an immersive digital experience."
     />
     <link
       rel="icon"
@@ -42,13 +42,15 @@
       href="http://necolas.github.io/normalize.css"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Blog Article - BINABOX</title>
+    <title>
+      Metaverse Arena: Live Sports, Socialize, and Bet | BINABOX Blog
+    </title>
   </head>
   <body>
     <!-- Header -->
     <header class="header">
       <div class="wrapper header-content">
-        <a href="./index.html" class="logo-block">
+        <a href="./index.html" title="Go to homepage" class="logo-block">
           <img src="./img/logo.svg" alt="Binabox logo" width="36" height="40" />
           BINABOX
         </a>
@@ -56,26 +58,34 @@
         <nav class="nav-menu">
           <ul class="nav-menu-items">
             <li>
-              <a href="index.html" class="nav-menu-item">HOME</a>
+              <a href="./index.html" class="nav-menu-item">
+                <span class="nav-menu-name">HOME</span>
+              </a>
             </li>
             <li>
-              <a href="./about.html" class="nav-menu-item">ABOUT</a>
+              <a href="./about.html" class="nav-menu-item">
+                <span class="nav-menu-name">ABOUT</span>
+              </a>
             </li>
             <li>
-              <a href="./index.html#roadmap-block" class="nav-menu-item"
-                >ROADMAP</a
-              >
+              <a href="./index.html#roadmap-block" class="nav-menu-item">
+                <span class="nav-menu-name">ROADMAP</span>
+              </a>
             </li>
             <li>
-              <a href="./catalog.html" class="nav-menu-item">COLLECTION</a>
+              <a href="./catalog.html" class="nav-menu-item">
+                <span class="nav-menu-name">COLLECTION</span>
+              </a>
             </li>
             <li>
-              <a href="./faqs.html" class="nav-menu-item">FAQS</a>
+              <a href="./faqs.html" class="nav-menu-item">
+                <span class="nav-menu-name">FAQS</span>
+              </a>
             </li>
 
             <li class="nav-dropdown-item">
               <a class="nav-menu-item">
-                PAGES
+                <span class="nav-menu-name">PAGES</span>
                 <svg class="icon arrow-down" width="15" height="15">
                   <use xlink:href="sprite.svg#arrow-down"></use>
                 </svg>
@@ -100,24 +110,37 @@
         </nav>
 
         <div class="btn-box">
-          <form class="darkmode" action="" method="post">
+          <form class="darkmode" action="/" method="post">
             <input
               type="checkbox"
               name="darkmode"
               id="darkmode"
               class="visually-hidden darkmode-toggle"
             />
-            <label class="switch-mode" for="darkmode"> </label>
+            <label
+              class="switch-mode"
+              for="darkmode"
+              title="Toggle light/dark mode"
+            ></label>
           </form>
 
-          <a href="#" class="btn-basic btn-media-header">
+          <a
+            href="https://discord.com"
+            target="_blank"
+            title="Join us on Discord"
+            class="btn-basic btn-media-header"
+          >
             <svg class="icon discord-btn" width="24" height="24">
               <use xlink:href="sprite.svg#discord-btn"></use>
             </svg>
             DISCORD
           </a>
 
-          <button class="btn-basic btn-light" type="button">
+          <button
+            class="btn-basic btn-light"
+            type="button"
+            title="Connect your wallet"
+          >
             <svg class="icon wallet-icon" width="24" height="24">
               <use xlink:href="sprite.svg#wallet"></use>
             </svg>
@@ -135,19 +158,15 @@
           <h1 class="secondary-heading">BLOG DETAIL</h1>
           <ul class="breadcrumbs-list">
             <li>
-              <a class="breadcrumbs-item inactive-link" href="./index.html"
-                >HOME</a
-              >
+              <a class="breadcrumbs-link" href="./index.html">HOME</a>
             </li>
+            <li class="vertical-line"></li>
             <li>
-              <a class="breadcrumbs-item inactive-link" href="./blog.html"
-                >OUR BLOG</a
-              >
+              <a class="breadcrumbs-link" href="./blog.html">OUR BLOG</a>
             </li>
+            <li class="vertical-line"></li>
             <li>
-              <a class="breadcrumbs-item" href="#blog-detail"
-                ><span class="highlighted-text">BLOG DETAIL</span></a
-              >
+              <a class="breadcrumbs-link" href="#blog-detail">BLOG DETAIL</a>
             </li>
           </ul>
         </div>
@@ -174,11 +193,12 @@
                 </svg>
                 tony nguyen
               </li>
-              <li class="blogarticle-date-item">
+              <li class="blogarticle-line"></li>
+              <li class="blogarticle-item">
                 <svg class="icon calendar-icon" width="24" height="24">
                   <use xlink:href="sprite.svg#calendar"></use>
                 </svg>
-                <time> 20 jun 2022 </time>
+                <time datetime="2022-06-20">20 jun 2022</time>
               </li>
             </ul>
             <p class="blog-story">
@@ -258,32 +278,50 @@
             <section class="blog-tags-share">
               <div class="tags-block">
                 <h3 class="blog-tags-title">Tags:</h3>
-                <a class="tags" href="#" target="_blank">ICO</a>
-                <a class="tags" href="#" target="_blank">CYPPUNK</a>
-                <a class="tags" href="#" target="_blank">LIGHT</a>
+                <a class="tags" href="#" target="_blank" title="ICO">ICO</a>
+                <a class="tags" href="#" target="_blank" title="CYPPUNK">
+                  CYPPUNK
+                </a>
+                <a class="tags" href="#" target="_blank" title="LIGHT">LIGHT</a>
               </div>
               <div class="share-block">
                 <h3 class="blog-tags-title">Share:</h3>
-                <a class="share" href="#">
+                <a
+                  class="share"
+                  href="https://discord.com"
+                  target="_blank"
+                  title="Share via Discord"
+                >
                   <svg class="icon share-icon" width="20" height="20">
                     <use xlink:href="sprite.svg#footer-discord"></use>
                   </svg>
                 </a>
-                <a class="share" href="#">
+                <a
+                  class="share"
+                  href="https://x.com"
+                  target="_blank"
+                  title="Share via Twitter"
+                >
                   <svg class="icon share-icon" width="20" height="20">
                     <use xlink:href="sprite.svg#footer-twitter"></use>
                   </svg>
                 </a>
-                <a class="share" href="#">
+                <a
+                  class="share"
+                  href="https://www.youtube.com"
+                  target="_blank"
+                  title="Share via YouTube"
+                >
                   <svg class="icon share-icon" width="20" height="20">
                     <use xlink:href="sprite.svg#footer-youtube"></use>
                   </svg>
                 </a>
               </div>
             </section>
+
             <!-- Blog pages -->
             <section class="blog-article-pages">
-              <a href="./blog-article.html">
+              <a href="./blog-article.html" class="blog-mini-link">
                 <article class="blog-article-mini">
                   <img
                     src="./img/img-nftcatalog/nft-picture5.webp"
@@ -299,7 +337,7 @@
                   </div>
                 </article>
               </a>
-              <a href="./blog-article.html">
+              <a href="./blog-article.html" class="blog-mini-link">
                 <article class="blog-article-mini blog-page-reverse">
                   <img
                     src="./img/img-nftcatalog/nft-picture3.webp"
@@ -308,9 +346,7 @@
                     height="80"
                   />
                   <div class="content-block">
-                    <p class="content-block-text">
-                      <span class="highlighted-text">NEXT</span>
-                    </p>
+                    <p class="content-block-text">NEXT</p>
                     <h2 class="content-block-title">
                       Enior Apple Employee Alleges Sexism At
                     </h2>
@@ -389,8 +425,8 @@
             </section>
           </section>
 
-          <form action="" method="get" role="search" class="blog-article-form">
-            <fieldset class="search-form">
+          <form action="/" method="get" role="search" class="blog-article-form">
+            <fieldset class="search-form" title="Search NFT">
               <label for="site-search" class="visually-hidden">
                 Search the site:
               </label>
@@ -400,7 +436,6 @@
                 name="search"
                 id="site-search"
                 pattern="[^'\x22]+"
-                title="Invalid input"
                 placeholder="Search NFT"
                 aria-label="Search through site content"
               />
@@ -506,73 +541,76 @@
               <legend class="sidebar-card-name">RECENT POSTS</legend>
               <ul class="blog-filters-list">
                 <li>
-                  <article class="recent-post">
-                    <img
-                      src="./img/img-nftcatalog/nft-picture5.webp"
-                      alt="Disk - NFT Card"
-                      width="100"
-                      height="100"
-                    />
-                    <a href="./blog-article.html">
-                      <h2 class="recent-post-title">
-                        Enior Apple Employee Alleges Sexism At
-                      </h2>
-                      <ul class="recent-post-list">
-                        <li class="recent-post-item">
-                          <span class="highlighted-text">GAMMING</span>
-                        </li>
-                        <li class="recent-post-time">
-                          <time datetime="2022-06-20">20 Jun 2022</time>
-                        </li>
-                      </ul>
-                    </a>
-                  </article>
+                  <a href="./blog-article.html" class="recent-post-link">
+                    <article class="recent-post">
+                      <img
+                        src="./img/img-nftcatalog/nft-picture5.webp"
+                        alt="Disk - NFT Card"
+                        width="100"
+                        height="100"
+                      />
+                      <div class="recent-post-content">
+                        <h2 class="recent-post-title">
+                          Enior Apple Employee Alleges Sexism At
+                        </h2>
+                        <ul class="recent-post-list">
+                          <li class="highlighted-text">GAMMING</li>
+                          <li class="recent-post-line"></li>
+                          <li class="recent-post-time">
+                            <time datetime="2022-06-20">20 Jun 2022</time>
+                          </li>
+                        </ul>
+                      </div>
+                    </article>
+                  </a>
                 </li>
                 <li>
-                  <article class="recent-post">
-                    <img
-                      src="./img/img-nftcatalog/nft-picture9.webp"
-                      alt="Duck - NFT Card"
-                      width="100"
-                      height="100"
-                    />
-                    <a href="./blog-article.html">
-                      <h2 class="recent-post-title">
-                        Enior Apple Employee Alleges Sexism At
-                      </h2>
-                      <ul class="recent-post-list">
-                        <li class="recent-post-item">
-                          <span class="highlighted-text">LAUCHPAD</span>
-                        </li>
-                        <li class="recent-post-time">
-                          <time datetime="2022-06-20">20 Jun 2022</time>
-                        </li>
-                      </ul>
-                    </a>
-                  </article>
+                  <a href="./blog-article.html" class="recent-post-link">
+                    <article class="recent-post">
+                      <img
+                        src="./img/img-nftcatalog/nft-picture9.webp"
+                        alt="Duck - NFT Card"
+                        width="100"
+                        height="100"
+                      />
+                      <div class="recent-post-content">
+                        <h2 class="recent-post-title">
+                          Enior Apple Employee Alleges Sexism At
+                        </h2>
+                        <ul class="recent-post-list">
+                          <li class="highlighted-text">LAUCHPAD</li>
+                          <li class="recent-post-line"></li>
+                          <li class="recent-post-time">
+                            <time datetime="2022-06-20">20 Jun 2022</time>
+                          </li>
+                        </ul>
+                      </div>
+                    </article>
+                  </a>
                 </li>
                 <li>
-                  <article class="recent-post">
-                    <img
-                      src="./img/img-nftcatalog/nft-picture3.webp"
-                      alt="Cat's Head - NFT Card"
-                      width="100"
-                      height="100"
-                    />
-                    <a href="./blog-article.html">
-                      <h2 class="recent-post-title">
-                        Enior Apple Employee Alleges Sexism At
-                      </h2>
-                      <ul class="recent-post-list">
-                        <li class="recent-post-item">
-                          <span class="highlighted-text">ART</span>
-                        </li>
-                        <li class="recent-post-time">
-                          <time datetime="2022-06-20">20 Jun 2022</time>
-                        </li>
-                      </ul>
-                    </a>
-                  </article>
+                  <a href="./blog-article.html" class="recent-post-link">
+                    <article class="recent-post">
+                      <img
+                        src="./img/img-nftcatalog/nft-picture3.webp"
+                        alt="Cat's Head - NFT Card"
+                        width="100"
+                        height="100"
+                      />
+                      <div class="recent-post-content">
+                        <h2 class="recent-post-title">
+                          Enior Apple Employee Alleges Sexism At
+                        </h2>
+                        <ul class="recent-post-list">
+                          <li class="highlighted-text">ART</li>
+                          <li class="recent-post-line"></li>
+                          <li class="recent-post-time">
+                            <time datetime="2022-06-20">20 Jun 2022</time>
+                          </li>
+                        </ul>
+                      </div>
+                    </article>
+                  </a>
                 </li>
               </ul>
             </fieldset>
@@ -580,15 +618,37 @@
             <fieldset class="blog-filters">
               <legend class="sidebar-card-name">TAG</legend>
               <ul class="blog-filters-tags">
-                <li class="tags">
-                  <a href="#">NFT</a>
+                <li class="blog-tags-item">
+                  <a href="#" target="_blank" title="NFT" class="tag">NFT</a>
                 </li>
-                <li class="tags"><a href="#">ICO</a></li>
-                <li class="tags"><a href="#">CRYPTO</a></li>
-                <li class="tags"><a href="#">LAUCHPAD</a></li>
-                <li class="tags"><a href="#">Robot</a></li>
-                <li class="tags"><a href="#">Gamming</a></li>
-                <li class="tags"><a href="#">Meraverse</a></li>
+                <li class="blog-tags-item">
+                  <a href="#" target="_blank" title="ICO" class="tag">ICO</a>
+                </li>
+                <li class="blog-tags-item">
+                  <a href="#" target="_blank" title="CRYPTO" class="tag">
+                    CRYPTO
+                  </a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" title="LAUCHPAD" class="tag">
+                    LAUCHPAD
+                  </a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" title="Robot" class="tag">
+                    Robot
+                  </a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" title="Gamming" class="tag">
+                    Gamming
+                  </a>
+                </li>
+                <li class="blog-tags-item">
+                  <a href="#" target="_blank" title="Meraverse" class="tag">
+                    Meraverse
+                  </a>
+                </li>
               </ul>
             </fieldset>
           </form>
@@ -597,27 +657,37 @@
 
       <!-- Call action section -->
       <section class="cta-section">
-        <article class="call-action-catalog wrapper">
-          <h2 class="secondary-heading catalog-cta-title">
-            JOIN OUR COMMUNITY
-          </h2>
-          <p class="catalog-cta-text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
-          </p>
-
-          <div class="cta-catbtn-box">
-            <a href="#" class="btn-basic btn-media">
-              <svg class="icon discord-btn" width="24" height="24">
-                <use xlink:href="sprite.svg#discord-btn"></use>
-              </svg>
-              DISCORD
-            </a>
-            <button class="btn-basic btn-light" type="button">
-              WHITELIST NOW
-            </button>
-          </div>
-        </article>
+        <div class="wrapper">
+          <article class="call-action-catalog">
+            <h2 class="secondary-heading catalog-cta-title">
+              JOIN OUR COMMUNITY
+            </h2>
+            <p class="catalog-cta-text">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+            <div class="cta-catbtn-box">
+              <a
+                href="https://discord.com"
+                target="_blank"
+                title="Join us on Discord"
+                class="btn-basic btn-media"
+              >
+                <svg class="icon discord-btn" width="24" height="24">
+                  <use xlink:href="sprite.svg#discord-btn"></use>
+                </svg>
+                DISCORD
+              </a>
+              <button
+                class="btn-basic btn-light"
+                type="button"
+                title="Access whitelist"
+              >
+                WHITELIST NOW
+              </button>
+            </div>
+          </article>
+        </div>
       </section>
     </main>
 
@@ -625,7 +695,7 @@
     <footer class="catalog-footer">
       <section class="footer-nftcatalog wrapper">
         <div class="catalog-footer-logobox">
-          <a href="./index.html" class="footer-cat-logo">
+          <a href="./index.html" class="footer-cat-logo" title="Go to homepage">
             <img
               src="./img/logo.svg"
               alt="Binabox logo"
@@ -682,7 +752,7 @@
               </li>
             </ul>
           </div>
-          <form action="" method="post" class="site-newsletter">
+          <form action="/" method="post" class="site-newsletter">
             <fieldset class="site-newsletter-fieldset">
               <legend class="sitemap-title">SUBSCRIBE</legend>
               <div class="site-newsletter-wrapper">
@@ -697,7 +767,11 @@
                   required
                   pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
                 />
-                <button class="btn-light btn-basic" type="submit">
+                <button
+                  class="btn-light btn-basic"
+                  type="submit"
+                  title="Subscribe to Our Newsletter for Updates"
+                >
                   subscribe
                 </button>
               </div>
@@ -706,59 +780,93 @@
         </div>
       </section>
 
-      <div class="footer-copyright wrapper">
-        <p class="footer-copyright-text">BINABOX 2022 - ALL rights reserved</p>
-        <div class="social-networks">
-          <ul class="footer-media-list">
-            <!-- Twitter add icon -->
-            <li class="network-item-cat">
-              <a href="#">
-                <svg class="icon cat-footer-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#footer-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <!-- Facebook add icon -->
-            <li class="network-item-cat">
-              <a href="#">
-                <svg class="icon cat-footer-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#footer-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <!-- Telegram add icon -->
-            <li class="network-item-cat">
-              <a href="#">
-                <svg class="icon cat-footer-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#footer-telegram"></use>
-                </svg>
-              </a>
-            </li>
-            <!-- YouTube add icon -->
-            <li class="network-item-cat">
-              <a href="#">
-                <svg class="icon cat-footer-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#footer-youtube"></use>
-                </svg>
-              </a>
-            </li>
-            <!-- Tiktok add icon -->
-            <li class="network-item-cat">
-              <a href="#">
-                <svg class="icon cat-footer-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#footer-tiktok"></use>
-                </svg>
-              </a>
-            </li>
-            <!-- Discord add icon -->
-            <li class="network-item-cat">
-              <a href="#">
-                <svg class="icon cat-footer-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#footer-discord"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+      <div class="wrapper">
+        <div class="footer-copyright">
+          <p class="footer-copyright-text">
+            BINABOX 2022 - ALL rights reserved
+          </p>
+          <div class="social-networks">
+            <ul class="footer-media-list">
+              <!-- Twitter add icon -->
+              <li class="network-item-cat">
+                <a
+                  href="https://x.com"
+                  target="_blank"
+                  title="Join us on Twitter"
+                  class="footer-media-link"
+                >
+                  <svg class="icon cat-footer-media" width="20" height="20">
+                    <use xlink:href="sprite.svg#footer-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <!-- Facebook add icon -->
+              <li class="network-item-cat">
+                <a
+                  href="https://www.facebook.com"
+                  target="_blank"
+                  title="Join us on Facebook"
+                  class="footer-media-link"
+                >
+                  <svg class="icon cat-footer-media" width="20" height="20">
+                    <use xlink:href="sprite.svg#footer-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <!-- Telegram add icon -->
+              <li class="network-item-cat">
+                <a
+                  href="https://web.telegram.org"
+                  target="_blank"
+                  title="Join us on Telegram"
+                  class="footer-media-link"
+                >
+                  <svg class="icon cat-footer-media" width="20" height="20">
+                    <use xlink:href="sprite.svg#footer-telegram"></use>
+                  </svg>
+                </a>
+              </li>
+              <!-- YouTube add icon -->
+              <li class="network-item-cat">
+                <a
+                  href="https://www.youtube.com"
+                  target="_blank"
+                  title="Join us on YouTube"
+                  class="footer-media-link"
+                >
+                  <svg class="icon cat-footer-media" width="20" height="20">
+                    <use xlink:href="sprite.svg#footer-youtube"></use>
+                  </svg>
+                </a>
+              </li>
+              <!-- Tiktok add icon -->
+              <li class="network-item-cat">
+                <a
+                  href="https://www.tiktok.com"
+                  target="_blank"
+                  title="Join us on TikTok"
+                  class="footer-media-link"
+                >
+                  <svg class="icon cat-footer-media" width="20" height="20">
+                    <use xlink:href="sprite.svg#footer-tiktok"></use>
+                  </svg>
+                </a>
+              </li>
+              <!-- Discord add icon -->
+              <li class="network-item-cat">
+                <a
+                  href="https://discord.com"
+                  target="_blank"
+                  title="Join us on Discord"
+                  class="footer-media-link"
+                >
+                  <svg class="icon cat-footer-media" width="20" height="20">
+                    <use xlink:href="sprite.svg#footer-discord"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </footer>

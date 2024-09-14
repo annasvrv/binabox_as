@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Catalog of NFT collection on BINABOX" />
+    <meta
+      name="description"
+      content="Explore BINABOX's comprehensive NFT catalog to discover and evaluate the rarity of exclusive digital collectibles."
+    />
     <link
       rel="icon"
       href="./favicon_io/android-chrome-192x192.png"
@@ -39,14 +42,16 @@
       href="http://necolas.github.io/normalize.css"
     />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>NFT Catalog</title>
+    <title>
+      NFT Catalog - Explore and Evaluate Digital Collectibles | BINABOX
+    </title>
   </head>
 
   <body>
     <!-- Header -->
     <header class="header">
       <div class="wrapper header-content">
-        <a href="./index.html" class="logo-block">
+        <a href="./index.html" class="logo-block" title="Go to homepage">
           <img src="./img/logo.svg" alt="Binabox logo" width="36" height="40" />
           BINABOX
         </a>
@@ -54,26 +59,34 @@
         <nav class="nav-menu">
           <ul class="nav-menu-items">
             <li>
-              <a href="index.html" class="nav-menu-item">HOME</a>
+              <a href="./index.html" class="nav-menu-item">
+                <span class="nav-menu-name">HOME</span>
+              </a>
             </li>
             <li>
-              <a href="./about.html" class="nav-menu-item">ABOUT</a>
+              <a href="./about.html" class="nav-menu-item">
+                <span class="nav-menu-name">ABOUT</span>
+              </a>
             </li>
             <li>
-              <a href="./index.html#roadmap-block" class="nav-menu-item"
-                >ROADMAP</a
-              >
+              <a href="./index.html#roadmap-block" class="nav-menu-item">
+                <span class="nav-menu-name">ROADMAP</span>
+              </a>
             </li>
             <li>
-              <a href="./catalog.html" class="nav-menu-item">COLLECTION</a>
+              <a href="./catalog.html" class="nav-menu-item active">
+                <span class="nav-menu-name">COLLECTION</span>
+              </a>
             </li>
             <li>
-              <a href="./faqs.html" class="nav-menu-item">FAQS</a>
+              <a href="./faqs.html" class="nav-menu-item">
+                <span class="nav-menu-name">FAQS</span>
+              </a>
             </li>
 
             <li class="nav-dropdown-item">
               <a class="nav-menu-item">
-                PAGES
+                <span class="nav-menu-name">PAGES</span>
                 <svg class="icon arrow-down" width="15" height="15">
                   <use xlink:href="sprite.svg#arrow-down"></use>
                 </svg>
@@ -98,24 +111,37 @@
         </nav>
 
         <div class="btn-box">
-          <form class="darkmode" action="" method="post">
+          <form class="darkmode" action="/" method="post">
             <input
               type="checkbox"
               name="darkmode"
               id="darkmode"
               class="visually-hidden darkmode-toggle"
             />
-            <label class="switch-mode" for="darkmode"> </label>
+            <label
+              class="switch-mode"
+              for="darkmode"
+              title="Toggle light/dark mode"
+            ></label>
           </form>
 
-          <a href="#" class="btn-basic btn-media-header">
+          <a
+            href="https://discord.com"
+            target="_blank"
+            title="Join us on Discord"
+            class="btn-basic btn-media-header"
+          >
             <svg class="icon discord-btn" width="24" height="24">
               <use xlink:href="sprite.svg#discord-btn"></use>
             </svg>
             DISCORD
           </a>
 
-          <button class="btn-basic btn-light" type="button">
+          <button
+            class="btn-basic btn-light"
+            type="button"
+            title="Connect your wallet"
+          >
             <svg class="icon wallet-icon" width="24" height="24">
               <use xlink:href="sprite.svg#wallet"></use>
             </svg>
@@ -133,14 +159,11 @@
           <h1 class="secondary-heading">EXPLORE COLECTIONS</h1>
           <ul class="breadcrumbs-list">
             <li>
-              <a class="breadcrumbs-item inactive-link" href="./index.html"
-                >HOME</a
-              >
+              <a href="./index.html" class="breadcrumbs-link">HOME</a>
             </li>
+            <li class="vertical-line"></li>
             <li>
-              <a class="breadcrumbs-item" href="#nft-collection"
-                ><span class="highlighted-text">COLLECTIONS</span></a
-              >
+              <a href="#nft-collection" class="breadcrumbs-link">COLLECTIONS</a>
             </li>
           </ul>
         </div>
@@ -149,7 +172,7 @@
       <!-- NFT Collection -->
       <section class="nft-collection-section">
         <div class="wrapper nft-collection">
-          <form action="" method="get">
+          <form action="/" method="get">
             <details class="nft-filter" open>
               <summary class="nft-filter-name">CLOTHING</summary>
               <ul class="nft-filter-list">
@@ -161,7 +184,9 @@
                     value="combatant"
                     id="clothing-combatant"
                   />
-                  <label for="clothing-combatant">Combatant</label>
+                  <label for="clothing-combatant" class="catalog-checkbox-label"
+                    >Combatant</label
+                  >
                 </li>
                 <li class="nft-filter-item">
                   <input
@@ -171,7 +196,9 @@
                     value="ninja"
                     id="clothing-ninja"
                   />
-                  <label for="clothing-ninja">Ninja </label>
+                  <label for="clothing-ninja" class="catalog-checkbox-label"
+                    >Ninja
+                  </label>
                 </li>
                 <li class="nft-filter-item">
                   <input
@@ -182,7 +209,9 @@
                     value="king"
                     id="clothing-king"
                   />
-                  <label for="clothing-king">King</label>
+                  <label for="clothing-king" class="catalog-checkbox-label"
+                    >King</label
+                  >
                 </li>
                 <li class="nft-filter-item">
                   <input
@@ -192,7 +221,9 @@
                     value="queen"
                     id="clothing-queen"
                   />
-                  <label for="clothing-queen">Queen</label>
+                  <label for="clothing-queen" class="catalog-checkbox-label"
+                    >Queen</label
+                  >
                 </li>
                 <li class="nft-filter-item">
                   <input
@@ -202,7 +233,9 @@
                     value="robot"
                     id="clothing-robot"
                   />
-                  <label for="clothing-robot">Robot</label>
+                  <label for="clothing-robot" class="catalog-checkbox-label"
+                    >Robot</label
+                  >
                 </li>
               </ul>
             </details>
@@ -217,7 +250,9 @@
                     value="yellow"
                     id="eyes-yellow"
                   />
-                  <label for="eyes-yellow">Yellow</label>
+                  <label for="eyes-yellow" class="catalog-checkbox-label"
+                    >Yellow</label
+                  >
                 </li>
                 <li class="nft-filter-item">
                   <input
@@ -227,7 +262,9 @@
                     value="green"
                     id="eyes-green"
                   />
-                  <label for="eyes-green">Green </label>
+                  <label for="eyes-green" class="catalog-checkbox-label"
+                    >Green
+                  </label>
                 </li>
                 <li class="nft-filter-item">
                   <input
@@ -238,7 +275,9 @@
                     value="mix"
                     id="eyes-mix"
                   />
-                  <label for="eyes-mix">Mix </label>
+                  <label for="eyes-mix" class="catalog-checkbox-label"
+                    >Mix
+                  </label>
                 </li>
                 <li class="nft-filter-item">
                   <input
@@ -248,7 +287,9 @@
                     value="orange"
                     id="eyes-orange"
                   />
-                  <label for="eyes-orange">Orange </label>
+                  <label for="eyes-orange" class="catalog-checkbox-label"
+                    >Orange
+                  </label>
                 </li>
                 <li class="nft-filter-item">
                   <input
@@ -258,7 +299,9 @@
                     value="glow"
                     id="eyes-glow"
                   />
-                  <label for="eyes-glow">Glow </label>
+                  <label for="eyes-glow" class="catalog-checkbox-label"
+                    >Glow
+                  </label>
                 </li>
                 <li class="nft-filter-item">
                   <input
@@ -268,7 +311,9 @@
                     value="blue"
                     id="eyes-blue"
                   />
-                  <label for="eyes-blue">Blue</label>
+                  <label for="eyes-blue" class="catalog-checkbox-label"
+                    >Blue</label
+                  >
                 </li>
               </ul>
             </details>
@@ -283,7 +328,9 @@
                     value="face-1"
                     id="face-1"
                   />
-                  <label for="face-1">Face</label>
+                  <label for="face-1" class="catalog-checkbox-label"
+                    >Face</label
+                  >
                 </li>
                 <li class="nft-filter-item">
                   <input
@@ -293,7 +340,9 @@
                     value="face-2"
                     id="face-2"
                   />
-                  <label for="face-2">Face</label>
+                  <label for="face-2" class="catalog-checkbox-label"
+                    >Face</label
+                  >
                 </li>
                 <li class="nft-filter-item">
                   <input
@@ -303,7 +352,9 @@
                     value="face-3"
                     id="face-3"
                   />
-                  <label for="face-3">Face</label>
+                  <label for="face-3" class="catalog-checkbox-label"
+                    >Face</label
+                  >
                 </li>
                 <li class="nft-filter-item">
                   <input
@@ -313,7 +364,9 @@
                     value="face-4"
                     id="face-4"
                   />
-                  <label for="face-4">Face</label>
+                  <label for="face-4" class="catalog-checkbox-label"
+                    >Face</label
+                  >
                 </li>
                 <li class="nft-filter-item">
                   <input
@@ -323,7 +376,9 @@
                     value="face-5"
                     id="face-5"
                   />
-                  <label for="face-5">Face</label>
+                  <label for="face-5" class="catalog-checkbox-label"
+                    >Face</label
+                  >
                 </li>
               </ul>
             </details>
@@ -338,7 +393,9 @@
                     value="skin-1"
                     id="skin-1"
                   />
-                  <label for="skin-1">Skin</label>
+                  <label for="skin-1" class="catalog-checkbox-label"
+                    >Skin</label
+                  >
                 </li>
                 <li class="nft-filter-item">
                   <input
@@ -348,7 +405,9 @@
                     value="skin-2"
                     id="skin-2"
                   />
-                  <label for="skin-2">Skin</label>
+                  <label for="skin-2" class="catalog-checkbox-label"
+                    >Skin</label
+                  >
                 </li>
                 <li class="nft-filter-item">
                   <input
@@ -358,7 +417,9 @@
                     value="skin-3"
                     id="skin-3"
                   />
-                  <label for="skin-3">Skin</label>
+                  <label for="skin-3" class="catalog-checkbox-label"
+                    >Skin</label
+                  >
                 </li>
                 <li class="nft-filter-item">
                   <input
@@ -368,7 +429,9 @@
                     value="skin-4"
                     id="skin-4"
                   />
-                  <label for="skin-4">Skin</label>
+                  <label for="skin-4" class="catalog-checkbox-label"
+                    >Skin</label
+                  >
                 </li>
                 <li class="nft-filter-item">
                   <input
@@ -378,7 +441,9 @@
                     value="skin-5"
                     id="skin-5"
                   />
-                  <label for="skin-5">Skin</label>
+                  <label for="skin-5" class="catalog-checkbox-label"
+                    >Skin</label
+                  >
                 </li>
               </ul>
             </details>
@@ -393,7 +458,9 @@
                     value="background-1"
                     id="background-1"
                   />
-                  <label for="background-1">Background</label>
+                  <label for="background-1" class="catalog-checkbox-label"
+                    >Background</label
+                  >
                 </li>
                 <li class="nft-filter-item">
                   <input
@@ -403,7 +470,9 @@
                     value="background-2"
                     id="background-2"
                   />
-                  <label for="background-2">Background</label>
+                  <label for="background-2" class="catalog-checkbox-label"
+                    >Background</label
+                  >
                 </li>
                 <li class="nft-filter-item">
                   <input
@@ -413,7 +482,9 @@
                     value="background-3"
                     id="background-3"
                   />
-                  <label for="background-3">Background</label>
+                  <label for="background-3" class="catalog-checkbox-label"
+                    >Background</label
+                  >
                 </li>
                 <li class="nft-filter-item">
                   <input
@@ -423,7 +494,9 @@
                     value="background-4"
                     id="background-4"
                   />
-                  <label for="background-4">Background</label>
+                  <label for="background-4" class="catalog-checkbox-label"
+                    >Background</label
+                  >
                 </li>
                 <li class="nft-filter-item">
                   <input
@@ -433,7 +506,9 @@
                     value="background-5"
                     id="background-5"
                   />
-                  <label for="background-5">Background</label>
+                  <label for="background-5" class="catalog-checkbox-label"
+                    >Background</label
+                  >
                 </li>
               </ul>
             </details>
@@ -448,7 +523,9 @@
                     value="cat"
                     id="special-cat"
                   />
-                  <label for="special-cat">Cat</label>
+                  <label for="special-cat" class="catalog-checkbox-label"
+                    >Cat</label
+                  >
                 </li>
                 <li class="nft-filter-item">
                   <input
@@ -458,7 +535,9 @@
                     value="sakura"
                     id="special-sakura"
                   />
-                  <label for="special-sakura">Sakura</label>
+                  <label for="special-sakura" class="catalog-checkbox-label"
+                    >Sakura</label
+                  >
                 </li>
                 <li class="nft-filter-item">
                   <input
@@ -469,7 +548,9 @@
                     value="snake"
                     id="special-snake"
                   />
-                  <label for="special-snake">Snake</label>
+                  <label for="special-snake" class="catalog-checkbox-label"
+                    >Snake</label
+                  >
                 </li>
                 <li class="nft-filter-item">
                   <input
@@ -479,7 +560,9 @@
                     value="eath"
                     id="special-eath"
                   />
-                  <label for="special-eath">Eath</label>
+                  <label for="special-eath" class="catalog-checkbox-label"
+                    >Eath</label
+                  >
                 </li>
                 <li class="nft-filter-item">
                   <input
@@ -489,7 +572,9 @@
                     value="water"
                     id="special-water"
                   />
-                  <label for="special-water">Water</label>
+                  <label for="special-water" class="catalog-checkbox-label"
+                    >Water</label
+                  >
                 </li>
               </ul>
             </details>
@@ -497,7 +582,7 @@
           <section class="catalogpage-content" id="nft-collection">
             <section class="nft-collection-search">
               <h2 class="secondary-heading">All Items</h2>
-              <form action="" method="get" role="search" class="search-form">
+              <form action="/" method="get" role="search" class="search-form">
                 <label for="site-search" class="visually-hidden">
                   Search the site:
                 </label>
@@ -544,7 +629,11 @@
                 </button>
               </li>
               <li>
-                <button class="current-filters-btn" type="reset">
+                <button
+                  class="current-filters-btn"
+                  type="reset"
+                  title="Reset all filters"
+                >
                   <span class="highlighted-text">Clear All</span>
                 </button>
               </li>
@@ -552,7 +641,11 @@
 
             <ul class="nft-card-list">
               <li>
-                <a href="./catalog-item.html">
+                <a
+                  href="./catalog-item.html"
+                  title="Click to see card details"
+                  class="nft-card-link"
+                >
                   <article class="nft-card">
                     <img
                       src="./img/img-nftcatalog/nft-picture1.webp"
@@ -566,7 +659,11 @@
               </li>
 
               <li>
-                <a href="./catalog-item.html">
+                <a
+                  href="./catalog-item.html"
+                  title="Click to see card details"
+                  class="nft-card-link"
+                >
                   <article class="nft-card">
                     <img
                       src="./img/img-nftcatalog/nft-picture2.webp"
@@ -580,7 +677,11 @@
               </li>
 
               <li>
-                <a href="./catalog-item.html">
+                <a
+                  href="./catalog-item.html"
+                  title="Click to see card details"
+                  class="nft-card-link"
+                >
                   <article class="nft-card">
                     <img
                       src="./img/img-nftcatalog/nft-picture3.webp"
@@ -594,7 +695,11 @@
               </li>
 
               <li>
-                <a href="./catalog-item.html">
+                <a
+                  href="./catalog-item.html"
+                  title="Click to see card details"
+                  class="nft-card-link"
+                >
                   <article class="nft-card">
                     <img
                       src="./img/img-nftcatalog/nft-picture4.webp"
@@ -608,7 +713,11 @@
               </li>
 
               <li>
-                <a href="./catalog-item.html">
+                <a
+                  href="./catalog-item.html"
+                  title="Click to see card details"
+                  class="nft-card-link"
+                >
                   <article class="nft-card">
                     <img
                       src="./img/img-nftcatalog/nft-picture5.webp"
@@ -622,7 +731,11 @@
               </li>
 
               <li>
-                <a href="./catalog-item.html">
+                <a
+                  href="./catalog-item.html"
+                  title="Click to see card details"
+                  class="nft-card-link"
+                >
                   <article class="nft-card">
                     <img
                       src="./img/img-nftcatalog/nft-picture6.webp"
@@ -636,7 +749,11 @@
               </li>
 
               <li>
-                <a href="./catalog-item.html">
+                <a
+                  href="./catalog-item.html"
+                  title="Click to see card details"
+                  class="nft-card-link"
+                >
                   <article class="nft-card">
                     <img
                       src="./img/img-nftcatalog/nft-picture7.webp"
@@ -650,7 +767,11 @@
               </li>
 
               <li>
-                <a href="./catalog-item.html">
+                <a
+                  href="./catalog-item.html"
+                  title="Click to see card details"
+                  class="nft-card-link"
+                >
                   <article class="nft-card">
                     <img
                       src="./img/img-nftcatalog/nft-picture8.webp"
@@ -664,7 +785,11 @@
               </li>
 
               <li>
-                <a href="./catalog-item.html">
+                <a
+                  href="./catalog-item.html"
+                  title="Click to see card details"
+                  class="nft-card-link"
+                >
                   <article class="nft-card">
                     <img
                       src="./img/img-nftcatalog/nft-picture9.webp"
@@ -683,27 +808,37 @@
 
       <!-- Call Action section -->
       <section class="cta-section">
-        <article class="call-action-catalog wrapper">
-          <h2 class="secondary-heading catalog-cta-title">
-            JOIN OUR COMMUNITY
-          </h2>
-          <p class="catalog-cta-text">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
-          </p>
-
-          <div class="cta-catbtn-box">
-            <a href="#" class="btn-basic btn-media">
-              <svg class="icon discord-btn" width="24" height="24">
-                <use xlink:href="sprite.svg#discord-btn"></use>
-              </svg>
-              DISCORD
-            </a>
-            <button class="btn-basic btn-light" type="button">
-              WHITELIST NOW
-            </button>
-          </div>
-        </article>
+        <div class="wrapper">
+          <article class="call-action-catalog">
+            <h2 class="secondary-heading catalog-cta-title">
+              JOIN OUR COMMUNITY
+            </h2>
+            <p class="catalog-cta-text">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+            <div class="cta-catbtn-box">
+              <a
+                href="https://discord.com"
+                target="_blank"
+                title="Join us on Discord"
+                class="btn-basic btn-media"
+              >
+                <svg class="icon discord-btn" width="24" height="24">
+                  <use xlink:href="sprite.svg#discord-btn"></use>
+                </svg>
+                DISCORD
+              </a>
+              <button
+                class="btn-basic btn-light"
+                type="button"
+                title="Access whitelist"
+              >
+                WHITELIST NOW
+              </button>
+            </div>
+          </article>
+        </div>
       </section>
     </main>
 
@@ -711,7 +846,7 @@
     <footer class="catalog-footer">
       <section class="footer-nftcatalog wrapper">
         <div class="catalog-footer-logobox">
-          <a href="./index.html" class="footer-cat-logo">
+          <a href="./index.html" class="footer-cat-logo" title="Go to homepage">
             <img
               src="./img/logo.svg"
               alt="Binabox logo"
@@ -755,20 +890,20 @@
             <h2 class="sitemap-title">COMPANY</h2>
             <ul>
               <li class="sitemap-list">
-                <a class="nav-pages-item" href="#">Terms Canditions</a>
+                <a class="nav-pages-item" href="#"> Terms Canditions </a>
               </li>
               <li class="sitemap-list">
-                <a class="nav-pages-item" href="#">Privacy Policy</a>
+                <a class="nav-pages-item" href="#"> Privacy Policy </a>
               </li>
               <li class="sitemap-list">
-                <a class="nav-pages-item" href="#">Whitepaper</a>
+                <a class="nav-pages-item" href="#"> Whitepaper </a>
               </li>
               <li class="sitemap-list">
-                <a class="nav-pages-item" href="#">Help Center</a>
+                <a class="nav-pages-item" href="#"> Help Center </a>
               </li>
             </ul>
           </div>
-          <form action="" method="post" class="site-newsletter">
+          <form action="/" method="post" class="site-newsletter">
             <fieldset class="site-newsletter-fieldset">
               <legend class="sitemap-title">SUBSCRIBE</legend>
               <div class="site-newsletter-wrapper">
@@ -783,7 +918,11 @@
                   required
                   pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
                 />
-                <button class="btn-light btn-basic" type="submit">
+                <button
+                  class="btn-light btn-basic"
+                  type="submit"
+                  title="Subscribe to Our Newsletter for Updates"
+                >
                   subscribe
                 </button>
               </div>
@@ -792,59 +931,93 @@
         </div>
       </section>
 
-      <div class="footer-copyright wrapper">
-        <p class="footer-copyright-text">BINABOX 2022 - ALL rights reserved</p>
-        <div class="social-networks">
-          <ul class="footer-media-list">
-            <!-- Twitter add icon -->
-            <li class="network-item-cat">
-              <a href="#">
-                <svg class="icon cat-footer-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#footer-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <!-- Facebook add icon -->
-            <li class="network-item-cat">
-              <a href="#">
-                <svg class="icon cat-footer-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#footer-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <!-- Telegram add icon -->
-            <li class="network-item-cat">
-              <a href="#">
-                <svg class="icon cat-footer-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#footer-telegram"></use>
-                </svg>
-              </a>
-            </li>
-            <!-- YouTube add icon -->
-            <li class="network-item-cat">
-              <a href="#">
-                <svg class="icon cat-footer-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#footer-youtube"></use>
-                </svg>
-              </a>
-            </li>
-            <!-- Tiktok add icon -->
-            <li class="network-item-cat">
-              <a href="#">
-                <svg class="icon cat-footer-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#footer-tiktok"></use>
-                </svg>
-              </a>
-            </li>
-            <!-- Discord add icon -->
-            <li class="network-item-cat">
-              <a href="#">
-                <svg class="icon cat-footer-media" width="20" height="20">
-                  <use xlink:href="sprite.svg#footer-discord"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+      <div class="wrapper">
+        <div class="footer-copyright">
+          <p class="footer-copyright-text">
+            BINABOX 2022 - ALL rights reserved
+          </p>
+          <div class="social-networks">
+            <ul class="footer-media-list">
+              <!-- Twitter add icon -->
+              <li class="network-item-cat">
+                <a
+                  href="https://x.com"
+                  target="_blank"
+                  title="Join us on Twitter"
+                  class="footer-media-link"
+                >
+                  <svg class="icon cat-footer-media" width="20" height="20">
+                    <use xlink:href="sprite.svg#footer-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <!-- Facebook add icon -->
+              <li class="network-item-cat">
+                <a
+                  href="https://www.facebook.com"
+                  target="_blank"
+                  title="Join us on Facebook"
+                  class="footer-media-link"
+                >
+                  <svg class="icon cat-footer-media" width="20" height="20">
+                    <use xlink:href="sprite.svg#footer-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <!-- Telegram add icon -->
+              <li class="network-item-cat">
+                <a
+                  href="https://web.telegram.org"
+                  target="_blank"
+                  title="Join us on Telegram"
+                  class="footer-media-link"
+                >
+                  <svg class="icon cat-footer-media" width="20" height="20">
+                    <use xlink:href="sprite.svg#footer-telegram"></use>
+                  </svg>
+                </a>
+              </li>
+              <!-- YouTube add icon -->
+              <li class="network-item-cat">
+                <a
+                  href="https://www.youtube.com"
+                  target="_blank"
+                  title="Join us on YouTube"
+                  class="footer-media-link"
+                >
+                  <svg class="icon cat-footer-media" width="20" height="20">
+                    <use xlink:href="sprite.svg#footer-youtube"></use>
+                  </svg>
+                </a>
+              </li>
+              <!-- Tiktok add icon -->
+              <li class="network-item-cat">
+                <a
+                  href="https://www.tiktok.com"
+                  target="_blank"
+                  title="Join us on TikTok"
+                  class="footer-media-link"
+                >
+                  <svg class="icon cat-footer-media" width="20" height="20">
+                    <use xlink:href="sprite.svg#footer-tiktok"></use>
+                  </svg>
+                </a>
+              </li>
+              <!-- Discord add icon -->
+              <li class="network-item-cat">
+                <a
+                  href="https://discord.com"
+                  target="_blank"
+                  title="Join us on Discord"
+                  class="footer-media-link"
+                >
+                  <svg class="icon cat-footer-media" width="20" height="20">
+                    <use xlink:href="sprite.svg#footer-discord"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </footer>
