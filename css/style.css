@@ -1493,7 +1493,7 @@ input::placeholder::first-letter {
 /************ Aside filter form catalog section ***************/
 
 .nft-filter {
-  display: flex;
+  /* display: flex; */
   background-color: var(--secondary-color);
   width: 280px;
   margin-bottom: 12px;
